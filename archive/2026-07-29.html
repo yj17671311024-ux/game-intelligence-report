@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>游戏产品动态与厂商学习日报 2026-07-29</title>
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --paper: #fff;
+      --ink: #20242a;
+      --muted: #5f6975;
+      --line: #d8dee7;
+      --soft: #eef2f6;
+      --blue: #176b87;
+      --green: #507a44;
+      --red: #9a4054;
+      --gold: #9b6a22;
+      --purple: #6356a8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.58;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page { width: min(1240px, calc(100% - 32px)); margin: 0 auto; padding: 24px 0 56px; }
+    .hero, .section, .card, .notice { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 24px; padding: 28px; margin-bottom: 14px; }
+    .eyebrow { color: var(--blue); font-weight: 800; margin-bottom: 8px; }
+    h1, h2, h3 { margin: 0; letter-spacing: 0; line-height: 1.2; }
+    h1 { font-size: clamp(34px, 5vw, 58px); max-width: 900px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 18px; }
+    p { margin: 0; }
+    .lead { margin-top: 14px; color: #485566; font-size: 17px; max-width: 960px; }
+    .meta { display: grid; gap: 12px; color: #485566; }
+    .meta .date { font-size: 34px; font-weight: 900; color: var(--ink); line-height: 1.05; }
+    .meta b { color: #344052; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .chip { border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px; background: #fff; color: #344052; font-size: 14px; }
+    .chip.blue { color: var(--blue); background: #eef8fb; border-color: #bfdae2; }
+    .chip.green { color: var(--green); background: #f1f8ee; border-color: #cbddc4; }
+    .chip.red { color: var(--red); background: #fbf0f3; border-color: #e5c6ce; }
+    .chip.gold { color: var(--gold); background: #fff8ec; border-color: #e7d2aa; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+    nav a { display: inline-flex; align-items: center; min-height: 42px; padding: 9px 14px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); }
+    .section { padding: 24px 28px; margin-top: 16px; }
+    .section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-bottom: 16px; }
+    .sub { color: var(--muted); margin-top: 6px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .card { padding: 18px; min-width: 0; }
+    .card h3 { color: var(--blue); margin-bottom: 10px; }
+    .card p, .card li { color: #4e5b6b; }
+    .notice { padding: 14px 16px; color: #485566; background: #fbfcfd; margin: 14px 0; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+    table { width: 100%; border-collapse: collapse; min-width: 980px; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; text-align: left; }
+    th { background: #f0f4f7; color: #354252; font-size: 13px; white-space: nowrap; }
+    tr:last-child td { border-bottom: none; }
+    .rank { display: inline-flex; width: 30px; height: 30px; align-items: center; justify-content: center; border-radius: 8px; background: var(--blue); color: #fff; font-weight: 800; }
+    .rank.soft { background: #e6edf3; color: #3d4b58; }
+    .product { font-weight: 800; color: #222832; }
+    .cn { display: block; color: #526071; font-weight: 500; margin-top: 2px; font-size: 13px; }
+    .tag { display: inline-block; margin-top: 4px; border-radius: 6px; padding: 2px 7px; background: var(--soft); color: #516070; font-size: 12px; }
+    ul, ol { margin: 8px 0 0 20px; padding: 0; }
+    li { margin: 5px 0; }
+    footer { color: var(--muted); margin-top: 20px; font-size: 13px; }
+    @media (max-width: 860px) {
+      .hero, .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .hero { padding: 22px; }
+      .section { padding: 20px; }
+      table { min-width: 860px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">游戏产品动态与厂商学习日报</div>
+        <h1>今天补更：Puzzle 稳，男向更看新品爆点</h1>
+        <p class="lead">今天先把断更补上：保留完整榜单、中文名/中文称呼、厂商学习卡和动态观察。注意：公开榜单源今日可见的最新刷新为 2026-07-28，报告日期为 2026-07-29。</p>
+        <div class="chips">
+          <span class="chip blue">Puzzle 完整榜单</span>
+          <span class="chip green">厂商产品集</span>
+          <span class="chip red">RPG / Strategy</span>
+          <span class="chip gold">账号变化路径</span>
+          <span class="chip">手动补更</span>
+        </div>
+      </div>
+      <div class="meta">
+        <div><b>日报日期</b><div class="date">2026-07-29</div></div>
+        <p><b>地区：</b>美国区</p>
+        <p><b>平台：</b>Google Play / iOS</p>
+        <p><b>榜单源：</b>AppBrain 公开榜单，榜单页标注每日刷新，当前公开快照为 2026-07-28</p>
+        <p><b>本次状态：</b>自动任务未产出，已手动补更</p>
+      </div>
+    </section>
+
+    <nav>
+      <a href="#summary">今日结论</a>
+      <a href="#changes">动态</a>
+      <a href="#makers">厂商学习</a>
+      <a href="#puzzle">Puzzle 完整榜单</a>
+      <a href="#male">男性向 / RPG / Strategy</a>
+      <a href="#sources">来源</a>
+    </nav>
+
+    <section class="section" id="summary">
+      <div class="section-head">
+        <div>
+          <h2>今日结论</h2>
+          <p class="sub">先看方向，再看完整榜单。</p>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Puzzle 收入头部</h3>
+          <p>Google Play Puzzle 收入前 3 仍是 Royal Match、Gossip Harbor、Royal Kingdom；iOS Puzzle 收入前 3 是 Royal Match、Gossip Harbor、Candy Crush Saga。Dream、Microfun、Peak、Playrix 仍是学习主线。</p>
+        </div>
+        <div class="card">
+          <h3>Puzzle 免费信号</h3>
+          <p>免费榜前列更偏轻玩法：Smash Fest、Meowdoku、Arrows、Block Blast、Amaze GO。Block / Arrow / Sort / Jam 仍是素材测试与买量观察重点。</p>
+        </div>
+        <div class="card">
+          <h3>厂商主线</h3>
+          <p>Microfun 同时在 GP 收入榜出现 Gossip Harbor、Flambe、Seaside Escape；Peak 有 Toon Blast、Match Factory、Toy Blast；Playrix 在 iOS 仍形成多产品矩阵。</p>
+        </div>
+        <div class="card">
+          <h3>男向主线</h3>
+          <p>RPG 收入榜由 Sword x Staff、NIKKE、RAID、MapleStory Idle、FGO 领跑；Strategy 收入榜由 Century Games 的 Kingshot、Whiteout Survival 占据前 2，4X/末日/生存仍强。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="changes">
+      <h2>动态观察</h2>
+      <div class="notice"><strong>读法：</strong>AppBrain 的公开文本中，等号代表排名不变；数字代表发生位置变动，但页面箭头方向在文本抽取中不完全保留。这里结合昨日旧版与今日公开快照做学习型观察，不把方向写死成绝对结论。</div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>1. Fishdom 与 Match Factory</h3>
+          <p>Google Play Puzzle 收入中 Fishdom 今日在第 5，Match Factory 在第 6；昨日旧版里二者为第 7 与第 6。学习点：Playrix 老产品仍能回到更靠前位置，Peak 新品仍稳定。</p>
+        </div>
+        <div class="card">
+          <h3>2. Microfun 的多产品占位</h3>
+          <p>Gossip Harbor 第 2，Flambe 第 10，Seaside Escape 第 18。柠檬微趣在 merge/story 赛道不是单点成功，而是产品集打法。</p>
+        </div>
+        <div class="card">
+          <h3>3. iOS 与 GP 差异</h3>
+          <p>iOS 第 2 为 Gossip Harbor，第 3 为 Candy Crush Saga；GP 第 2 为 Gossip Harbor，第 3 为 Royal Kingdom。iOS 上 King 与 Playrix 的老产品存在感更强。</p>
+        </div>
+        <div class="card">
+          <h3>4. 免费榜不是收入榜</h3>
+          <p>Smash Fest、Meowdoku、Arrows、Block Blast 领跑 GP Puzzle 免费榜，但其中多数未进入收入前列。学习时要分清“下载题材/素材”与“付费深度”。</p>
+        </div>
+        <div class="card">
+          <h3>5. Strategy 的强势厂商</h3>
+          <p>Century Games 在 Strategy 收入前 2 同时占位 Kingshot 与 Whiteout Survival，说明其生存/SLG 框架仍是男向商业化重点样本。</p>
+        </div>
+        <div class="card">
+          <h3>6. RPG 新品/二游信号</h3>
+          <p>NIKKE、FGO、Reverse: 1999、Zenless Zone Zero、Arknights: Endfield 同榜出现；IP、角色收集、二游美术资产与长期活动仍是 RPG 学习重点。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="makers">
+      <h2>厂商学习卡</h2>
+      <p class="sub">国外厂商如无稳定官方中文名，用“中文参考/常见叫法”辅助记忆。</p>
+      <div class="table-wrap" style="margin-top:12px;">
+        <table>
+          <thead><tr><th>厂商</th><th>中文称呼</th><th>代表产品</th><th>今天看到的位置</th><th>学习点</th></tr></thead>
+          <tbody>
+            <tr><td>Dream Games</td><td>常直称 Dream Games；中文参考：梦之游戏</td><td>Royal Match、Royal Kingdom</td><td>GP Puzzle #1/#3；iOS Puzzle #1</td><td>单玩法高品质 + 第二产品承接，适合学习关卡产能、活动节奏、王室题材包装。</td></tr>
+            <tr><td>Microfun Limited</td><td>柠檬微趣</td><td>Gossip Harbor、Flambe、Seaside Escape</td><td>GP Puzzle #2/#10/#18；iOS Puzzle #2/#23</td><td>merge/story 产品集最值得拆：剧情、订单、装修/经营目标如何延长留存。</td></tr>
+            <tr><td>Peak / Peak Games</td><td>常直称 Peak；Zynga 旗下土耳其团队</td><td>Toon Blast、Match Factory、Toy Blast</td><td>GP Puzzle #4/#6/#14；iOS #5/#9/#20</td><td>从 Blast 老产品到 3D Match 新品的连续能力。</td></tr>
+            <tr><td>Playrix</td><td>常直称 Playrix；中文可记为“梦幻系厂商”</td><td>Fishdom、Township、Gardenscapes、Homescapes</td><td>GP Puzzle #5；iOS #4/#7/#10/#11</td><td>多老产品矩阵仍强，学习“消除 + 家园/花园/小镇/水族箱”的长期内容框架。</td></tr>
+            <tr><td>King</td><td>King；中文参考：国王游戏；Candy Crush 厂商</td><td>Candy Crush Saga、Candy Crush Soda Saga、Farm Heroes Saga</td><td>iOS Puzzle #3/#16</td><td>长期运营与品牌资产样本，尤其适合看活动、关卡、订阅/礼包节奏。</td></tr>
+            <tr><td>Homa</td><td>Homa Games；中文参考：霍马</td><td>All in Hole、Hoop Land 等轻玩法</td><td>GP Puzzle #9；iOS Puzzle #14</td><td>轻玩法商业化与广告素材测试能力。</td></tr>
+            <tr><td>Rollic Games</td><td>常直称 Rollic；Zynga 旗下</td><td>Color Block Jam、Car Sort、Gecko Out</td><td>GP Puzzle #22/#29；iOS Puzzle #19/#30</td><td>超休闲到混合休闲的题材迭代，适合跟素材与免费榜信号。</td></tr>
+            <tr><td>Century Games</td><td>世纪游戏</td><td>Kingshot、Whiteout Survival、Tasty Travels</td><td>Strategy #1/#2；iOS Puzzle #6</td><td>同一集团既有男向 SLG，也有休闲 merge，适合看品类横向能力。</td></tr>
+            <tr><td>37GAMES</td><td>三七互娱海外品牌</td><td>Puzzles & Survival、Puzzles & Chaos、Last Asylum、Puzzles & Conquest</td><td>Strategy #7/#10/#11；RPG #20</td><td>Puzzle + SLG / RPG 混合框架，男向数值与轻 puzzle 的结合案例。</td></tr>
+            <tr><td>Level Infinite</td><td>腾讯 Level Infinite</td><td>GODDESS OF VICTORY: NIKKE</td><td>RPG #2</td><td>二游/角色收集在美国 Android 收入榜仍强，学习美术资产、角色活动和抽卡商业化。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="puzzle">
+      <h2>Puzzle 完整榜单与简要</h2>
+      <div class="notice"><strong>中文名说明：</strong>“中文名”表示官方或常见译名；“中文参考”是便于学习的直译，不等同官方译名。</div>
+
+      <h3>Google Play 美国 Puzzle 收入 Top 30</h3>
+      <div class="table-wrap" style="margin-top:10px;">
+        <table>
+          <thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>简要学习点</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank">1</span></td><td class="product">Royal Match<span class="cn">中文名：皇家消除</span></td><td>Dream Games（梦之游戏）</td><td>Match-3</td><td>头部标杆，关卡产能、活动节奏、装修叙事都值得持续拆。</td></tr>
+            <tr><td><span class="rank">2</span></td><td class="product">Gossip Harbor: Merge & Story<span class="cn">中文名：浪漫餐厅</span></td><td>Microfun（柠檬微趣）</td><td>Merge / Story</td><td>订单 + 剧情 + 场景修复的核心样本。</td></tr>
+            <tr><td><span class="rank">3</span></td><td class="product">Royal Kingdom<span class="cn">中文参考：皇家王国</span></td><td>Dream Games（梦之游戏）</td><td>Match-3</td><td>Dream 第二产品，观察与 Royal Match 的差异化。</td></tr>
+            <tr><td><span class="rank">4</span></td><td class="product">Toon Blast<span class="cn">中文参考：卡通爆破</span></td><td>Peak（Peak Games）</td><td>Blast</td><td>老牌 Blast 长线运营。</td></tr>
+            <tr><td><span class="rank">5</span></td><td class="product">Fishdom<span class="cn">中文名：梦幻水族箱</span></td><td>Playrix（梦幻系厂商）</td><td>Match-3 / 养成</td><td>老产品回到前 5，说明主题和长线内容仍有效。</td></tr>
+            <tr><td><span class="rank">6</span></td><td class="product">Match Factory!<span class="cn">中文参考：匹配工厂</span></td><td>Peak（Peak Games）</td><td>3D Match</td><td>3D Match 收入化重点样本。</td></tr>
+            <tr><td><span class="rank">7</span></td><td class="product">Pixel Flow!<span class="cn">中文参考：像素流</span></td><td>Loom Games</td><td>轻 Puzzle</td><td>免费榜与收入榜均可见，适合看轻玩法转化。</td></tr>
+            <tr><td><span class="rank">8</span></td><td class="product">Yarn Loop<span class="cn">中文参考：毛线环</span></td><td>Combo Game</td><td>Knit / Sort</td><td>线绳/毛线题材持续进入收入榜。</td></tr>
+            <tr><td><span class="rank">9</span></td><td class="product">All in Hole: Black Hole Games<span class="cn">中文参考：全都进洞</span></td><td>Homa（霍马）</td><td>黑洞 / 轻 Puzzle</td><td>混合休闲收入化。</td></tr>
+            <tr><td><span class="rank">10</span></td><td class="product">Flambe: Merge & Cook<span class="cn">中文参考：合成与烹饪</span></td><td>Microfun（柠檬微趣）</td><td>Merge / Cook</td><td>Microfun 第二个高位 merge，题材从餐厅扩展到烹饪。</td></tr>
+            <tr><td><span class="rank soft">11</span></td><td class="product">Travel Town<span class="cn">中文参考：旅行小镇</span></td><td>Magmatic Games / Moon Active</td><td>Merge</td><td>merge 赛道对照样本。</td></tr>
+            <tr><td><span class="rank soft">12</span></td><td class="product">Mystery Town<span class="cn">中文参考：神秘小镇</span></td><td>Cedar Games</td><td>Merge / 悬疑</td><td>悬疑题材 merge。</td></tr>
+            <tr><td><span class="rank soft">13</span></td><td class="product">Hole Stars<span class="cn">中文参考：黑洞明星</span></td><td>Moon Active</td><td>黑洞 / Puzzle</td><td>Moon Active 轻玩法探索。</td></tr>
+            <tr><td><span class="rank soft">14</span></td><td class="product">Toy Blast<span class="cn">中文参考：玩具爆破</span></td><td>Peak（Peak Games）</td><td>Blast</td><td>Peak 老产品，与 Toon Blast 对照。</td></tr>
+            <tr><td><span class="rank soft">15</span></td><td class="product">Magic Sort!<span class="cn">中文参考：魔法排序</span></td><td>Grand Games</td><td>Sort</td><td>排序类收入化。</td></tr>
+            <tr><td><span class="rank soft">16</span></td><td class="product">Empires & Puzzles<span class="cn">中文名：帝国与谜题</span></td><td>Small Giant Games</td><td>Puzzle RPG</td><td>Puzzle 与男向 RPG/SLG 的连接点。</td></tr>
+            <tr><td><span class="rank soft">17</span></td><td class="product">Merge Dragons!<span class="cn">中文名：合成龙</span></td><td>Gram Games</td><td>Merge</td><td>老牌 merge 长线。</td></tr>
+            <tr><td><span class="rank soft">18</span></td><td class="product">Seaside Escape<span class="cn">中文名：梦幻旅行</span></td><td>Microfun（柠檬微趣）</td><td>Merge / Story</td><td>Microfun 多产品矩阵。</td></tr>
+            <tr><td><span class="rank soft">19</span></td><td class="product">Marble Sort!<span class="cn">中文参考：弹珠排序</span></td><td>Voodoo</td><td>Sort</td><td>超休闲厂商收入化尝试。</td></tr>
+            <tr><td><span class="rank soft">20</span></td><td class="product">Merge Mansion<span class="cn">中文名：合并庄园</span></td><td>Metacore</td><td>Merge / Story</td><td>merge/story 标杆之一。</td></tr>
+            <tr><td><span class="rank soft">21</span></td><td class="product">Domino Dreams<span class="cn">中文参考：多米诺梦想</span></td><td>SuperPlay</td><td>Domino / Puzzle</td><td>牌类包装 puzzle 收入化。</td></tr>
+            <tr><td><span class="rank soft">22</span></td><td class="product">Color Block Jam<span class="cn">中文参考：色块堵塞</span></td><td>Rollic Games</td><td>Block / Jam</td><td>轻 puzzle 热点机制。</td></tr>
+            <tr><td><span class="rank soft">23</span></td><td class="product">Match Villains<span class="cn">中文参考：匹配反派</span></td><td>Good Job Games</td><td>Match</td><td>题材包装与素材表现。</td></tr>
+            <tr><td><span class="rank soft">24</span></td><td class="product">Triple Match 3D<span class="cn">中文参考：三重匹配 3D</span></td><td>Boombox Games</td><td>3D Match</td><td>3D Match 赛道样本。</td></tr>
+            <tr><td><span class="rank soft">25</span></td><td class="product">Triple Match City<span class="cn">中文参考：三重匹配城市</span></td><td>Breeze Games</td><td>3D Match</td><td>城市题材 3D Match。</td></tr>
+            <tr><td><span class="rank soft">26</span></td><td class="product">Screwdom 3D<span class="cn">中文参考：螺丝王国 3D</span></td><td>iKame / Zego</td><td>Screw Puzzle</td><td>螺丝拆解玩法仍在收入榜。</td></tr>
+            <tr><td><span class="rank soft">27</span></td><td class="product">Disney Emoji Blitz<span class="cn">中文参考：迪士尼表情闪电</span></td><td>Jam City</td><td>IP / Match</td><td>IP puzzle 长线。</td></tr>
+            <tr><td><span class="rank soft">28</span></td><td class="product">Cube Land Puzzle Game<span class="cn">中文参考：方块大陆</span></td><td>Rotatelab</td><td>Block / Puzzle</td><td>轻玩法进入收入末段。</td></tr>
+            <tr><td><span class="rank soft">29</span></td><td class="product">Car Sort<span class="cn">中文参考：汽车排序</span></td><td>Rollic Games</td><td>Sort</td><td>交通/排序素材。</td></tr>
+            <tr><td><span class="rank soft">30</span></td><td class="product">Loop Sort<span class="cn">中文参考：环形排序</span></td><td>Voodoo</td><td>Sort</td><td>排序轻玩法素材观察。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:18px;">iOS 美国 iPhone Puzzle 收入 Top 30</h3>
+      <div class="table-wrap" style="margin-top:10px;">
+        <table>
+          <thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>简要学习点</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank">1</span></td><td class="product">Royal Match<span class="cn">中文名：皇家消除</span></td><td>Dream Games</td><td>Match-3</td><td>双端头部。</td></tr>
+            <tr><td><span class="rank">2</span></td><td class="product">Gossip Harbor<span class="cn">中文名：浪漫餐厅</span></td><td>Microfun（柠檬微趣）</td><td>Merge / Story</td><td>iOS 高位，merge/story 强。</td></tr>
+            <tr><td><span class="rank">3</span></td><td class="product">Candy Crush Saga<span class="cn">中文名：糖果传奇</span></td><td>King</td><td>Match-3</td><td>经典长线。</td></tr>
+            <tr><td><span class="rank">4</span></td><td class="product">Township<span class="cn">中文名：梦想小镇</span></td><td>Playrix</td><td>经营 / Puzzle</td><td>Playrix 小镇矩阵。</td></tr>
+            <tr><td><span class="rank">5</span></td><td class="product">Toon Blast<span class="cn">中文参考：卡通爆破</span></td><td>Peak Games</td><td>Blast</td><td>老产品高位。</td></tr>
+            <tr><td><span class="rank">6</span></td><td class="product">Tasty Travels<span class="cn">中文参考：美味旅行</span></td><td>Century Games（世纪游戏）</td><td>Merge</td><td>世纪游戏休闲线。</td></tr>
+            <tr><td><span class="rank">7</span></td><td class="product">Gardenscapes<span class="cn">中文名：梦幻花园</span></td><td>Playrix</td><td>Match-3 / 花园</td><td>Playrix 核心老产品。</td></tr>
+            <tr><td><span class="rank">8</span></td><td class="product">Pixel Flow!<span class="cn">中文参考：像素流</span></td><td>Loom Games</td><td>轻 Puzzle</td><td>iOS 也能转收入。</td></tr>
+            <tr><td><span class="rank">9</span></td><td class="product">Match Factory!<span class="cn">中文参考：匹配工厂</span></td><td>Peak Games</td><td>3D Match</td><td>Peak 新方向。</td></tr>
+            <tr><td><span class="rank">10</span></td><td class="product">Fishdom<span class="cn">中文名：梦幻水族箱</span></td><td>Playrix</td><td>Match-3 / 养成</td><td>Playrix 多产品占位。</td></tr>
+            <tr><td><span class="rank soft">11</span></td><td class="product">Homescapes<span class="cn">中文名：梦幻家园</span></td><td>Playrix</td><td>Match-3 / 家装</td><td>老产品矩阵。</td></tr>
+            <tr><td><span class="rank soft">12</span></td><td class="product">Merge Cooking<span class="cn">中文参考：合成烹饪</span></td><td>Happibits</td><td>Merge / Cook</td><td>烹饪题材 merge。</td></tr>
+            <tr><td><span class="rank soft">13</span></td><td class="product">NYT Games<span class="cn">中文参考：纽约时报游戏</span></td><td>The New York Times（纽约时报）</td><td>Word / Crossword</td><td>订阅与品牌型 puzzle。</td></tr>
+            <tr><td><span class="rank soft">14</span></td><td class="product">All in Hole<span class="cn">中文参考：全都进洞</span></td><td>Homa</td><td>黑洞 / Puzzle</td><td>轻玩法收入化。</td></tr>
+            <tr><td><span class="rank soft">15</span></td><td class="product">Screwdom<span class="cn">中文参考：螺丝王国</span></td><td>Zego Global</td><td>Screw Puzzle</td><td>螺丝题材。</td></tr>
+            <tr><td><span class="rank soft">16</span></td><td class="product">Candy Crush Soda Saga<span class="cn">中文名：糖果苏打传奇</span></td><td>King</td><td>Match-3</td><td>King 第二产品。</td></tr>
+            <tr><td><span class="rank soft">17</span></td><td class="product">Travel Town<span class="cn">中文参考：旅行小镇</span></td><td>Moon Active</td><td>Merge</td><td>merge 对照样本。</td></tr>
+            <tr><td><span class="rank soft">18</span></td><td class="product">Yarn Loop<span class="cn">中文参考：毛线环</span></td><td>Combo Games</td><td>Knit / Sort</td><td>毛线题材。</td></tr>
+            <tr><td><span class="rank soft">19</span></td><td class="product">Color Block Jam<span class="cn">中文参考：色块堵塞</span></td><td>Rollic Games</td><td>Block / Jam</td><td>轻 puzzle 热点。</td></tr>
+            <tr><td><span class="rank soft">20</span></td><td class="product">Toy Blast<span class="cn">中文参考：玩具爆破</span></td><td>Peak Games</td><td>Blast</td><td>Peak 老产品。</td></tr>
+            <tr><td><span class="rank soft">21</span></td><td class="product">Colony Flow!<span class="cn">中文参考：殖民流</span></td><td>ABI Global</td><td>轻 Puzzle</td><td>轻玩法观察。</td></tr>
+            <tr><td><span class="rank soft">22</span></td><td class="product">Merge Mansion<span class="cn">中文名：合并庄园</span></td><td>Metacore</td><td>Merge / Story</td><td>merge/story 标杆。</td></tr>
+            <tr><td><span class="rank soft">23</span></td><td class="product">Seaside Escape<span class="cn">中文名：梦幻旅行</span></td><td>Microfun</td><td>Merge / Story</td><td>Microfun 产品集。</td></tr>
+            <tr><td><span class="rank soft">24</span></td><td class="product">Matching Story<span class="cn">中文参考：匹配故事</span></td><td>VERTEX Games</td><td>Merge / Match</td><td>故事化 puzzle。</td></tr>
+            <tr><td><span class="rank soft">25</span></td><td class="product">Triple Match 3D<span class="cn">中文参考：三重匹配 3D</span></td><td>Boombox Games</td><td>3D Match</td><td>3D Match。</td></tr>
+            <tr><td><span class="rank soft">26</span></td><td class="product">Triple Match City<span class="cn">中文参考：三重匹配城市</span></td><td>Breeze Games</td><td>3D Match</td><td>城市题材 3D Match。</td></tr>
+            <tr><td><span class="rank soft">27</span></td><td class="product">Angry Birds 2<span class="cn">中文名：愤怒的小鸟 2</span></td><td>Rovio</td><td>IP / Physics</td><td>经典 IP 长线。</td></tr>
+            <tr><td><span class="rank soft">28</span></td><td class="product">Piggy Kingdom<span class="cn">中文参考：小猪王国</span></td><td>Olleyo Games</td><td>Match-3</td><td>童话题材包装。</td></tr>
+            <tr><td><span class="rank soft">29</span></td><td class="product">Project Makeover<span class="cn">中文参考：项目改造</span></td><td>Magic Tavern</td><td>Match / 装扮</td><td>剧情装扮 meta。</td></tr>
+            <tr><td><span class="rank soft">30</span></td><td class="product">Car Sort<span class="cn">中文参考：汽车排序</span></td><td>Rollic Games</td><td>Sort</td><td>排序素材。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:18px;">Google Play 美国 Puzzle 免费 Top 30</h3>
+      <div class="table-wrap" style="margin-top:10px;">
+        <table>
+          <thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>简要学习点</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank">1</span></td><td class="product">Smash Fest!<span class="cn">中文参考：砸碎派对</span></td><td>Flow Games</td><td>轻 Puzzle</td><td>下载头部，重点看素材与首局体验。</td></tr>
+            <tr><td><span class="rank">2</span></td><td class="product">Meowdoku<span class="cn">中文参考：猫猫数独</span></td><td>Oakever Games</td><td>数独 / 轻 Puzzle</td><td>Oakever 免费榜能力强。</td></tr>
+            <tr><td><span class="rank">3</span></td><td class="product">Arrows - Puzzle Escape<span class="cn">中文参考：箭头逃脱</span></td><td>Lessmore</td><td>Arrow Puzzle</td><td>箭头解谜仍强。</td></tr>
+            <tr><td><span class="rank">4</span></td><td class="product">Block Blast!<span class="cn">中文参考：方块爆破</span></td><td>HungryStudio</td><td>Block</td><td>超大下载量，素材库必看。</td></tr>
+            <tr><td><span class="rank">5</span></td><td class="product">Amaze GO!<span class="cn">中文参考：惊奇前进</span></td><td>Oakever Games</td><td>轻 Puzzle</td><td>Oakever 第二个前 5。</td></tr>
+            <tr><td><span class="rank">6</span></td><td class="product">Gossip Harbor<span class="cn">中文名：浪漫餐厅</span></td><td>Microfun</td><td>Merge / Story</td><td>同时进免费与收入，商业化质量高。</td></tr>
+            <tr><td><span class="rank">7</span></td><td class="product">Bus Traffic Fever!<span class="cn">中文参考：巴士交通狂热</span></td><td>GOODROID</td><td>Traffic Puzzle</td><td>交通堵塞素材。</td></tr>
+            <tr><td><span class="rank">8</span></td><td class="product">Yarn Loop<span class="cn">中文参考：毛线环</span></td><td>Combo Game</td><td>Knit / Sort</td><td>免费与收入均可见。</td></tr>
+            <tr><td><span class="rank">9</span></td><td class="product">Magic Sort!<span class="cn">中文参考：魔法排序</span></td><td>Grand Games</td><td>Sort</td><td>排序玩法。</td></tr>
+            <tr><td><span class="rank">10</span></td><td class="product">Arrow Puzzle<span class="cn">中文参考：箭头谜题</span></td><td>Easybrain</td><td>Arrow Puzzle</td><td>Easybrain 经典轻 puzzle 能力。</td></tr>
+            <tr><td><span class="rank soft">11</span></td><td class="product">Pixel Flow!<span class="cn">中文参考：像素流</span></td><td>Loom Games</td><td>轻 Puzzle</td><td>收入榜第 7，值得重点看。</td></tr>
+            <tr><td><span class="rank soft">12</span></td><td class="product">Color Block: Combo Blast<span class="cn">中文参考：色块连击爆破</span></td><td>Ivy</td><td>Block</td><td>Block 变体。</td></tr>
+            <tr><td><span class="rank soft">13</span></td><td class="product">Jigsawcard Solitaire Puzzle<span class="cn">中文参考：拼图纸牌</span></td><td>Oakever Games</td><td>Jigsaw / Solitaire</td><td>Oakever 第三个前 13。</td></tr>
+            <tr><td><span class="rank soft">14</span></td><td class="product">Pocket Sort<span class="cn">中文参考：口袋排序</span></td><td>SayGames</td><td>Sort / Merge</td><td>SayGames 轻玩法。</td></tr>
+            <tr><td><span class="rank soft">15</span></td><td class="product">Woodoku Blast<span class="cn">中文参考：木块数独爆破</span></td><td>Tripledot Studios</td><td>Block / Sudoku</td><td>经典木块变体。</td></tr>
+            <tr><td><span class="rank soft">16</span></td><td class="product">Royal Kingdom<span class="cn">中文参考：皇家王国</span></td><td>Dream Games</td><td>Match-3</td><td>免费榜与收入榜双可见。</td></tr>
+            <tr><td><span class="rank soft">17</span></td><td class="product">Royal Match<span class="cn">中文名：皇家消除</span></td><td>Dream Games</td><td>Match-3</td><td>老产品仍有新增量。</td></tr>
+            <tr><td><span class="rank soft">18</span></td><td class="product">Tile Explorer<span class="cn">中文参考：瓷砖探索</span></td><td>Oakever Games</td><td>Triple Match</td><td>Oakever 多品类覆盖。</td></tr>
+            <tr><td><span class="rank soft">19</span></td><td class="product">Romantic Nuts & Bolts Sorting<span class="cn">中文参考：浪漫螺母螺栓排序</span></td><td>Bunny Fungames</td><td>Screw / Sort</td><td>螺丝 + 浪漫题材。</td></tr>
+            <tr><td><span class="rank soft">20</span></td><td class="product">Block Color Mania<span class="cn">中文参考：色块狂热</span></td><td>Brainteaser Puzzle Game Studio</td><td>Block</td><td>Block 变体素材。</td></tr>
+            <tr><td><span class="rank soft">21</span></td><td class="product">Cube Land Puzzle Game<span class="cn">中文参考：方块大陆</span></td><td>Rotatelab</td><td>Block</td><td>也在收入榜末段。</td></tr>
+            <tr><td><span class="rank soft">22</span></td><td class="product">Stack Smash<span class="cn">中文参考：堆叠粉碎</span></td><td>Tripledot Studios</td><td>Block 3D</td><td>3D block 素材。</td></tr>
+            <tr><td><span class="rank soft">23</span></td><td class="product">Loop Master<span class="cn">中文参考：循环大师</span></td><td>Pleasure City</td><td>Sort / Jam</td><td>Jam/Sort 变体。</td></tr>
+            <tr><td><span class="rank soft">24</span></td><td class="product">Point Out<span class="cn">中文参考：点出逃脱</span></td><td>Lion Studios Plus</td><td>Color Escape</td><td>颜色逃脱素材。</td></tr>
+            <tr><td><span class="rank soft">25</span></td><td class="product">Hidden Object Games: Seek It<span class="cn">中文参考：找物游戏</span></td><td>NimbleMind</td><td>Hidden Object</td><td>找物赛道。</td></tr>
+            <tr><td><span class="rank soft">26</span></td><td class="product">Maze Escape<span class="cn">中文参考：迷宫逃脱</span></td><td>FIOGONIA</td><td>Maze</td><td>迷宫解谜。</td></tr>
+            <tr><td><span class="rank soft">27</span></td><td class="product">Cardscapes<span class="cn">中文参考：纸牌拼图</span></td><td>Malpa Games</td><td>Jigsaw / Card</td><td>拼图纸牌混合。</td></tr>
+            <tr><td><span class="rank soft">28</span></td><td class="product">Knock Out<span class="cn">中文参考：击退</span></td><td>Combo Game</td><td>轻 Puzzle</td><td>低门槛素材。</td></tr>
+            <tr><td><span class="rank soft">29</span></td><td class="product">Colony Flow!<span class="cn">中文参考：殖民流</span></td><td>ABI Games</td><td>轻 Puzzle</td><td>iOS 收入也可见。</td></tr>
+            <tr><td><span class="rank soft">30</span></td><td class="product">Brain Puzzle 3<span class="cn">中文参考：脑洞谜题 3</span></td><td>JoyGame Studio</td><td>Brain Puzzle</td><td>脑洞素材。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="male">
+      <h2>男性向 / RPG / Strategy 完整榜单</h2>
+      <p class="sub">这里不只看 Google Play 分类名：塔防、SLG、4X、生存、Puzzle RPG、二游角色收集，都按男向商业化学习线索放在一起读。</p>
+
+      <h3>Google Play 美国 RPG 收入 Top 30</h3>
+      <div class="table-wrap" style="margin-top:10px;">
+        <table>
+          <thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>中文名 / 中文参考</th><th>学习点</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank">1</span></td><td class="product">Sword x Staff</td><td>BOLTRAY GAMES</td><td>中文参考：剑与法杖</td><td>新面孔居首，重点看题材包装、开服活动与买量素材。</td></tr>
+            <tr><td><span class="rank">2</span></td><td class="product">GODDESS OF VICTORY: NIKKE</td><td>Level Infinite</td><td>中文名：胜利女神：妮姬</td><td>二游角色收集和美术资产驱动。</td></tr>
+            <tr><td><span class="rank">3</span></td><td class="product">RAID: Shadow Legends</td><td>Plarium</td><td>中文参考：突袭：暗影传说</td><td>欧美写实卡牌 RPG 长线。</td></tr>
+            <tr><td><span class="rank">4</span></td><td class="product">MapleStory: Idle RPG</td><td>NEXON</td><td>中文参考：冒险岛：放置 RPG</td><td>经典 IP + idle。</td></tr>
+            <tr><td><span class="rank">5</span></td><td class="product">Fate/Grand Order</td><td>Aniplex</td><td>中文名：命运/冠位指定</td><td>IP 与角色池长线。</td></tr>
+            <tr><td><span class="rank">6</span></td><td class="product">MARVEL Strike Force</td><td>Scopely</td><td>中文参考：漫威突击队</td><td>超级英雄 IP 阵容收集。</td></tr>
+            <tr><td><span class="rank">7</span></td><td class="product">Isekai: Slow Life</td><td>Mars-Games</td><td>中文参考：异世界慢生活</td><td>异世界题材 + 经营/收集。</td></tr>
+            <tr><td><span class="rank">8</span></td><td class="product">DIGIMON UP</td><td>Bandai Namco</td><td>中文参考：数码宝贝 UP</td><td>日系 IP。</td></tr>
+            <tr><td><span class="rank">9</span></td><td class="product">Hero Wars</td><td>Nexters</td><td>中文参考：英雄战争</td><td>经典买量 RPG。</td></tr>
+            <tr><td><span class="rank">10</span></td><td class="product">Summoners War X Frieren</td><td>Com2uS</td><td>中文名：魔灵召唤 x 葬送的芙莉莲</td><td>联动提升关注度。</td></tr>
+            <tr><td><span class="rank soft">11</span></td><td>The Seven Deadly Sins</td><td>Netmarble</td><td>中文名：七大罪</td><td>动漫 IP RPG。</td></tr>
+            <tr><td><span class="rank soft">12</span></td><td>Star Wars: Galaxy of Heroes</td><td>EA</td><td>中文参考：星球大战：银河英雄</td><td>经典 IP 长线。</td></tr>
+            <tr><td><span class="rank soft">13</span></td><td>Invincible: Guarding the Globe</td><td>Ubisoft</td><td>中文参考：无敌少侠：守护地球</td><td>美漫 IP。</td></tr>
+            <tr><td><span class="rank soft">14</span></td><td>Diablo Immortal</td><td>Blizzard</td><td>中文名：暗黑破坏神：不朽</td><td>经典 ARPG IP。</td></tr>
+            <tr><td><span class="rank soft">15</span></td><td>Watcher of Realms</td><td>Skystone Games</td><td>中文参考：诸神黄昏守望者</td><td>策略 RPG / 塔防感。</td></tr>
+            <tr><td><span class="rank soft">16</span></td><td>Reverse: 1999</td><td>Bluepoch</td><td>中文名：重返未来：1999</td><td>中文二游出海。</td></tr>
+            <tr><td><span class="rank soft">17</span></td><td>Rogue Legend</td><td>PocketHaven</td><td>中文参考：肉鸽传说</td><td>Roguelike RPG。</td></tr>
+            <tr><td><span class="rank soft">18</span></td><td>Epic Seven</td><td>Smilegate</td><td>中文名：第七史诗</td><td>韩系二游长线。</td></tr>
+            <tr><td><span class="rank soft">19</span></td><td>RF ONLINE NEXT</td><td>Netmarble</td><td>中文参考：RF Online Next</td><td>MMO/IP 新作线索。</td></tr>
+            <tr><td><span class="rank soft">20</span></td><td>Puzzles & Conquest</td><td>37GAMES（三七互娱）</td><td>中文参考：谜题与征服</td><td>Puzzle + SLG 混合。</td></tr>
+            <tr><td><span class="rank soft">21</span></td><td>Zenless Zone Zero</td><td>COGNOSPHERE</td><td>中文名：绝区零</td><td>米哈游动作二游。</td></tr>
+            <tr><td><span class="rank soft">22</span></td><td>Overmortal</td><td>LTGAMES GLOBAL</td><td>中文参考：凡人修仙类放置</td><td>修仙题材出海。</td></tr>
+            <tr><td><span class="rank soft">23</span></td><td>XP Hero</td><td>Supercent</td><td>中文参考：经验英雄</td><td>轻量 RPG。</td></tr>
+            <tr><td><span class="rank soft">24</span></td><td>CookieRun: Kingdom</td><td>Devsisters</td><td>中文名：姜饼人王国</td><td>可爱风 RPG/经营。</td></tr>
+            <tr><td><span class="rank soft">25</span></td><td>King's Choice</td><td>ONEMT</td><td>中文参考：国王的选择</td><td>宫廷经营 RPG。</td></tr>
+            <tr><td><span class="rank soft">26</span></td><td>Evo Defense</td><td>BLUE PLANET JOY</td><td>中文参考：进化防御</td><td>防御/塔防线索。</td></tr>
+            <tr><td><span class="rank soft">27</span></td><td>Arknights: Endfield</td><td>GRYPHLINE</td><td>中文名：明日方舟：终末地</td><td>鹰角 IP 新作，二游与开放世界/策略化结合。</td></tr>
+            <tr><td><span class="rank soft">28</span></td><td>WWE Champions</td><td>Scopely</td><td>中文参考：WWE 冠军</td><td>体育 IP RPG。</td></tr>
+            <tr><td><span class="rank soft">29</span></td><td>Little Farm Story</td><td>SayGames</td><td>中文参考：小农场故事</td><td>轻放置。</td></tr>
+            <tr><td><span class="rank soft">30</span></td><td>Ever Night: Reawakening</td><td>Hong Kong Longsin</td><td>中文参考：永夜觉醒</td><td>新品/小体量 RPG 观察。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:18px;">Google Play 美国 Strategy 收入 Top 30</h3>
+      <div class="table-wrap" style="margin-top:10px;">
+        <table>
+          <thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>中文名 / 中文参考</th><th>学习点</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank">1</span></td><td class="product">Kingshot</td><td>Century Games（世纪游戏）</td><td>中文参考：王国射击</td><td>世纪游戏新强势产品，生存/策略包装。</td></tr>
+            <tr><td><span class="rank">2</span></td><td class="product">Whiteout Survival</td><td>Century Games（世纪游戏）</td><td>中文参考：无尽冬日 / 白域生存</td><td>冰雪生存 SLG 标杆。</td></tr>
+            <tr><td><span class="rank">3</span></td><td class="product">Last War: Survival Game</td><td>FUNFLY / FirstFun</td><td>中文参考：最后战争：生存游戏</td><td>轻玩法前置 + SLG 商业化。</td></tr>
+            <tr><td><span class="rank">4</span></td><td class="product">Last Z: Survival Shooter</td><td>Omnilojo</td><td>中文参考：末日 Z</td><td>末日射击 + 策略。</td></tr>
+            <tr><td><span class="rank">5</span></td><td class="product">Total Battle</td><td>Scorewarrior</td><td>中文参考：全面战争策略</td><td>传统战争策略。</td></tr>
+            <tr><td><span class="rank">6</span></td><td>Evony: The King's Return</td><td>TG Inc.</td><td>中文参考：伊凡尼：王者归来</td><td>经典 SLG 买量。</td></tr>
+            <tr><td><span class="rank">7</span></td><td>Last Asylum: Plague</td><td>37GAMES GLOBAL</td><td>中文参考：最后庇护所：瘟疫</td><td>37GAMES 末日线。</td></tr>
+            <tr><td><span class="rank">8</span></td><td>Dark War Survival</td><td>Omnilojo</td><td>中文参考：黑暗战争生存</td><td>生存策略。</td></tr>
+            <tr><td><span class="rank">9</span></td><td>Clash of Clans</td><td>Supercell</td><td>中文名：部落冲突</td><td>经典策略长线。</td></tr>
+            <tr><td><span class="rank">10</span></td><td>Puzzles & Survival</td><td>37GAMES（三七互娱）</td><td>中文参考：谜题与生存</td><td>Puzzle + SLG 标杆。</td></tr>
+            <tr><td><span class="rank soft">11</span></td><td>Puzzles & Chaos</td><td>37GAMES</td><td>中文参考：谜题与混沌</td><td>Puzzle + 城堡 SLG。</td></tr>
+            <tr><td><span class="rank soft">12</span></td><td>Top Heroes</td><td>RiverGame</td><td>中文参考：顶级英雄</td><td>英雄 + 王国策略。</td></tr>
+            <tr><td><span class="rank soft">13</span></td><td>Clash Royale</td><td>Supercell</td><td>中文名：皇室战争</td><td>实时卡牌策略。</td></tr>
+            <tr><td><span class="rank soft">14</span></td><td>Arknights</td><td>Yostar</td><td>中文名：明日方舟</td><td>塔防/二游长线。</td></tr>
+            <tr><td><span class="rank soft">15</span></td><td>Top Girl</td><td>Happy Factory</td><td>中文参考：顶级女孩</td><td>题材差异化策略。</td></tr>
+            <tr><td><span class="rank soft">16</span></td><td>Palmon: Survival</td><td>Lilith</td><td>中文参考：帕鲁生存</td><td>莉莉丝生存策略线索。</td></tr>
+            <tr><td><span class="rank soft">17</span></td><td>Lands of Jail</td><td>Just Game</td><td>中文参考：监狱之地</td><td>题材包装。</td></tr>
+            <tr><td><span class="rank soft">18</span></td><td>The Grand Mafia</td><td>Phantix</td><td>中文参考：黑道风云</td><td>黑帮 SLG 长线。</td></tr>
+            <tr><td><span class="rank soft">19</span></td><td>Rise of Kingdoms</td><td>LilithGames（莉莉丝）</td><td>中文名：万国觉醒</td><td>经典 4X。</td></tr>
+            <tr><td><span class="rank soft">20</span></td><td>Age of Origins</td><td>CamelStudio</td><td>中文参考：起源时代</td><td>末日 SLG。</td></tr>
+            <tr><td><span class="rank soft">21</span></td><td>Game of Thrones: Dragonfire</td><td>Warner Bros.</td><td>中文参考：权力的游戏：龙焰</td><td>影视 IP 策略。</td></tr>
+            <tr><td><span class="rank soft">22</span></td><td>Star Trek Fleet Command</td><td>Scopely</td><td>中文参考：星际迷航舰队指挥</td><td>科幻 IP SLG。</td></tr>
+            <tr><td><span class="rank soft">23</span></td><td>Top War</td><td>RiverGame</td><td>中文参考：口袋奇兵 / 顶级战争</td><td>合成 + 策略。</td></tr>
+            <tr><td><span class="rank soft">24</span></td><td>Tiles Survive!</td><td>FunPlus</td><td>中文参考：瓷砖生存</td><td>FunPlus 新线索。</td></tr>
+            <tr><td><span class="rank soft">25</span></td><td>Lords Mobile</td><td>IGG</td><td>中文名：王国纪元</td><td>老牌 SLG。</td></tr>
+            <tr><td><span class="rank soft">26</span></td><td>Police Chief</td><td>VoyagerOne</td><td>中文参考：警察局长</td><td>职业题材策略。</td></tr>
+            <tr><td><span class="rank soft">27</span></td><td>Duck Survival</td><td>Joy Nice Games</td><td>中文参考：鸭子生存</td><td>动物拟人题材生存。</td></tr>
+            <tr><td><span class="rank soft">28</span></td><td>Mafia City</td><td>Phantix</td><td>中文名：黑道风云</td><td>黑帮 SLG 长线。</td></tr>
+            <tr><td><span class="rank soft">29</span></td><td>Infinity Kingdom</td><td>Yoozoo</td><td>中文参考：无尽王国</td><td>游族策略。</td></tr>
+            <tr><td><span class="rank soft">30</span></td><td>Stormshot</td><td>FunPlus</td><td>中文参考：风暴射击</td><td>射击解谜 + SLG。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="sources">
+      <h2>来源与口径</h2>
+      <ul>
+        <li><a href="https://www.appbrain.com/stats/google-play-rankings/top_grossing/puzzle/us">AppBrain：Google Play 美国 Puzzle 收入榜</a>，页面标注 Last updated: July 28, 2026。</li>
+        <li><a href="https://www.appbrain.com/stats/appstore-rankings/top_grossing/games_puzzle/us">AppBrain：iOS 美国 Puzzle 收入榜</a>，页面标注 Last updated: July 28, 2026。</li>
+        <li><a href="https://www.appbrain.com/stats/google-play-rankings/top_free/puzzle/us">AppBrain：Google Play 美国 Puzzle 免费榜</a>，页面说明榜单每日从 Google Play 刷新。</li>
+        <li><a href="https://www.appbrain.com/stats/google-play-rankings/top_grossing/role_playing/us">AppBrain：Google Play 美国 RPG 收入榜</a>，页面标注 Last updated: July 28, 2026。</li>
+        <li><a href="https://www.appbrain.com/stats/google-play-rankings/top_grossing/strategy/us">AppBrain：Google Play 美国 Strategy 收入榜</a>，页面标注 Last updated: July 28, 2026。</li>
+      </ul>
+      <div class="notice"><strong>自动化备注：</strong>今天 10:40 检查时，本地没有发现 2026-07-29 文件，Windows 任务查询也未找到 GameIntelligenceDailyPublish。因此本期为手动补更；后续需要重新确认 Windows 每日任务已由当前 Windows 用户创建。</div>
+    </section>
+
+    <footer>生成日期：2026-07-29 10:40（Asia/Shanghai）。要求：陈列清晰、不省略榜单、厂商名称与游戏名称补中文称呼。</footer>
+  </main>
+</body>
+</html>
