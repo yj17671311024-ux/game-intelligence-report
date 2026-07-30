@@ -481,20 +481,17 @@
       if (entry.image) {
         const img = document.createElement("img");
         const assetPrefix = location.pathname.includes("/archive/") ? "../" : "";
-        img.src = entry.image.startsWith("assets/") ? `${assetPrefix}${entry.image}` : entry.image;
         img.alt = `${gameKey} icon`;
-        img.loading = "lazy";
         img.referrerPolicy = "no-referrer";
-        img.onload = () => {
-          icon.textContent = "";
-          icon.classList.remove("fallback");
-          icon.appendChild(img);
-        };
         img.onerror = () => {
           img.remove();
           icon.classList.add("fallback");
           icon.textContent = icon.dataset.initial;
         };
+        icon.textContent = "";
+        icon.classList.remove("fallback");
+        icon.appendChild(img);
+        img.src = entry.image.startsWith("assets/") ? `${assetPrefix}${entry.image}` : entry.image;
       } else {
         icon.classList.add("fallback");
         icon.textContent = entry.initial;
