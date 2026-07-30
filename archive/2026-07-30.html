@@ -68,11 +68,22 @@
     .product { font-weight: 800; color: #222832; }
     .cn { display: block; color: #526071; font-weight: 500; margin-top: 2px; font-size: 13px; }
     .tag { display: inline-block; margin-top: 4px; border-radius: 6px; padding: 2px 7px; background: var(--soft); color: #516070; font-size: 12px; }
+    .visual-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
+    .visual-card { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 12px; align-items: center; padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: #fff; min-width: 0; }
+    .visual-card strong { display: block; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .visual-card span { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+    .app-icon { width: 46px; height: 46px; flex: 0 0 46px; display: inline-flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 10px; border: 1px solid rgba(36, 45, 55, .16); background: linear-gradient(135deg, #e9f4f8, #f8f1df); color: #26313d; font-size: 15px; font-weight: 900; box-shadow: inset 0 0 0 1px rgba(255,255,255,.25); }
+    .app-icon.large { width: 58px; height: 58px; flex-basis: 58px; border-radius: 12px; font-size: 18px; }
+    .app-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .app-icon.fallback { letter-spacing: 0; }
+    td.product-with-icon { min-width: 220px; }
+    .product-cell { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 10px; align-items: center; }
+    .product-text { min-width: 0; }
     ul, ol { margin: 8px 0 0 20px; padding: 0; }
     li { margin: 5px 0; }
     footer { color: var(--muted); margin-top: 20px; font-size: 13px; }
     @media (max-width: 860px) {
-      .hero, .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .hero, .grid-2, .grid-3, .visual-strip { grid-template-columns: 1fr; }
       .hero { padding: 22px; }
       .section { padding: 20px; }
       table { min-width: 860px; }
@@ -105,12 +116,32 @@
 
     <nav>
       <a href="#summary">今日结论</a>
+      <a href="#visual">图像速览</a>
       <a href="#changes">动态</a>
       <a href="#makers">厂商学习</a>
       <a href="#puzzle">Puzzle 完整榜单</a>
       <a href="#male">男性向 / RPG / Strategy</a>
       <a href="#sources">来源</a>
     </nav>
+
+    <section class="section" id="visual">
+      <div class="section-head">
+        <div>
+          <h2>图像速览</h2>
+          <p class="sub">先用 icon 把今天最值得盯的产品拎出来，降低通篇文字的阅读压力。</p>
+        </div>
+      </div>
+      <div class="visual-strip">
+        <div class="visual-card" data-game="Royal Match"><span class="app-icon large"></span><div><strong>Royal Match</strong><span>Dream Games / Puzzle 收入头部</span></div></div>
+        <div class="visual-card" data-game="Gossip Harbor"><span class="app-icon large"></span><div><strong>Gossip Harbor</strong><span>柠檬微趣 / Merge Story</span></div></div>
+        <div class="visual-card" data-game="Royal Kingdom"><span class="app-icon large"></span><div><strong>Royal Kingdom</strong><span>Dream 第二产品</span></div></div>
+        <div class="visual-card" data-game="Fishdom"><span class="app-icon large"></span><div><strong>Fishdom</strong><span>Playrix 老产品回升</span></div></div>
+        <div class="visual-card" data-game="Match Factory"><span class="app-icon large"></span><div><strong>Match Factory</strong><span>Peak / 3D Match</span></div></div>
+        <div class="visual-card" data-game="GODDESS OF VICTORY: NIKKE"><span class="app-icon large"></span><div><strong>NIKKE</strong><span>Level Infinite / 二游 RPG</span></div></div>
+        <div class="visual-card" data-game="Kingshot"><span class="app-icon large"></span><div><strong>Kingshot</strong><span>Century Games / Strategy</span></div></div>
+        <div class="visual-card" data-game="Whiteout Survival"><span class="app-icon large"></span><div><strong>Whiteout Survival</strong><span>Century Games / 生存 SLG</span></div></div>
+      </div>
+    </section>
 
     <section class="section" id="summary">
       <div class="section-head">
@@ -411,6 +442,81 @@
 
     <footer>生成日期：2026-07-30 11:10（Asia/Shanghai）。要求：陈列清晰、不省略榜单、厂商名称与游戏名称补中文称呼。</footer>
   </main>
+  <script>
+    const iconMap = {
+      "Royal Match": { initial: "RM", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "https://play-lh.googleusercontent.com/RBnqZ3q_jjOREX6v49DGe4BzKGNwJMcv8aBNDeDuMRFQdyX6rA7S-k5N39ggj43XeKFGLmxuH1jOYONfbUHmYA%3Dw240-h480" },
+      "Gossip Harbor": { initial: "GH", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "https://play-lh.googleusercontent.com/qKeDsPsOqyEWuCS_Z8VE1mis-cfxO1xlduqxK_FjFyH_SNor1mDUNmScpibJp7M_gVIjDqS-SyxCdPxHlWmCRt4%3Dw240-h480" },
+      "Royal Kingdom": { initial: "RK", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "https://play-lh.googleusercontent.com/O83j-W51jyftL_iGe0uXLg_aMWlXBDrdN1sbTK6VJ9uYui4lfs6rA1CYXb1SDMFJjZU7LOMygNxySQnBZ9A5Bg%3Dw240-h480" },
+      "Toon Blast": { initial: "TB", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "https://play-lh.googleusercontent.com/ekfU_7pbR8Oj6vDY9JCznGiMwQm96gmatyBlv9MyvgPnNhmodMo1fZgrQu7NfQ9WY2K4DIxd7TyETGgXH2qq%3Dw240-h480" },
+      "Fishdom": { initial: "FD", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "https://play-lh.googleusercontent.com/xCNnX62AirslBmOf5Zp2fySAT9S9XsMUAK3PUGeLVCO4uYHGvfG8lHEof253BQ2q1vS85qsySHt8imuLfIMw%3Dw240-h480" },
+      "Match Factory": { initial: "MF", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "https://play-lh.googleusercontent.com/TfYptHuK821z2ugqfa7JUomzdoWWV1jBuO1hNraCb0TNAD-zplUWditdZPndKzN50fqzdWBEUp81vMi-s0B4%3Dw240-h480" },
+      "GODDESS OF VICTORY: NIKKE": { initial: "NK", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "https://play-lh.googleusercontent.com/JK5mejs0bVT_9613gCxNfCjRw_m3JiQ4wC8B8Kt471yu7ThFQazVkCLTfPZ81hnenft7ilaE-qSwVGpQT6sEFcY%3Dw240-h480" },
+      "Kingshot": { initial: "KS", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "https://play-lh.googleusercontent.com/cs59HOM5uSmSzgnmMyFpqYw9sMtQkYxMUTRZ1TSCZK6t6T-cjluQW_9krAcgeEozBYQWKl2DmUTeETdYtKhq%3Dw240-h480" },
+      "Whiteout Survival": { initial: "WS", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "https://play-lh.googleusercontent.com/tNMaMiJ4wTQy_TeZSWHdSlP5qH0PGig9g9sDJu2QFvCHdnrbo2u17pX55W4i6KITo56v_ZyICkqLgA2svH9ycQ%3Dw240-h480" },
+      "Candy Crush Saga": { initial: "CC", color: "linear-gradient(135deg,#e94f87,#ffc83d)" },
+      "Township": { initial: "TS", color: "linear-gradient(135deg,#4ca55d,#f1d46b)" },
+      "Gardenscapes": { initial: "GS", color: "linear-gradient(135deg,#4f8f4f,#f2d46b)" },
+      "Homescapes": { initial: "HS", color: "linear-gradient(135deg,#4d78bd,#f0b354)" },
+      "Pixel Flow": { initial: "PF", color: "linear-gradient(135deg,#5ec6ff,#b36cff)" },
+      "Yarn Loop": { initial: "YL", color: "linear-gradient(135deg,#f59bc8,#ffd27a)" },
+      "Magic Sort": { initial: "MS", color: "linear-gradient(135deg,#8b5cf6,#22c55e)" },
+      "Puzzles & Survival": { initial: "PS", color: "linear-gradient(135deg,#334155,#84cc16)" },
+      "Arknights": { initial: "AK", color: "linear-gradient(135deg,#1f2937,#94a3b8)" }
+    };
+
+    function matchIconEntry(text) {
+      const normalized = text.replace(/\s+/g, " ").trim();
+      const keys = Object.keys(iconMap).sort((a, b) => b.length - a.length);
+      return keys.find((key) => normalized.includes(key));
+    }
+
+    function makeIcon(gameKey, sizeClass = "") {
+      const entry = iconMap[gameKey] || { initial: (gameKey || "?").slice(0, 2).toUpperCase(), color: "linear-gradient(135deg,#e9f4f8,#f8f1df)" };
+      const icon = document.createElement("span");
+      icon.className = `app-icon ${sizeClass}`.trim();
+      icon.style.background = entry.color;
+      icon.dataset.initial = entry.initial;
+      if (entry.image) {
+        const img = document.createElement("img");
+        img.src = entry.image;
+        img.alt = `${gameKey} icon`;
+        img.loading = "lazy";
+        img.referrerPolicy = "no-referrer";
+        img.onerror = () => {
+          img.remove();
+          icon.classList.add("fallback");
+          icon.textContent = icon.dataset.initial;
+        };
+        icon.appendChild(img);
+      } else {
+        icon.classList.add("fallback");
+        icon.textContent = entry.initial;
+      }
+      return icon;
+    }
+
+    document.querySelectorAll(".visual-card").forEach((card) => {
+      const gameKey = card.dataset.game;
+      const holder = card.querySelector(".app-icon");
+      if (holder && gameKey) holder.replaceWith(makeIcon(gameKey, "large"));
+    });
+
+    document.querySelectorAll("#puzzle tbody tr, #male tbody tr").forEach((row) => {
+      const cell = row.children[1];
+      if (!cell || cell.querySelector(".product-cell")) return;
+      const key = matchIconEntry(cell.textContent);
+      const iconKey = key || cell.textContent.trim().slice(0, 18);
+      const wrap = document.createElement("div");
+      wrap.className = "product-cell";
+      const textWrap = document.createElement("div");
+      textWrap.className = "product-text";
+      while (cell.firstChild) textWrap.appendChild(cell.firstChild);
+      wrap.appendChild(makeIcon(iconKey));
+      wrap.appendChild(textWrap);
+      cell.classList.add("product-with-icon");
+      cell.appendChild(wrap);
+    });
+  </script>
 </body>
 </html>
 
