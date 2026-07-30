@@ -592,6 +592,9 @@
         const img = document.createElement("img");
         const assetPrefix = location.pathname.includes("/archive/") ? "../" : "";
         img.alt = `${gameKey} icon`;
+        img.loading = sizeClass.includes("large") ? "eager" : "lazy";
+        img.decoding = "async";
+        if (sizeClass.includes("large")) img.fetchPriority = "high";
         img.referrerPolicy = "no-referrer";
         img.onerror = () => {
           img.remove();
