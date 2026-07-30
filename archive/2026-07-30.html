@@ -444,15 +444,15 @@
   </main>
   <script>
     const iconMap = {
-      "Royal Match": { initial: "RM", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "https://play-lh.googleusercontent.com/RBnqZ3q_jjOREX6v49DGe4BzKGNwJMcv8aBNDeDuMRFQdyX6rA7S-k5N39ggj43XeKFGLmxuH1jOYONfbUHmYA=s96-rw" },
-      "Gossip Harbor": { initial: "GH", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "https://play-lh.googleusercontent.com/qKeDsPsOqyEWuCS_Z8VE1mis-cfxO1xlduqxK_FjFyH_SNor1mDUNmScpibJp7M_gVIjDqS-SyxCdPxHlWmCRt4=s96-rw" },
-      "Royal Kingdom": { initial: "RK", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "https://play-lh.googleusercontent.com/O83j-W51jyftL_iGe0uXLg_aMWlXBDrdN1sbTK6VJ9uYui4lfs6rA1CYXb1SDMFJjZU7LOMygNxySQnBZ9A5Bg=s96-rw" },
-      "Toon Blast": { initial: "TB", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "https://play-lh.googleusercontent.com/ekfU_7pbR8Oj6vDY9JCznGiMwQm96gmatyBlv9MyvgPnNhmodMo1fZgrQu7NfQ9WY2K4DIxd7TyETGgXH2qq=s96-rw" },
-      "Fishdom": { initial: "FD", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "https://play-lh.googleusercontent.com/xCNnX62AirslBmOf5Zp2fySAT9S9XsMUAK3PUGeLVCO4uYHGvfG8lHEof253BQ2q1vS85qsySHt8imuLfIMw=s96-rw" },
-      "Match Factory": { initial: "MF", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "https://play-lh.googleusercontent.com/TfYptHuK821z2ugqfa7JUomzdoWWV1jBuO1hNraCb0TNAD-zplUWditdZPndKzN50fqzdWBEUp81vMi-s0B4=s96-rw" },
-      "GODDESS OF VICTORY: NIKKE": { initial: "NK", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "https://play-lh.googleusercontent.com/JK5mejs0bVT_9613gCxNfCjRw_m3JiQ4wC8B8Kt471yu7ThFQazVkCLTfPZ81hnenft7ilaE-qSwVGpQT6sEFcY=s96-rw" },
-      "Kingshot": { initial: "KS", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "https://play-lh.googleusercontent.com/cs59HOM5uSmSzgnmMyFpqYw9sMtQkYxMUTRZ1TSCZK6t6T-cjluQW_9krAcgeEozBYQWKl2DmUTeETdYtKhq=s96-rw" },
-      "Whiteout Survival": { initial: "WS", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "https://play-lh.googleusercontent.com/tNMaMiJ4wTQy_TeZSWHdSlP5qH0PGig9g9sDJu2QFvCHdnrbo2u17pX55W4i6KITo56v_ZyICkqLgA2svH9ycQ=s96-rw" },
+      "Royal Match": { initial: "RM", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/royal-match.svg" },
+      "Gossip Harbor": { initial: "GH", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/gossip-harbor.svg" },
+      "Royal Kingdom": { initial: "RK", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/royal-kingdom.svg" },
+      "Toon Blast": { initial: "TB", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/toon-blast.svg" },
+      "Fishdom": { initial: "FD", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/fishdom.svg" },
+      "Match Factory": { initial: "MF", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/match-factory.svg" },
+      "GODDESS OF VICTORY: NIKKE": { initial: "NK", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/nikke.svg" },
+      "Kingshot": { initial: "KS", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/kingshot.svg" },
+      "Whiteout Survival": { initial: "WS", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/whiteout-survival.svg" },
       "Candy Crush Saga": { initial: "CC", color: "linear-gradient(135deg,#e94f87,#ffc83d)" },
       "Township": { initial: "TS", color: "linear-gradient(135deg,#4ca55d,#f1d46b)" },
       "Gardenscapes": { initial: "GS", color: "linear-gradient(135deg,#4f8f4f,#f2d46b)" },
@@ -476,18 +476,25 @@
       icon.className = `app-icon ${sizeClass}`.trim();
       icon.style.background = entry.color;
       icon.dataset.initial = entry.initial;
+      icon.classList.add("fallback");
+      icon.textContent = entry.initial;
       if (entry.image) {
         const img = document.createElement("img");
-        img.src = entry.image.replace(/%3D/gi, "=").replace(/=w240-h480$/i, "=s96-rw");
+        const assetPrefix = location.pathname.includes("/archive/") ? "../" : "";
+        img.src = entry.image.startsWith("assets/") ? `${assetPrefix}${entry.image}` : entry.image;
         img.alt = `${gameKey} icon`;
         img.loading = "lazy";
         img.referrerPolicy = "no-referrer";
+        img.onload = () => {
+          icon.textContent = "";
+          icon.classList.remove("fallback");
+          icon.appendChild(img);
+        };
         img.onerror = () => {
           img.remove();
           icon.classList.add("fallback");
           icon.textContent = icon.dataset.initial;
         };
-        icon.appendChild(img);
       } else {
         icon.classList.add("fallback");
         icon.textContent = entry.initial;
@@ -519,5 +526,6 @@
   </script>
 </body>
 </html>
+
 
 
