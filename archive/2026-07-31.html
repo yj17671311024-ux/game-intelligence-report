@@ -35,7 +35,41 @@
     .app-icon.large { width:58px; height:58px; flex-basis:58px; border-radius:12px; font-size:18px; } .app-icon img { width:100%; height:100%; object-fit:cover; display:block; } .app-icon.fallback { letter-spacing:0; }
     td.product-with-icon { min-width:220px; } .product-cell { display:grid; grid-template-columns:46px minmax(0,1fr); gap:10px; align-items:center; } .product-text { min-width:0; }
     ul,ol { margin:8px 0 0 20px; padding:0; } li { margin:5px 0; } footer { color:var(--muted); margin-top:20px; font-size:13px; }
-    @media (max-width:860px) { .hero,.grid-2,.grid-3,.visual-strip { grid-template-columns:1fr; } .hero { padding:22px; } .section { padding:20px; } table { min-width:860px; } }
+
+
+
+    .studio-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; align-items:start; }
+    .studio-card { border:1px solid var(--line); border-radius:8px; background:#fff; overflow:hidden; min-width:0; transition:box-shadow .18s ease, transform .18s ease; }
+    .studio-card[open] { box-shadow:0 10px 24px rgba(28,58,75,.08); }
+    .studio-card summary { list-style:none; cursor:pointer; padding:16px; display:grid; gap:10px; }
+    .studio-card summary::-webkit-details-marker { display:none; }
+    .studio-card[open] summary { border-bottom:1px solid var(--line); background:#fbfcfd; }
+    .studio-card:not([open]) summary:hover { background:#fbfcfd; }
+    .studio-summary { display:grid; grid-template-columns:54px minmax(0,1fr) auto; gap:12px; align-items:center; }
+    .studio-mark { width:54px; height:54px; border-radius:12px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:900; font-size:13px; background:linear-gradient(135deg,var(--blue),#2f9a91); box-shadow:inset 0 0 0 1px rgba(255,255,255,.22); }
+    .studio-title { min-width:0; }
+    .studio-title h3 { color:var(--ink); margin:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .studio-title span { color:var(--muted); display:block; margin-top:3px; font-size:13px; }
+    .studio-toggle { color:var(--blue); font-size:13px; font-weight:800; white-space:nowrap; }
+    .studio-card[open] .studio-toggle::after { content:"收起"; }
+    .studio-card:not([open]) .studio-toggle::after { content:"展开"; }
+    .studio-toggle { font-size:0; }
+    .studio-toggle::after { font-size:13px; }
+    .studio-intro { color:#4e5b6b; margin:0; }
+    .studio-metrics { display:flex; flex-wrap:wrap; gap:8px; }
+    .studio-metrics span { border:1px solid var(--line); background:#f6f8fa; color:#495664; border-radius:999px; padding:4px 8px; font-size:12px; }
+    .studio-body { padding:14px 16px 16px; }
+    .studio-thesis { color:#3f4d5c; margin-bottom:12px; }
+    .studio-products { display:grid; gap:0; border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#fff; }
+    .studio-product { display:grid; grid-template-columns:46px minmax(0,1fr) minmax(145px,auto); gap:10px; align-items:center; padding:10px; border-top:1px solid var(--line); background:#fff; }
+    .studio-product:first-child { border-top:0; }
+    .studio-product-text { min-width:0; }
+    .studio-product-text strong { display:block; color:#20242a; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .studio-product-text span { color:#526071; display:block; font-size:13px; margin-top:1px; }
+    .studio-product-text p { color:#4e5b6b; margin-top:5px; font-size:13px; }
+    .studio-rank-pill { justify-self:end; max-width:220px; border-radius:8px; background:#eef8fb; border:1px solid #bfdae2; color:var(--blue); font-size:12px; font-weight:800; line-height:1.35; padding:6px 8px; text-align:right; }
+
+    @media (max-width:860px) { .hero,.grid-2,.grid-3,.visual-strip,.studio-grid { grid-template-columns:1fr; } .studio-product { grid-template-columns:42px minmax(0,1fr); } .studio-rank-pill { grid-column:1 / -1; justify-self:start; text-align:left; max-width:none; } .hero { padding:22px; } .section { padding:20px; } table { min-width:860px; } }
   </style>
 </head>
 <body>
@@ -114,24 +148,568 @@
     </section>
 
     <section id="studios" class="section">
-      <h2>厂商学习卡</h2>
-      <p class="sub">国外厂商如无稳定官方中文名，用“中文参考/常见叫法”辅助记忆。</p>
-      <div class="table-wrap" style="margin-top:14px">
-        <table>
-          <thead><tr><th>厂商</th><th>中文称呼</th><th>代表产品集</th><th>今日榜单信号</th><th>学习点</th></tr></thead>
-          <tbody><tr><td>Dream Games</td><td>梦之游戏</td><td>Royal Match、Royal Kingdom</td><td>双产品同时占据 GP Puzzle 前三，iOS Royal Kingdom 进入前四。</td><td>学习单玩法精品化、第二产品承接、王室题材包装和关卡产能。</td></tr>
-<tr><td>Microfun Limited</td><td>柠檬微趣</td><td>Gossip Harbor、Flambe、Seaside Escape</td><td>GP Puzzle #2/#10/#18；iOS #3/#23/#26。</td><td>最值得系统学习的 merge/story 厂商：订单、剧情、装修/经营目标如何延长留存。</td></tr>
-<tr><td>Peak / Peak Games</td><td>Peak，Zynga 旗下土耳其团队</td><td>Toon Blast、Match Factory、Toy Blast</td><td>GP Puzzle #4/#6/#15；iOS #6/#10/#25。</td><td>从 Blast 老产品到 3D Match 新品的连续能力。</td></tr>
-<tr><td>Playrix</td><td>Playrix；中文可记为梦幻系厂商</td><td>Fishdom、Township、Gardenscapes、Homescapes</td><td>GP Fishdom #5；iOS 多款仍在前 15。</td><td>多老产品矩阵仍强，学习消除 + 家园/花园/小镇/水族箱的长期内容框架。</td></tr>
-<tr><td>King</td><td>King；Candy Crush 厂商</td><td>Candy Crush Saga、Candy Crush Soda Saga</td><td>iOS Puzzle #2/#20。</td><td>长期运营、品牌资产和活动节奏样本。</td></tr>
-<tr><td>Century Games</td><td>世纪游戏</td><td>Kingshot、Whiteout Survival、Tasty Travels</td><td>Strategy #1/#2；iOS Puzzle #7。</td><td>同集团横跨男向 SLG 与休闲 merge，适合看品类横向能力。</td></tr>
-<tr><td>37GAMES</td><td>三七互娱海外品牌</td><td>Puzzles &amp; Survival、Puzzles &amp; Chaos、Puzzles &amp; Conquest、Last Asylum</td><td>Strategy #7/#9/#11；RPG #24。</td><td>Puzzle + SLG/RPG 混合框架，男向数值与轻 puzzle 的结合案例。</td></tr>
-<tr><td>COGNOSPHERE / HoYoverse</td><td>米哈游海外发行主体</td><td>Zenless Zone Zero</td><td>RPG #2。</td><td>二游大版本/周年活动拉榜效果明显，重点看角色、活动和内容更新节奏。</td></tr>
-<tr><td>Level Infinite</td><td>腾讯 Level Infinite</td><td>GODDESS OF VICTORY: NIKKE</td><td>RPG #4。</td><td>二游角色收集在美国 Android 收入榜仍强，适合看美术资产、角色活动和抽卡商业化。</td></tr>
-<tr><td>Supercell</td><td>Supercell</td><td>Clash of Clans、Clash Royale</td><td>Strategy #10/#15。</td><td>经典策略长线，适合作为成熟玩法和社区运营参照。</td></tr>
-<tr><td>Lilith / LilithGames</td><td>莉莉丝</td><td>Palmon: Survival、Rise of Kingdoms、AFK Arena</td><td>Strategy #13/#20；RPG #30。</td><td>SLG 与放置 RPG 长线能力，关注新品题材包装。</td></tr>
-<tr><td>FunPlus</td><td>FunPlus</td><td>Tiles Survive、Guns of Glory、Stormshot</td><td>Strategy #24/#29/#30。</td><td>老牌 SLG 厂商继续在榜尾有多条线索。</td></tr></tbody>
-        </table>
+      <div class="section-head">
+        <div>
+          <h2>厂商学习卡</h2>
+          <p class="sub">按厂商聚合产品矩阵。点开每张卡，可以看到该厂商的标志性产品、真实 icon、当前排名和可学习点。</p>
+        </div>
+      </div>
+      <div class="studio-grid">
+        <details class="studio-card" open>
+          <summary>
+            <div class="studio-summary">
+              <div class="studio-mark">Dream</div>
+              <div class="studio-title">
+                <h3>Dream Games</h3>
+                <span>梦之游戏</span>
+              </div>
+              <div class="studio-toggle">点开</div>
+            </div>
+            <p class="studio-intro">土耳其头部休闲游戏厂商，代表路径是把单一 Match-3 玩法做到极高完成度，再用第二产品承接同一套能力。</p>
+            <div class="studio-metrics">
+              <span>2 款标志产品</span>
+              <span>Puzzle 精品化</span>
+              <span>GP Puzzle 收入 #1 / iOS Puzzle 收入 #1 / GP 免费 #12</span>
+            </div>
+          </summary>
+          <div class="studio-body">
+            <p class="studio-thesis">学习重点：关卡产能、失败-重试节奏、王室题材包装、活动节奏与第二产品差异化。</p>
+            <div class="studio-products">
+              <article class="studio-product" data-game="Royal Match">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Royal Match</strong>
+                  <span>中文名：皇家消除</span>
+                  <p>头部标杆，观察关卡、活动、装修叙事和礼包节奏。</p>
+                </div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #1 / iOS Puzzle 收入 #1 / GP 免费 #12</div>
+              </article>
+              <article class="studio-product" data-game="Royal Kingdom">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Royal Kingdom</strong>
+                  <span>中文名：皇家王国</span>
+                  <p>第二产品样本，重点看如何复用 Royal Match 能力又做差异化。</p>
+                </div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #3 / iOS Puzzle 收入 #4 / GP 免费 #19</div>
+              </article>
+            </div>
+          </div>
+        </details>
+        <details class="studio-card" open>
+          <summary>
+            <div class="studio-summary">
+              <div class="studio-mark">Micro</div>
+              <div class="studio-title">
+                <h3>Microfun Limited</h3>
+                <span>柠檬微趣</span>
+              </div>
+              <div class="studio-toggle">点开</div>
+            </div>
+            <p class="studio-intro">中国出海休闲厂商，强项是 merge、剧情、订单和场景修复目标的组合。</p>
+            <div class="studio-metrics">
+              <span>3 款标志产品</span>
+              <span>Merge / Story</span>
+              <span>GP Puzzle 收入 #2 / iOS Puzzle 收入 #3</span>
+            </div>
+          </summary>
+          <div class="studio-body">
+            <p class="studio-thesis">学习重点：订单系统如何驱动资源循环，剧情和装修目标如何延长留存，多产品如何复用 merge/story 框架。</p>
+            <div class="studio-products">
+              <article class="studio-product" data-game="Gossip Harbor: Merge &amp; Story">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Gossip Harbor: Merge &amp; Story</strong>
+                  <span>中文名：浪漫餐厅</span>
+                  <p>merge/story 头部样本，订单、剧情、场景修复都值得拆。</p>
+                </div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #2 / iOS Puzzle 收入 #3</div>
+              </article>
+              <article class="studio-product" data-game="Flambe: Merge &amp; Cook">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Flambe: Merge &amp; Cook</strong>
+                  <span>中文名：合成与烹饪</span>
+                  <p>同框架换烹饪题材，看题材包装与新手期差异。</p>
+                </div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #10 / iOS Puzzle 收入 #23</div>
+              </article>
+              <article class="studio-product" data-game="Seaside Escape">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Seaside Escape</strong>
+                  <span>中文名：梦幻旅行</span>
+                  <p>产品矩阵补位，适合看长期运营和内容扩展。</p>
+                </div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #18 / iOS Puzzle 收入 #26</div>
+              </article>
+            </div>
+          </div>
+        </details>
+        <details class="studio-card" >
+          <summary>
+            <div class="studio-summary">
+              <div class="studio-mark">Peak</div>
+              <div class="studio-title">
+                <h3>Peak / Peak Games</h3>
+                <span>Peak，Zynga 旗下土耳其团队</span>
+              </div>
+              <div class="studio-toggle">点开</div>
+            </div>
+            <p class="studio-intro">经典休闲厂商，从 Blast 老产品延伸到 3D Match，产品组合能看出玩法迁移能力。</p>
+            <div class="studio-metrics">
+              <span>3 款标志产品</span>
+              <span>Blast / 3D Match</span>
+              <span>GP Puzzle 收入 #4 / iOS Puzzle 收入 #6</span>
+            </div>
+          </summary>
+          <div class="studio-body">
+            <p class="studio-thesis">学习重点：老产品长线运营、关卡池维护、从 2D Blast 到 3D Match 的商业化迁移。</p>
+            <div class="studio-products">
+              <article class="studio-product" data-game="Toon Blast">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Toon Blast</strong>
+                  <span>中文名：卡通爆破</span>
+                  <p>老牌 Blast 长线运营样本。</p>
+                </div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #4 / iOS Puzzle 收入 #6</div>
+              </article>
+              <article class="studio-product" data-game="Match Factory!">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Match Factory!</strong>
+                  <span>中文名：匹配工厂</span>
+                  <p>3D Match 收入化样本，看物件设计、清屏反馈和活动节奏。</p>
+                </div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #6 / iOS Puzzle 收入 #10</div>
+              </article>
+              <article class="studio-product" data-game="Toy Blast">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Toy Blast</strong>
+                  <span>中文名：玩具爆破</span>
+                  <p>Peak 早期老产品，适合和 Toon Blast 对照。</p>
+                </div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #15 / iOS Puzzle 收入 #25</div>
+              </article>
+            </div>
+          </div>
+        </details>
+        <details class="studio-card" >
+          <summary>
+            <div class="studio-summary">
+              <div class="studio-mark">Playrix</div>
+              <div class="studio-title">
+                <h3>Playrix</h3>
+                <span>Playrix；可记为梦幻系厂商</span>
+              </div>
+              <div class="studio-toggle">点开</div>
+            </div>
+            <p class="studio-intro">长线休闲产品矩阵厂商，擅长把消除与家装、花园、小镇、水族箱等长期目标结合。</p>
+            <div class="studio-metrics">
+              <span>4 款标志产品</span>
+              <span>消除 + Meta</span>
+              <span>GP Puzzle 收入 #5 / iOS Puzzle 收入 #14</span>
+            </div>
+          </summary>
+          <div class="studio-body">
+            <p class="studio-thesis">学习重点：老产品长期内容框架、主题化装修目标、多产品矩阵的稳定经营。</p>
+            <div class="studio-products">
+              <article class="studio-product" data-game="Fishdom">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Fishdom</strong>
+                  <span>中文名：梦幻水族箱</span>
+                  <p>水族箱养成目标仍有效，适合看装饰与关卡结合。</p>
+                </div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #5 / iOS Puzzle 收入 #14</div>
+              </article>
+              <article class="studio-product" data-game="Township">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Township</strong>
+                  <span>中文名：梦想小镇</span>
+                  <p>经营/小镇题材，适合看长线生产系统。</p>
+                </div>
+                <div class="studio-rank-pill">iOS Puzzle 收入 #5</div>
+              </article>
+              <article class="studio-product" data-game="Gardenscapes">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Gardenscapes</strong>
+                  <span>中文名：梦幻花园</span>
+                  <p>花园修复 meta 经典样本。</p>
+                </div>
+                <div class="studio-rank-pill">iOS Puzzle 收入 #8</div>
+              </article>
+              <article class="studio-product" data-game="Homescapes">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Homescapes</strong>
+                  <span>中文名：梦幻家园</span>
+                  <p>家装叙事与角色关系长期运营。</p>
+                </div>
+                <div class="studio-rank-pill">iOS Puzzle 收入 #12</div>
+              </article>
+            </div>
+          </div>
+        </details>
+        <details class="studio-card" >
+          <summary>
+            <div class="studio-summary">
+              <div class="studio-mark">King</div>
+              <div class="studio-title">
+                <h3>King</h3>
+                <span>King；Candy Crush 厂商</span>
+              </div>
+              <div class="studio-toggle">点开</div>
+            </div>
+            <p class="studio-intro">全球最经典的 Match-3 厂商之一，强项是品牌资产、关卡池和活动运营。</p>
+            <div class="studio-metrics">
+              <span>2 款标志产品</span>
+              <span>经典 Match-3</span>
+              <span>iOS Puzzle 收入 #2</span>
+            </div>
+          </summary>
+          <div class="studio-body">
+            <p class="studio-thesis">学习重点：老产品持续变现、品牌认知、活动节奏、关卡难度曲线。</p>
+            <div class="studio-products">
+              <article class="studio-product" data-game="Candy Crush Saga">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Candy Crush Saga</strong>
+                  <span>中文名：糖果传奇</span>
+                  <p>经典长线标杆，适合看活动和关卡难度。</p>
+                </div>
+                <div class="studio-rank-pill">iOS Puzzle 收入 #2</div>
+              </article>
+              <article class="studio-product" data-game="Candy Crush Soda Saga">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Candy Crush Soda Saga</strong>
+                  <span>中文名：糖果苏打传奇</span>
+                  <p>第二产品长线，适合看品牌内差异化。</p>
+                </div>
+                <div class="studio-rank-pill">iOS Puzzle 收入 #20</div>
+              </article>
+            </div>
+          </div>
+        </details>
+        <details class="studio-card" >
+          <summary>
+            <div class="studio-summary">
+              <div class="studio-mark">Century</div>
+              <div class="studio-title">
+                <h3>Century Games</h3>
+                <span>世纪游戏</span>
+              </div>
+              <div class="studio-toggle">点开</div>
+            </div>
+            <p class="studio-intro">同时覆盖男向 SLG 和休闲 merge 的厂商，产品组合很适合学习跨品类能力。</p>
+            <div class="studio-metrics">
+              <span>3 款标志产品</span>
+              <span>SLG + 休闲横向</span>
+              <span>GP Strategy 收入 #1</span>
+            </div>
+          </summary>
+          <div class="studio-body">
+            <p class="studio-thesis">学习重点：生存题材包装、买量素材、联盟/SLG 商业化，以及休闲产品线的横向扩张。</p>
+            <div class="studio-products">
+              <article class="studio-product" data-game="Kingshot">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Kingshot</strong>
+                  <span>中文名：王国射击</span>
+                  <p>新强势策略产品，看生存/策略包装和投放素材。</p>
+                </div>
+                <div class="studio-rank-pill">GP Strategy 收入 #1</div>
+              </article>
+              <article class="studio-product" data-game="Whiteout Survival">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Whiteout Survival</strong>
+                  <span>中文名：无尽冬日 / 白域生存</span>
+                  <p>冰雪生存 SLG 标杆，适合拆建筑、联盟、活动节奏。</p>
+                </div>
+                <div class="studio-rank-pill">GP Strategy 收入 #2</div>
+              </article>
+              <article class="studio-product" data-game="Tasty Travels">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Tasty Travels</strong>
+                  <span>中文名：美味旅行</span>
+                  <p>休闲 merge 线，说明厂商不只会做男向。</p>
+                </div>
+                <div class="studio-rank-pill">iOS Puzzle 收入 #7</div>
+              </article>
+            </div>
+          </div>
+        </details>
+        <details class="studio-card" >
+          <summary>
+            <div class="studio-summary">
+              <div class="studio-mark">37</div>
+              <div class="studio-title">
+                <h3>37GAMES</h3>
+                <span>三七互娱海外品牌</span>
+              </div>
+              <div class="studio-toggle">点开</div>
+            </div>
+            <p class="studio-intro">中国出海大厂，擅长把 puzzle 前置玩法和 SLG/RPG 数值框架结合。</p>
+            <div class="studio-metrics">
+              <span>4 款标志产品</span>
+              <span>Puzzle + SLG</span>
+              <span>GP Strategy 收入 #9</span>
+            </div>
+          </summary>
+          <div class="studio-body">
+            <p class="studio-thesis">学习重点：轻玩法入口、末日/城堡题材、联盟系统、付费数值和买量素材的结合。</p>
+            <div class="studio-products">
+              <article class="studio-product" data-game="Puzzles &amp; Survival">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Puzzles &amp; Survival</strong>
+                  <span>中文名：谜题与生存</span>
+                  <p>Puzzle + SLG 标杆，今天升到 Strategy 前 10。</p>
+                </div>
+                <div class="studio-rank-pill">GP Strategy 收入 #9</div>
+              </article>
+              <article class="studio-product" data-game="Puzzles &amp; Chaos">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Puzzles &amp; Chaos</strong>
+                  <span>中文名：谜题与混沌</span>
+                  <p>同框架城堡题材版本，适合横向比较题材包装。</p>
+                </div>
+                <div class="studio-rank-pill">GP Strategy 收入 #11</div>
+              </article>
+              <article class="studio-product" data-game="Last Asylum: Plague">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Last Asylum: Plague</strong>
+                  <span>中文名：最后庇护所：瘟疫</span>
+                  <p>末日线产品，适合看题材和活动。</p>
+                </div>
+                <div class="studio-rank-pill">GP Strategy 收入 #7</div>
+              </article>
+              <article class="studio-product" data-game="Puzzles &amp; Conquest">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Puzzles &amp; Conquest</strong>
+                  <span>中文名：谜题与征服</span>
+                  <p>Puzzle + RPG/SLG 混合，作为矩阵补位。</p>
+                </div>
+                <div class="studio-rank-pill">GP RPG 收入 #24</div>
+              </article>
+            </div>
+          </div>
+        </details>
+        <details class="studio-card" >
+          <summary>
+            <div class="studio-summary">
+              <div class="studio-mark">HYV</div>
+              <div class="studio-title">
+                <h3>COGNOSPHERE / HoYoverse</h3>
+                <span>米哈游海外发行主体</span>
+              </div>
+              <div class="studio-toggle">点开</div>
+            </div>
+            <p class="studio-intro">内容工业化和角色运营能力强，榜单波动通常与版本、角色池、活动节点高度相关。</p>
+            <div class="studio-metrics">
+              <span>1 款标志产品</span>
+              <span>二游 / 内容驱动</span>
+              <span>GP RPG 收入 #2</span>
+            </div>
+          </summary>
+          <div class="studio-body">
+            <p class="studio-thesis">学习重点：角色资产、版本更新节奏、活动召回、社区话题和收入峰值之间的关系。</p>
+            <div class="studio-products">
+              <article class="studio-product" data-game="Zenless Zone Zero">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Zenless Zone Zero</strong>
+                  <span>中文名：绝区零</span>
+                  <p>今天男向最强动态信号，重点看版本/角色池拉榜。</p>
+                </div>
+                <div class="studio-rank-pill">GP RPG 收入 #2</div>
+              </article>
+            </div>
+          </div>
+        </details>
+        <details class="studio-card" >
+          <summary>
+            <div class="studio-summary">
+              <div class="studio-mark">Level</div>
+              <div class="studio-title">
+                <h3>Level Infinite</h3>
+                <span>腾讯 Level Infinite</span>
+              </div>
+              <div class="studio-toggle">点开</div>
+            </div>
+            <p class="studio-intro">腾讯海外发行品牌，适合观察二游在欧美市场的发行、素材和商业化。</p>
+            <div class="studio-metrics">
+              <span>1 款标志产品</span>
+              <span>全球发行 / 二游</span>
+              <span>GP RPG 收入 #4</span>
+            </div>
+          </summary>
+          <div class="studio-body">
+            <p class="studio-thesis">学习重点：角色收集、美术资产、抽卡活动和全球发行节奏。</p>
+            <div class="studio-products">
+              <article class="studio-product" data-game="GODDESS OF VICTORY: NIKKE">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>GODDESS OF VICTORY: NIKKE</strong>
+                  <span>中文名：胜利女神：妮姬</span>
+                  <p>美术资产和角色池驱动的二游样本。</p>
+                </div>
+                <div class="studio-rank-pill">GP RPG 收入 #4</div>
+              </article>
+            </div>
+          </div>
+        </details>
+        <details class="studio-card" >
+          <summary>
+            <div class="studio-summary">
+              <div class="studio-mark">SC</div>
+              <div class="studio-title">
+                <h3>Supercell</h3>
+                <span>Supercell</span>
+              </div>
+              <div class="studio-toggle">点开</div>
+            </div>
+            <p class="studio-intro">经典策略厂商，代表产品长期占据策略榜单，是成熟玩法和社区运营参照。</p>
+            <div class="studio-metrics">
+              <span>2 款标志产品</span>
+              <span>策略长线</span>
+              <span>GP Strategy 收入 #10</span>
+            </div>
+          </summary>
+          <div class="studio-body">
+            <p class="studio-thesis">学习重点：多人竞技、部落/社区、平衡性、活动运营和长线品牌。</p>
+            <div class="studio-products">
+              <article class="studio-product" data-game="Clash of Clans">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Clash of Clans</strong>
+                  <span>中文名：部落冲突</span>
+                  <p>经典 SLG 长线，今天被 Puzzles &amp; Survival 反超。</p>
+                </div>
+                <div class="studio-rank-pill">GP Strategy 收入 #10</div>
+              </article>
+              <article class="studio-product" data-game="Clash Royale">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Clash Royale</strong>
+                  <span>中文名：皇室战争</span>
+                  <p>实时卡牌策略，适合看竞技与卡牌收集结合。</p>
+                </div>
+                <div class="studio-rank-pill">GP Strategy 收入 #15</div>
+              </article>
+            </div>
+          </div>
+        </details>
+        <details class="studio-card" >
+          <summary>
+            <div class="studio-summary">
+              <div class="studio-mark">Lilith</div>
+              <div class="studio-title">
+                <h3>Lilith / LilithGames</h3>
+                <span>莉莉丝</span>
+              </div>
+              <div class="studio-toggle">点开</div>
+            </div>
+            <p class="studio-intro">中国出海代表厂商之一，既有 4X 长线，也有放置 RPG 和新生存策略线索。</p>
+            <div class="studio-metrics">
+              <span>3 款标志产品</span>
+              <span>SLG / 放置 RPG</span>
+              <span>GP Strategy 收入 #13</span>
+            </div>
+          </summary>
+          <div class="studio-body">
+            <p class="studio-thesis">学习重点：4X 长线框架、题材包装、英雄收集和新产品探索。</p>
+            <div class="studio-products">
+              <article class="studio-product" data-game="Palmon: Survival">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Palmon: Survival</strong>
+                  <span>中文名：帕鲁生存</span>
+                  <p>生存策略新品线索，重点看题材包装。</p>
+                </div>
+                <div class="studio-rank-pill">GP Strategy 收入 #13</div>
+              </article>
+              <article class="studio-product" data-game="Rise of Kingdoms">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Rise of Kingdoms</strong>
+                  <span>中文名：万国觉醒</span>
+                  <p>经典 4X 长线样本。</p>
+                </div>
+                <div class="studio-rank-pill">GP Strategy 收入 #20</div>
+              </article>
+              <article class="studio-product" data-game="AFK Arena">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>AFK Arena</strong>
+                  <span>中文名：剑与远征</span>
+                  <p>放置 RPG 老产品回榜，观察活动节点。</p>
+                </div>
+                <div class="studio-rank-pill">GP RPG 收入 #30</div>
+              </article>
+            </div>
+          </div>
+        </details>
+        <details class="studio-card" >
+          <summary>
+            <div class="studio-summary">
+              <div class="studio-mark">FP</div>
+              <div class="studio-title">
+                <h3>FunPlus</h3>
+                <span>FunPlus</span>
+              </div>
+              <div class="studio-toggle">点开</div>
+            </div>
+            <p class="studio-intro">老牌 SLG 出海厂商，今天 Strategy 榜尾有多条产品线索。</p>
+            <div class="studio-metrics">
+              <span>3 款标志产品</span>
+              <span>SLG / 混合题材</span>
+              <span>GP Strategy 收入 #24</span>
+            </div>
+          </summary>
+          <div class="studio-body">
+            <p class="studio-thesis">学习重点：SLG 买量题材、解谜前置、老产品回流和新品试探。</p>
+            <div class="studio-products">
+              <article class="studio-product" data-game="Tiles Survive!">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Tiles Survive!</strong>
+                  <span>中文名：瓷砖生存</span>
+                  <p>Tile + Survival 新线索。</p>
+                </div>
+                <div class="studio-rank-pill">GP Strategy 收入 #24</div>
+              </article>
+              <article class="studio-product" data-game="Guns of Glory: Lost Island">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Guns of Glory: Lost Island</strong>
+                  <span>中文名：火枪纪元：失落之岛</span>
+                  <p>老线回榜，适合看活动或投放。</p>
+                </div>
+                <div class="studio-rank-pill">GP Strategy 收入 #29</div>
+              </article>
+              <article class="studio-product" data-game="Stormshot">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Stormshot</strong>
+                  <span>中文名：风暴射击</span>
+                  <p>射击解谜 + SLG 的包装样本。</p>
+                </div>
+                <div class="studio-rank-pill">GP Strategy 收入 #30</div>
+              </article>
+            </div>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -492,6 +1070,19 @@
       const gameKey = card.dataset.game;
       const holder = card.querySelector(".app-icon");
       if (holder && gameKey) holder.replaceWith(makeIcon(gameKey, "large"));
+    });
+
+
+    document.querySelectorAll(".studio-product[data-game]").forEach((item) => {
+      const gameKey = item.dataset.game;
+      const holder = item.querySelector(".studio-product-icon");
+      const iconKey = matchIconEntry(gameKey) || gameKey;
+      if (holder && gameKey) {
+        const icon = makeIcon(iconKey);
+        const img = icon.querySelector("img");
+        if (img) img.loading = "eager";
+        holder.replaceWith(icon);
+      }
     });
 
     document.querySelectorAll("#puzzle tbody tr, #male tbody tr").forEach((row) => {
