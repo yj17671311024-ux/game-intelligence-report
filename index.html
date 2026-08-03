@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>游戏产品动态与厂商学习日报 2026-07-31</title>
+  <title>游戏产品动态与厂商学习日报 2026-08-03</title>
   <style>
     :root { --bg:#f4f6f8; --paper:#fff; --ink:#20242a; --muted:#5f6975; --line:#d8dee7; --soft:#eef2f6; --blue:#176b87; --green:#507a44; --red:#9a4054; --gold:#9b6a22; --purple:#6356a8; }
-    * { box-sizing: border-box; }
+    * { box-sizing:border-box; }
     body { margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif; line-height:1.58; }
     a { color:var(--blue); text-decoration:none; } a:hover { text-decoration:underline; }
-    .page { width:min(1240px,calc(100% - 32px)); margin:0 auto; padding:24px 0 56px; }
+    .page { width:min(1280px,calc(100% - 32px)); margin:0 auto; padding:24px 0 56px; }
     .hero,.section,.card,.notice { background:var(--paper); border:1px solid var(--line); border-radius:8px; }
-    .hero { display:grid; grid-template-columns:minmax(0,1fr) 330px; gap:24px; padding:28px; margin-bottom:14px; }
+    .hero { display:grid; grid-template-columns:minmax(0,1fr) 340px; gap:24px; padding:28px; margin-bottom:14px; }
     .eyebrow { color:var(--blue); font-weight:800; margin-bottom:8px; }
-    h1,h2,h3 { margin:0; letter-spacing:0; line-height:1.2; } h1 { font-size:clamp(34px,5vw,58px); max-width:900px; } h2 { font-size:28px; } h3 { font-size:18px; }
+    h1,h2,h3 { margin:0; letter-spacing:0; line-height:1.2; } h1 { font-size:clamp(34px,5vw,58px); max-width:920px; } h2 { font-size:28px; } h3 { font-size:18px; }
     p { margin:0; } .lead { margin-top:14px; color:#485566; font-size:17px; max-width:960px; }
     .meta { display:grid; gap:12px; color:#485566; } .meta .date { font-size:34px; font-weight:900; color:var(--ink); line-height:1.05; } .meta b { color:#344052; }
     .chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; } .chip { border:1px solid var(--line); border-radius:999px; padding:7px 12px; background:#fff; color:#344052; font-size:14px; }
@@ -23,53 +23,35 @@
     .grid-2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; } .grid-3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
     .card { padding:18px; min-width:0; } .card h3 { color:var(--blue); margin-bottom:10px; } .card p,.card li { color:#4e5b6b; }
     .notice { padding:14px 16px; color:#485566; background:#fbfcfd; margin:14px 0; }
-    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:#fff; } table { width:100%; border-collapse:collapse; min-width:980px; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:#fff; } table { width:100%; border-collapse:collapse; min-width:1080px; }
     th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; text-align:left; } th { background:#f0f4f7; color:#354252; font-size:13px; white-space:nowrap; } tr:last-child td { border-bottom:none; }
     .rank { display:inline-flex; width:30px; height:30px; align-items:center; justify-content:center; border-radius:8px; background:var(--blue); color:#fff; font-weight:800; } .rank.soft { background:#e6edf3; color:#3d4b58; }
     .product { font-weight:800; color:#222832; } .cn { display:block; color:#526071; font-weight:500; margin-top:2px; font-size:13px; }
-    .tag { display:inline-block; margin-top:4px; border-radius:6px; padding:2px 7px; background:var(--soft); color:#516070; font-size:12px; }
+    .delta { display:inline-flex; align-items:center; justify-content:center; min-width:42px; border-radius:999px; padding:3px 8px; font-size:12px; font-weight:800; border:1px solid var(--line); background:#f6f8fa; color:#526071; }
+    .delta.up { background:#eef8ee; border-color:#c8dfc0; color:#507a44; } .delta.down { background:#fbf0f3; border-color:#e5c6ce; color:#9a4054; } .delta.new { background:#fff8ec; border-color:#e7d2aa; color:#9b6a22; }
     .visual-strip { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:14px; }
     .visual-card { display:grid; grid-template-columns:58px minmax(0,1fr); gap:12px; align-items:center; padding:14px; border:1px solid var(--line); border-radius:8px; background:#fff; min-width:0; }
     .visual-card strong { display:block; color:var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } .visual-card span { display:block; color:var(--muted); font-size:13px; margin-top:2px; }
     .app-icon { width:46px; height:46px; flex:0 0 46px; display:inline-flex; align-items:center; justify-content:center; overflow:hidden; border-radius:10px; border:1px solid rgba(36,45,55,.16); background:linear-gradient(135deg,#e9f4f8,#f8f1df); color:#26313d; font-size:15px; font-weight:900; box-shadow:inset 0 0 0 1px rgba(255,255,255,.25); }
     .app-icon.large { width:58px; height:58px; flex-basis:58px; border-radius:12px; font-size:18px; } .app-icon img { width:100%; height:100%; object-fit:cover; display:block; } .app-icon.fallback { letter-spacing:0; }
-    td.product-with-icon { min-width:220px; } .product-cell { display:grid; grid-template-columns:46px minmax(0,1fr); gap:10px; align-items:center; } .product-text { min-width:0; }
-    ul,ol { margin:8px 0 0 20px; padding:0; } li { margin:5px 0; } footer { color:var(--muted); margin-top:20px; font-size:13px; }
-
-
-
+    td.product-with-icon { min-width:240px; } .product-cell { display:grid; grid-template-columns:46px minmax(0,1fr); gap:10px; align-items:center; } .product-text { min-width:0; }
     .studio-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; align-items:start; }
-    .studio-card { border:1px solid var(--line); border-radius:8px; background:#fff; overflow:hidden; min-width:0; transition:box-shadow .18s ease, transform .18s ease; }
-    .studio-card[open] { box-shadow:0 10px 24px rgba(28,58,75,.08); }
-    .studio-card summary { list-style:none; cursor:pointer; padding:16px; display:grid; gap:10px; }
-    .studio-card summary::-webkit-details-marker { display:none; }
-    .studio-card[open] summary { border-bottom:1px solid var(--line); background:#fbfcfd; }
-    .studio-card:not([open]) summary:hover { background:#fbfcfd; }
+    .studio-card { border:1px solid var(--line); border-radius:8px; background:#fff; overflow:hidden; min-width:0; transition:box-shadow .18s ease; }
+    .studio-card[open] { box-shadow:0 10px 24px rgba(28,58,75,.08); } .studio-card summary { list-style:none; cursor:pointer; padding:16px; display:grid; gap:10px; }
+    .studio-card summary::-webkit-details-marker { display:none; } .studio-card[open] summary { border-bottom:1px solid var(--line); background:#fbfcfd; } .studio-card:not([open]) summary:hover { background:#fbfcfd; }
     .studio-summary { display:grid; grid-template-columns:54px minmax(0,1fr) auto; gap:12px; align-items:center; }
     .studio-mark { width:54px; height:54px; border-radius:12px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:900; font-size:13px; background:linear-gradient(135deg,var(--blue),#2f9a91); box-shadow:inset 0 0 0 1px rgba(255,255,255,.22); }
-    .studio-title { min-width:0; }
-    .studio-title h3 { color:var(--ink); margin:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-    .studio-title span { color:var(--muted); display:block; margin-top:3px; font-size:13px; }
-    .studio-toggle { color:var(--blue); font-size:13px; font-weight:800; white-space:nowrap; }
-    .studio-card[open] .studio-toggle::after { content:"收起"; }
-    .studio-card:not([open]) .studio-toggle::after { content:"展开"; }
-    .studio-toggle { font-size:0; }
-    .studio-toggle::after { font-size:13px; }
-    .studio-intro { color:#4e5b6b; margin:0; }
-    .studio-metrics { display:flex; flex-wrap:wrap; gap:8px; }
-    .studio-metrics span { border:1px solid var(--line); background:#f6f8fa; color:#495664; border-radius:999px; padding:4px 8px; font-size:12px; }
-    .studio-body { padding:14px 16px 16px; }
-    .studio-thesis { color:#3f4d5c; margin-bottom:12px; }
+    .studio-title { min-width:0; } .studio-title h3 { color:var(--ink); margin:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } .studio-title span { color:var(--muted); display:block; margin-top:3px; font-size:13px; }
+    .studio-toggle { color:var(--blue); font-size:0; font-weight:800; white-space:nowrap; } .studio-toggle::after { font-size:13px; } .studio-card[open] .studio-toggle::after { content:"收起"; } .studio-card:not([open]) .studio-toggle::after { content:"展开"; }
+    .studio-intro { color:#4e5b6b; margin:0; } .studio-metrics { display:flex; flex-wrap:wrap; gap:8px; } .studio-metrics span { border:1px solid var(--line); background:#f6f8fa; color:#495664; border-radius:999px; padding:4px 8px; font-size:12px; }
+    .studio-body { padding:14px 16px 16px; } .studio-thesis { color:#3f4d5c; margin-bottom:12px; }
     .studio-products { display:grid; gap:0; border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#fff; }
     .studio-product { display:grid; grid-template-columns:46px minmax(0,1fr) minmax(145px,auto); gap:10px; align-items:center; padding:10px; border-top:1px solid var(--line); background:#fff; }
-    .studio-product:first-child { border-top:0; }
-    .studio-product-text { min-width:0; }
-    .studio-product-text strong { display:block; color:#20242a; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-    .studio-product-text span { color:#526071; display:block; font-size:13px; margin-top:1px; }
-    .studio-product-text p { color:#4e5b6b; margin-top:5px; font-size:13px; }
+    .studio-product:first-child { border-top:0; } .studio-product-text { min-width:0; } .studio-product-text strong { display:block; color:#20242a; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .studio-product-text span { color:#526071; display:block; font-size:13px; margin-top:1px; } .studio-product-text p { color:#4e5b6b; margin-top:5px; font-size:13px; }
     .studio-rank-pill { justify-self:end; max-width:220px; border-radius:8px; background:#eef8fb; border:1px solid #bfdae2; color:var(--blue); font-size:12px; font-weight:800; line-height:1.35; padding:6px 8px; text-align:right; }
-
-    @media (max-width:860px) { .hero,.grid-2,.grid-3,.visual-strip,.studio-grid { grid-template-columns:1fr; } .studio-product { grid-template-columns:42px minmax(0,1fr); } .studio-rank-pill { grid-column:1 / -1; justify-self:start; text-align:left; max-width:none; } .hero { padding:22px; } .section { padding:20px; } table { min-width:860px; } }
+    ul,ol { margin:8px 0 0 20px; padding:0; } li { margin:5px 0; } footer { color:var(--muted); margin-top:20px; font-size:13px; }
+    @media (max-width:860px) { .hero,.grid-2,.grid-3,.visual-strip,.studio-grid { grid-template-columns:1fr; } .studio-product { grid-template-columns:42px minmax(0,1fr); } .studio-rank-pill { grid-column:1 / -1; justify-self:start; text-align:left; max-width:none; } .hero { padding:22px; } .section { padding:20px; } table { min-width:940px; } }
   </style>
 </head>
 <body>
@@ -77,18 +59,18 @@
     <section class="hero">
       <div>
         <div class="eyebrow">游戏产品动态与厂商学习日报</div>
-        <h1>7 月 31 日补更：Puzzle 稳，RPG 今天明显换血</h1>
-        <p class="lead">今天已生成当日报告文件。公开榜单源今天可见的最新快照为 2026-07-30；日报日期为 2026-07-31。本版延续真实商店 icon、本地缓存、完整榜单、中文名和厂商学习卡。</p>
+        <h1>8 月 3 日更新：免费 Puzzle 换头部，Strategy 男向竞争更激烈</h1>
+        <p class="lead">今天更新的是日报，不新建周报。公开榜单源当前可见最新快照为 AppBrain：August 3, 2026；AppCurrents：2026-08-03；日报日期为 2026-08-03。本版延续真实商店 icon、完整榜单、中文名和可展开厂商作品集。</p>
         <div class="chips">
           <span class="chip blue">Puzzle 完整榜单</span>
           <span class="chip green">真实商店 icon</span>
           <span class="chip red">RPG / Strategy 动态</span>
-          <span class="chip gold">厂商学习卡</span>
-          <span class="chip">榜单快照 2026-07-30</span>
+          <span class="chip gold">厂商作品集</span>
+          <span class="chip">对比 2026-07-31</span>
         </div>
       </div>
       <div class="meta">
-        <div><b>日报日期</b><div class="date">2026-07-31</div></div>
+        <div><b>日报日期</b><div class="date">2026-08-03</div></div>
         <p><b>地区：</b>美国区</p>
         <p><b>平台：</b>Google Play / iOS</p>
         <p><b>榜单源：</b>AppBrain / AppCurrents 公开榜单</p>
@@ -110,12 +92,12 @@
       <h2>今日结论</h2>
       <p class="sub">先看结论，再进入榜单细节。</p>
       <div class="grid-2" style="margin-top:16px">
-        <div class="card"><h3>Puzzle 收入主线</h3><p>GP Puzzle 前 10 基本稳定；Mystery Town 反超 Travel Town，Magic Sort 反超 Toy Blast，Domino Dreams 进入第 19。</p></div>
-<div class="card"><h3>iOS Puzzle 变化</h3><p>Royal Kingdom 冲到 iOS Puzzle #4；Block Out! 进入 #11；Flambe 与 Jelly Busters 出现在榜内，说明 iOS 侧新品/题材波动更明显。</p></div>
-<div class="card"><h3>Puzzle 免费榜</h3><p>Block Blast 继续免费榜第一；找物、方块、排序、交通、螺丝仍是下载侧主要题材。Color Block Jam 同时在免费与收入榜可见。</p></div>
-<div class="card"><h3>RPG 动态</h3><p>Zenless Zone Zero 上升到 RPG #2，是今天最强男向变化；NTE 与 Chaos Zero Nightmare 新进前 30，二游新品值得关注。</p></div>
-<div class="card"><h3>Strategy 动态</h3><p>Kingshot / Whiteout Survival 继续包揽前二；Puzzles &amp; Survival 升到 #9；Star Trek Fleet Command 升到 #16；Warhammer 40K 与 Guns of Glory 进榜。</p></div>
-<div class="card"><h3>厂商观察</h3><p>Dream、Microfun、Peak、Playrix 继续构成 Puzzle 学习主线；Century、37GAMES、米哈游、莉莉丝、FunPlus 是男向/混合品类观察主线。</p></div>
+        <div class="card"><h3>Puzzle 收入头部</h3><p>Google Play Puzzle 收入前三为 Royal Match #1、Gossip Harbor: Merge &amp; Story #2、Royal Kingdom #3；iOS Puzzle 收入前三为 Royal Match #1、Candy Crush Saga #2、Gossip Harbor: Merge &amp; Story #3。头部格局仍由 Dream、Microfun、King 主导。</p></div>
+<div class="card"><h3>Puzzle 免费变化</h3><p>Google Play Puzzle 免费榜今天是 Meowdoku: Brain Puzzle Games #1、Magic Sort! #2、Block Blast! #3、Arrows – Puzzle Escape #4、Bus Traffic Fever! #5；Meowdoku、Magic Sort、Block Blast 都值得看素材与首局。</p></div>
+<div class="card"><h3>RPG 主线</h3><p>RPG 收入前五为 Sword x Staff #1、Zenless Zone Zero #2、Fate/Grand Order #3、Star Wars: Galaxy of Heroes #4、GODDESS OF VICTORY: NIKKE #5；Zenless Zone Zero 留在 #2，说明版本和角色池仍有拉动。</p></div>
+<div class="card"><h3>Strategy 主线</h3><p>Strategy 收入榜头部变为 Last War: Survival Game #1、Kingshot #2、Whiteout Survival #3、Last Z: Survival Shooter #4、Evony: The King's Return #5；Last War 当前 #1，Century 的 Kingshot / Whiteout 分列 #2/#3。</p></div>
+<div class="card"><h3>厂商主线</h3><p>今天学习主线建议按三组看：休闲看 Dream / Microfun / Oakever / Peak；长线矩阵看 Playrix / King；男向看 FirstFun、Century、37GAMES、HoYoverse、FunPlus。</p></div>
+<div class="card"><h3>明天继续看</h3><p>重点跟踪 Meowdoku 是否守住免费榜第一、Last War 是否继续压住 Century 双产品、Zenless Zone Zero 是否保持 RPG 前三。</p></div>
       </div>
     </section>
 
@@ -123,27 +105,27 @@
       <div class="section-head">
         <div>
           <h2>图像速览</h2>
-          <p class="sub">顶部只放今天最值得先看的产品，使用真实商店 icon。</p>
+          <p class="sub">今天最值得先看的产品，全部优先使用真实商店 icon。</p>
         </div>
       </div>
       <div class="visual-strip">
-        <div class="visual-card" data-game="Royal Match"><span class="app-icon large"></span><div><strong>Royal Match</strong><span>Dream / Puzzle 收入头部</span></div></div>
-<div class="visual-card" data-game="Royal Kingdom"><span class="app-icon large"></span><div><strong>Royal Kingdom</strong><span>iOS #4，Dream 第二产品</span></div></div>
-<div class="visual-card" data-game="Block Blast!"><span class="app-icon large"></span><div><strong>Block Blast!</strong><span>GP 免费榜第一</span></div></div>
-<div class="visual-card" data-game="Zenless Zone Zero"><span class="app-icon large"></span><div><strong>Zenless Zone Zero</strong><span>RPG #2，上升最强</span></div></div>
-<div class="visual-card" data-game="NTE: Neverness to Everness"><span class="app-icon large"></span><div><strong>NTE: Neverness to Everness</strong><span>RPG 新进前 20</span></div></div>
-<div class="visual-card" data-game="Kingshot"><span class="app-icon large"></span><div><strong>Kingshot</strong><span>Strategy #1</span></div></div>
-<div class="visual-card" data-game="Puzzles &amp; Survival"><span class="app-icon large"></span><div><strong>Puzzles &amp; Survival</strong><span>Puzzle + SLG 升到 #9</span></div></div>
-<div class="visual-card" data-game="Star Trek Fleet Command"><span class="app-icon large"></span><div><strong>Star Trek Fleet Command</strong><span>Strategy #16 上升</span></div></div>
+        <div class="visual-card" data-game="Meowdoku: Brain Puzzle Games"><span class="app-icon large"></span><div><strong>Meowdoku: Brain Puzzle Games</strong><span>GP Puzzle 免费 #1，新免费头部</span></div></div>
+<div class="visual-card" data-game="Magic Sort!"><span class="app-icon large"></span><div><strong>Magic Sort!</strong><span>GP 免费 #2 / 收入 #15</span></div></div>
+<div class="visual-card" data-game="Royal Match"><span class="app-icon large"></span><div><strong>Royal Match</strong><span>GP/iOS Puzzle 收入 #1</span></div></div>
+<div class="visual-card" data-game="Zenless Zone Zero"><span class="app-icon large"></span><div><strong>Zenless Zone Zero</strong><span>GP RPG 收入 #2</span></div></div>
+<div class="visual-card" data-game="Last War: Survival Game"><span class="app-icon large"></span><div><strong>Last War: Survival Game</strong><span>GP Strategy 收入 #1</span></div></div>
+<div class="visual-card" data-game="Kingshot"><span class="app-icon large"></span><div><strong>Kingshot</strong><span>GP Strategy 收入 #2</span></div></div>
+<div class="visual-card" data-game="Whiteout Survival"><span class="app-icon large"></span><div><strong>Whiteout Survival</strong><span>GP Strategy 收入 #3</span></div></div>
+<div class="visual-card" data-game="Puzzles &amp; Survival"><span class="app-icon large"></span><div><strong>Puzzles &amp; Survival</strong><span>Puzzle + SLG，Strategy #10</span></div></div>
       </div>
     </section>
 
     <section id="changes" class="section">
       <h2>榜单动态与账号观察</h2>
       <div class="grid-3" style="margin-top:16px">
-        <div class="card"><h3>新增/回榜</h3><ul><li>RPG：NTE、Chaos Zero Nightmare、AFK Arena 进入前 30。</li><li>Strategy：Warhammer 40K、Guns of Glory 进入前 30。</li><li>iOS Puzzle：Block Out!、Jelly Busters 出现在榜内。</li></ul></div>
-        <div class="card"><h3>值得学习</h3><ul><li>Dream：Royal Match + Royal Kingdom 双产品打法。</li><li>Microfun：三款 merge/story 同时在榜。</li><li>Century：Kingshot、Whiteout、Tasty Travels 横跨男向和休闲。</li></ul></div>
-        <div class="card"><h3>明天继续看</h3><ul><li>Zenless Zone Zero 是否继续留在 RPG 前 3。</li><li>Royal Kingdom 在 iOS 是否稳住前 5。</li><li>Color Block Jam 是否保持免费与收入双榜。</li></ul></div>
+        <div class="card"><h3>上升 / 新进</h3><ul><li>Meowdoku: Brain Puzzle Games：GP Puzzle 免费 #1（新进）</li><li>Magic Sort!：GP Puzzle 免费 #2（新进）</li><li>Gossip Harbor: Merge &amp; Story：iOS Puzzle 收入 #3（新进）</li><li>Arrows – Puzzle Escape：GP Puzzle 免费 #4（新进）</li><li>Bus Traffic Fever!：GP Puzzle 免费 #5（新进）</li><li>Gossip Harbor: Merge &amp; Story：GP Puzzle 免费 #6（新进）</li></ul></div>
+        <div class="card"><h3>值得拆解</h3><ul><li>Oakever：Meowdoku、Amaze GO、Jigsawcard、Tile Explorer 多产品进入免费榜。</li><li>Century：Kingshot 与 Whiteout Survival 仍是男向 Strategy 核心厂商。</li><li>Devsisters：CookieRun: Kingdom 与 CookieRun: Crumble 同时进 RPG 收入榜。</li></ul></div>
+        <div class="card"><h3>明天继续看</h3><ul><li>Meowdoku 是否守住免费榜第一。</li><li>Last War 是否继续压住 Kingshot / Whiteout。</li><li>Zenless Zone Zero 是否维持 RPG 前三。</li></ul></div>
       </div>
     </section>
 
@@ -163,13 +145,13 @@
                 <h3>Dream Games</h3>
                 <span>梦之游戏</span>
               </div>
-              <div class="studio-toggle">点开</div>
+              <div class="studio-toggle">展开</div>
             </div>
             <p class="studio-intro">土耳其头部休闲游戏厂商，代表路径是把单一 Match-3 玩法做到极高完成度，再用第二产品承接同一套能力。</p>
             <div class="studio-metrics">
               <span>2 款标志产品</span>
               <span>Puzzle 精品化</span>
-              <span>GP Puzzle 收入 #1 / iOS Puzzle 收入 #1 / GP 免费 #12</span>
+              <span>GP Puzzle 收入 #1 / GP Puzzle 免费 #13 / iOS Puzzle 收入 #1</span>
             </div>
           </summary>
           <div class="studio-body">
@@ -179,19 +161,19 @@
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Royal Match</strong>
-                  <span>中文名：皇家消除</span>
-                  <p>头部标杆，观察关卡、活动、装修叙事和礼包节奏。</p>
+                  <span>中文参考：皇家消除</span>
+                  <p>头部标杆，继续拆关卡产能、活动节奏、装修改造叙事和礼包节奏。</p>
                 </div>
-                <div class="studio-rank-pill">GP Puzzle 收入 #1 / iOS Puzzle 收入 #1 / GP 免费 #12</div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #1 / GP Puzzle 免费 #13 / iOS Puzzle 收入 #1</div>
               </article>
               <article class="studio-product" data-game="Royal Kingdom">
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Royal Kingdom</strong>
-                  <span>中文名：皇家王国</span>
-                  <p>第二产品样本，重点看如何复用 Royal Match 能力又做差异化。</p>
+                  <span>中文参考：皇家王国</span>
+                  <p>Dream 第二产品，适合看同题材能力复用与差异化。</p>
                 </div>
-                <div class="studio-rank-pill">GP Puzzle 收入 #3 / iOS Puzzle 收入 #4 / GP 免费 #19</div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #3 / GP Puzzle 免费 #18 / iOS Puzzle 收入 #4</div>
               </article>
             </div>
           </div>
@@ -204,13 +186,13 @@
                 <h3>Microfun Limited</h3>
                 <span>柠檬微趣</span>
               </div>
-              <div class="studio-toggle">点开</div>
+              <div class="studio-toggle">展开</div>
             </div>
             <p class="studio-intro">中国出海休闲厂商，强项是 merge、剧情、订单和场景修复目标的组合。</p>
             <div class="studio-metrics">
               <span>3 款标志产品</span>
               <span>Merge / Story</span>
-              <span>GP Puzzle 收入 #2 / iOS Puzzle 收入 #3</span>
+              <span>GP Puzzle 收入 #2 / GP Puzzle 免费 #6 / iOS Puzzle 收入 #3</span>
             </div>
           </summary>
           <div class="studio-body">
@@ -220,28 +202,87 @@
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Gossip Harbor: Merge &amp; Story</strong>
-                  <span>中文名：浪漫餐厅</span>
-                  <p>merge/story 头部样本，订单、剧情、场景修复都值得拆。</p>
+                  <span>中文参考：浪漫餐厅</span>
+                  <p>merge/story 头部样本，订单、剧情和场景修复都值得长期拆。</p>
                 </div>
-                <div class="studio-rank-pill">GP Puzzle 收入 #2 / iOS Puzzle 收入 #3</div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #2 / GP Puzzle 免费 #6 / iOS Puzzle 收入 #3</div>
               </article>
               <article class="studio-product" data-game="Flambe: Merge &amp; Cook">
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Flambe: Merge &amp; Cook</strong>
-                  <span>中文名：合成与烹饪</span>
-                  <p>同框架换烹饪题材，看题材包装与新手期差异。</p>
+                  <span>中文参考：合成与烹饪</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
-                <div class="studio-rank-pill">GP Puzzle 收入 #10 / iOS Puzzle 收入 #23</div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #10 / iOS Puzzle 收入 #22</div>
               </article>
               <article class="studio-product" data-game="Seaside Escape">
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Seaside Escape</strong>
-                  <span>中文名：梦幻旅行</span>
-                  <p>产品矩阵补位，适合看长期运营和内容扩展。</p>
+                  <span>中文参考：梦幻旅行</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
-                <div class="studio-rank-pill">GP Puzzle 收入 #18 / iOS Puzzle 收入 #26</div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #16 / iOS Puzzle 收入 #27</div>
+              </article>
+            </div>
+          </div>
+        </details>
+        <details class="studio-card" >
+          <summary>
+            <div class="studio-summary">
+              <div class="studio-mark">Oak</div>
+              <div class="studio-title">
+                <h3>Oakever Games</h3>
+                <span>Oakever Games</span>
+              </div>
+              <div class="studio-toggle">展开</div>
+            </div>
+            <p class="studio-intro">今天 Google Play Puzzle 免费榜里最值得补充观察的厂商，多个产品进入前 30。</p>
+            <div class="studio-metrics">
+              <span>4 款标志产品</span>
+              <span>免费榜 / 轻 Puzzle</span>
+              <span>GP Puzzle 免费 #1</span>
+            </div>
+          </summary>
+          <div class="studio-body">
+            <p class="studio-thesis">学习重点：免费榜买量包装、脑力题材、拼图/瓷砖/迷宫轻玩法的矩阵化投放。</p>
+            <div class="studio-products">
+              <article class="studio-product" data-game="Meowdoku: Brain Puzzle Games">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Meowdoku: Brain Puzzle Games</strong>
+                  <span>中文参考：喵独：脑力谜题</span>
+                  <p>免费榜第一，猫咪包装 + 数独/脑力题材值得拆素材。</p>
+                </div>
+                <div class="studio-rank-pill">GP Puzzle 免费 #1</div>
+              </article>
+              <article class="studio-product" data-game="Amaze GO!">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Amaze GO!</strong>
+                  <span>中文参考：迷宫冲冲冲</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
+                </div>
+                <div class="studio-rank-pill">GP Puzzle 免费 #7</div>
+              </article>
+              <article class="studio-product" data-game="Jigsawcard Solitaire Puzzle">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Jigsawcard Solitaire Puzzle</strong>
+                  <span>中文参考：拼图纸牌</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
+                </div>
+                <div class="studio-rank-pill">GP Puzzle 免费 #22</div>
+              </article>
+              <article class="studio-product" data-game="Tile Explorer - Triple Match">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Tile Explorer - Triple Match</strong>
+                  <span>中文参考：瓷砖探索</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
+                </div>
+                <div class="studio-rank-pill">GP Puzzle 免费 #26</div>
               </article>
             </div>
           </div>
@@ -252,9 +293,9 @@
               <div class="studio-mark">Peak</div>
               <div class="studio-title">
                 <h3>Peak / Peak Games</h3>
-                <span>Peak，Zynga 旗下土耳其团队</span>
+                <span>Peak / Peak Games</span>
               </div>
-              <div class="studio-toggle">点开</div>
+              <div class="studio-toggle">展开</div>
             </div>
             <p class="studio-intro">经典休闲厂商，从 Blast 老产品延伸到 3D Match，产品组合能看出玩法迁移能力。</p>
             <div class="studio-metrics">
@@ -270,7 +311,7 @@
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Toon Blast</strong>
-                  <span>中文名：卡通爆破</span>
+                  <span>中文参考：卡通爆破</span>
                   <p>老牌 Blast 长线运营样本。</p>
                 </div>
                 <div class="studio-rank-pill">GP Puzzle 收入 #4 / iOS Puzzle 收入 #6</div>
@@ -279,19 +320,19 @@
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Match Factory!</strong>
-                  <span>中文名：匹配工厂</span>
-                  <p>3D Match 收入化样本，看物件设计、清屏反馈和活动节奏。</p>
+                  <span>中文参考：匹配工厂</span>
+                  <p>3D Match 收入化重点样本，注意物件设计、清屏反馈和活动节奏。</p>
                 </div>
-                <div class="studio-rank-pill">GP Puzzle 收入 #6 / iOS Puzzle 收入 #10</div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #6 / GP Puzzle 免费 #19 / iOS Puzzle 收入 #8</div>
               </article>
               <article class="studio-product" data-game="Toy Blast">
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Toy Blast</strong>
-                  <span>中文名：玩具爆破</span>
-                  <p>Peak 早期老产品，适合和 Toon Blast 对照。</p>
+                  <span>中文参考：玩具爆破</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
-                <div class="studio-rank-pill">GP Puzzle 收入 #15 / iOS Puzzle 收入 #25</div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #13 / iOS Puzzle 收入 #23</div>
               </article>
             </div>
           </div>
@@ -304,13 +345,13 @@
                 <h3>Playrix</h3>
                 <span>Playrix；可记为梦幻系厂商</span>
               </div>
-              <div class="studio-toggle">点开</div>
+              <div class="studio-toggle">展开</div>
             </div>
             <p class="studio-intro">长线休闲产品矩阵厂商，擅长把消除与家装、花园、小镇、水族箱等长期目标结合。</p>
             <div class="studio-metrics">
               <span>4 款标志产品</span>
               <span>消除 + Meta</span>
-              <span>GP Puzzle 收入 #5 / iOS Puzzle 收入 #14</span>
+              <span>GP Puzzle 收入 #5 / iOS Puzzle 收入 #13</span>
             </div>
           </summary>
           <div class="studio-body">
@@ -320,17 +361,17 @@
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Fishdom</strong>
-                  <span>中文名：梦幻水族箱</span>
-                  <p>水族箱养成目标仍有效，适合看装饰与关卡结合。</p>
+                  <span>中文参考：梦幻水族箱</span>
+                  <p>消除 + 水族箱养成目标仍有效，适合看长期内容目标。</p>
                 </div>
-                <div class="studio-rank-pill">GP Puzzle 收入 #5 / iOS Puzzle 收入 #14</div>
+                <div class="studio-rank-pill">GP Puzzle 收入 #5 / iOS Puzzle 收入 #13</div>
               </article>
               <article class="studio-product" data-game="Township">
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Township</strong>
-                  <span>中文名：梦想小镇</span>
-                  <p>经营/小镇题材，适合看长线生产系统。</p>
+                  <span>中文参考：梦想小镇</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
                 <div class="studio-rank-pill">iOS Puzzle 收入 #5</div>
               </article>
@@ -338,19 +379,19 @@
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Gardenscapes</strong>
-                  <span>中文名：梦幻花园</span>
-                  <p>花园修复 meta 经典样本。</p>
+                  <span>中文参考：梦幻花园</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
-                <div class="studio-rank-pill">iOS Puzzle 收入 #8</div>
+                <div class="studio-rank-pill">iOS Puzzle 收入 #9</div>
               </article>
               <article class="studio-product" data-game="Homescapes">
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Homescapes</strong>
-                  <span>中文名：梦幻家园</span>
-                  <p>家装叙事与角色关系长期运营。</p>
+                  <span>中文参考：梦幻家园</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
-                <div class="studio-rank-pill">iOS Puzzle 收入 #12</div>
+                <div class="studio-rank-pill">iOS Puzzle 收入 #11</div>
               </article>
             </div>
           </div>
@@ -363,9 +404,9 @@
                 <h3>King</h3>
                 <span>King；Candy Crush 厂商</span>
               </div>
-              <div class="studio-toggle">点开</div>
+              <div class="studio-toggle">展开</div>
             </div>
-            <p class="studio-intro">全球最经典的 Match-3 厂商之一，强项是品牌资产、关卡池和活动运营。</p>
+            <p class="studio-intro">全球经典 Match-3 厂商之一，强项是品牌资产、关卡池和活动运营。</p>
             <div class="studio-metrics">
               <span>2 款标志产品</span>
               <span>经典 Match-3</span>
@@ -379,8 +420,8 @@
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Candy Crush Saga</strong>
-                  <span>中文名：糖果传奇</span>
-                  <p>经典长线标杆，适合看活动和关卡难度。</p>
+                  <span>中文参考：糖果传奇</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
                 <div class="studio-rank-pill">iOS Puzzle 收入 #2</div>
               </article>
@@ -388,10 +429,10 @@
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Candy Crush Soda Saga</strong>
-                  <span>中文名：糖果苏打传奇</span>
-                  <p>第二产品长线，适合看品牌内差异化。</p>
+                  <span>中文参考：糖果苏打传奇</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
-                <div class="studio-rank-pill">iOS Puzzle 收入 #20</div>
+                <div class="studio-rank-pill">iOS Puzzle 收入 #18</div>
               </article>
             </div>
           </div>
@@ -404,42 +445,42 @@
                 <h3>Century Games</h3>
                 <span>世纪游戏</span>
               </div>
-              <div class="studio-toggle">点开</div>
+              <div class="studio-toggle">展开</div>
             </div>
             <p class="studio-intro">同时覆盖男向 SLG 和休闲 merge 的厂商，产品组合很适合学习跨品类能力。</p>
             <div class="studio-metrics">
               <span>3 款标志产品</span>
               <span>SLG + 休闲横向</span>
-              <span>GP Strategy 收入 #1</span>
+              <span>GP Strategy 收入 #2</span>
             </div>
           </summary>
           <div class="studio-body">
-            <p class="studio-thesis">学习重点：生存题材包装、买量素材、联盟/SLG 商业化，以及休闲产品线的横向扩张。</p>
+            <p class="studio-thesis">学习重点：生存题材包装、买量素材、联盟 SLG 商业化，以及休闲产品线的横向扩张。</p>
             <div class="studio-products">
               <article class="studio-product" data-game="Kingshot">
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Kingshot</strong>
-                  <span>中文名：王国射击</span>
-                  <p>新强势策略产品，看生存/策略包装和投放素材。</p>
+                  <span>中文参考：王国射击</span>
+                  <p>Century 另一头部策略产品，和 Whiteout Survival 形成双核心。</p>
                 </div>
-                <div class="studio-rank-pill">GP Strategy 收入 #1</div>
+                <div class="studio-rank-pill">GP Strategy 收入 #2</div>
               </article>
               <article class="studio-product" data-game="Whiteout Survival">
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Whiteout Survival</strong>
-                  <span>中文名：无尽冬日 / 白域生存</span>
-                  <p>冰雪生存 SLG 标杆，适合拆建筑、联盟、活动节奏。</p>
+                  <span>中文参考：无尽冬日</span>
+                  <p>冰雪生存 SLG 标杆，适合拆建筑、联盟和活动节奏。</p>
                 </div>
-                <div class="studio-rank-pill">GP Strategy 收入 #2</div>
+                <div class="studio-rank-pill">GP Strategy 收入 #3</div>
               </article>
               <article class="studio-product" data-game="Tasty Travels">
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Tasty Travels</strong>
-                  <span>中文名：美味旅行</span>
-                  <p>休闲 merge 线，说明厂商不只会做男向。</p>
+                  <span>中文参考：美味旅行</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
                 <div class="studio-rank-pill">iOS Puzzle 收入 #7</div>
               </article>
@@ -454,13 +495,13 @@
                 <h3>37GAMES</h3>
                 <span>三七互娱海外品牌</span>
               </div>
-              <div class="studio-toggle">点开</div>
+              <div class="studio-toggle">展开</div>
             </div>
             <p class="studio-intro">中国出海大厂，擅长把 puzzle 前置玩法和 SLG/RPG 数值框架结合。</p>
             <div class="studio-metrics">
-              <span>4 款标志产品</span>
+              <span>3 款标志产品</span>
               <span>Puzzle + SLG</span>
-              <span>GP Strategy 收入 #9</span>
+              <span>GP Strategy 收入 #10</span>
             </div>
           </summary>
           <div class="studio-body">
@@ -470,17 +511,17 @@
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Puzzles &amp; Survival</strong>
-                  <span>中文名：谜题与生存</span>
-                  <p>Puzzle + SLG 标杆，今天升到 Strategy 前 10。</p>
+                  <span>中文参考：谜题与生存</span>
+                  <p>Puzzle + SLG 核心样本，今天 Strategy 前 10。</p>
                 </div>
-                <div class="studio-rank-pill">GP Strategy 收入 #9</div>
+                <div class="studio-rank-pill">GP Strategy 收入 #10</div>
               </article>
               <article class="studio-product" data-game="Puzzles &amp; Chaos">
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Puzzles &amp; Chaos</strong>
-                  <span>中文名：谜题与混沌</span>
-                  <p>同框架城堡题材版本，适合横向比较题材包装。</p>
+                  <span>中文参考：谜题与混沌</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
                 <div class="studio-rank-pill">GP Strategy 收入 #11</div>
               </article>
@@ -488,19 +529,10 @@
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Last Asylum: Plague</strong>
-                  <span>中文名：最后庇护所：瘟疫</span>
-                  <p>末日线产品，适合看题材和活动。</p>
+                  <span>中文参考：最后庇护所：瘟疫</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
-                <div class="studio-rank-pill">GP Strategy 收入 #7</div>
-              </article>
-              <article class="studio-product" data-game="Puzzles &amp; Conquest">
-                <span class="studio-product-icon app-icon"></span>
-                <div class="studio-product-text">
-                  <strong>Puzzles &amp; Conquest</strong>
-                  <span>中文名：谜题与征服</span>
-                  <p>Puzzle + RPG/SLG 混合，作为矩阵补位。</p>
-                </div>
-                <div class="studio-rank-pill">GP RPG 收入 #24</div>
+                <div class="studio-rank-pill">GP Strategy 收入 #8</div>
               </article>
             </div>
           </div>
@@ -513,7 +545,7 @@
                 <h3>COGNOSPHERE / HoYoverse</h3>
                 <span>米哈游海外发行主体</span>
               </div>
-              <div class="studio-toggle">点开</div>
+              <div class="studio-toggle">展开</div>
             </div>
             <p class="studio-intro">内容工业化和角色运营能力强，榜单波动通常与版本、角色池、活动节点高度相关。</p>
             <div class="studio-metrics">
@@ -529,10 +561,51 @@
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Zenless Zone Zero</strong>
-                  <span>中文名：绝区零</span>
-                  <p>今天男向最强动态信号，重点看版本/角色池拉榜。</p>
+                  <span>中文参考：绝区零</span>
+                  <p>RPG 收入 #2，版本/角色池拉榜能力非常明显。</p>
                 </div>
                 <div class="studio-rank-pill">GP RPG 收入 #2</div>
+              </article>
+            </div>
+          </div>
+        </details>
+        <details class="studio-card" >
+          <summary>
+            <div class="studio-summary">
+              <div class="studio-mark">Dev</div>
+              <div class="studio-title">
+                <h3>Devsisters</h3>
+                <span>Devsisters</span>
+              </div>
+              <div class="studio-toggle">展开</div>
+            </div>
+            <p class="studio-intro">今天 RPG 收入榜里同一账号两款 CookieRun 产品同时出现，适合观察 IP 矩阵。</p>
+            <div class="studio-metrics">
+              <span>2 款标志产品</span>
+              <span>RPG / 可爱风 IP</span>
+              <span>GP RPG 收入 #9</span>
+            </div>
+          </summary>
+          <div class="studio-body">
+            <p class="studio-thesis">学习重点：可爱风 IP、角色收集、王国/放置框架和衍生产品的分层运营。</p>
+            <div class="studio-products">
+              <article class="studio-product" data-game="CookieRun: Kingdom">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>CookieRun: Kingdom</strong>
+                  <span>中文参考：姜饼人王国</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
+                </div>
+                <div class="studio-rank-pill">GP RPG 收入 #9</div>
+              </article>
+              <article class="studio-product" data-game="CookieRun: Crumble - Idle RPG">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>CookieRun: Crumble - Idle RPG</strong>
+                  <span>中文参考：姜饼人：碎碎冒险</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
+                </div>
+                <div class="studio-rank-pill">GP RPG 收入 #11</div>
               </article>
             </div>
           </div>
@@ -545,13 +618,13 @@
                 <h3>Level Infinite</h3>
                 <span>腾讯 Level Infinite</span>
               </div>
-              <div class="studio-toggle">点开</div>
+              <div class="studio-toggle">展开</div>
             </div>
             <p class="studio-intro">腾讯海外发行品牌，适合观察二游在欧美市场的发行、素材和商业化。</p>
             <div class="studio-metrics">
               <span>1 款标志产品</span>
               <span>全球发行 / 二游</span>
-              <span>GP RPG 收入 #4</span>
+              <span>GP RPG 收入 #5</span>
             </div>
           </summary>
           <div class="studio-body">
@@ -561,10 +634,10 @@
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>GODDESS OF VICTORY: NIKKE</strong>
-                  <span>中文名：胜利女神：妮姬</span>
-                  <p>美术资产和角色池驱动的二游样本。</p>
+                  <span>中文参考：胜利女神：妮姬</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
-                <div class="studio-rank-pill">GP RPG 收入 #4</div>
+                <div class="studio-rank-pill">GP RPG 收入 #5</div>
               </article>
             </div>
           </div>
@@ -577,13 +650,13 @@
                 <h3>Supercell</h3>
                 <span>Supercell</span>
               </div>
-              <div class="studio-toggle">点开</div>
+              <div class="studio-toggle">展开</div>
             </div>
             <p class="studio-intro">经典策略厂商，代表产品长期占据策略榜单，是成熟玩法和社区运营参照。</p>
             <div class="studio-metrics">
               <span>2 款标志产品</span>
               <span>策略长线</span>
-              <span>GP Strategy 收入 #10</span>
+              <span>GP Strategy 收入 #7</span>
             </div>
           </summary>
           <div class="studio-body">
@@ -593,19 +666,19 @@
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Clash of Clans</strong>
-                  <span>中文名：部落冲突</span>
-                  <p>经典 SLG 长线，今天被 Puzzles &amp; Survival 反超。</p>
+                  <span>中文参考：部落冲突</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
-                <div class="studio-rank-pill">GP Strategy 收入 #10</div>
+                <div class="studio-rank-pill">GP Strategy 收入 #7</div>
               </article>
               <article class="studio-product" data-game="Clash Royale">
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Clash Royale</strong>
-                  <span>中文名：皇室战争</span>
-                  <p>实时卡牌策略，适合看竞技与卡牌收集结合。</p>
+                  <span>中文参考：皇室战争</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
-                <div class="studio-rank-pill">GP Strategy 收入 #15</div>
+                <div class="studio-rank-pill">GP Strategy 收入 #16</div>
               </article>
             </div>
           </div>
@@ -618,13 +691,13 @@
                 <h3>Lilith / LilithGames</h3>
                 <span>莉莉丝</span>
               </div>
-              <div class="studio-toggle">点开</div>
+              <div class="studio-toggle">展开</div>
             </div>
             <p class="studio-intro">中国出海代表厂商之一，既有 4X 长线，也有放置 RPG 和新生存策略线索。</p>
             <div class="studio-metrics">
               <span>3 款标志产品</span>
               <span>SLG / 放置 RPG</span>
-              <span>GP Strategy 收入 #13</span>
+              <span>GP Strategy 收入 #14</span>
             </div>
           </summary>
           <div class="studio-body">
@@ -634,26 +707,26 @@
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Palmon: Survival</strong>
-                  <span>中文名：帕鲁生存</span>
-                  <p>生存策略新品线索，重点看题材包装。</p>
+                  <span>中文参考：帕鲁生存</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
-                <div class="studio-rank-pill">GP Strategy 收入 #13</div>
+                <div class="studio-rank-pill">GP Strategy 收入 #14</div>
               </article>
               <article class="studio-product" data-game="Rise of Kingdoms">
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Rise of Kingdoms</strong>
-                  <span>中文名：万国觉醒</span>
-                  <p>经典 4X 长线样本。</p>
+                  <span>中文参考：万国觉醒</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
-                <div class="studio-rank-pill">GP Strategy 收入 #20</div>
+                <div class="studio-rank-pill">GP Strategy 收入 #15</div>
               </article>
               <article class="studio-product" data-game="AFK Arena">
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>AFK Arena</strong>
-                  <span>中文名：剑与远征</span>
-                  <p>放置 RPG 老产品回榜，观察活动节点。</p>
+                  <span>中文参考：剑与远征</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
                 <div class="studio-rank-pill">GP RPG 收入 #30</div>
               </article>
@@ -668,13 +741,13 @@
                 <h3>FunPlus</h3>
                 <span>FunPlus</span>
               </div>
-              <div class="studio-toggle">点开</div>
+              <div class="studio-toggle">展开</div>
             </div>
-            <p class="studio-intro">老牌 SLG 出海厂商，今天 Strategy 榜尾有多条产品线索。</p>
+            <p class="studio-intro">老牌 SLG 出海厂商，今天 Strategy 榜尾仍有多条产品线索。</p>
             <div class="studio-metrics">
               <span>3 款标志产品</span>
               <span>SLG / 混合题材</span>
-              <span>GP Strategy 收入 #24</span>
+              <span>GP Strategy 收入 #25</span>
             </div>
           </summary>
           <div class="studio-body">
@@ -684,26 +757,26 @@
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Tiles Survive!</strong>
-                  <span>中文名：瓷砖生存</span>
-                  <p>Tile + Survival 新线索。</p>
+                  <span>中文参考：瓷砖生存</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
-                <div class="studio-rank-pill">GP Strategy 收入 #24</div>
+                <div class="studio-rank-pill">GP Strategy 收入 #25</div>
+              </article>
+              <article class="studio-product" data-game="Foundation: Galactic Frontier">
+                <span class="studio-product-icon app-icon"></span>
+                <div class="studio-product-text">
+                  <strong>Foundation: Galactic Frontier</strong>
+                  <span>中文参考：基地：银河边境</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
+                </div>
+                <div class="studio-rank-pill">GP Strategy 收入 #28</div>
               </article>
               <article class="studio-product" data-game="Guns of Glory: Lost Island">
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>Guns of Glory: Lost Island</strong>
-                  <span>中文名：火枪纪元：失落之岛</span>
-                  <p>老线回榜，适合看活动或投放。</p>
-                </div>
-                <div class="studio-rank-pill">GP Strategy 收入 #29</div>
-              </article>
-              <article class="studio-product" data-game="Stormshot">
-                <span class="studio-product-icon app-icon"></span>
-                <div class="studio-product-text">
-                  <strong>Stormshot</strong>
-                  <span>中文名：风暴射击</span>
-                  <p>射击解谜 + SLG 的包装样本。</p>
+                  <span>中文参考：火枪纪元：失落之岛</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
                 </div>
                 <div class="studio-rank-pill">GP Strategy 收入 #30</div>
               </article>
@@ -715,320 +788,1366 @@
 
     <section id="puzzle" class="section">
       <h2>Puzzle 完整榜单与简要</h2>
-      <div class="notice"><strong>中文名说明：</strong>“中文名”表示官方或常见译名；“中文参考”用于辅助学习，不等同官方译名。厂商待核验处先保守标注，不硬写。</div>
+      <div class="notice"><strong>中文名说明：</strong>“中文参考”用于辅助学习与记忆，不等同官方译名；厂商中文称呼优先使用常见叫法，无法确认时保留英文。</div>
       <h3>Google Play Puzzle 收入榜 Top 30</h3>
-      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>简要学习点</th></tr></thead><tbody><tr><td><span class="rank">1</span></td><td class="product">Royal Match<span class="cn">中文名：皇家消除</span></td><td>Dream Games（梦之游戏）</td><td>Match-3</td><td>头部标杆继续稳居第一，关卡产能、活动节奏、装修改造叙事仍是日常拆解对象。</td></tr>
-<tr><td><span class="rank">2</span></td><td class="product">Gossip Harbor: Merge &amp; Story<span class="cn">中文名：浪漫餐厅</span></td><td>Microfun（柠檬微趣）</td><td>Merge / Story</td><td>订单 + 剧情 + 场景修复的强商业化样本，Microfun 仍是 merge/story 学习重点。</td></tr>
-<tr><td><span class="rank">3</span></td><td class="product">Royal Kingdom<span class="cn">中文名：皇家王国</span></td><td>Dream Games（梦之游戏）</td><td>Match-3</td><td>Dream 第二产品稳定前三，观察它与 Royal Match 的题材和关卡差异化。</td></tr>
-<tr><td><span class="rank">4</span></td><td class="product">Toon Blast<span class="cn">中文名：卡通爆破</span></td><td>Peak（Peak Games）</td><td>Blast</td><td>老牌 Blast 仍在高位，说明长期运营与关卡池价值很强。</td></tr>
-<tr><td><span class="rank">5</span></td><td class="product">Fishdom<span class="cn">中文名：梦幻水族箱</span></td><td>Playrix（梦幻系厂商）</td><td>Match-3 / 养成</td><td>Playrix 老产品继续守住前五，水族箱装饰目标仍有效。</td></tr>
-<tr><td><span class="rank">6</span></td><td class="product">Match Factory!<span class="cn">中文名：匹配工厂</span></td><td>Peak（Peak Games）</td><td>3D Match</td><td>Peak 在 3D Match 收入化上的重点样本。</td></tr>
-<tr><td><span class="rank">7</span></td><td class="product">Pixel Flow!<span class="cn">中文名：像素流</span></td><td>Loom Games</td><td>轻 Puzzle</td><td>轻玩法进入收入榜前十，适合观察广告流量到内购转化。</td></tr>
-<tr><td><span class="rank">8</span></td><td class="product">Yarn Loop<span class="cn">中文名：毛线环</span></td><td>Combo Game</td><td>Knit / Sort</td><td>线绳/毛线题材继续高位，说明触感类整理题材仍有空间。</td></tr>
-<tr><td><span class="rank">9</span></td><td class="product">All in Hole: Black Hole Games<span class="cn">中文名：全都进洞</span></td><td>Homa（霍马）</td><td>黑洞 / 轻 Puzzle</td><td>轻玩法商业化样本，适合看关卡节奏与礼包设计。</td></tr>
-<tr><td><span class="rank">10</span></td><td class="product">Flambe: Merge &amp; Cook<span class="cn">中文名：合成与烹饪</span></td><td>Microfun（柠檬微趣）</td><td>Merge / Cook</td><td>Microfun 第二个高位 merge，题材从港口餐厅扩到烹饪。</td></tr>
-<tr><td><span class="rank soft">11</span></td><td class="product">Mystery Town<span class="cn">中文名：神秘小镇</span></td><td>Cedar Games</td><td>Merge / 悬疑</td><td>悬疑包装的 merge 继续上探，题材差异化值得看素材。</td></tr>
-<tr><td><span class="rank soft">12</span></td><td class="product">Travel Town<span class="cn">中文名：旅行小镇</span></td><td>Moon Active</td><td>Merge</td><td>merge 赛道老样本，今天被 Mystery Town 反超一位。</td></tr>
-<tr><td><span class="rank soft">13</span></td><td class="product">Hole Stars<span class="cn">中文名：黑洞明星</span></td><td>Moon Active</td><td>黑洞 / Puzzle</td><td>Moon Active 轻玩法探索，和 Travel Town 形成品类对照。</td></tr>
-<tr><td><span class="rank soft">14</span></td><td class="product">Magic Sort!<span class="cn">中文名：魔法排序</span></td><td>Grand Games</td><td>Sort</td><td>排序类今天高于 Toy Blast，说明轻解谜仍有收入弹性。</td></tr>
-<tr><td><span class="rank soft">15</span></td><td class="product">Toy Blast<span class="cn">中文名：玩具爆破</span></td><td>Peak（Peak Games）</td><td>Blast</td><td>Peak 老产品，和 Toon Blast / Match Factory 共同构成产品梯队。</td></tr>
-<tr><td><span class="rank soft">16</span></td><td class="product">Empires &amp; Puzzles<span class="cn">中文名：帝国与谜题</span></td><td>Small Giant Games</td><td>Puzzle RPG</td><td>Puzzle 与男向 RPG/SLG 的连接点，适合看数值与战斗包装。</td></tr>
-<tr><td><span class="rank soft">17</span></td><td class="product">Merge Dragons!<span class="cn">中文名：合成龙</span></td><td>Gram Games</td><td>Merge</td><td>老牌 merge 长线，适合作为题材生命力参照。</td></tr>
-<tr><td><span class="rank soft">18</span></td><td class="product">Seaside Escape<span class="cn">中文名：梦幻旅行</span></td><td>Microfun（柠檬微趣）</td><td>Merge / Story</td><td>Microfun 第三款收入榜产品，产品集强度很高。</td></tr>
-<tr><td><span class="rank soft">19</span></td><td class="product">Domino Dreams<span class="cn">中文名：多米诺梦想</span></td><td>SuperPlay</td><td>Domino / Puzzle</td><td>牌类包装 puzzle，上升到 Marble Sort 前面。</td></tr>
-<tr><td><span class="rank soft">20</span></td><td class="product">Marble Sort!<span class="cn">中文名：弹珠排序</span></td><td>Voodoo</td><td>Sort</td><td>超休闲厂商收入化尝试，关注广告与内购平衡。</td></tr>
-<tr><td><span class="rank soft">21</span></td><td class="product">Color Block Jam<span class="cn">中文名：色块堵塞</span></td><td>Rollic Games</td><td>Block / Jam</td><td>轻 puzzle 热点机制，收入和免费侧都值得跟。</td></tr>
-<tr><td><span class="rank soft">22</span></td><td class="product">Merge Mansion<span class="cn">中文名：合并庄园</span></td><td>Metacore</td><td>Merge / Story</td><td>merge/story 标杆之一，但今天被 Color Block Jam 反超。</td></tr>
-<tr><td><span class="rank soft">23</span></td><td class="product">Match Villains<span class="cn">中文名：匹配反派</span></td><td>Good Job Games</td><td>Match</td><td>题材包装和素材表现可以单独看。</td></tr>
-<tr><td><span class="rank soft">24</span></td><td class="product">Triple Match 3D<span class="cn">中文名：三重匹配 3D</span></td><td>Boombox Games</td><td>3D Match</td><td>3D Match 赛道核心对照样本。</td></tr>
-<tr><td><span class="rank soft">25</span></td><td class="product">Triple Match City<span class="cn">中文名：三重匹配城市</span></td><td>Breeze Games</td><td>3D Match</td><td>城市题材 3D Match，位置稳定。</td></tr>
-<tr><td><span class="rank soft">26</span></td><td class="product">Screwdom 3D<span class="cn">中文名：螺丝王国 3D</span></td><td>iKame / Zego</td><td>Screw Puzzle</td><td>螺丝拆解玩法仍在收入榜。</td></tr>
-<tr><td><span class="rank soft">27</span></td><td class="product">Cube Land Puzzle Game<span class="cn">中文名：方块大陆</span></td><td>Rotatelab</td><td>Block / Puzzle</td><td>轻玩法收入榜末段，今天位于 Disney Emoji Blitz 前。</td></tr>
-<tr><td><span class="rank soft">28</span></td><td class="product">Disney Emoji Blitz<span class="cn">中文名：迪士尼表情闪电</span></td><td>Jam City</td><td>IP / Match</td><td>IP puzzle 长线，位置略回落。</td></tr>
-<tr><td><span class="rank soft">29</span></td><td class="product">Car Sort<span class="cn">中文名：汽车排序</span></td><td>Rollic Games / LeoGame</td><td>Sort</td><td>交通排序素材样本。</td></tr>
-<tr><td><span class="rank soft">30</span></td><td class="product">Loop Sort<span class="cn">中文名：环形排序</span></td><td>Voodoo</td><td>Sort</td><td>排序轻玩法素材观察。</td></tr></tbody></table></div>
+      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>
+              <tr>
+                <td><span class="rank">1</span></td>
+                <td class="product">Royal Match<span class="cn">中文参考：皇家消除</span></td>
+                <td>Dream Games（梦之游戏）</td>
+                <td>Match-3</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>头部标杆，继续拆关卡产能、活动节奏、装修改造叙事和礼包节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">2</span></td>
+                <td class="product">Gossip Harbor: Merge &amp; Story<span class="cn">中文参考：浪漫餐厅</span></td>
+                <td>Microfun（柠檬微趣）</td>
+                <td>Merge / Story</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>merge/story 头部样本，订单、剧情和场景修复都值得长期拆。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">3</span></td>
+                <td class="product">Royal Kingdom<span class="cn">中文参考：皇家王国</span></td>
+                <td>Dream Games（梦之游戏）</td>
+                <td>Match-3</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>Dream 第二产品，适合看同题材能力复用与差异化。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">4</span></td>
+                <td class="product">Toon Blast<span class="cn">中文参考：卡通爆破</span></td>
+                <td>Peak / Peak Games</td>
+                <td>Blast</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>老牌 Blast 长线运营样本。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">5</span></td>
+                <td class="product">Fishdom<span class="cn">中文参考：梦幻水族箱</span></td>
+                <td>Playrix（可记为梦幻系厂商）</td>
+                <td>Match-3 / 养成</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>消除 + 水族箱养成目标仍有效，适合看长期内容目标。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">6</span></td>
+                <td class="product">Match Factory!<span class="cn">中文参考：匹配工厂</span></td>
+                <td>Peak / Peak Games</td>
+                <td>3D Match</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>3D Match 收入化重点样本，注意物件设计、清屏反馈和活动节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">7</span></td>
+                <td class="product">Pixel Flow!<span class="cn">中文参考：像素流</span></td>
+                <td>Loom Games</td>
+                <td>轻 Puzzle</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>轻玩法同时在收入与免费侧可见，适合观察广告量向内购转化。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">8</span></td>
+                <td class="product">Yarn Loop<span class="cn">中文参考：毛线环</span></td>
+                <td>Combo Game</td>
+                <td>Knit / Sort</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>毛线/编织触感题材持续高位，适合看素材包装。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">9</span></td>
+                <td class="product">All in Hole: Black Hole Games<span class="cn">中文参考：全部进洞：黑洞游戏</span></td>
+                <td>Homa（霍马）</td>
+                <td>黑洞 / 轻 Puzzle</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">10</span></td>
+                <td class="product">Flambe: Merge &amp; Cook<span class="cn">中文参考：合成与烹饪</span></td>
+                <td>Microfun（柠檬微趣）</td>
+                <td>Merge / Cook</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">11</span></td>
+                <td class="product">Mystery Town<span class="cn">中文参考：神秘小镇</span></td>
+                <td>Cedar Games</td>
+                <td>Merge / 悬疑</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">12</span></td>
+                <td class="product">Travel Town<span class="cn">中文参考：旅行小镇</span></td>
+                <td>Magmatic Games（Travel Town 团队）</td>
+                <td>Merge</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">13</span></td>
+                <td class="product">Toy Blast<span class="cn">中文参考：玩具爆破</span></td>
+                <td>Peak / Peak Games</td>
+                <td>Blast</td>
+                <td><span class="delta up">↑2</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">14</span></td>
+                <td class="product">Hole Stars<span class="cn">中文参考：黑洞明星</span></td>
+                <td>Moon Active</td>
+                <td>黑洞 / Puzzle</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">15</span></td>
+                <td class="product">Magic Sort!<span class="cn">中文参考：魔法排序</span></td>
+                <td>Grand Games</td>
+                <td>Sort</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>排序玩法今天在免费榜和收入榜都强，值得看首局与关卡压力曲线。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">16</span></td>
+                <td class="product">Seaside Escape<span class="cn">中文参考：梦幻旅行</span></td>
+                <td>Microfun（柠檬微趣）</td>
+                <td>Merge / Story</td>
+                <td><span class="delta up">↑2</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">17</span></td>
+                <td class="product">Merge Dragons!<span class="cn">中文参考：合成龙</span></td>
+                <td>Gram Games</td>
+                <td>Merge</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">18</span></td>
+                <td class="product">Domino Dreams<span class="cn">中文参考：多米诺梦境</span></td>
+                <td>SuperPlay</td>
+                <td>Domino / Puzzle</td>
+                <td><span class="delta up">↑1</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">19</span></td>
+                <td class="product">Color Block Jam<span class="cn">中文参考：色块堵塞</span></td>
+                <td>Rollic Games</td>
+                <td>Block / Jam</td>
+                <td><span class="delta up">↑2</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">20</span></td>
+                <td class="product">Marble Sort!<span class="cn">中文参考：弹珠排序</span></td>
+                <td>Voodoo</td>
+                <td>Sort</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">21</span></td>
+                <td class="product">Merge Mansion<span class="cn">中文参考：合并庄园</span></td>
+                <td>Metacore</td>
+                <td>Merge / Story</td>
+                <td><span class="delta up">↑1</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">22</span></td>
+                <td class="product">Empires &amp; Puzzles<span class="cn">中文参考：帝国与谜题</span></td>
+                <td>Small Giant Games</td>
+                <td>Puzzle RPG</td>
+                <td><span class="delta down">↓6</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">23</span></td>
+                <td class="product">Match Villains<span class="cn">中文参考：匹配反派</span></td>
+                <td>Good Job Games</td>
+                <td>GP Puzzle 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">24</span></td>
+                <td class="product">Triple Match 3D<span class="cn">中文参考：三重匹配 3D</span></td>
+                <td>Boombox Games</td>
+                <td>GP Puzzle 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">25</span></td>
+                <td class="product">Triple Match City<span class="cn">中文参考：三重匹配城市</span></td>
+                <td>Breeze Games</td>
+                <td>GP Puzzle 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">26</span></td>
+                <td class="product">Cube Land Puzzle Game<span class="cn">中文参考：方块大陆</span></td>
+                <td>Rotatelab</td>
+                <td>GP Puzzle 收入</td>
+                <td><span class="delta up">↑1</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">27</span></td>
+                <td class="product">Screwdom 3D<span class="cn">中文参考：螺丝王国 3D</span></td>
+                <td>iKame / Zego</td>
+                <td>Screw Puzzle</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">28</span></td>
+                <td class="product">Disney Emoji Blitz<span class="cn">中文参考：迪士尼表情闪电</span></td>
+                <td>Jam City</td>
+                <td>GP Puzzle 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">29</span></td>
+                <td class="product">Car Sort<span class="cn">中文参考：汽车排序</span></td>
+                <td>Rollic Games</td>
+                <td>GP Puzzle 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">30</span></td>
+                <td class="product">Loop Sort<span class="cn">中文参考：环形排序</span></td>
+                <td>Voodoo</td>
+                <td>GP Puzzle 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr></tbody></table></div>
       <h3 style="margin-top:22px">iOS Puzzle 收入榜 Top 30</h3>
-      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>简要学习点</th></tr></thead><tbody><tr><td><span class="rank">1</span></td><td class="product">Royal Match<span class="cn">中文名：皇家消除</span></td><td>Dream Games（梦之游戏）</td><td>Match-3</td><td>iOS 收入榜继续第一。</td></tr>
-<tr><td><span class="rank">2</span></td><td class="product">Candy Crush Saga<span class="cn">中文名：糖果传奇</span></td><td>King</td><td>Match-3</td><td>iOS 第二，经典长线仍强。</td></tr>
-<tr><td><span class="rank">3</span></td><td class="product">Gossip Harbor<span class="cn">中文名：浪漫餐厅</span></td><td>Microfun（柠檬微趣）</td><td>Merge / Story</td><td>从第二到第三，但仍是 merge/story 头部。</td></tr>
-<tr><td><span class="rank">4</span></td><td class="product">Royal Kingdom<span class="cn">中文名：皇家王国</span></td><td>Dream Games（梦之游戏）</td><td>Match-3</td><td>今天 iOS 进入前四，是最重要的上升信号之一。</td></tr>
-<tr><td><span class="rank">5</span></td><td class="product">Township<span class="cn">中文名：梦想小镇</span></td><td>Playrix</td><td>经营 / Puzzle</td><td>Playrix 小镇矩阵保持高位。</td></tr>
-<tr><td><span class="rank">6</span></td><td class="product">Toon Blast<span class="cn">中文名：卡通爆破</span></td><td>Peak Games</td><td>Blast</td><td>老产品继续在 iOS 前十。</td></tr>
-<tr><td><span class="rank">7</span></td><td class="product">Tasty Travels<span class="cn">中文名：美味旅行</span></td><td>Century Games（世纪游戏）</td><td>Merge</td><td>世纪游戏休闲线，和 SLG 线形成横向能力。</td></tr>
-<tr><td><span class="rank">8</span></td><td class="product">Gardenscapes<span class="cn">中文名：梦幻花园</span></td><td>Playrix</td><td>Match-3 / 花园</td><td>Playrix 核心老产品。</td></tr>
-<tr><td><span class="rank">9</span></td><td class="product">Pixel Flow!<span class="cn">中文名：像素流</span></td><td>Loom Games</td><td>轻 Puzzle</td><td>双端收入榜可见，值得继续看转化。</td></tr>
-<tr><td><span class="rank">10</span></td><td class="product">Match Factory!<span class="cn">中文名：匹配工厂</span></td><td>Peak Games</td><td>3D Match</td><td>Peak 新方向仍在 iOS 前十。</td></tr>
-<tr><td><span class="rank soft">11</span></td><td class="product">Block Out!<span class="cn">中文名：方块突围</span></td><td>HypeHype / 轻玩法团队</td><td>Block / Jam</td><td>新进入 iOS 收入前段，建议观察素材与前 20 关节奏。</td></tr>
-<tr><td><span class="rank soft">12</span></td><td class="product">Homescapes<span class="cn">中文名：梦幻家园</span></td><td>Playrix</td><td>Match-3 / 家装</td><td>老产品矩阵稳定。</td></tr>
-<tr><td><span class="rank soft">13</span></td><td class="product">Merge Cooking<span class="cn">中文名：合成烹饪</span></td><td>Happibits</td><td>Merge / Cook</td><td>烹饪题材 merge。</td></tr>
-<tr><td><span class="rank soft">14</span></td><td class="product">Fishdom<span class="cn">中文名：梦幻水族箱</span></td><td>Playrix</td><td>Match-3 / 养成</td><td>iOS 位置低于 Google Play，说明双端结构不同。</td></tr>
-<tr><td><span class="rank soft">15</span></td><td class="product">Magic Sort!<span class="cn">中文名：魔法排序</span></td><td>Grand Games</td><td>Sort</td><td>排序类也进入 iOS 收入前 15。</td></tr>
-<tr><td><span class="rank soft">16</span></td><td class="product">Dragon Ball Z Dokkan Battle<span class="cn">中文名：龙珠 Z 爆裂大战</span></td><td>Bandai Namco</td><td>IP / Puzzle RPG</td><td>IP 型 puzzle/RPG 收入很强，值得作为男向连接案例。</td></tr>
-<tr><td><span class="rank soft">17</span></td><td class="product">NYT Games<span class="cn">中文名：纽约时报游戏</span></td><td>The New York Times（纽约时报）</td><td>Word / Crossword</td><td>订阅与品牌型 puzzle。</td></tr>
-<tr><td><span class="rank soft">18</span></td><td class="product">All in Hole: Black Hole Games<span class="cn">中文名：全都进洞</span></td><td>Homa</td><td>黑洞 / Puzzle</td><td>轻玩法收入化。</td></tr>
-<tr><td><span class="rank soft">19</span></td><td class="product">Screwdom<span class="cn">中文名：螺丝王国</span></td><td>Zego Global</td><td>Screw Puzzle</td><td>螺丝题材。</td></tr>
-<tr><td><span class="rank soft">20</span></td><td class="product">Candy Crush Soda Saga<span class="cn">中文名：糖果苏打传奇</span></td><td>King</td><td>Match-3</td><td>King 第二产品。</td></tr>
-<tr><td><span class="rank soft">21</span></td><td class="product">Color Block Jam<span class="cn">中文名：色块堵塞</span></td><td>Rollic Games</td><td>Block / Jam</td><td>轻 puzzle 热点。</td></tr>
-<tr><td><span class="rank soft">22</span></td><td class="product">Yarn Loop<span class="cn">中文名：毛线环</span></td><td>Combo Games</td><td>Knit / Sort</td><td>毛线题材继续可见。</td></tr>
-<tr><td><span class="rank soft">23</span></td><td class="product">Flambe: Merge &amp; Cook<span class="cn">中文名：合成与烹饪</span></td><td>Microfun（柠檬微趣）</td><td>Merge / Cook</td><td>Microfun 产品集继续扩展。</td></tr>
-<tr><td><span class="rank soft">24</span></td><td class="product">Travel Town<span class="cn">中文名：旅行小镇</span></td><td>Moon Active</td><td>Merge</td><td>merge 对照样本。</td></tr>
-<tr><td><span class="rank soft">25</span></td><td class="product">Toy Blast<span class="cn">中文名：玩具爆破</span></td><td>Peak Games</td><td>Blast</td><td>Peak 老产品。</td></tr>
-<tr><td><span class="rank soft">26</span></td><td class="product">Seaside Escape<span class="cn">中文名：梦幻旅行</span></td><td>Microfun（柠檬微趣）</td><td>Merge / Story</td><td>Microfun 第三款产品。</td></tr>
-<tr><td><span class="rank soft">27</span></td><td class="product">Colony Flow!<span class="cn">中文名：殖民流</span></td><td>ABI Global</td><td>轻 Puzzle</td><td>轻玩法收入观察。</td></tr>
-<tr><td><span class="rank soft">28</span></td><td class="product">Merge Mansion<span class="cn">中文名：合并庄园</span></td><td>Metacore</td><td>Merge / Story</td><td>merge/story 标杆。</td></tr>
-<tr><td><span class="rank soft">29</span></td><td class="product">Jelly Busters<span class="cn">中文名：果冻爆破</span></td><td>未知 / 待核验</td><td>Puzzle</td><td>新进入 iOS 榜尾，先作为新品线索保留。</td></tr>
-<tr><td><span class="rank soft">30</span></td><td class="product">Triple Match City<span class="cn">中文名：三重匹配城市</span></td><td>Breeze Games</td><td>3D Match</td><td>城市题材 3D Match。</td></tr></tbody></table></div>
+      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>
+              <tr>
+                <td><span class="rank">1</span></td>
+                <td class="product">Royal Match<span class="cn">中文参考：皇家消除</span></td>
+                <td>Dream Games（梦之游戏）</td>
+                <td>Match-3</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>头部标杆，继续拆关卡产能、活动节奏、装修改造叙事和礼包节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">2</span></td>
+                <td class="product">Candy Crush Saga<span class="cn">中文参考：糖果传奇</span></td>
+                <td>King</td>
+                <td>iOS Puzzle 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">3</span></td>
+                <td class="product">Gossip Harbor: Merge &amp; Story<span class="cn">中文参考：浪漫餐厅</span></td>
+                <td>Microfun（柠檬微趣）</td>
+                <td>Merge / Story</td>
+                <td><span class="delta new">新进</span></td>
+                <td>merge/story 头部样本，订单、剧情和场景修复都值得长期拆。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">4</span></td>
+                <td class="product">Royal Kingdom<span class="cn">中文参考：皇家王国</span></td>
+                <td>Dream Games（梦之游戏）</td>
+                <td>Match-3</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>Dream 第二产品，适合看同题材能力复用与差异化。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">5</span></td>
+                <td class="product">Township<span class="cn">中文参考：梦想小镇</span></td>
+                <td>Playrix（可记为梦幻系厂商）</td>
+                <td>iOS Puzzle 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">6</span></td>
+                <td class="product">Toon Blast<span class="cn">中文参考：卡通爆破</span></td>
+                <td>Peak / Peak Games</td>
+                <td>Blast</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>老牌 Blast 长线运营样本。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">7</span></td>
+                <td class="product">Tasty Travels<span class="cn">中文参考：美味旅行</span></td>
+                <td>Century Games（世纪游戏）</td>
+                <td>iOS Puzzle 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">8</span></td>
+                <td class="product">Match Factory!<span class="cn">中文参考：匹配工厂</span></td>
+                <td>Peak / Peak Games</td>
+                <td>3D Match</td>
+                <td><span class="delta up">↑2</span></td>
+                <td>3D Match 收入化重点样本，注意物件设计、清屏反馈和活动节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">9</span></td>
+                <td class="product">Gardenscapes<span class="cn">中文参考：梦幻花园</span></td>
+                <td>Playrix（可记为梦幻系厂商）</td>
+                <td>iOS Puzzle 收入</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">10</span></td>
+                <td class="product">Pixel Flow!<span class="cn">中文参考：像素流</span></td>
+                <td>Loom Games</td>
+                <td>轻 Puzzle</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>轻玩法同时在收入与免费侧可见，适合观察广告量向内购转化。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">11</span></td>
+                <td class="product">Homescapes<span class="cn">中文参考：梦幻家园</span></td>
+                <td>Playrix（可记为梦幻系厂商）</td>
+                <td>iOS Puzzle 收入</td>
+                <td><span class="delta up">↑1</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">12</span></td>
+                <td class="product">Block Out!<span class="cn">中文参考：方块突围</span></td>
+                <td>HypeHype</td>
+                <td>iOS Puzzle 收入</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">13</span></td>
+                <td class="product">Fishdom<span class="cn">中文参考：梦幻水族箱</span></td>
+                <td>Playrix（可记为梦幻系厂商）</td>
+                <td>Match-3 / 养成</td>
+                <td><span class="delta up">↑1</span></td>
+                <td>消除 + 水族箱养成目标仍有效，适合看长期内容目标。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">14</span></td>
+                <td class="product">Merge Cooking<span class="cn">中文参考：合成烹饪</span></td>
+                <td>待核验</td>
+                <td>iOS Puzzle 收入</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">15</span></td>
+                <td class="product">Magic Sort!<span class="cn">中文参考：魔法排序</span></td>
+                <td>Grand Games</td>
+                <td>Sort</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>排序玩法今天在免费榜和收入榜都强，值得看首局与关卡压力曲线。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">16</span></td>
+                <td class="product">All in Hole: Black Hole Games<span class="cn">中文参考：全部进洞：黑洞游戏</span></td>
+                <td>Homa（霍马）</td>
+                <td>黑洞 / 轻 Puzzle</td>
+                <td><span class="delta up">↑2</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">17</span></td>
+                <td class="product">Screwdom<span class="cn">中文参考：螺丝王国</span></td>
+                <td>Zego Global</td>
+                <td>iOS Puzzle 收入</td>
+                <td><span class="delta up">↑2</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">18</span></td>
+                <td class="product">Candy Crush Soda Saga<span class="cn">中文参考：糖果苏打传奇</span></td>
+                <td>King</td>
+                <td>iOS Puzzle 收入</td>
+                <td><span class="delta up">↑2</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">19</span></td>
+                <td class="product">NYT Games<span class="cn">中文参考：纽约时报游戏</span></td>
+                <td>The New York Times</td>
+                <td>iOS Puzzle 收入</td>
+                <td><span class="delta down">↓2</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">20</span></td>
+                <td class="product">Yarn Loop<span class="cn">中文参考：毛线环</span></td>
+                <td>Combo Game</td>
+                <td>Knit / Sort</td>
+                <td><span class="delta up">↑2</span></td>
+                <td>毛线/编织触感题材持续高位，适合看素材包装。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">21</span></td>
+                <td class="product">Color Block Jam<span class="cn">中文参考：色块堵塞</span></td>
+                <td>Rollic Games</td>
+                <td>Block / Jam</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">22</span></td>
+                <td class="product">Flambe: Merge &amp; Cook<span class="cn">中文参考：合成与烹饪</span></td>
+                <td>Microfun（柠檬微趣）</td>
+                <td>Merge / Cook</td>
+                <td><span class="delta up">↑1</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">23</span></td>
+                <td class="product">Toy Blast<span class="cn">中文参考：玩具爆破</span></td>
+                <td>Peak / Peak Games</td>
+                <td>Blast</td>
+                <td><span class="delta up">↑2</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">24</span></td>
+                <td class="product">Travel Town<span class="cn">中文参考：旅行小镇</span></td>
+                <td>Magmatic Games（Travel Town 团队）</td>
+                <td>Merge</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">25</span></td>
+                <td class="product">Colony Flow!<span class="cn">中文参考：殖民流</span></td>
+                <td>ABI Global</td>
+                <td>iOS Puzzle 收入</td>
+                <td><span class="delta up">↑2</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">26</span></td>
+                <td class="product">Merge Mansion<span class="cn">中文参考：合并庄园</span></td>
+                <td>Metacore</td>
+                <td>Merge / Story</td>
+                <td><span class="delta up">↑2</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">27</span></td>
+                <td class="product">Seaside Escape<span class="cn">中文参考：梦幻旅行</span></td>
+                <td>Microfun（柠檬微趣）</td>
+                <td>Merge / Story</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">28</span></td>
+                <td class="product">Mystery Town<span class="cn">中文参考：神秘小镇</span></td>
+                <td>Cedar Games</td>
+                <td>Merge / 悬疑</td>
+                <td><span class="delta new">新进</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">29</span></td>
+                <td class="product">Jelly Busters: Puzzle Game<span class="cn">中文参考：果冻爆破</span></td>
+                <td>待核验</td>
+                <td>iOS Puzzle 收入</td>
+                <td><span class="delta new">新进</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">30</span></td>
+                <td class="product">Triple Match City<span class="cn">中文参考：三重匹配城市</span></td>
+                <td>Breeze Games</td>
+                <td>iOS Puzzle 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</td>
+              </tr></tbody></table></div>
       <h3 style="margin-top:22px">Google Play Puzzle 免费榜 Top 30</h3>
-      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>简要学习点</th></tr></thead><tbody><tr><td><span class="rank">1</span></td><td class="product">Block Blast!<span class="cn">中文名：方块爆破</span></td><td>HungryStudio</td><td>Block</td><td>免费榜第一，仍是买量素材与首局体验标杆。</td></tr>
-<tr><td><span class="rank">2</span></td><td class="product">Ocean Block Shoot<span class="cn">中文名：海洋方块射击</span></td><td>未知 / 待核验</td><td>Block / Shoot</td><td>新题材包装，海洋 + 方块射击。</td></tr>
-<tr><td><span class="rank">3</span></td><td class="product">Search It: Hidden Object Games<span class="cn">中文名：找一找：隐藏物品</span></td><td>未知 / 待核验</td><td>Hidden Object</td><td>找物赛道下载很强。</td></tr>
-<tr><td><span class="rank">4</span></td><td class="product">Jigsaw Drop<span class="cn">中文名：拼图掉落</span></td><td>未知 / 待核验</td><td>Jigsaw</td><td>拼图玩法新线索。</td></tr>
-<tr><td><span class="rank">5</span></td><td class="product">Find Hidden Objects - Spot It!<span class="cn">中文名：找隐藏物品</span></td><td>未知 / 待核验</td><td>Hidden Object</td><td>找物赛道第二个前五。</td></tr>
-<tr><td><span class="rank">6</span></td><td class="product">Block Puzzle Sudoku<span class="cn">中文名：方块数独</span></td><td>未知 / 待核验</td><td>Block / Sudoku</td><td>木块 + 数独经典组合。</td></tr>
-<tr><td><span class="rank">7</span></td><td class="product">Offline Games - No Wifi Games<span class="cn">中文名：离线小游戏</span></td><td>未知 / 待核验</td><td>合集 / Puzzle</td><td>离线合集流量入口。</td></tr>
-<tr><td><span class="rank">8</span></td><td class="product">Mahjong Master<span class="cn">中文名：麻将大师</span></td><td>未知 / 待核验</td><td>Mahjong</td><td>麻将/牌类 puzzle。</td></tr>
-<tr><td><span class="rank">9</span></td><td class="product">Color Block Jam<span class="cn">中文名：色块堵塞</span></td><td>Rollic Games</td><td>Block / Jam</td><td>免费与收入双榜可见，值得重点拆。</td></tr>
-<tr><td><span class="rank">10</span></td><td class="product">Water Sort Puzzle<span class="cn">中文名：水排序谜题</span></td><td>未知 / 待核验</td><td>Sort</td><td>经典水排序仍有量。</td></tr>
-<tr><td><span class="rank soft">11</span></td><td class="product">Ball Sort Puzzle - Color Games<span class="cn">中文名：球排序</span></td><td>未知 / 待核验</td><td>Sort</td><td>排序玩法量级仍在。</td></tr>
-<tr><td><span class="rank soft">12</span></td><td class="product">Royal Match<span class="cn">中文名：皇家消除</span></td><td>Dream Games（梦之游戏）</td><td>Match-3</td><td>老产品仍有新增量。</td></tr>
-<tr><td><span class="rank soft">13</span></td><td class="product">Carnival Blast<span class="cn">中文名：嘉年华爆破</span></td><td>未知 / 待核验</td><td>Blast</td><td>爆破题材新品线索。</td></tr>
-<tr><td><span class="rank soft">14</span></td><td class="product">Car Sort<span class="cn">中文名：汽车排序</span></td><td>Rollic Games / LeoGame</td><td>Sort</td><td>交通排序素材。</td></tr>
-<tr><td><span class="rank soft">15</span></td><td class="product">Bus Out<span class="cn">中文名：巴士出行</span></td><td>未知 / 待核验</td><td>Traffic Puzzle</td><td>交通堵塞题材。</td></tr>
-<tr><td><span class="rank soft">16</span></td><td class="product">Block Crush<span class="cn">中文名：方块粉碎</span></td><td>未知 / 待核验</td><td>Block</td><td>Block 变体。</td></tr>
-<tr><td><span class="rank soft">17</span></td><td class="product">Tile Explorer - Triple Match<span class="cn">中文名：瓷砖探索</span></td><td>Oakever Games</td><td>Triple Match</td><td>瓷砖三消。</td></tr>
-<tr><td><span class="rank soft">18</span></td><td class="product">Brain Puzzle: Tricky Quest<span class="cn">中文名：脑洞谜题：棘手任务</span></td><td>未知 / 待核验</td><td>Brain Puzzle</td><td>脑洞/恶搞素材。</td></tr>
-<tr><td><span class="rank soft">19</span></td><td class="product">Royal Kingdom<span class="cn">中文名：皇家王国</span></td><td>Dream Games（梦之游戏）</td><td>Match-3</td><td>Dream 第二产品也有新增量。</td></tr>
-<tr><td><span class="rank soft">20</span></td><td class="product">Screwdom 3D<span class="cn">中文名：螺丝王国 3D</span></td><td>iKame / Zego</td><td>Screw Puzzle</td><td>免费与收入双榜可见。</td></tr>
-<tr><td><span class="rank soft">21</span></td><td class="product">Block Blitz: Brick Breaker<span class="cn">中文名：方块闪击</span></td><td>未知 / 待核验</td><td>Brick / Block</td><td>砖块消除。</td></tr>
-<tr><td><span class="rank soft">22</span></td><td class="product">Woodoku: Wood Block Puzzle<span class="cn">中文名：木块数独</span></td><td>Tripledot Studios</td><td>Block / Sudoku</td><td>木块数独经典样本。</td></tr>
-<tr><td><span class="rank soft">23</span></td><td class="product">Differences - Find Difference<span class="cn">中文名：找不同</span></td><td>未知 / 待核验</td><td>Find Difference</td><td>找不同题材。</td></tr>
-<tr><td><span class="rank soft">24</span></td><td class="product">Tile Match - Matching Games<span class="cn">中文名：瓷砖匹配</span></td><td>未知 / 待核验</td><td>Tile Match</td><td>瓷砖匹配。</td></tr>
-<tr><td><span class="rank soft">25</span></td><td class="product">Tile Family - Match Puzzle Game<span class="cn">中文名：瓷砖家族</span></td><td>Playflux</td><td>Tile Match</td><td>家庭题材 tile match。</td></tr>
-<tr><td><span class="rank soft">26</span></td><td class="product">Wood Screw Puzzle<span class="cn">中文名：木螺丝谜题</span></td><td>未知 / 待核验</td><td>Screw Puzzle</td><td>螺丝题材继续扩散。</td></tr>
-<tr><td><span class="rank soft">27</span></td><td class="product">Grass Master: Lawn Mowing 3D<span class="cn">中文名：割草大师 3D</span></td><td>未知 / 待核验</td><td>3D / Cleanup</td><td>清理/割草视觉反馈。</td></tr>
-<tr><td><span class="rank soft">28</span></td><td class="product">Tricky Prank: Annoying Puzzle<span class="cn">中文名：整蛊谜题</span></td><td>未知 / 待核验</td><td>Brain Puzzle</td><td>恶搞脑洞题材。</td></tr>
-<tr><td><span class="rank soft">29</span></td><td class="product">Emoji Match: Fun Puzzle Game<span class="cn">中文名：表情匹配</span></td><td>未知 / 待核验</td><td>Emoji / Match</td><td>表情符号轻玩法。</td></tr>
-<tr><td><span class="rank soft">30</span></td><td class="product">Redirect It<span class="cn">中文名：重定向</span></td><td>未知 / 待核验</td><td>Logic Puzzle</td><td>逻辑路径题材。</td></tr></tbody></table></div>
+      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>
+              <tr>
+                <td><span class="rank">1</span></td>
+                <td class="product">Meowdoku: Brain Puzzle Games<span class="cn">中文参考：喵独：脑力谜题</span></td>
+                <td>Oakever Games</td>
+                <td>Sudoku / Brain Puzzle</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜第一，猫咪包装 + 数独/脑力题材值得拆素材。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">2</span></td>
+                <td class="product">Magic Sort!<span class="cn">中文参考：魔法排序</span></td>
+                <td>Grand Games</td>
+                <td>Sort</td>
+                <td><span class="delta new">新进</span></td>
+                <td>排序玩法今天在免费榜和收入榜都强，值得看首局与关卡压力曲线。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">3</span></td>
+                <td class="product">Block Blast!<span class="cn">中文参考：方块爆破</span></td>
+                <td>HungryStudio</td>
+                <td>Block</td>
+                <td><span class="delta down">↓2</span></td>
+                <td>免费榜仍在前三，作为买量素材和首局体验标杆继续观察。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">4</span></td>
+                <td class="product">Arrows – Puzzle Escape<span class="cn">中文参考：箭头逃脱</span></td>
+                <td>Lessmore</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">5</span></td>
+                <td class="product">Bus Traffic Fever!<span class="cn">中文参考：巴士交通热</span></td>
+                <td>GOODROID</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">6</span></td>
+                <td class="product">Gossip Harbor: Merge &amp; Story<span class="cn">中文参考：浪漫餐厅</span></td>
+                <td>Microfun（柠檬微趣）</td>
+                <td>Merge / Story</td>
+                <td><span class="delta new">新进</span></td>
+                <td>merge/story 头部样本，订单、剧情和场景修复都值得长期拆。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">7</span></td>
+                <td class="product">Amaze GO!<span class="cn">中文参考：迷宫冲冲冲</span></td>
+                <td>Oakever Games</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">8</span></td>
+                <td class="product">Arrow Puzzle: Tap Puzzle Games<span class="cn">中文参考：箭头点击谜题</span></td>
+                <td>Easybrain</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">9</span></td>
+                <td class="product">Pixel Flow!<span class="cn">中文参考：像素流</span></td>
+                <td>Loom Games</td>
+                <td>轻 Puzzle</td>
+                <td><span class="delta new">新进</span></td>
+                <td>轻玩法同时在收入与免费侧可见，适合观察广告量向内购转化。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">10</span></td>
+                <td class="product">Yarn Loop<span class="cn">中文参考：毛线环</span></td>
+                <td>Combo Game</td>
+                <td>Knit / Sort</td>
+                <td><span class="delta new">新进</span></td>
+                <td>毛线/编织触感题材持续高位，适合看素材包装。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">11</span></td>
+                <td class="product">Stack Smash - Block 3D Puzzle<span class="cn">中文参考：堆栈粉碎</span></td>
+                <td>Tripledot Studios</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">12</span></td>
+                <td class="product">Color Block: Combo Blast<span class="cn">中文参考：彩色方块连击</span></td>
+                <td>Ivy</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">13</span></td>
+                <td class="product">Royal Match<span class="cn">中文参考：皇家消除</span></td>
+                <td>Dream Games（梦之游戏）</td>
+                <td>Match-3</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>头部标杆，继续拆关卡产能、活动节奏、装修改造叙事和礼包节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">14</span></td>
+                <td class="product">Pocket Sort: Coin Merge Puzzle<span class="cn">中文参考：口袋排序：硬币合并</span></td>
+                <td>SayGames</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">15</span></td>
+                <td class="product">Cube Land Puzzle Game<span class="cn">中文参考：方块大陆</span></td>
+                <td>Rotatelab</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">16</span></td>
+                <td class="product">Woodoku Blast<span class="cn">中文参考：木独爆破</span></td>
+                <td>Tripledot Studios</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">17</span></td>
+                <td class="product">Loop Master: Color Jam Sort<span class="cn">中文参考：待补充</span></td>
+                <td>Pleasure City</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">18</span></td>
+                <td class="product">Royal Kingdom<span class="cn">中文参考：皇家王国</span></td>
+                <td>Dream Games（梦之游戏）</td>
+                <td>Match-3</td>
+                <td><span class="delta up">↑1</span></td>
+                <td>Dream 第二产品，适合看同题材能力复用与差异化。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">19</span></td>
+                <td class="product">Match Factory!<span class="cn">中文参考：匹配工厂</span></td>
+                <td>Peak / Peak Games</td>
+                <td>3D Match</td>
+                <td><span class="delta new">新进</span></td>
+                <td>3D Match 收入化重点样本，注意物件设计、清屏反馈和活动节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">20</span></td>
+                <td class="product">Hidden Object Games: Seek It<span class="cn">中文参考：找找看：隐藏物品</span></td>
+                <td>NimbleMind</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">21</span></td>
+                <td class="product">Ball Sort Puzzle - Color Games<span class="cn">中文参考：球排序</span></td>
+                <td>Guru Puzzle</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta down">↓10</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">22</span></td>
+                <td class="product">Jigsawcard Solitaire Puzzle<span class="cn">中文参考：拼图纸牌</span></td>
+                <td>Oakever Games</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">23</span></td>
+                <td class="product">Block Color Mania, Puzzle Game<span class="cn">中文参考：彩块狂热</span></td>
+                <td>Brainteaser Puzzle Game Studio</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">24</span></td>
+                <td class="product">Jigsaw Drop: Solitaire Puzzle<span class="cn">中文参考：拼图掉落</span></td>
+                <td>Runyou</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">25</span></td>
+                <td class="product">Romantic Nuts &amp; Bolts Sorting<span class="cn">中文参考：浪漫螺母螺栓排序</span></td>
+                <td>Bunny Fungames</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">26</span></td>
+                <td class="product">Tile Explorer - Triple Match<span class="cn">中文参考：瓷砖探索</span></td>
+                <td>Oakever Games</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta down">↓9</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">27</span></td>
+                <td class="product">Point Out: Color Escape Puzzle<span class="cn">中文参考：点出：颜色逃脱</span></td>
+                <td>Lion Studios</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">28</span></td>
+                <td class="product">Knock Out<span class="cn">中文参考：击倒</span></td>
+                <td>Combo Game</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">29</span></td>
+                <td class="product">Hole Stars<span class="cn">中文参考：黑洞明星</span></td>
+                <td>Moon Active</td>
+                <td>黑洞 / Puzzle</td>
+                <td><span class="delta new">新进</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">30</span></td>
+                <td class="product">Mahjong Master<span class="cn">中文参考：麻将大师</span></td>
+                <td>Mindful Daily Puzzles</td>
+                <td>GP Puzzle 免费</td>
+                <td><span class="delta down">↓22</span></td>
+                <td>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</td>
+              </tr></tbody></table></div>
     </section>
 
     <section id="male" class="section">
       <h2>男性向 / RPG / Strategy 完整榜单</h2>
       <p class="sub">用 RPG 与 Strategy 收入榜观察角色收集、IP、SLG、塔防/策略混合产品。</p>
       <h3>Google Play RPG 收入榜 Top 30</h3>
-      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>简要学习点</th></tr></thead><tbody><tr><td><span class="rank">1</span></td><td class="product">Sword x Staff<span class="cn">中文名：剑与法杖</span></td><td>BOLTRAY GAMES</td><td>Action RPG</td><td>继续第一，新面孔强势，重点看开服活动、买量素材和战斗包装。</td></tr>
-<tr><td><span class="rank">2</span></td><td class="product">Zenless Zone Zero<span class="cn">中文名：绝区零</span></td><td>COGNOSPHERE（米哈游海外）</td><td>Action RPG</td><td>从 20 名外上冲到第 2，是今天男向最强动态信号。</td></tr>
-<tr><td><span class="rank">3</span></td><td class="product">Fate/Grand Order<span class="cn">中文名：命运/冠位指定</span></td><td>Aniplex</td><td>IP RPG</td><td>IP 与角色池长线，今天升到第 3。</td></tr>
-<tr><td><span class="rank">4</span></td><td class="product">GODDESS OF VICTORY: NIKKE<span class="cn">中文名：胜利女神：妮姬</span></td><td>Level Infinite（腾讯）</td><td>二游 / 角色收集</td><td>从第 2 回落到第 4，但仍是二游高收入样本。</td></tr>
-<tr><td><span class="rank">5</span></td><td class="product">Star Wars: Galaxy of Heroes<span class="cn">中文名：星球大战：银河英雄</span></td><td>EA</td><td>IP RPG</td><td>从中段上升到前五，经典 IP 长线表现强。</td></tr>
-<tr><td><span class="rank">6</span></td><td class="product">RAID: Shadow Legends<span class="cn">中文名：突袭：暗影传说</span></td><td>Plarium</td><td>欧美写实 RPG</td><td>回落到第 6，但仍是欧美卡牌 RPG 标杆。</td></tr>
-<tr><td><span class="rank">7</span></td><td class="product">MARVEL Strike Force<span class="cn">中文名：漫威突击队</span></td><td>Scopely</td><td>IP / Squad RPG</td><td>超级英雄阵容收集。</td></tr>
-<tr><td><span class="rank">8</span></td><td class="product">MapleStory: Idle RPG<span class="cn">中文名：冒险岛：放置 RPG</span></td><td>NEXON</td><td>IP / Idle</td><td>经典 IP + idle。</td></tr>
-<tr><td><span class="rank">9</span></td><td class="product">The Seven Deadly Sins<span class="cn">中文名：七大罪</span></td><td>Netmarble</td><td>动漫 IP RPG</td><td>动漫 IP 稳定。</td></tr>
-<tr><td><span class="rank">10</span></td><td class="product">Summoners War X Frieren<span class="cn">中文名：魔灵召唤 x 葬送的芙莉莲</span></td><td>Com2uS</td><td>联动 RPG</td><td>联动仍在前十，观察联动素材。</td></tr>
-<tr><td><span class="rank soft">11</span></td><td class="product">Hero Wars<span class="cn">中文名：英雄战争</span></td><td>Nexters</td><td>RPG</td><td>买量 RPG 长线。</td></tr>
-<tr><td><span class="rank soft">12</span></td><td class="product">Isekai: Slow Life<span class="cn">中文名：异世界慢生活</span></td><td>Mars-Games</td><td>异世界 / 经营 RPG</td><td>异世界题材 + 经营收集。</td></tr>
-<tr><td><span class="rank soft">13</span></td><td class="product">DIGIMON UP<span class="cn">中文名：数码宝贝 UP</span></td><td>Bandai Namco</td><td>IP RPG</td><td>日系 IP。</td></tr>
-<tr><td><span class="rank soft">14</span></td><td class="product">CookieRun: Kingdom<span class="cn">中文名：姜饼人王国</span></td><td>Devsisters</td><td>RPG / 经营</td><td>可爱风 RPG/经营上升到 14。</td></tr>
-<tr><td><span class="rank soft">15</span></td><td class="product">Invincible: Guarding the Globe<span class="cn">中文名：无敌少侠：守护地球</span></td><td>Ubisoft</td><td>美漫 IP RPG</td><td>美漫 IP。</td></tr>
-<tr><td><span class="rank soft">16</span></td><td class="product">Diablo Immortal<span class="cn">中文名：暗黑破坏神：不朽</span></td><td>Blizzard</td><td>ARPG</td><td>经典 ARPG IP。</td></tr>
-<tr><td><span class="rank soft">17</span></td><td class="product">Watcher of Realms<span class="cn">中文名：诸神黄昏守望者</span></td><td>Skystone Games</td><td>策略 RPG / 塔防感</td><td>塔防感 RPG，适合和塔防品类交叉看。</td></tr>
-<tr><td><span class="rank soft">18</span></td><td class="product">Reverse: 1999<span class="cn">中文名：重返未来：1999</span></td><td>Bluepoch（深蓝互动）</td><td>二游 RPG</td><td>中文二游出海。</td></tr>
-<tr><td><span class="rank soft">19</span></td><td class="product">NTE: Neverness to Everness<span class="cn">中文名：异环</span></td><td>Hotta / Perfect World</td><td>开放世界 RPG</td><td>新进入前 20，二游开放世界线索。</td></tr>
-<tr><td><span class="rank soft">20</span></td><td class="product">Rogue Legend<span class="cn">中文名：肉鸽传说</span></td><td>PocketHaven</td><td>Roguelike RPG</td><td>轻量 roguelike RPG。</td></tr>
-<tr><td><span class="rank soft">21</span></td><td class="product">Chaos Zero Nightmare<span class="cn">中文名：混沌零点噩梦</span></td><td>Smilegate / Super Creative</td><td>二游 RPG</td><td>新进入榜单，二游新品线索。</td></tr>
-<tr><td><span class="rank soft">22</span></td><td class="product">Overmortal<span class="cn">中文名：凡人修仙类放置</span></td><td>LTGAMES GLOBAL</td><td>Idle RPG</td><td>修仙题材出海。</td></tr>
-<tr><td><span class="rank soft">23</span></td><td class="product">XP Hero<span class="cn">中文名：经验英雄</span></td><td>Supercent</td><td>轻量 RPG</td><td>轻量 RPG。</td></tr>
-<tr><td><span class="rank soft">24</span></td><td class="product">Puzzles &amp; Conquest<span class="cn">中文名：谜题与征服</span></td><td>37GAMES（三七互娱）</td><td>Puzzle + SLG</td><td>Puzzle 与男向 SLG 混合。</td></tr>
-<tr><td><span class="rank soft">25</span></td><td class="product">RF ONLINE NEXT<span class="cn">中文名：RF Online Next</span></td><td>Netmarble</td><td>MMO / IP</td><td>MMO/IP 新作线索。</td></tr>
-<tr><td><span class="rank soft">26</span></td><td class="product">Epic Seven<span class="cn">中文名：第七史诗</span></td><td>Smilegate</td><td>二游 RPG</td><td>韩系二游长线。</td></tr>
-<tr><td><span class="rank soft">27</span></td><td class="product">King's Choice<span class="cn">中文名：国王的选择</span></td><td>ONEMT</td><td>宫廷经营 RPG</td><td>宫廷经营/角色收集。</td></tr>
-<tr><td><span class="rank soft">28</span></td><td class="product">WWE Champions<span class="cn">中文名：WWE 冠军</span></td><td>Scopely</td><td>体育 IP RPG</td><td>体育 IP RPG。</td></tr>
-<tr><td><span class="rank soft">29</span></td><td class="product">Little Farm Story<span class="cn">中文名：小农场故事</span></td><td>SayGames</td><td>轻放置</td><td>轻放置/经营。</td></tr>
-<tr><td><span class="rank soft">30</span></td><td class="product">AFK Arena<span class="cn">中文名：剑与远征</span></td><td>Lilith（莉莉丝）</td><td>Idle RPG</td><td>老牌放置 RPG 回到榜尾，观察活动或投放。</td></tr></tbody></table></div>
+      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>
+              <tr>
+                <td><span class="rank">1</span></td>
+                <td class="product">Sword x Staff<span class="cn">中文参考：剑与法杖</span></td>
+                <td>BOLTRAY GAMES</td>
+                <td>Action RPG</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">2</span></td>
+                <td class="product">Zenless Zone Zero<span class="cn">中文参考：绝区零</span></td>
+                <td>COGNOSPHERE（米哈游海外）</td>
+                <td>Action RPG / 二游</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>RPG 收入 #2，版本/角色池拉榜能力非常明显。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">3</span></td>
+                <td class="product">Fate/Grand Order<span class="cn">中文参考：命运/冠位指定</span></td>
+                <td>Aniplex</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">4</span></td>
+                <td class="product">Star Wars: Galaxy of Heroes<span class="cn">中文参考：星球大战：银河英雄</span></td>
+                <td>EA（艺电）</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta up">↑1</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">5</span></td>
+                <td class="product">GODDESS OF VICTORY: NIKKE<span class="cn">中文参考：胜利女神：妮姬</span></td>
+                <td>Level Infinite（腾讯海外发行）</td>
+                <td>二游 / 角色收集</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">6</span></td>
+                <td class="product">RAID: Shadow Legends<span class="cn">中文参考：突袭：暗影传说</span></td>
+                <td>Plarium</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">7</span></td>
+                <td class="product">MARVEL Strike Force<span class="cn">中文参考：漫威突击队</span></td>
+                <td>Scopely</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">8</span></td>
+                <td class="product">Summoners War X Frieren<span class="cn">中文参考：魔灵召唤 x 葬送的芙莉莲</span></td>
+                <td>Com2uS</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta up">↑2</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">9</span></td>
+                <td class="product">CookieRun: Kingdom<span class="cn">中文参考：姜饼人王国</span></td>
+                <td>Devsisters</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta up">↑5</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">10</span></td>
+                <td class="product">Isekai:Slow Life<span class="cn">中文参考：异世界慢生活</span></td>
+                <td>Mars-Games</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta up">↑2</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">11</span></td>
+                <td class="product">CookieRun: Crumble - Idle RPG<span class="cn">中文参考：姜饼人：碎碎冒险</span></td>
+                <td>Devsisters</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta new">新进</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">12</span></td>
+                <td class="product">Diablo Immortal<span class="cn">中文参考：暗黑破坏神：不朽</span></td>
+                <td>Blizzard（暴雪）</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta up">↑4</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">13</span></td>
+                <td class="product">MapleStory: Idle RPG<span class="cn">中文参考：冒险岛：放置 RPG</span></td>
+                <td>NEXON</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta down">↓5</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">14</span></td>
+                <td class="product">Watcher of Realms<span class="cn">中文参考：诸神黄昏守望者</span></td>
+                <td>Skystone Games</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta up">↑3</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">15</span></td>
+                <td class="product">Invincible: Guarding the Globe<span class="cn">中文参考：无敌少侠：守护地球</span></td>
+                <td>Ubisoft（育碧）</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">16</span></td>
+                <td class="product">Chaos Zero Nightmare<span class="cn">中文参考：混沌零点噩梦</span></td>
+                <td>Smilegate</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta up">↑5</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">17</span></td>
+                <td class="product">Hero Wars<span class="cn">中文参考：英雄战争</span></td>
+                <td>NEXTERS GLOBAL LTD</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta down">↓6</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">18</span></td>
+                <td class="product">DIGIMON UP<span class="cn">中文参考：数码宝贝 UP</span></td>
+                <td>Bandai Namco Entertainment Inc.</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta down">↓5</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">19</span></td>
+                <td class="product">NTE: Neverness to Everness<span class="cn">中文参考：异环</span></td>
+                <td>N2E</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">20</span></td>
+                <td class="product">Rogue Legend<span class="cn">中文参考：肉鸽传说</span></td>
+                <td>PocketHaven</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">21</span></td>
+                <td class="product">BrownDust2 - Full Burst RPG<span class="cn">中文参考：棕色尘埃 2</span></td>
+                <td>NEOWIZ</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta new">新进</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">22</span></td>
+                <td class="product">MapleStory M - Fantasy MMORPG<span class="cn">中文参考：冒险岛 M</span></td>
+                <td>NEXON</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta new">新进</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">23</span></td>
+                <td class="product">The Seven Deadly Sins<span class="cn">中文参考：七大罪</span></td>
+                <td>Netmarble</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta down">↓14</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">24</span></td>
+                <td class="product">XP Hero<span class="cn">中文参考：经验英雄</span></td>
+                <td>Supercent, Inc.</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">25</span></td>
+                <td class="product">Wizardry Variants Daphne<span class="cn">中文参考：巫术变体：达芙妮</span></td>
+                <td>Drecom</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta new">新进</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">26</span></td>
+                <td class="product">RF ONLINE NEXT<span class="cn">中文参考：RF Online Next</span></td>
+                <td>Netmarble</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">27</span></td>
+                <td class="product">P5X | Persona5: The Phantom X<span class="cn">中文参考：女神异闻录：夜幕魅影</span></td>
+                <td>SEGA（世嘉）</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta new">新进</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">28</span></td>
+                <td class="product">Pokémon Masters EX<span class="cn">中文参考：宝可梦大师 EX</span></td>
+                <td>DeNA</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta new">新进</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">29</span></td>
+                <td class="product">WWE Champions<span class="cn">中文参考：WWE 冠军</span></td>
+                <td>Scopely</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">30</span></td>
+                <td class="product">AFK Arena<span class="cn">中文参考：剑与远征</span></td>
+                <td>LilithGames（莉莉丝）</td>
+                <td>GP RPG 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</td>
+              </tr></tbody></table></div>
       <h3 style="margin-top:22px">Google Play Strategy 收入榜 Top 30</h3>
-      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>简要学习点</th></tr></thead><tbody><tr><td><span class="rank">1</span></td><td class="product">Kingshot<span class="cn">中文名：王国射击</span></td><td>Century Games（世纪游戏）</td><td>Strategy / Survival</td><td>继续第一，Century 双头部结构稳定。</td></tr>
-<tr><td><span class="rank">2</span></td><td class="product">Whiteout Survival<span class="cn">中文名：无尽冬日 / 白域生存</span></td><td>Century Games（世纪游戏）</td><td>生存 SLG</td><td>冰雪生存 SLG 标杆，稳定第二。</td></tr>
-<tr><td><span class="rank">3</span></td><td class="product">Last War: Survival Game<span class="cn">中文名：最后战争：生存游戏</span></td><td>FUNFLY / FirstFun</td><td>轻玩法 + SLG</td><td>轻玩法前置 + SLG 商业化仍强。</td></tr>
-<tr><td><span class="rank">4</span></td><td class="product">Last Z: Survival Shooter<span class="cn">中文名：末日 Z</span></td><td>Omnilojo</td><td>Survival Shooter</td><td>末日射击 + 策略。</td></tr>
-<tr><td><span class="rank">5</span></td><td class="product">Total Battle<span class="cn">中文名：全面战争策略</span></td><td>Scorewarrior</td><td>War Strategy</td><td>传统战争策略。</td></tr>
-<tr><td><span class="rank">6</span></td><td class="product">Evony: The King's Return<span class="cn">中文名：伊凡尼：王者归来</span></td><td>TG Inc.</td><td>SLG</td><td>经典 SLG 买量。</td></tr>
-<tr><td><span class="rank">7</span></td><td class="product">Last Asylum: Plague<span class="cn">中文名：最后庇护所：瘟疫</span></td><td>37GAMES GLOBAL</td><td>末日 SLG</td><td>37GAMES 末日线。</td></tr>
-<tr><td><span class="rank">8</span></td><td class="product">Dark War Survival<span class="cn">中文名：黑暗战争生存</span></td><td>Omnilojo</td><td>Survival Strategy</td><td>生存策略。</td></tr>
-<tr><td><span class="rank">9</span></td><td class="product">Puzzles &amp; Survival<span class="cn">中文名：谜题与生存</span></td><td>37GAMES（三七互娱）</td><td>Puzzle + SLG</td><td>今天升到第 9，是 puzzle + SLG 的核心标杆。</td></tr>
-<tr><td><span class="rank">10</span></td><td class="product">Clash of Clans<span class="cn">中文名：部落冲突</span></td><td>Supercell</td><td>Strategy</td><td>经典策略长线，今天被 Puzzles &amp; Survival 反超。</td></tr>
-<tr><td><span class="rank soft">11</span></td><td class="product">Puzzles &amp; Chaos<span class="cn">中文名：谜题与混沌</span></td><td>37GAMES（三七互娱）</td><td>Puzzle + Castle SLG</td><td>37GAMES 混合框架第二产品。</td></tr>
-<tr><td><span class="rank soft">12</span></td><td class="product">Arknights<span class="cn">中文名：明日方舟</span></td><td>Yostar</td><td>塔防 / 二游</td><td>塔防/二游长线，今天升到第 12。</td></tr>
-<tr><td><span class="rank soft">13</span></td><td class="product">Palmon: Survival<span class="cn">中文名：帕鲁生存</span></td><td>Lilith（莉莉丝）</td><td>生存策略</td><td>莉莉丝生存策略线索。</td></tr>
-<tr><td><span class="rank soft">14</span></td><td class="product">Top Girl<span class="cn">中文名：顶级女孩</span></td><td>Happy Factory</td><td>题材策略</td><td>题材差异化策略。</td></tr>
-<tr><td><span class="rank soft">15</span></td><td class="product">Clash Royale<span class="cn">中文名：皇室战争</span></td><td>Supercell</td><td>实时卡牌策略</td><td>经典实时卡牌策略。</td></tr>
-<tr><td><span class="rank soft">16</span></td><td class="product">Star Trek Fleet Command<span class="cn">中文名：星际迷航舰队指挥</span></td><td>Scopely</td><td>科幻 IP SLG</td><td>今天升到第 16，IP SLG 动态值得看。</td></tr>
-<tr><td><span class="rank soft">17</span></td><td class="product">Top Heroes<span class="cn">中文名：顶级英雄</span></td><td>RiverGame</td><td>英雄 + 王国策略</td><td>从前 12 回落到 17。</td></tr>
-<tr><td><span class="rank soft">18</span></td><td class="product">Age of Origins<span class="cn">中文名：起源时代</span></td><td>CamelStudio</td><td>末日 SLG</td><td>末日 SLG。</td></tr>
-<tr><td><span class="rank soft">19</span></td><td class="product">Lands of Jail<span class="cn">中文名：监狱之地</span></td><td>Just Game</td><td>题材策略</td><td>监狱题材包装。</td></tr>
-<tr><td><span class="rank soft">20</span></td><td class="product">Rise of Kingdoms<span class="cn">中文名：万国觉醒</span></td><td>LilithGames（莉莉丝）</td><td>4X Strategy</td><td>经典 4X。</td></tr>
-<tr><td><span class="rank soft">21</span></td><td class="product">The Grand Mafia<span class="cn">中文名：黑道风云</span></td><td>Phantix</td><td>Mafia SLG</td><td>黑帮 SLG 长线。</td></tr>
-<tr><td><span class="rank soft">22</span></td><td class="product">Top War<span class="cn">中文名：口袋奇兵 / 顶级战争</span></td><td>RiverGame</td><td>Merge + Strategy</td><td>合成 + 策略。</td></tr>
-<tr><td><span class="rank soft">23</span></td><td class="product">Game of Thrones: Dragonfire<span class="cn">中文名：权力的游戏：龙焰</span></td><td>Warner Bros.</td><td>影视 IP 策略</td><td>影视 IP 策略。</td></tr>
-<tr><td><span class="rank soft">24</span></td><td class="product">Tiles Survive!<span class="cn">中文名：瓷砖生存</span></td><td>FunPlus</td><td>Tile + Survival</td><td>FunPlus 新线索。</td></tr>
-<tr><td><span class="rank soft">25</span></td><td class="product">Lords Mobile<span class="cn">中文名：王国纪元</span></td><td>IGG</td><td>SLG</td><td>老牌 SLG。</td></tr>
-<tr><td><span class="rank soft">26</span></td><td class="product">Police Chief<span class="cn">中文名：警察局长</span></td><td>VoyagerOne</td><td>职业题材策略</td><td>职业题材策略。</td></tr>
-<tr><td><span class="rank soft">27</span></td><td class="product">Warhammer 40,000: Tacticus<span class="cn">中文名：战锤 40K：战术</span></td><td>Snowprint Studios</td><td>IP / Tactical RPG</td><td>新进 Strategy 前 30，IP 战术玩法值得看。</td></tr>
-<tr><td><span class="rank soft">28</span></td><td class="product">Duck Survival<span class="cn">中文名：鸭子生存</span></td><td>Joy Nice Games</td><td>生存策略</td><td>拟人题材生存。</td></tr>
-<tr><td><span class="rank soft">29</span></td><td class="product">Guns of Glory: Lost Island<span class="cn">中文名：火枪纪元：失落之岛</span></td><td>FunPlus</td><td>SLG</td><td>新进榜尾，FunPlus 老线仍有波动。</td></tr>
-<tr><td><span class="rank soft">30</span></td><td class="product">Stormshot<span class="cn">中文名：风暴射击</span></td><td>FunPlus</td><td>射击解谜 + SLG</td><td>射击解谜 + SLG。</td></tr></tbody></table></div>
+      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>
+              <tr>
+                <td><span class="rank">1</span></td>
+                <td class="product">Last War: Survival Game<span class="cn">中文参考：最后战争：生存游戏</span></td>
+                <td>FirstFun / FunFly</td>
+                <td>轻玩法 + SLG</td>
+                <td><span class="delta up">↑2</span></td>
+                <td>Strategy 收入 #1，轻玩法前置 + SLG 商业化仍是男向重点。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">2</span></td>
+                <td class="product">Kingshot<span class="cn">中文参考：王国射击</span></td>
+                <td>Century Games（世纪游戏）</td>
+                <td>Survival Strategy</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>Century 另一头部策略产品，和 Whiteout Survival 形成双核心。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">3</span></td>
+                <td class="product">Whiteout Survival<span class="cn">中文参考：无尽冬日</span></td>
+                <td>Century Games（世纪游戏）</td>
+                <td>Survival SLG</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>冰雪生存 SLG 标杆，适合拆建筑、联盟和活动节奏。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">4</span></td>
+                <td class="product">Last Z: Survival Shooter<span class="cn">中文参考：末日 Z</span></td>
+                <td>Omnilojo</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">5</span></td>
+                <td class="product">Evony: The King's Return<span class="cn">中文参考：伊凡尼：王者归来</span></td>
+                <td>TG Inc.</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta up">↑1</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">6</span></td>
+                <td class="product">Total Battle<span class="cn">中文参考：全面战争策略</span></td>
+                <td>Scorewarrior</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">7</span></td>
+                <td class="product">Clash of Clans<span class="cn">中文参考：部落冲突</span></td>
+                <td>Supercell</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta up">↑3</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">8</span></td>
+                <td class="product">Last Asylum: Plague<span class="cn">中文参考：最后庇护所：瘟疫</span></td>
+                <td>37GAMES（三七互娱海外）</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">9</span></td>
+                <td class="product">Dark War Survival<span class="cn">中文参考：黑暗战争生存</span></td>
+                <td>Omnilojo</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank">10</span></td>
+                <td class="product">Puzzles &amp; Survival<span class="cn">中文参考：谜题与生存</span></td>
+                <td>37GAMES（三七互娱）</td>
+                <td>Puzzle + SLG</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>Puzzle + SLG 核心样本，今天 Strategy 前 10。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">11</span></td>
+                <td class="product">Puzzles &amp; Chaos<span class="cn">中文参考：谜题与混沌</span></td>
+                <td>37GAMES（三七互娱）</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">12</span></td>
+                <td class="product">Arknights<span class="cn">中文参考：明日方舟</span></td>
+                <td>Yostar（悠星）</td>
+                <td>塔防 / 二游</td>
+                <td><span class="delta flat">持平</span></td>
+                <td>塔防/二游长线代表，适合看版本节点与角色内容拉动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">13</span></td>
+                <td class="product">Star Trek Fleet Command<span class="cn">中文参考：星际迷航舰队指挥</span></td>
+                <td>Scopely</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta up">↑3</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">14</span></td>
+                <td class="product">Palmon: Survival<span class="cn">中文参考：帕鲁生存</span></td>
+                <td>Lilith / LilithGames（莉莉丝）</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">15</span></td>
+                <td class="product">Rise of Kingdoms<span class="cn">中文参考：万国觉醒</span></td>
+                <td>LilithGames（莉莉丝）</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta up">↑5</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">16</span></td>
+                <td class="product">Clash Royale<span class="cn">中文参考：皇室战争</span></td>
+                <td>Supercell</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">17</span></td>
+                <td class="product">Age of Origins<span class="cn">中文参考：起源时代</span></td>
+                <td>CamelStudio</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta up">↑1</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">18</span></td>
+                <td class="product">Lands of Jail<span class="cn">中文参考：监狱之地</span></td>
+                <td>Just Game</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta up">↑1</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">19</span></td>
+                <td class="product">Top Girl<span class="cn">中文参考：顶级女孩</span></td>
+                <td>Happy Factory</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta down">↓5</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">20</span></td>
+                <td class="product">Game of Thrones: Dragonfire<span class="cn">中文参考：权力的游戏：龙焰</span></td>
+                <td>Warner Bros.（华纳兄弟）</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta up">↑3</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">21</span></td>
+                <td class="product">Police Chief<span class="cn">中文参考：警察局长</span></td>
+                <td>VoyagerOne</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta up">↑5</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">22</span></td>
+                <td class="product">Lords Mobile<span class="cn">中文参考：王国纪元</span></td>
+                <td>IGG</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta up">↑3</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">23</span></td>
+                <td class="product">The Grand Mafia<span class="cn">中文参考：黑道风云</span></td>
+                <td>Phantix</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta down">↓2</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">24</span></td>
+                <td class="product">Warhammer 40,000: Tacticus<span class="cn">中文参考：战锤 40K：战术</span></td>
+                <td>Snowprint Studios</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta up">↑3</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">25</span></td>
+                <td class="product">Tiles Survive!<span class="cn">中文参考：瓷砖生存</span></td>
+                <td>FunPlus</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">26</span></td>
+                <td class="product">Top War<span class="cn">中文参考：口袋奇兵</span></td>
+                <td>RiverGame</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta down">↓4</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">27</span></td>
+                <td class="product">Duck Survival<span class="cn">中文参考：鸭子生存</span></td>
+                <td>Joy Nice Games</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta up">↑1</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">28</span></td>
+                <td class="product">Foundation: Galactic Frontier<span class="cn">中文参考：基地：银河边境</span></td>
+                <td>FunPlus</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta new">新进</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">29</span></td>
+                <td class="product">Top Heroes<span class="cn">中文参考：顶级英雄</span></td>
+                <td>RiverGame</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta down">↓12</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr>
+              <tr>
+                <td><span class="rank soft">30</span></td>
+                <td class="product">Guns of Glory: Lost Island<span class="cn">中文参考：火枪纪元：失落之岛</span></td>
+                <td>FunPlus</td>
+                <td>GP Strategy 收入</td>
+                <td><span class="delta down">↓1</span></td>
+                <td>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</td>
+              </tr></tbody></table></div>
     </section>
 
     <section id="sources" class="section">
       <h2>来源与口径</h2>
       <ul>
         <li><a href="https://www.appbrain.com/stats/google-play-rankings/top_grossing/puzzle/us">AppBrain Google Play - Top Grossing Puzzle / US</a></li>
-<li><a href="https://www.appbrain.com/stats/google-play-rankings/top_free/game-puzzle/us">AppBrain Google Play - Top Free Puzzle / US</a></li>
-<li><a href="https://www.appbrain.com/stats/google-play-rankings/top_grossing/role-playing/us">AppBrain Google Play - Top Grossing Role Playing / US</a></li>
+<li><a href="https://www.appbrain.com/stats/google-play-rankings/top_free/puzzle/us">AppBrain Google Play - Top Free Puzzle / US</a></li>
+<li><a href="https://www.appbrain.com/stats/google-play-rankings/top_grossing/role_playing/us">AppBrain Google Play - Top Grossing Role Playing / US</a></li>
 <li><a href="https://www.appbrain.com/stats/google-play-rankings/top_grossing/strategy/us">AppBrain Google Play - Top Grossing Strategy / US</a></li>
 <li><a href="https://appcurrents.com/charts/us/puzzle-games">AppCurrents iOS - Top Grossing Puzzle / US</a></li>
-<li><a href="https://itunes.apple.com/search">Apple iTunes Search API - icon cache</a></li>
+        <li><a href="https://itunes.apple.com/search">Apple iTunes Search API - icon cache</a></li>
       </ul>
-      <div class="notice"><strong>口径：</strong>Google Play 榜单使用 AppBrain 美国区公开榜单，页面今日可见最新更新时间为 2026-07-30；iOS Puzzle 使用 AppCurrents 美国区当前页。第三方榜单可能存在估算、延迟和分类差异，本日报用于产品学习与趋势观察。</div>
-      <div class="notice"><strong>icon 状态：</strong>本日报共纳入 132 个去重游戏名；当前未高可信匹配真实商店 icon 的游戏：Block Blitz: Brick Breaker、Top Girl。</div>
+      <div class="notice"><strong>口径：</strong>Google Play 榜单使用 AppBrain 美国区公开榜单，iOS Puzzle 使用 AppCurrents 美国区当前页。第三方榜单可能存在估算、延迟和分类差异，本日报用于产品学习与趋势观察。</div>
+      <div class="notice"><strong>icon 状态：</strong>本日报共纳入 123 个去重游戏名；当前未高可信匹配真实商店 icon 的游戏：无。</div>
     </section>
 
-    <footer>生成日期：2026-07-31 10:42（Asia/Shanghai）。要求：陈列清晰、不省略榜单、厂商名称与游戏名称补中文称呼，真实商店 icon 优先。</footer>
+    <footer>生成日期：2026-08-03 12:52（Asia/Shanghai）。要求：陈列清晰、不省略榜单、厂商名称与游戏名称补中文称呼，真实商店 icon 优先。</footer>
   </main>
 
   <script>
     const iconMap = {
-      "Tile Family - Match Puzzle Game": { initial: "TF", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/tile-family-match-puzzle-game.jpg" },
-      "Search It: Hidden Object Games": { initial: "SI", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/search-it-hidden-object-games.jpg" },
-      "Find Hidden Objects - Spot It!": { initial: "FH", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/find-hidden-objects-spot-it.jpg" },
-      "Ball Sort Puzzle - Color Games": { initial: "BS", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/ball-sort-puzzle-color-games.jpg" },
-      "Invincible: Guarding the Globe": { initial: "IG", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/invincible-guarding-the-globe.jpg" },
-      "All in Hole: Black Hole Games": { initial: "AI", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/all-in-hole-black-hole-games.jpg" },
-      "Offline Games - No Wifi Games": { initial: "OG", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/offline-games-no-wifi-games.jpg" },
-      "Differences - Find Difference": { initial: "DF", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/differences-find-difference.jpg" },
-      "Tricky Prank: Annoying Puzzle": { initial: "TP", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/tricky-prank-annoying-puzzle.jpg" },
-      "Gossip Harbor: Merge & Story": { initial: "GH", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/gossip-harbor-merge-and-story.jpg" },
-      "Tile Explorer - Triple Match": { initial: "TE", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/tile-explorer-triple-match.jpg" },
-      "Grass Master: Lawn Mowing 3D": { initial: "GM", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/grass-master-lawn-mowing-3d.jpg" },
-      "Emoji Match: Fun Puzzle Game": { initial: "EM", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/emoji-match-fun-puzzle-game.jpg" },
-      "Dragon Ball Z Dokkan Battle": { initial: "DB", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/dragon-ball-z-dokkan-battle.jpg" },
-      "Tile Match - Matching Games": { initial: "TM", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/tile-match-matching-games.jpg" },
-      "Star Wars: Galaxy of Heroes": { initial: "SW", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/star-wars-galaxy-of-heroes.jpg" },
-      "Game of Thrones: Dragonfire": { initial: "GO", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/game-of-thrones-dragonfire.jpg" },
-      "Brain Puzzle: Tricky Quest": { initial: "BP", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/brain-puzzle-tricky-quest.jpg" },
-      "Block Blitz: Brick Breaker": { initial: "BB", color: "linear-gradient(135deg,#111827,#b91c1c)" },
-      "Woodoku: Wood Block Puzzle": { initial: "WW", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/woodoku-wood-block-puzzle.jpg" },
-      "NTE: Neverness to Everness": { initial: "NN", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/nte-neverness-to-everness.jpg" },
-      "Warhammer 40,000: Tacticus": { initial: "W4", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/warhammer-40-000-tacticus.jpg" },
-      "Guns of Glory: Lost Island": { initial: "GO", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/guns-of-glory-lost-island.jpg" },
-      "GODDESS OF VICTORY: NIKKE": { initial: "GO", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/goddess-of-victory-nikke.jpg" },
-      "Last Z: Survival Shooter": { initial: "LS", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/last-z-survival-shooter.jpg" },
-      "Evony: The King's Return": { initial: "ET", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/evony-the-king-s-return.jpg" },
-      "Summoners War X Frieren": { initial: "SW", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/summoners-war-x-frieren.jpg" },
-      "Last War: Survival Game": { initial: "LW", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/last-war-survival-game.jpg" },
-      "Star Trek Fleet Command": { initial: "ST", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/star-trek-fleet-command.jpg" },
-      "Cube Land Puzzle Game": { initial: "CL", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/cube-land-puzzle-game.jpg" },
-      "Candy Crush Soda Saga": { initial: "CC", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/candy-crush-soda-saga.jpg" },
-      "The Seven Deadly Sins": { initial: "TS", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/the-seven-deadly-sins.jpg" },
-      "Flambe: Merge & Cook": { initial: "FM", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/flambe-merge-and-cook.jpg" },
-      "RAID: Shadow Legends": { initial: "RS", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/raid-shadow-legends.jpg" },
-      "MapleStory: Idle RPG": { initial: "MI", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/maplestory-idle-rpg.jpg" },
-      "Chaos Zero Nightmare": { initial: "CZ", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/chaos-zero-nightmare.jpg" },
-      "Block Puzzle Sudoku": { initial: "BP", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/block-puzzle-sudoku.jpg" },
-      "MARVEL Strike Force": { initial: "MS", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/marvel-strike-force.jpg" },
-      "Last Asylum: Plague": { initial: "LA", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/last-asylum-plague.jpg" },
-      "Disney Emoji Blitz": { initial: "DE", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/disney-emoji-blitz.jpg" },
-      "CookieRun: Kingdom": { initial: "CK", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/cookierun-kingdom.jpg" },
-      "Puzzles & Conquest": { initial: "PA", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/puzzles-and-conquest.jpg" },
-      "Puzzles & Survival": { initial: "PA", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/puzzles-and-survival.jpg" },
-      "Empires & Puzzles": { initial: "EA", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/empires-and-puzzles.jpg" },
-      "Triple Match City": { initial: "TM", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/triple-match-city.jpg" },
-      "Ocean Block Shoot": { initial: "OB", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/ocean-block-shoot.jpg" },
-      "Water Sort Puzzle": { initial: "WS", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/water-sort-puzzle.jpg" },
-      "Wood Screw Puzzle": { initial: "WS", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/wood-screw-puzzle.jpg" },
-      "Zenless Zone Zero": { initial: "ZZ", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/zenless-zone-zero.jpg" },
-      "Isekai: Slow Life": { initial: "IS", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/isekai-slow-life.jpg" },
-      "Watcher of Realms": { initial: "WO", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/watcher-of-realms.jpg" },
-      "Little Farm Story": { initial: "LF", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/little-farm-story.jpg" },
-      "Whiteout Survival": { initial: "WS", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/whiteout-survival.jpg" },
-      "Dark War Survival": { initial: "DW", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/dark-war-survival.jpg" },
-      "Candy Crush Saga": { initial: "CC", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/candy-crush-saga.jpg" },
-      "Fate/Grand Order": { initial: "FG", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/fate-grand-order.jpg" },
-      "Palmon: Survival": { initial: "PS", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/palmon-survival.jpg" },
-      "Rise of Kingdoms": { initial: "RO", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/rise-of-kingdoms.jpg" },
-      "Color Block Jam": { initial: "CB", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/color-block-jam.jpg" },
-      "Triple Match 3D": { initial: "TM", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/triple-match-3d.jpg" },
-      "Diablo Immortal": { initial: "DI", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/diablo-immortal.jpg" },
-      "Puzzles & Chaos": { initial: "PA", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/puzzles-and-chaos.jpg" },
-      "The Grand Mafia": { initial: "TG", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/the-grand-mafia.jpg" },
-      "Match Factory!": { initial: "MF", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/match-factory.jpg" },
-      "Merge Dragons!": { initial: "MD", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/merge-dragons.jpg" },
-      "Seaside Escape": { initial: "SE", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/seaside-escape.jpg" },
-      "Match Villains": { initial: "MV", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/match-villains.jpg" },
-      "Mahjong Master": { initial: "MM", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/mahjong-master.jpg" },
-      "Carnival Blast": { initial: "CB", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/carnival-blast.jpg" },
-      "RF ONLINE NEXT": { initial: "RO", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/rf-online-next.jpg" },
-      "Clash of Clans": { initial: "CO", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/clash-of-clans.jpg" },
-      "Age of Origins": { initial: "AO", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/age-of-origins.jpg" },
-      "Tiles Survive!": { initial: "TS", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/tiles-survive.jpg" },
-      "Royal Kingdom": { initial: "RK", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/royal-kingdom.jpg" },
-      "Domino Dreams": { initial: "DD", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/domino-dreams.jpg" },
-      "Merge Mansion": { initial: "MM", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/merge-mansion.jpg" },
-      "Gossip Harbor": { initial: "GH", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/gossip-harbor.jpg" },
-      "Tasty Travels": { initial: "TT", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/tasty-travels.jpg" },
-      "Merge Cooking": { initial: "MC", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/merge-cooking.jpg" },
-      "Jelly Busters": { initial: "JB", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/jelly-busters.jpg" },
-      "Sword x Staff": { initial: "SS", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/sword-x-staff.jpg" },
-      "Reverse: 1999": { initial: "R1", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/reverse-1999.jpg" },
-      "King's Choice": { initial: "KC", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/king-s-choice.jpg" },
-      "WWE Champions": { initial: "WC", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/wwe-champions.jpg" },
-      "Lands of Jail": { initial: "LO", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/lands-of-jail.jpg" },
-      "Duck Survival": { initial: "DS", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/duck-survival.jpg" },
-      "Match Factory": { initial: "MF", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/match-factory.jpg" },
-      "Tile Explorer": { initial: "TE", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/tile-explorer.jpg" },
-      "Mystery Town": { initial: "MT", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/mystery-town.jpg" },
-      "Marble Sort!": { initial: "MS", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/marble-sort.jpg" },
-      "Gardenscapes": { initial: "G", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/gardenscapes.jpg" },
-      "Colony Flow!": { initial: "CF", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/colony-flow.jpg" },
-      "Block Blast!": { initial: "BB", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/block-blast.jpg" },
-      "Rogue Legend": { initial: "RL", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/rogue-legend.jpg" },
-      "Total Battle": { initial: "TB", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/total-battle.jpg" },
-      "Clash Royale": { initial: "CR", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/clash-royale.jpg" },
-      "Lords Mobile": { initial: "LM", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/lords-mobile.jpg" },
-      "Police Chief": { initial: "PC", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/police-chief.jpg" },
-      "Royal Match": { initial: "RM", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/royal-match.jpg" },
-      "Pixel Flow!": { initial: "PF", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/pixel-flow.jpg" },
-      "Travel Town": { initial: "TT", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/travel-town.jpg" },
-      "Magic Sort!": { initial: "MS", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/magic-sort.jpg" },
-      "Screwdom 3D": { initial: "S3", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/screwdom-3d.jpg" },
-      "Jigsaw Drop": { initial: "JD", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/jigsaw-drop.jpg" },
-      "Block Crush": { initial: "BC", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/block-crush.jpg" },
-      "Redirect It": { initial: "RI", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/redirect-it.jpg" },
-      "All in Hole": { initial: "AI", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/all-in-hole.jpg" },
-      "Toon Blast": { initial: "TB", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/toon-blast.jpg" },
-      "Hole Stars": { initial: "HS", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/hole-stars.jpg" },
-      "Block Out!": { initial: "BO", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/block-out.jpg" },
-      "Homescapes": { initial: "H", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/homescapes.jpg" },
-      "DIGIMON UP": { initial: "DU", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/digimon-up.jpg" },
-      "Overmortal": { initial: "O", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/overmortal.jpg" },
-      "Epic Seven": { initial: "ES", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/epic-seven.jpg" },
-      "Top Heroes": { initial: "TH", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/top-heroes.jpg" },
-      "Yarn Loop": { initial: "YL", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/yarn-loop.jpg" },
-      "Toy Blast": { initial: "TB", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/toy-blast.jpg" },
-      "Loop Sort": { initial: "LS", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/loop-sort.jpg" },
-      "NYT Games": { initial: "NG", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/nyt-games.jpg" },
-      "Hero Wars": { initial: "HW", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/hero-wars.jpg" },
-      "AFK Arena": { initial: "AA", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/afk-arena.jpg" },
-      "Arknights": { initial: "A", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/arknights.jpg" },
-      "Stormshot": { initial: "S", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/stormshot.jpg" },
-      "Car Sort": { initial: "CS", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/car-sort.jpg" },
-      "Township": { initial: "T", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/township.jpg" },
-      "Screwdom": { initial: "S", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/screwdom.jpg" },
-      "Kingshot": { initial: "K", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/kingshot.jpg" },
-      "Top Girl": { initial: "TG", color: "linear-gradient(135deg,#70d9ee,#f4bc34)" },
-      "Fishdom": { initial: "F", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/fishdom.jpg" },
-      "Bus Out": { initial: "BO", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/bus-out.jpg" },
-      "XP Hero": { initial: "XH", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/xp-hero.jpg" },
-      "Top War": { initial: "TW", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/top-war.jpg" }
+      "Arrow Puzzle: Tap Puzzle Games": { initial: "AP", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/arrow-puzzle-tap-puzzle-games.jpg" },
+      "Pocket Sort: Coin Merge Puzzle": { initial: "PS", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/pocket-sort-coin-merge-puzzle.jpg" },
+      "Ball Sort Puzzle - Color Games": { initial: "BS", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/ball-sort-puzzle-color-games.jpg" },
+      "Block Color Mania, Puzzle Game": { initial: "BC", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/block-color-mania-puzzle-game.jpg" },
+      "Point Out: Color Escape Puzzle": { initial: "PO", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/point-out-color-escape-puzzle.jpg" },
+      "Invincible: Guarding the Globe": { initial: "IG", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/invincible-guarding-the-globe.jpg" },
+      "All in Hole: Black Hole Games": { initial: "AI", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/all-in-hole-black-hole-games.jpg" },
+      "Stack Smash - Block 3D Puzzle": { initial: "SS", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/stack-smash-block-3d-puzzle.jpg" },
+      "Jigsaw Drop: Solitaire Puzzle": { initial: "JD", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/jigsaw-drop-solitaire-puzzle.jpg" },
+      "Romantic Nuts & Bolts Sorting": { initial: "RN", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/romantic-nuts-and-bolts-sorting.jpg" },
+      "CookieRun: Crumble - Idle RPG": { initial: "CC", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/cookierun-crumble-idle-rpg.jpg" },
+      "MapleStory M - Fantasy MMORPG": { initial: "MF", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/maplestory-m-fantasy-mmorpg.jpg" },
+      "P5X | Persona5: The Phantom X": { initial: "PP", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/p5x-persona5-the-phantom-x.jpg" },
+      "Foundation: Galactic Frontier": { initial: "FG", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/foundation-galactic-frontier.jpg" },
+      "Gossip Harbor: Merge & Story": { initial: "GH", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/gossip-harbor-merge-and-story.jpg" },
+      "Meowdoku: Brain Puzzle Games": { initial: "MB", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/meowdoku-brain-puzzle-games.jpg" },
+      "Hidden Object Games: Seek It": { initial: "HO", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/hidden-object-games-seek-it.jpg" },
+      "Tile Explorer - Triple Match": { initial: "TE", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/tile-explorer-triple-match.jpg" },
+      "Loop Master: Color Jam Sort": { initial: "LM", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/loop-master-color-jam-sort.jpg" },
+      "Jigsawcard Solitaire Puzzle": { initial: "JS", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/jigsawcard-solitaire-puzzle.jpg" },
+      "Star Wars: Galaxy of Heroes": { initial: "SW", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/star-wars-galaxy-of-heroes.jpg" },
+      "BrownDust2 - Full Burst RPG": { initial: "BF", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/browndust2-full-burst-rpg.jpg" },
+      "Game of Thrones: Dragonfire": { initial: "GO", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/game-of-thrones-dragonfire.jpg" },
+      "NTE: Neverness to Everness": { initial: "NN", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/nte-neverness-to-everness.jpg" },
+      "Warhammer 40,000: Tacticus": { initial: "W4", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/warhammer-40-000-tacticus.jpg" },
+      "Guns of Glory: Lost Island": { initial: "GO", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/guns-of-glory-lost-island.jpg" },
+      "Jelly Busters: Puzzle Game": { initial: "JB", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/jelly-busters-puzzle-game.jpg" },
+      "GODDESS OF VICTORY: NIKKE": { initial: "GO", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/goddess-of-victory-nikke.jpg" },
+      "Color Block: Combo Blast": { initial: "CB", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/color-block-combo-blast.jpg" },
+      "Wizardry Variants Daphne": { initial: "WV", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/wizardry-variants-daphne.jpg" },
+      "Last Z: Survival Shooter": { initial: "LS", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/last-z-survival-shooter.jpg" },
+      "Evony: The King's Return": { initial: "ET", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/evony-the-king-s-return.jpg" },
+      "Summoners War X Frieren": { initial: "SW", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/summoners-war-x-frieren.jpg" },
+      "Last War: Survival Game": { initial: "LW", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/last-war-survival-game.jpg" },
+      "Star Trek Fleet Command": { initial: "ST", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/star-trek-fleet-command.jpg" },
+      "Arrows – Puzzle Escape": { initial: "AP", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/arrows-puzzle-escape.jpg" },
+      "Cube Land Puzzle Game": { initial: "CL", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/cube-land-puzzle-game.jpg" },
+      "The Seven Deadly Sins": { initial: "TS", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/the-seven-deadly-sins.jpg" },
+      "Candy Crush Soda Saga": { initial: "CC", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/candy-crush-soda-saga.jpg" },
+      "Flambe: Merge & Cook": { initial: "FM", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/flambe-merge-and-cook.jpg" },
+      "RAID: Shadow Legends": { initial: "RS", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/raid-shadow-legends.jpg" },
+      "MapleStory: Idle RPG": { initial: "MI", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/maplestory-idle-rpg.jpg" },
+      "Chaos Zero Nightmare": { initial: "CZ", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/chaos-zero-nightmare.jpg" },
+      "MARVEL Strike Force": { initial: "MS", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/marvel-strike-force.jpg" },
+      "Last Asylum: Plague": { initial: "LA", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/last-asylum-plague.jpg" },
+      "Disney Emoji Blitz": { initial: "DE", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/disney-emoji-blitz.jpg" },
+      "Bus Traffic Fever!": { initial: "BT", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/bus-traffic-fever.jpg" },
+      "CookieRun: Kingdom": { initial: "CK", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/cookierun-kingdom.jpg" },
+      "Pokémon Masters EX": { initial: "PM", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/pok-mon-masters-ex.jpg" },
+      "Puzzles & Survival": { initial: "PA", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/puzzles-and-survival.jpg" },
+      "Empires & Puzzles": { initial: "EA", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/empires-and-puzzles.jpg" },
+      "Triple Match City": { initial: "TM", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/triple-match-city.jpg" },
+      "Zenless Zone Zero": { initial: "ZZ", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/zenless-zone-zero.jpg" },
+      "Watcher of Realms": { initial: "WO", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/watcher-of-realms.jpg" },
+      "Whiteout Survival": { initial: "WS", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/whiteout-survival.jpg" },
+      "Dark War Survival": { initial: "DW", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/dark-war-survival.jpg" },
+      "Fate/Grand Order": { initial: "FG", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/fate-grand-order.jpg" },
+      "Isekai:Slow Life": { initial: "IS", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/isekai-slow-life.jpg" },
+      "Palmon: Survival": { initial: "PS", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/palmon-survival.jpg" },
+      "Rise of Kingdoms": { initial: "RO", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/rise-of-kingdoms.jpg" },
+      "Candy Crush Saga": { initial: "CC", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/candy-crush-saga.jpg" },
+      "Color Block Jam": { initial: "CB", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/color-block-jam.jpg" },
+      "Triple Match 3D": { initial: "TM", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/triple-match-3d.jpg" },
+      "Diablo Immortal": { initial: "DI", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/diablo-immortal.jpg" },
+      "Puzzles & Chaos": { initial: "PA", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/puzzles-and-chaos.jpg" },
+      "The Grand Mafia": { initial: "TG", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/the-grand-mafia.jpg" },
+      "Match Factory!": { initial: "MF", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/match-factory.jpg" },
+      "Seaside Escape": { initial: "SE", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/seaside-escape.jpg" },
+      "Merge Dragons!": { initial: "MD", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/merge-dragons.jpg" },
+      "Match Villains": { initial: "MV", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/match-villains.jpg" },
+      "Mahjong Master": { initial: "MM", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/mahjong-master.jpg" },
+      "RF ONLINE NEXT": { initial: "RO", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/rf-online-next.jpg" },
+      "Clash of Clans": { initial: "CO", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/clash-of-clans.jpg" },
+      "Age of Origins": { initial: "AO", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/age-of-origins.jpg" },
+      "Tiles Survive!": { initial: "TS", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/tiles-survive.jpg" },
+      "Royal Kingdom": { initial: "RK", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/royal-kingdom.jpg" },
+      "Domino Dreams": { initial: "DD", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/domino-dreams.jpg" },
+      "Merge Mansion": { initial: "MM", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/merge-mansion.jpg" },
+      "Woodoku Blast": { initial: "WB", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/woodoku-blast.jpg" },
+      "Sword x Staff": { initial: "SS", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/sword-x-staff.jpg" },
+      "WWE Champions": { initial: "WC", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/wwe-champions.jpg" },
+      "Lands of Jail": { initial: "LO", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/lands-of-jail.jpg" },
+      "Duck Survival": { initial: "DS", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/duck-survival.jpg" },
+      "Tasty Travels": { initial: "TT", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/tasty-travels.jpg" },
+      "Merge Cooking": { initial: "MC", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/merge-cooking.jpg" },
+      "Mystery Town": { initial: "MT", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/mystery-town.jpg" },
+      "Marble Sort!": { initial: "MS", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/marble-sort.jpg" },
+      "Block Blast!": { initial: "BB", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/block-blast.jpg" },
+      "Rogue Legend": { initial: "RL", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/rogue-legend.jpg" },
+      "Total Battle": { initial: "TB", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/total-battle.jpg" },
+      "Clash Royale": { initial: "CR", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/clash-royale.jpg" },
+      "Police Chief": { initial: "PC", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/police-chief.jpg" },
+      "Lords Mobile": { initial: "LM", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/lords-mobile.jpg" },
+      "Gardenscapes": { initial: "G", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/gardenscapes.jpg" },
+      "Colony Flow!": { initial: "CF", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/colony-flow.jpg" },
+      "Royal Match": { initial: "RM", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/royal-match.jpg" },
+      "Pixel Flow!": { initial: "PF", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/pixel-flow.jpg" },
+      "Travel Town": { initial: "TT", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/travel-town.jpg" },
+      "Magic Sort!": { initial: "MS", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/magic-sort.jpg" },
+      "Screwdom 3D": { initial: "S3", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/screwdom-3d.jpg" },
+      "Toon Blast": { initial: "TB", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/toon-blast.jpg" },
+      "Hole Stars": { initial: "HS", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/hole-stars.jpg" },
+      "DIGIMON UP": { initial: "DU", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/digimon-up.jpg" },
+      "Top Heroes": { initial: "TH", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/top-heroes.jpg" },
+      "Homescapes": { initial: "H", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/homescapes.jpg" },
+      "Block Out!": { initial: "BO", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/block-out.jpg" },
+      "Yarn Loop": { initial: "YL", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/yarn-loop.jpg" },
+      "Toy Blast": { initial: "TB", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/toy-blast.jpg" },
+      "Loop Sort": { initial: "LS", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/loop-sort.jpg" },
+      "Amaze GO!": { initial: "AG", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/amaze-go.jpg" },
+      "Knock Out": { initial: "KO", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/knock-out.jpg" },
+      "Hero Wars": { initial: "HW", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/hero-wars.jpg" },
+      "AFK Arena": { initial: "AA", color: "linear-gradient(135deg,#13b4df,#f6d84d)", image: "assets/icons/official/afk-arena.jpg" },
+      "Arknights": { initial: "A", color: "linear-gradient(135deg,#10a8ef,#ffce55)", image: "assets/icons/official/arknights.jpg" },
+      "NYT Games": { initial: "NG", color: "linear-gradient(135deg,#111827,#b91c1c)", image: "assets/icons/official/nyt-games.jpg" },
+      "Car Sort": { initial: "CS", color: "linear-gradient(135deg,#70d9ee,#f4bc34)", image: "assets/icons/official/car-sort.jpg" },
+      "Kingshot": { initial: "K", color: "linear-gradient(135deg,#c9eef9,#3a78b7)", image: "assets/icons/official/kingshot.jpg" },
+      "Top Girl": { initial: "TG", color: "linear-gradient(135deg,#8b5cf6,#22c55e)", image: "assets/icons/official/top-girl.jpg" },
+      "Township": { initial: "T", color: "linear-gradient(135deg,#f59bc8,#ffd27a)", image: "assets/icons/official/township.jpg" },
+      "Screwdom": { initial: "S", color: "linear-gradient(135deg,#334155,#84cc16)", image: "assets/icons/official/screwdom.jpg" },
+      "Fishdom": { initial: "F", color: "linear-gradient(135deg,#2566d8,#f2c94c)", image: "assets/icons/official/fishdom.jpg" },
+      "XP Hero": { initial: "XH", color: "linear-gradient(135deg,#f6c37a,#5f9fd9)", image: "assets/icons/official/xp-hero.jpg" },
+      "Top War": { initial: "TW", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/top-war.jpg" }
     };
 
     function matchIconEntry(text) {
@@ -1071,7 +2190,6 @@
       const holder = card.querySelector(".app-icon");
       if (holder && gameKey) holder.replaceWith(makeIcon(gameKey, "large"));
     });
-
 
     document.querySelectorAll(".studio-product[data-game]").forEach((item) => {
       const gameKey = item.dataset.game;
