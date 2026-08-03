@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-07-31T02:43:39.145Z",
-  "total": 162,
-  "found": 157,
+  "preparedAt": "2026-08-03T04:52:55.070Z",
+  "total": 184,
+  "found": 180,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -106,7 +106,31 @@
       "best": null
     },
     {
+      "name": "Arrow Puzzle: Tap Puzzle Games",
+      "found": true,
+      "initial": "AP",
+      "image": "assets/icons/official/arrow-puzzle-tap-puzzle-games.jpg",
+      "matchedName": "Arrow Puzzle: Tap Puzzle Games",
+      "artistName": "Easybrain",
+      "sourceUrl": "https://www.appbrain.com/app/arrow-puzzle-tap-puzzle-games/com.easybrain.arrow.puzzle.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 2756
+    },
+    {
       "name": "Arrows - Puzzle Escape",
+      "found": true,
+      "initial": "AP",
+      "image": "assets/icons/official/arrows-puzzle-escape.jpg",
+      "matchedName": "Arrows – Puzzle Escape",
+      "artistName": "Lessmore GmbH",
+      "sourceUrl": "https://apps.apple.com/us/app/arrows-puzzle-escape/id6748397500?uo=4",
+      "score": 274,
+      "query": "Arrows - Puzzle Escape",
+      "bytes": 23488
+    },
+    {
+      "name": "Arrows – Puzzle Escape",
       "found": true,
       "initial": "AP",
       "image": "assets/icons/official/arrows-puzzle-escape.jpg",
@@ -167,6 +191,18 @@
       "bytes": 53112
     },
     {
+      "name": "Block Color Mania, Puzzle Game",
+      "found": true,
+      "initial": "BC",
+      "image": "assets/icons/official/block-color-mania-puzzle-game.jpg",
+      "matchedName": "Block Color Mania, Puzzle Game",
+      "artistName": "Brainteaser Puzzle Game Studio",
+      "sourceUrl": "https://www.appbrain.com/app/block-color-mania-puzzle-game/block.color.game.jam.blocks.sort.puzzle.games.slide.free",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 3424
+    },
+    {
       "name": "Block Crush",
       "found": true,
       "initial": "BC",
@@ -225,6 +261,18 @@
       "score": 286,
       "query": "Brain Puzzle: Tricky Quest",
       "bytes": 75442
+    },
+    {
+      "name": "BrownDust2 - Full Burst RPG",
+      "found": true,
+      "initial": "BF",
+      "image": "assets/icons/official/browndust2-full-burst-rpg.jpg",
+      "matchedName": "BrownDust2 - Full Burst RPG",
+      "artistName": "NEOWIZ",
+      "sourceUrl": "https://www.appbrain.com/app/browndust2-full-burst-rpg/com.neowizgames.game.browndust2",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5678
     },
     {
       "name": "Bus Out",
@@ -381,6 +429,18 @@
       "score": 286,
       "query": "Color Block: Combo Blast",
       "bytes": 43352
+    },
+    {
+      "name": "CookieRun: Crumble - Idle RPG",
+      "found": true,
+      "initial": "CC",
+      "image": "assets/icons/official/cookierun-crumble-idle-rpg.jpg",
+      "matchedName": "CookieRun: Crumble - Idle RPG",
+      "artistName": "Devsisters Corporation",
+      "sourceUrl": "https://www.appbrain.com/app/cookierun-crumble-idle-rpg/com.devsisters.cc",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5521
     },
     {
       "name": "CookieRun: Kingdom",
@@ -624,6 +684,18 @@
       }
     },
     {
+      "name": "Flambé: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge & Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6265
+    },
+    {
       "name": "Flambe: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -634,6 +706,31 @@
       "score": 94,
       "query": "Flambe: Merge & Cook",
       "bytes": 58307
+    },
+    {
+      "name": "Flambé: Merge and Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 286,
+      "query": "Flambé: Merge and Cook",
+      "bytes": 58307
+    },
+    {
+      "name": "Foundation: Galactic Frontier",
+      "found": true,
+      "initial": "FG",
+      "image": "assets/icons/official/foundation-galactic-frontier.jpg",
+      "matchedName": "Foundation: Galactic Frontier",
+      "artistName": "FunPlus International AG",
+      "sourceUrl": "https://www.appbrain.com/app/foundation-galactic-frontier/com.games.foundation",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5512
     },
     {
       "name": "Game of Thrones: Dragonfire",
@@ -804,6 +901,18 @@
       "bytes": 101891
     },
     {
+      "name": "Isekai:Slow Life",
+      "found": true,
+      "initial": "IS",
+      "image": "assets/icons/official/isekai-slow-life.jpg",
+      "matchedName": "Isekai:Slow Life",
+      "artistName": "Mars Era Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/isekai-slow-life/id6449289088?uo=4",
+      "score": 274,
+      "query": "Isekai: Slow Life",
+      "bytes": 101891
+    },
+    {
       "name": "Jelly Busters",
       "found": true,
       "initial": "JB",
@@ -813,6 +922,19 @@
       "sourceUrl": "https://apps.apple.com/us/app/jelly-busters-puzzle-game/id6756058501?uo=4",
       "score": 142,
       "query": "Jelly Busters",
+      "bytes": 46227
+    },
+    {
+      "name": "Jelly Busters: Puzzle Game",
+      "found": true,
+      "initial": "JB",
+      "image": "assets/icons/official/jelly-busters-puzzle-game.jpg",
+      "matchedName": "Jelly Busters: Puzzle Game",
+      "artistName": "Moon Active",
+      "sourceUrl": "https://apps.apple.com/us/app/jelly-busters-puzzle-game/id6756058501?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 286,
+      "query": "Jelly Busters: Puzzle Game",
       "bytes": 46227
     },
     {
@@ -826,6 +948,18 @@
       "score": 142,
       "query": "Jigsaw Drop",
       "bytes": 81975
+    },
+    {
+      "name": "Jigsaw Drop: Solitaire Puzzle",
+      "found": true,
+      "initial": "JD",
+      "image": "assets/icons/official/jigsaw-drop-solitaire-puzzle.jpg",
+      "matchedName": "Jigsaw Drop: Solitaire Puzzle",
+      "artistName": "Runyou",
+      "sourceUrl": "https://www.appbrain.com/app/jigsaw-drop-solitaire-puzzle/jigsaw.solitaire.match.games.free",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 2533
     },
     {
       "name": "Jigsawcard Solitaire Puzzle",
@@ -948,6 +1082,18 @@
       "bytes": 69734
     },
     {
+      "name": "Loop Master: Color Jam Sort",
+      "found": true,
+      "initial": "LM",
+      "image": "assets/icons/official/loop-master-color-jam-sort.jpg",
+      "matchedName": "Loop Master™: Color Jam Sort",
+      "artistName": "Pleasure City",
+      "sourceUrl": "https://www.appbrain.com/app/loop-master%E2%84%A2-color-jam-sort/com.loop.clear.cube.free.card.puzzle.sort.match",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6367
+    },
+    {
       "name": "Loop Sort",
       "found": true,
       "initial": "LS",
@@ -1006,6 +1152,18 @@
       "score": 262,
       "query": "Mahjong Master",
       "bytes": 104704
+    },
+    {
+      "name": "MapleStory M - Fantasy MMORPG",
+      "found": true,
+      "initial": "MF",
+      "image": "assets/icons/official/maplestory-m-fantasy-mmorpg.jpg",
+      "matchedName": "MapleStory M - Fantasy MMORPG",
+      "artistName": "NEXON Company",
+      "sourceUrl": "https://www.appbrain.com/app/maplestory-m-fantasy-mmorpg/com.nexon.maplem.global",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6503
     },
     {
       "name": "MapleStory: Idle RPG",
@@ -1116,6 +1274,18 @@
       "bytes": 76458
     },
     {
+      "name": "Meowdoku: Brain Puzzle Games",
+      "found": true,
+      "initial": "MB",
+      "image": "assets/icons/official/meowdoku-brain-puzzle-games.jpg",
+      "matchedName": "Meowdoku: Brain Puzzle Games",
+      "artistName": "Oakever Games",
+      "sourceUrl": "https://www.appbrain.com/app/meowdoku-brain-puzzle-games/com.oakever.meowdoku",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6082
+    },
+    {
       "name": "Merge Cooking",
       "found": true,
       "initial": "MC",
@@ -1224,6 +1394,18 @@
       "bytes": 71182
     },
     {
+      "name": "P5X | Persona5: The Phantom X",
+      "found": true,
+      "initial": "PP",
+      "image": "assets/icons/official/p5x-persona5-the-phantom-x.jpg",
+      "matchedName": "P5X | Persona5: The Phantom X",
+      "artistName": "SEGA CORPORATION",
+      "sourceUrl": "https://www.appbrain.com/app/p5x-%7C-persona5-the-phantom-x/com.sega.persona5.the.phantomx.en",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6523
+    },
+    {
       "name": "Palmon: Survival",
       "found": true,
       "initial": "PS",
@@ -1272,6 +1454,18 @@
       "bytes": 33627
     },
     {
+      "name": "Pocket Sort: Coin Merge Puzzle",
+      "found": true,
+      "initial": "PS",
+      "image": "assets/icons/official/pocket-sort-coin-merge-puzzle.jpg",
+      "matchedName": "Pocket Sort: Coin Merge Puzzle",
+      "artistName": "SayGames Ltd",
+      "sourceUrl": "https://www.appbrain.com/app/pocket-sort-coin-merge-puzzle/com.pocket.sort.coin.puzzle.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5489
+    },
+    {
       "name": "Point Out",
       "found": true,
       "initial": "PO",
@@ -1282,6 +1476,30 @@
       "score": 262,
       "query": "Point Out",
       "bytes": 55317
+    },
+    {
+      "name": "Point Out: Color Escape Puzzle",
+      "found": true,
+      "initial": "PO",
+      "image": "assets/icons/official/point-out-color-escape-puzzle.jpg",
+      "matchedName": "Point Out: Color Escape Puzzle",
+      "artistName": "Lion Studios Plus",
+      "sourceUrl": "https://www.appbrain.com/app/point-out-color-escape-puzzle/com.arrow.out",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 3529
+    },
+    {
+      "name": "Pokémon Masters EX",
+      "found": true,
+      "initial": "PM",
+      "image": "assets/icons/official/pok-mon-masters-ex.jpg",
+      "matchedName": "Pokémon Masters EX",
+      "artistName": "DeNA Co., Ltd.",
+      "sourceUrl": "https://www.appbrain.com/app/pok%C3%A9mon-masters-ex/com.dena.a12026418",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5913
     },
     {
       "name": "Police Chief",
@@ -1500,6 +1718,18 @@
       "bytes": 65195
     },
     {
+      "name": "Seaside Escape: Merge & Story",
+      "found": true,
+      "initial": "SE",
+      "image": "assets/icons/official/seaside-escape-merge-and-story.jpg",
+      "matchedName": "Seaside Escape®: Merge & Story",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://www.appbrain.com/app/seaside-escape%C2%AE-merge-story/com.gamedots.seasideescape",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5958
+    },
+    {
       "name": "Smash Fest!",
       "found": true,
       "initial": "SF",
@@ -1516,6 +1746,18 @@
       "found": false,
       "initial": "SS",
       "best": null
+    },
+    {
+      "name": "Stack Smash - Block 3D Puzzle",
+      "found": true,
+      "initial": "SS",
+      "image": "assets/icons/official/stack-smash-block-3d-puzzle.jpg",
+      "matchedName": "Stack Smash - Block 3D Puzzle",
+      "artistName": "Tripledot Studios Limited",
+      "sourceUrl": "https://www.appbrain.com/app/stack-smash-block-3d-puzzle/com.tripledot.blockssmashgame",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6230
     },
     {
       "name": "Star Trek Fleet Command",
@@ -1687,16 +1929,15 @@
     },
     {
       "name": "Top Girl",
-      "found": false,
+      "found": true,
       "initial": "TG",
-      "best": {
-        "trackName": "Star Girl - Fashion Celebrity",
-        "artistName": "Oriented Games",
-        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple118/v4/49/de/c1/49dec13c-f07e-dcd7-372d-aeba948be597/AppIcon-1x_U007emarketing-85-220-9.png/512x512bb.jpg",
-        "sourceUrl": "https://apps.apple.com/us/app/star-girl-fashion-celebrity/id541835159?uo=4",
-        "score": 35,
-        "query": "Top Girl"
-      }
+      "image": "assets/icons/official/top-girl.jpg",
+      "matchedName": "Top Girl",
+      "artistName": "Happy Factory PTE LTD",
+      "sourceUrl": "https://www.appbrain.com/app/top-girl/com.a3.topgirl.gplay",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6586
     },
     {
       "name": "Top Heroes",
@@ -1721,6 +1962,18 @@
       "score": 142,
       "query": "Top War",
       "bytes": 89990
+    },
+    {
+      "name": "Top War: Battle Game",
+      "found": true,
+      "initial": "TW",
+      "image": "assets/icons/official/top-war-battle-game.jpg",
+      "matchedName": "Top War: Battle Game",
+      "artistName": "RiverGame",
+      "sourceUrl": "https://www.appbrain.com/app/top-war-battle-game/com.topwar.gp",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 2827
     },
     {
       "name": "Total Battle",
@@ -1853,6 +2106,18 @@
       "score": 262,
       "query": "Whiteout Survival",
       "bytes": 81862
+    },
+    {
+      "name": "Wizardry Variants Daphne",
+      "found": true,
+      "initial": "WV",
+      "image": "assets/icons/official/wizardry-variants-daphne.jpg",
+      "matchedName": "Wizardry Variants Daphne",
+      "artistName": "株式会社ドリコム",
+      "sourceUrl": "https://www.appbrain.com/app/wizardry-variants-daphne/jp.co.drecom.wizardry.daphne",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 2371
     },
     {
       "name": "Wood Screw Puzzle",
