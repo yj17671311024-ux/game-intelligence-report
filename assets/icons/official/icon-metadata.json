@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-03T04:52:55.070Z",
-  "total": 184,
-  "found": 180,
+  "preparedAt": "2026-08-04T02:11:25.019Z",
+  "total": 186,
+  "found": 182,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -986,6 +986,18 @@
       "bytes": 110726
     },
     {
+      "name": "King's Choice: Rule Your Fate",
+      "found": true,
+      "initial": "KC",
+      "image": "assets/icons/official/king-s-choice-rule-your-fate.jpg",
+      "matchedName": "King's Choice: Rule Your Fate",
+      "artistName": "ONEMT SGP",
+      "sourceUrl": "https://www.appbrain.com/app/kings-choice-rule-your-fate/com.onemt.and.kc",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5728
+    },
+    {
       "name": "Kingshot",
       "found": true,
       "initial": "K",
@@ -1608,6 +1620,18 @@
       "score": 274,
       "query": "RF ONLINE NEXT",
       "bytes": 68914
+    },
+    {
+      "name": "Rise of Castles: Ice and Fire",
+      "found": true,
+      "initial": "RO",
+      "image": "assets/icons/official/rise-of-castles-ice-and-fire.jpg",
+      "matchedName": "Rise of Castles: Ice and Fire",
+      "artistName": "Long Tech Network Limited",
+      "sourceUrl": "https://www.appbrain.com/app/rise-of-castles-ice-and-fire/com.im30.ROE.gp",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6701
     },
     {
       "name": "Rise of Kingdoms",
