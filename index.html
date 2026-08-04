@@ -29,6 +29,41 @@
     .change-grid { display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:14px; margin-top:16px; }
     .card { padding:18px; min-width:0; } .card h3 { color:var(--blue); margin-bottom:10px; } .card p,.card li { color:#4e5b6b; }
     .card ul { margin-left:0; list-style:none; } .card li { padding:7px 0 7px 14px; border-top:1px solid #edf1f4; position:relative; } .card li:first-child { border-top:0; } .card li::before { content:""; position:absolute; left:0; top:17px; width:5px; height:5px; border-radius:50%; background:var(--blue); }
+    .insight-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:16px; }
+    .insight-card { padding:0; overflow:hidden; }
+    .insight-card-head { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:start; padding:16px; background:#fbfcfd; border-bottom:1px solid var(--line); }
+    .insight-card-head h3,.motion-head h3 { margin:0; color:var(--blue); }
+    .insight-card-head p { color:#526071; font-size:14px; margin-top:6px; line-height:1.45; }
+    .insight-card-head > span,.motion-head > span { display:inline-flex; align-items:center; justify-content:center; border-radius:999px; border:1px solid #bfdae2; background:#eef8fb; color:var(--blue); font-size:12px; font-weight:900; padding:5px 9px; white-space:nowrap; }
+    .mini-list { display:grid; gap:0; }
+    .mini-list.compact { border-top:1px solid var(--line); }
+    .mini-product { display:grid; grid-template-columns:46px minmax(0,1fr) minmax(92px,auto); gap:10px; align-items:center; padding:11px 14px; border-top:1px solid var(--line); background:#fff; min-width:0; }
+    .mini-product:first-child { border-top:0; }
+    .mini-product-text { min-width:0; }
+    .mini-product-text strong { display:block; color:#20242a; overflow-wrap:anywhere; line-height:1.25; }
+    .mini-product-text span { display:block; color:#526071; font-size:12px; margin-top:2px; overflow-wrap:anywhere; line-height:1.35; }
+    .mini-product-text p { color:#4e5b6b; font-size:13px; margin-top:5px; line-height:1.42; }
+    .mini-ranks { justify-self:stretch; display:grid; gap:4px; align-content:center; min-width:92px; }
+    .mini-ranks span,.mini-ranks .delta { display:block; width:100%; border-radius:6px; background:#eef8fb; border:1px solid #bfdae2; color:var(--blue); font-size:12px; font-weight:800; line-height:1.25; padding:5px 7px; text-align:center; }
+    .mini-ranks .delta.new { background:#fff8ec; border-color:#e7d2aa; color:var(--gold); }
+    .mini-ranks .delta.up { background:#eef8ee; border-color:#c8dfc0; color:var(--green); }
+    .mini-ranks .delta.down { background:#fbf0f3; border-color:#e5c6ce; color:var(--red); }
+    .motion-grid { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr); gap:14px; margin-top:16px; }
+    .motion-main,.motion-side { display:grid; gap:14px; align-content:start; }
+    .motion-card { padding:0; overflow:hidden; }
+    .motion-head { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:center; padding:16px; background:#fbfcfd; border-bottom:1px solid var(--line); }
+    .account-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; padding:14px; }
+    .account-card { border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#fff; }
+    .account-card header { display:grid; gap:4px; padding:12px; background:#f8fafb; border-bottom:1px solid var(--line); }
+    .account-card header strong { color:#20242a; line-height:1.25; }
+    .account-card header span { color:#526071; font-size:12px; line-height:1.35; }
+    .account-card .mini-product { grid-template-columns:38px minmax(0,1fr); padding:9px 10px; }
+    .account-card .mini-product .app-icon { width:38px; height:38px; flex-basis:38px; border-radius:8px; font-size:12px; }
+    .account-card .mini-product-text p { display:none; }
+    .account-card .mini-ranks { grid-column:2; display:flex; flex-wrap:wrap; gap:4px; justify-content:flex-start; min-width:0; }
+    .account-card .mini-ranks span,.account-card .mini-ranks .delta { width:auto; padding:4px 6px; }
+    .read-path { display:grid; gap:8px; padding:14px; }
+    .read-path span { display:flex; align-items:center; min-height:36px; border:1px solid var(--line); border-radius:7px; padding:8px 10px; color:#42505f; background:#fff; font-weight:700; }
     .notice { padding:14px 16px; color:#485566; background:#fbfcfd; margin:14px 0; }
     .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:#fff; } table { width:100%; border-collapse:collapse; min-width:1080px; }
     th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; text-align:left; } th { background:#f0f4f7; color:#354252; font-size:13px; white-space:nowrap; } tr:last-child td { border-bottom:none; }
@@ -71,8 +106,8 @@
     .studio-rank-list small { background:#f7f9fb; border-color:#dce3ea; color:#657180; font-weight:700; }
     ul,ol { margin:8px 0 0 20px; padding:0; } li { margin:5px 0; } footer { color:var(--muted); margin-top:20px; font-size:13px; }
     @media (max-width:1100px) { .dashboard { grid-template-columns:1fr; } .side-nav { position:static; grid-template-columns:repeat(4,minmax(0,1fr)); } .side-nav button { text-align:center; } }
-    @media (max-width:980px) { .change-grid { grid-template-columns:1fr; } }
-    @media (max-width:860px) { .hero,.grid-2,.grid-3,.visual-strip,.studio-grid,.family-grid { grid-template-columns:1fr; } .side-nav { display:flex; overflow-x:auto; } .side-nav button { flex:0 0 auto; white-space:nowrap; } .studio-product,.family-product { grid-template-columns:42px minmax(0,1fr); } .studio-rank-list,.family-ranks { grid-column:1 / -1; grid-template-columns:repeat(3,minmax(0,1fr)); } .hero { padding:22px; } .section { padding:20px; } table { min-width:940px; } }
+    @media (max-width:980px) { .change-grid,.motion-grid,.insight-grid,.account-grid { grid-template-columns:1fr; } }
+    @media (max-width:860px) { .hero,.grid-2,.grid-3,.visual-strip,.studio-grid,.family-grid { grid-template-columns:1fr; } .side-nav { display:flex; overflow-x:auto; } .side-nav button { flex:0 0 auto; white-space:nowrap; } .studio-product,.family-product,.mini-product { grid-template-columns:42px minmax(0,1fr); } .studio-rank-list,.family-ranks,.mini-ranks { grid-column:1 / -1; grid-template-columns:repeat(3,minmax(0,1fr)); } .hero { padding:22px; } .section { padding:20px; } table { min-width:940px; } }
   </style>
 </head>
 <body>
@@ -113,14 +148,243 @@
       <div class="content-panels">
     <section id="summary" class="section panel active">
       <h2>今日结论</h2>
-      <p class="sub">先看结论，再进入榜单细节。</p>
-      <div class="grid-2" style="margin-top:16px">
-        <div class="card"><h3>Puzzle 收入头部</h3><p>Google Play Puzzle 收入前三为 Royal Match（皇家消除） #1、Gossip Harbor: Merge &amp; Story（浪漫餐厅） #2、Royal Kingdom（皇家王国） #3；iOS Puzzle 收入前三为 Royal Match（皇家消除） #1、Candy Crush Saga（糖果传奇） #2、Gossip Harbor: Merge &amp; Story（浪漫餐厅） #3。头部格局仍由 Dream、Microfun、King 主导。</p></div>
-<div class="card"><h3>Puzzle 免费变化</h3><p>Google Play Puzzle 免费榜今天是 Meowdoku: Brain Puzzle Games（喵独：脑力谜题） #1、Magic Sort!（魔法排序） #2、Arrows – Puzzle Escape（箭头逃脱） #3、Block Blast!（方块爆破） #4、Bus Traffic Fever!（巴士交通热） #5；Meowdoku: Brain Puzzle Games（喵独：脑力谜题）、Magic Sort!（魔法排序）、Block Blast!（方块爆破） 都值得看素材与首局。</p></div>
-<div class="card"><h3>RPG 主线</h3><p>RPG 收入前五为 Zenless Zone Zero（绝区零） #1、Sword x Staff（剑与法杖） #2、Fate/Grand Order（命运/冠位指定） #3、Star Wars: Galaxy of Heroes（星球大战：银河英雄） #4、GODDESS OF VICTORY: NIKKE（胜利女神：妮姬） #5；Zenless Zone Zero（绝区零） 留在头部，说明版本和角色池仍有拉动。</p></div>
-<div class="card"><h3>Strategy 主线</h3><p>Strategy 收入榜头部变为 Kingshot（王国射击） #1、Last War: Survival Game（最后战争：生存游戏） #2、Whiteout Survival（无尽冬日） #3、Last Z: Survival Shooter（末日 Z） #4、Evony: The King's Return（伊凡尼：王者归来） #5；Last War: Survival Game（最后战争：生存游戏） 与 Century 的 Kingshot（王国射击） / Whiteout Survival（无尽冬日） 继续构成男向 Strategy 主线。</p></div>
-<div class="card"><h3>厂商主线</h3><p>今天学习主线建议按三组看：休闲看 Dream / Microfun / Oakever / Peak；长线矩阵看 Playrix / King；男向看 FirstFun、Century、37GAMES、HoYoverse、FunPlus。</p></div>
-<div class="card"><h3>明天继续看</h3><p>重点跟踪 Meowdoku: Brain Puzzle Games（喵独：脑力谜题） 是否守住免费榜第一、Last War: Survival Game（最后战争：生存游戏） 是否继续压住 Century 双产品、Zenless Zone Zero（绝区零） 是否保持 RPG 头部。</p></div>
+      <p class="sub">每条结论都对应具体产品，先扫图标、中文名和排名，再进入完整榜单。</p>
+      <div class="insight-grid">
+          <article class="card insight-card">
+            <div class="insight-card-head">
+              <div>
+                <h3>Puzzle 收入头部</h3>
+                <p>头部仍看关卡产能、长期活动和装修/剧情目标。</p>
+              </div>
+              <span>收入榜</span>
+            </div>
+            <div class="mini-list">
+              <article class="mini-product insight-product" data-game="Royal Match">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Royal Match</strong>
+                  <span>中文参考：皇家消除 · Dream Games（梦之游戏）</span>
+                  <p>头部标杆，继续拆关卡产能、活动节奏、装修改造叙事和礼包节奏。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 收入 #1</span><span>GP Puzzle 免费 #11</span><span>iOS Puzzle 收入 #1</span></div>
+              </article>
+              <article class="mini-product insight-product" data-game="Gossip Harbor: Merge &amp; Story">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Gossip Harbor: Merge &amp; Story</strong>
+                  <span>中文参考：浪漫餐厅 · Microfun（柠檬微趣）</span>
+                  <p>merge/story 头部样本，订单、剧情和场景修复都值得长期拆。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 收入 #2</span><span>GP Puzzle 免费 #6</span><span>iOS Puzzle 收入 #3</span></div>
+              </article>
+              <article class="mini-product insight-product" data-game="Royal Kingdom">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Royal Kingdom</strong>
+                  <span>中文参考：皇家王国 · Dream Games（梦之游戏）</span>
+                  <p>Dream 第二产品，适合看同题材能力复用与差异化。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 收入 #3</span><span>GP Puzzle 免费 #17</span><span>iOS Puzzle 收入 #4</span></div>
+              </article>
+              <article class="mini-product insight-product" data-game="Candy Crush Saga">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Candy Crush Saga</strong>
+                  <span>中文参考：糖果传奇 · King</span>
+                  <p>收入榜线索，适合看题材包装、关卡节奏、活动运营和商业化设计。</p>
+                </div>
+                <div class="mini-ranks"><span>iOS Puzzle 收入 #2</span></div>
+              </article>
+            </div>
+          </article>
+          <article class="card insight-card">
+            <div class="insight-card-head">
+              <div>
+                <h3>Puzzle 免费变化</h3>
+                <p>免费榜更适合看题材包装、首局节奏和素材方向。</p>
+              </div>
+              <span>免费榜</span>
+            </div>
+            <div class="mini-list">
+              <article class="mini-product insight-product" data-game="Meowdoku: Brain Puzzle Games">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Meowdoku: Brain Puzzle Games</strong>
+                  <span>中文参考：喵独：脑力谜题 · Oakever Games</span>
+                  <p>免费榜第一，猫咪包装 + 数独/脑力题材值得拆素材。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 免费 #1</span></div>
+              </article>
+              <article class="mini-product insight-product" data-game="Magic Sort!">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Magic Sort!</strong>
+                  <span>中文参考：魔法排序 · Grand Games</span>
+                  <p>排序玩法今天在免费榜和收入榜都强，值得看首局与关卡压力曲线。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 收入 #15</span><span>GP Puzzle 免费 #2</span><span>iOS Puzzle 收入 #15</span></div>
+              </article>
+              <article class="mini-product insight-product" data-game="Arrows – Puzzle Escape">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Arrows – Puzzle Escape</strong>
+                  <span>中文参考：箭头逃脱 · Lessmore</span>
+                  <p>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 免费 #3</span><span class="delta up">↑1</span></div>
+              </article>
+              <article class="mini-product insight-product" data-game="Block Blast!">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Block Blast!</strong>
+                  <span>中文参考：方块爆破 · HungryStudio</span>
+                  <p>免费榜仍在前三，作为买量素材和首局体验标杆继续观察。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 免费 #4</span><span class="delta down">↓1</span></div>
+              </article>
+              <article class="mini-product insight-product" data-game="Bus Traffic Fever!">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Bus Traffic Fever!</strong>
+                  <span>中文参考：巴士交通热 · GOODROID</span>
+                  <p>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 免费 #5</span></div>
+              </article>
+            </div>
+          </article>
+          <article class="card insight-card">
+            <div class="insight-card-head">
+              <div>
+                <h3>RPG 主线</h3>
+                <p>看版本节点、角色池、美术资产和 IP 拉动。</p>
+              </div>
+              <span>男向</span>
+            </div>
+            <div class="mini-list">
+              <article class="mini-product insight-product" data-game="Zenless Zone Zero">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Zenless Zone Zero</strong>
+                  <span>中文参考：绝区零 · COGNOSPHERE（米哈游海外）</span>
+                  <p>RPG 收入 #2，版本/角色池拉榜能力非常明显。</p>
+                </div>
+                <div class="mini-ranks"><span>GP RPG 收入 #1</span><span class="delta up">↑1</span></div>
+              </article>
+              <article class="mini-product insight-product" data-game="Sword x Staff">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Sword x Staff</strong>
+                  <span>中文参考：剑与法杖 · BOLTRAY GAMES</span>
+                  <p>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</p>
+                </div>
+                <div class="mini-ranks"><span>GP RPG 收入 #2</span><span class="delta down">↓1</span></div>
+              </article>
+              <article class="mini-product insight-product" data-game="Fate/Grand Order">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Fate/Grand Order</strong>
+                  <span>中文参考：命运/冠位指定 · Aniplex</span>
+                  <p>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</p>
+                </div>
+                <div class="mini-ranks"><span>GP RPG 收入 #3</span></div>
+              </article>
+              <article class="mini-product insight-product" data-game="Star Wars: Galaxy of Heroes">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Star Wars: Galaxy of Heroes</strong>
+                  <span>中文参考：星球大战：银河英雄 · EA（艺电）</span>
+                  <p>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</p>
+                </div>
+                <div class="mini-ranks"><span>GP RPG 收入 #4</span></div>
+              </article>
+            </div>
+          </article>
+          <article class="card insight-card">
+            <div class="insight-card-head">
+              <div>
+                <h3>Strategy / 塔防主线</h3>
+                <p>看轻玩法前置、SLG 商业化和联盟/赛季活动。</p>
+              </div>
+              <span>男向</span>
+            </div>
+            <div class="mini-list">
+              <article class="mini-product insight-product" data-game="Kingshot">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Kingshot</strong>
+                  <span>中文参考：王国射击 · Century Games（世纪游戏）</span>
+                  <p>Century 另一头部策略产品，和 Whiteout Survival 形成双核心。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Strategy 收入 #1</span><span class="delta up">↑1</span></div>
+              </article>
+              <article class="mini-product insight-product" data-game="Last War: Survival Game">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Last War: Survival Game</strong>
+                  <span>中文参考：最后战争：生存游戏 · FirstFun / FunFly</span>
+                  <p>Strategy 收入 #1，轻玩法前置 + SLG 商业化仍是男向重点。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Strategy 收入 #2</span><span class="delta down">↓1</span></div>
+              </article>
+              <article class="mini-product insight-product" data-game="Whiteout Survival">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Whiteout Survival</strong>
+                  <span>中文参考：无尽冬日 · Century Games（世纪游戏）</span>
+                  <p>冰雪生存 SLG 标杆，适合拆建筑、联盟和活动节奏。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Strategy 收入 #3</span></div>
+              </article>
+              <article class="mini-product insight-product" data-game="Last Z: Survival Shooter">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Last Z: Survival Shooter</strong>
+                  <span>中文参考：末日 Z · Omnilojo</span>
+                  <p>策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Strategy 收入 #4</span></div>
+              </article>
+            </div>
+          </article>
+          <article class="card insight-card">
+            <div class="insight-card-head">
+              <div>
+                <h3>明天继续跟踪</h3>
+                <p>只保留最需要复看的三个信号。</p>
+              </div>
+              <span>观察</span>
+            </div>
+            <div class="mini-list">
+              <article class="mini-product insight-product" data-game="Meowdoku: Brain Puzzle Games">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Meowdoku: Brain Puzzle Games</strong>
+                  <span>中文参考：喵独：脑力谜题 · Oakever Games</span>
+                  <p>看免费榜第一能否守住，以及猫咪包装是否继续吸量。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 免费 #1</span></div>
+              </article>
+              <article class="mini-product insight-product" data-game="Last War: Survival Game">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Last War: Survival Game</strong>
+                  <span>中文参考：最后战争：生存游戏 · FirstFun / FunFly</span>
+                  <p>看 Strategy #1 能否继续压住 Century 双产品。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Strategy 收入 #2</span><span class="delta down">↓1</span></div>
+              </article>
+              <article class="mini-product insight-product" data-game="Zenless Zone Zero">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Zenless Zone Zero</strong>
+                  <span>中文参考：绝区零 · COGNOSPHERE（米哈游海外）</span>
+                  <p>看版本热度是否继续把 RPG 收入维持在头部。</p>
+                </div>
+                <div class="mini-ranks"><span>GP RPG 收入 #1</span><span class="delta up">↑1</span></div>
+              </article>
+            </div>
+          </article>
       </div>
     </section>
 
@@ -145,10 +409,246 @@
 
     <section id="changes" class="section panel">
       <h2>榜单动态与账号观察</h2>
-      <div class="change-grid">
-        <div class="card"><h3>上升 / 新进</h3><ul><li>Tile Family:Match Puzzle Game（瓷砖家族：匹配谜题）：GP Puzzle 收入 #30（新进）</li><li>King's Choice: Rule Your Fate（国王的选择：命运法则）：GP RPG 收入 #30（新进）</li><li>Rise of Castles: Ice and Fire（城堡崛起：冰与火）：GP Strategy 收入 #30（新进）</li><li>Clash Royale（皇室战争）：GP Strategy 收入 #11（↑5）</li><li>Merge Cooking（合成烹饪）：iOS Puzzle 收入 #11（↑3）</li><li>Game of Thrones: Dragonfire（权力的游戏：龙焰）：GP Strategy 收入 #17（↑3）</li></ul></div>
-        <div class="card"><h3>值得拆解</h3><ul><li>Oakever：Meowdoku: Brain Puzzle Games（喵独：脑力谜题）、Amaze GO!（迷宫冲冲冲）、Jigsawcard Solitaire Puzzle（拼图纸牌）、Tile Explorer - Triple Match（瓷砖探索） 多产品进入免费榜。</li><li>Century：Kingshot（王国射击） 与 Whiteout Survival（无尽冬日） 仍是男向 Strategy 核心产品。</li><li>Devsisters：CookieRun: Kingdom（姜饼人王国） 与 CookieRun: Crumble - Idle RPG（姜饼人：碎碎冒险） 同时进 RPG 收入榜。</li></ul></div>
-        <div class="card"><h3>明天继续看</h3><ul><li>Meowdoku: Brain Puzzle Games（喵独：脑力谜题） 是否守住免费榜第一。</li><li>Last War: Survival Game（最后战争：生存游戏） 是否继续压住 Kingshot（王国射击） / Whiteout Survival（无尽冬日）。</li><li>Zenless Zone Zero（绝区零） 是否维持 RPG 头部。</li></ul></div>
+      <p class="sub">动态不再堆成长句，按产品和账号拆成可扫描的小行。</p>
+      
+      <div class="motion-grid">
+        <div class="motion-main">
+          <article class="card motion-card">
+            <div class="motion-head">
+              <h3>上升 / 新进</h3>
+              <span>8 个信号</span>
+            </div>
+            <div class="mini-list mover-list">
+              <article class="mini-product mover-item" data-game="Tile Family:Match Puzzle Game">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Tile Family:Match Puzzle Game</strong>
+                  <span>中文参考：瓷砖家族：匹配谜题 · Playflux</span>
+                  <p>新进榜单，优先看题材包装、首局和素材入口。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 收入 #30</span><span class="delta new">新进</span></div>
+              </article>
+              <article class="mini-product mover-item" data-game="King's Choice: Rule Your Fate">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>King's Choice: Rule Your Fate</strong>
+                  <span>中文参考：国王的选择：命运法则 · ONEMT SGP</span>
+                  <p>新进榜单，优先看题材包装、首局和素材入口。</p>
+                </div>
+                <div class="mini-ranks"><span>GP RPG 收入 #30</span><span class="delta new">新进</span></div>
+              </article>
+              <article class="mini-product mover-item" data-game="Rise of Castles: Ice and Fire">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Rise of Castles: Ice and Fire</strong>
+                  <span>中文参考：城堡崛起：冰与火 · Long Tech Network Limited</span>
+                  <p>新进榜单，优先看题材包装、首局和素材入口。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Strategy 收入 #30</span><span class="delta new">新进</span></div>
+              </article>
+              <article class="mini-product mover-item" data-game="Clash Royale">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Clash Royale</strong>
+                  <span>中文参考：皇室战争 · Supercell</span>
+                  <p>较上期↑5，优先看最近版本、活动或买量素材变化。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Strategy 收入 #11</span><span class="delta up">↑5</span></div>
+              </article>
+              <article class="mini-product mover-item" data-game="Merge Cooking">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Merge Cooking</strong>
+                  <span>中文参考：合成烹饪 · 待核验</span>
+                  <p>较上期↑3，优先看最近版本、活动或买量素材变化。</p>
+                </div>
+                <div class="mini-ranks"><span>iOS Puzzle 收入 #11</span><span class="delta up">↑3</span></div>
+              </article>
+              <article class="mini-product mover-item" data-game="Game of Thrones: Dragonfire">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Game of Thrones: Dragonfire</strong>
+                  <span>中文参考：权力的游戏：龙焰 · Warner Bros.（华纳兄弟）</span>
+                  <p>较上期↑3，优先看最近版本、活动或买量素材变化。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Strategy 收入 #17</span><span class="delta up">↑3</span></div>
+              </article>
+              <article class="mini-product mover-item" data-game="Jigsaw Drop: Solitaire Puzzle">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Jigsaw Drop: Solitaire Puzzle</strong>
+                  <span>中文参考：拼图掉落 · Runyou</span>
+                  <p>较上期↑3，优先看最近版本、活动或买量素材变化。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 免费 #21</span><span class="delta up">↑3</span></div>
+              </article>
+              <article class="mini-product mover-item" data-game="WWE Champions">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>WWE Champions</strong>
+                  <span>中文参考：WWE 冠军 · Scopely</span>
+                  <p>较上期↑3，优先看最近版本、活动或买量素材变化。</p>
+                </div>
+                <div class="mini-ranks"><span>GP RPG 收入 #26</span><span class="delta up">↑3</span></div>
+              </article>
+            </div>
+          </article>
+          <article class="card motion-card">
+            <div class="motion-head">
+              <h3>账号与厂商观察</h3>
+              <span>按厂商看产品集</span>
+            </div>
+            <div class="account-grid">
+              
+              <section class="account-card">
+                <header>
+                  <strong>Oakever 免费矩阵</strong>
+                  <span>猫咪 / 迷宫 / 纸牌 / Tile 多题材并行</span>
+                </header>
+                <div class="mini-list compact">
+              <article class="mini-product account-product" data-game="Meowdoku: Brain Puzzle Games">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Meowdoku: Brain Puzzle Games</strong>
+                  <span>中文参考：喵独：脑力谜题 · Oakever Games</span>
+                  <p>免费榜第一，猫咪包装 + 数独/脑力题材值得拆素材。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 免费 #1</span></div>
+              </article>
+              <article class="mini-product account-product" data-game="Amaze GO!">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Amaze GO!</strong>
+                  <span>中文参考：迷宫冲冲冲 · Oakever Games</span>
+                  <p>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 免费 #7</span></div>
+              </article>
+              <article class="mini-product account-product" data-game="Jigsawcard Solitaire Puzzle">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Jigsawcard Solitaire Puzzle</strong>
+                  <span>中文参考：拼图纸牌 · Oakever Games</span>
+                  <p>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 免费 #26</span><span class="delta down">↓4</span></div>
+              </article>
+              <article class="mini-product account-product" data-game="Tile Explorer - Triple Match">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Tile Explorer - Triple Match</strong>
+                  <span>中文参考：瓷砖探索 · Oakever Games</span>
+                  <p>免费榜流量线索，适合看素材包装、首局体验和广告变现入口。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 免费 #25</span><span class="delta up">↑1</span></div>
+              </article>
+                </div>
+              </section>
+              
+              <section class="account-card">
+                <header>
+                  <strong>Century 男向双线</strong>
+                  <span>4X / 生存 SLG 两个核心收入样本</span>
+                </header>
+                <div class="mini-list compact">
+              <article class="mini-product account-product" data-game="Kingshot">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Kingshot</strong>
+                  <span>中文参考：王国射击 · Century Games（世纪游戏）</span>
+                  <p>Century 另一头部策略产品，和 Whiteout Survival 形成双核心。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Strategy 收入 #1</span><span class="delta up">↑1</span></div>
+              </article>
+              <article class="mini-product account-product" data-game="Whiteout Survival">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Whiteout Survival</strong>
+                  <span>中文参考：无尽冬日 · Century Games（世纪游戏）</span>
+                  <p>冰雪生存 SLG 标杆，适合拆建筑、联盟和活动节奏。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Strategy 收入 #3</span></div>
+              </article>
+                </div>
+              </section>
+              
+              <section class="account-card">
+                <header>
+                  <strong>Devsisters RPG 账号</strong>
+                  <span>CookieRun IP 的 RPG 与 Idle 延展</span>
+                </header>
+                <div class="mini-list compact">
+              <article class="mini-product account-product" data-game="CookieRun: Kingdom">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>CookieRun: Kingdom</strong>
+                  <span>中文参考：姜饼人王国 · Devsisters</span>
+                  <p>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</p>
+                </div>
+                <div class="mini-ranks"><span>GP RPG 收入 #9</span></div>
+              </article>
+              <article class="mini-product account-product" data-game="CookieRun: Crumble - Idle RPG">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>CookieRun: Crumble - Idle RPG</strong>
+                  <span>中文参考：姜饼人：碎碎冒险 · Devsisters</span>
+                  <p>RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。</p>
+                </div>
+                <div class="mini-ranks"><span>GP RPG 收入 #10</span><span class="delta up">↑1</span></div>
+              </article>
+                </div>
+              </section>
+            </div>
+          </article>
+        </div>
+        <aside class="motion-side">
+          <article class="card motion-card">
+            <div class="motion-head">
+              <h3>明天继续看</h3>
+              <span>3 条</span>
+            </div>
+            <div class="mini-list watch-list">
+              <article class="mini-product watch-item" data-game="Meowdoku: Brain Puzzle Games">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Meowdoku: Brain Puzzle Games</strong>
+                  <span>中文参考：喵独：脑力谜题 · Oakever Games</span>
+                  <p>免费榜头部是否稳定，是休闲新品观察重点。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Puzzle 免费 #1</span></div>
+              </article>
+              <article class="mini-product watch-item" data-game="Last War: Survival Game">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Last War: Survival Game</strong>
+                  <span>中文参考：最后战争：生存游戏 · FirstFun / FunFly</span>
+                  <p>男向 Strategy 龙头是否继续压住同题材竞品。</p>
+                </div>
+                <div class="mini-ranks"><span>GP Strategy 收入 #2</span><span class="delta down">↓1</span></div>
+              </article>
+              <article class="mini-product watch-item" data-game="Zenless Zone Zero">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>Zenless Zone Zero</strong>
+                  <span>中文参考：绝区零 · COGNOSPHERE（米哈游海外）</span>
+                  <p>角色池和版本节点是否继续带动 RPG 收入。</p>
+                </div>
+                <div class="mini-ranks"><span>GP RPG 收入 #1</span><span class="delta up">↑1</span></div>
+              </article>
+            </div>
+          </article>
+          <article class="card motion-card">
+            <div class="motion-head">
+              <h3>阅读顺序</h3>
+              <span>更省力</span>
+            </div>
+            <div class="read-path">
+              <span>先看新进/上升</span>
+              <span>再看账号产品集</span>
+              <span>最后进完整榜单核对</span>
+            </div>
+          </article>
+        </aside>
       </div>
     </section>
 
@@ -2464,7 +2964,7 @@
       </div>
     </div>
 
-    <footer>生成日期：2026-08-04 16:03（Asia/Shanghai）</footer>
+    <footer>生成日期：2026-08-04 17:54（Asia/Shanghai）</footer>
   </main>
 
   <script>
@@ -2651,9 +3151,9 @@
       if (holder && gameKey) holder.replaceWith(makeIcon(gameKey, "large"));
     });
 
-    document.querySelectorAll(".studio-product[data-game], .family-product[data-game]").forEach((item) => {
+    document.querySelectorAll(".studio-product[data-game], .family-product[data-game], .mini-product[data-game]").forEach((item) => {
       const gameKey = item.dataset.game;
-      const holder = item.querySelector(".studio-product-icon, .family-product-icon");
+      const holder = item.querySelector(".studio-product-icon, .family-product-icon, .mini-product-icon");
       const iconKey = matchIconEntry(gameKey) || gameKey;
       if (holder && gameKey) {
         const icon = makeIcon(iconKey);
