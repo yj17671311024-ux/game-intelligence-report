@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-04T02:58:32.807Z",
-  "total": 186,
-  "found": 182,
+  "preparedAt": "2026-08-04T04:53:33.066Z",
+  "total": 187,
+  "found": 183,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -1905,6 +1905,18 @@
     },
     {
       "name": "Tile Family - Match Puzzle Game",
+      "found": true,
+      "initial": "TF",
+      "image": "assets/icons/official/tile-family-match-puzzle-game.jpg",
+      "matchedName": "Tile Family®:Match Puzzle Game",
+      "artistName": "Playflux",
+      "sourceUrl": "https://apps.apple.com/us/app/tile-family-match-puzzle-game/id6444056676?uo=4",
+      "score": 298,
+      "query": "Tile Family - Match Puzzle Game",
+      "bytes": 67697
+    },
+    {
+      "name": "Tile Family:Match Puzzle Game",
       "found": true,
       "initial": "TF",
       "image": "assets/icons/official/tile-family-match-puzzle-game.jpg",
