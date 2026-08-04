@@ -376,6 +376,43 @@ const typeMap = {
   "Arknights": "塔防 / 二游",
 };
 
+const familyDefs = [
+  {
+    name: "Match-3 / Blast",
+    desc: "传统消除、Blast 与关卡型长线产品，重点看关卡产能、活动节奏和长期目标。",
+  },
+  {
+    name: "Merge / Story / Cook",
+    desc: "合成、订单、装修、剧情和烹饪题材，重点看叙事包装、任务链和内容消耗。",
+  },
+  {
+    name: "Sort / Jam / Line",
+    desc: "排序、Jam、路线与堵塞类轻谜题，重点看首局压力、素材表达和广告变现入口。",
+  },
+  {
+    name: "3D Match / Object",
+    desc: "3D 物件匹配和找物清屏，重点看物件识别、触感反馈和关卡节奏。",
+  },
+  {
+    name: "Hidden Object / Search",
+    desc: "找物和视觉搜索，重点看场景信息量、目标提示和题材包装。",
+  },
+  {
+    name: "Word / Sudoku / Brain",
+    desc: "文字、数独、纸牌、麻将和脑力题，重点看日常留存、题库组织和轻量化包装。",
+  },
+  {
+    name: "Arcade / Logic Puzzle",
+    desc: "Block、Screw、Hole、Tile 等机制型 Puzzle，重点看单局爽感和素材可解释性。",
+  },
+  {
+    name: "Puzzle + Meta / SLG",
+    desc: "Puzzle 与 RPG、SLG、养成等外层系统混合，重点看玩法入口和商业化外层。",
+  },
+];
+
+const familyOrder = new Map(familyDefs.map((family, index) => [family.name, index]));
+
 const pointMap = {
   "Royal Match": "头部标杆，继续拆关卡产能、活动节奏、装修改造叙事和礼包节奏。",
   "Gossip Harbor: Merge & Story": "merge/story 头部样本，订单、剧情和场景修复都值得长期拆。",
@@ -598,6 +635,24 @@ function gameType(name, fallback) {
   return typeMap[name] || fallback || "待观察";
 }
 
+function gameFamily(name, categoryShort = "") {
+  const raw = `${name || ""} ${typeMap[name] || ""}`.toLowerCase();
+  if (categoryShort.includes("RPG")) return "RPG / 角色收集";
+  if (categoryShort.includes("Strategy")) {
+    if (/puzzles? & (survival|chaos)|puzzle \+ slg|puzzle/.test(raw)) return "Puzzle + Meta / SLG";
+    return "Strategy / SLG";
+  }
+  if (/puzzles? & (survival|chaos)|empires & puzzles|puzzle rpg|puzzle \+ slg|slg/.test(raw)) return "Puzzle + Meta / SLG";
+  if (/merge|cook|mansion|harbor|travel town|seaside|dragons|flambe|mystery town|tasty travels/.test(raw)) return "Merge / Story / Cook";
+  if (/match factory|3d match|triple match|object/.test(raw)) return "3D Match / Object";
+  if (/sort|jam|line|loop|yarn|marble|car sort|bus traffic|arrow/.test(raw)) return "Sort / Jam / Line";
+  if (/hidden|seek|search|find/.test(raw)) return "Hidden Object / Search";
+  if (/\bword\b|sudoku|brain|nyt|mahjong|domino|solitaire|jigsawcard/.test(raw)) return "Word / Sudoku / Brain";
+  if (/block|screw|hole|pixel|flow|knock|tile|cube|woodoku|jigsaw|point out|color block/.test(raw)) return "Arcade / Logic Puzzle";
+  if (/match-3|candy|royal match|royal kingdom|toon blast|toy blast|fishdom|gardenscapes|homescapes|township/.test(raw)) return "Match-3 / Blast";
+  return "Arcade / Logic Puzzle";
+}
+
 function learningPoint(name, categoryShort) {
   if (pointMap[name]) return pointMap[name];
   if (categoryShort.includes("免费")) return "免费榜流量线索，适合看素材包装、首局体验和广告变现入口。";
@@ -653,6 +708,7 @@ function parseAppBrain(html, config) {
         developer,
         developerCn: devCn(developer),
         type: gameType(name, config.short),
+        family: gameFamily(name, config.short),
         point: learningPoint(name, config.short),
         categoryKey: config.key,
         categoryShort: config.short,
@@ -683,6 +739,7 @@ function parseAppCurrents(html) {
             developer,
             developerCn: devCn(developer),
             type: gameType(name, iosSource.short),
+            family: gameFamily(name, iosSource.short),
             point: learningPoint(name, iosSource.short),
             categoryKey: iosSource.key,
             categoryShort: iosSource.short,
@@ -975,10 +1032,73 @@ function categoryRows(rows) {
                 <td><span class="${row.rank <= 10 ? "rank" : "rank soft"}">${row.rank}</span></td>
                 <td class="product">${escapeHtml(row.name)}<span class="cn">中文参考：${escapeHtml(cnName(row.name))}</span></td>
                 <td>${escapeHtml(row.developerCn)}</td>
-                <td>${escapeHtml(row.type)}</td>
+                <td><strong>${escapeHtml(row.family || gameFamily(row.name, row.categoryShort))}</strong><span class="cn">${escapeHtml(row.type)}</span></td>
                 <td><span class="delta ${row.deltaClass}">${escapeHtml(row.delta)}</span></td>
                 <td>${escapeHtml(row.point)}</td>
               </tr>`).join("");
+}
+
+function puzzleFamilyCardsHtml(data) {
+  const ranks = rankLookup(data);
+  const puzzleRows = [
+    ...data.gpPuzzleGross.rows,
+    ...data.iosPuzzleGross.rows,
+    ...data.gpPuzzleFree.rows,
+  ];
+  const byName = new Map();
+  for (const row of puzzleRows) {
+    const existing = byName.get(row.name);
+    if (!existing || row.rank < existing.rank || row.categoryShort.includes("收入")) byName.set(row.name, row);
+  }
+
+  const groups = new Map(familyDefs.map((family) => [family.name, []]));
+  for (const row of byName.values()) {
+    const familyName = row.family || gameFamily(row.name, row.categoryShort);
+    if (!groups.has(familyName)) groups.set(familyName, []);
+    groups.get(familyName).push(row);
+  }
+
+  const familyCards = [...groups.entries()]
+    .filter(([, rows]) => rows.length)
+    .sort((a, b) => (familyOrder.get(a[0]) ?? 99) - (familyOrder.get(b[0]) ?? 99))
+    .map(([familyName, rows]) => {
+      const def = familyDefs.find((item) => item.name === familyName);
+      const sorted = rows.sort((a, b) => {
+        const scoreA = a.categoryShort.includes("收入") ? a.rank : a.rank + 35;
+        const scoreB = b.categoryShort.includes("收入") ? b.rank : b.rank + 35;
+        return scoreA - scoreB;
+      });
+      const productHtml = sorted.slice(0, 6).map((row) => {
+        const rankHtml = (ranks.get(row.name) || [`${row.categoryShort} #${row.rank}`])
+          .slice(0, 3)
+          .map((label) => `<span>${escapeHtml(label)}</span>`)
+          .join("");
+        return `
+                <article class="family-product" data-game="${escapeHtml(row.name)}">
+                  <span class="family-product-icon app-icon"></span>
+                  <div class="family-product-text">
+                    <strong>${escapeHtml(row.name)}</strong>
+                    <span>中文参考：${escapeHtml(cnName(row.name))}</span>
+                    <p>${escapeHtml(row.point)}</p>
+                  </div>
+                  <div class="family-ranks">${rankHtml}</div>
+                </article>`;
+      }).join("");
+      return `
+          <article class="family-card">
+            <header>
+              <div>
+                <h3>${escapeHtml(familyName)}</h3>
+                <p>${escapeHtml(def?.desc || "本期 Puzzle 榜单中的机制类产品集合。")}</p>
+              </div>
+              <span>${sorted.length} 款</span>
+            </header>
+            <div class="family-products">${productHtml}
+            </div>
+          </article>`;
+    });
+
+  return familyCards.join("\n");
 }
 
 function studioCardsHtml(data) {
@@ -1100,7 +1220,7 @@ function html(data, iconEntries) {
     * { box-sizing:border-box; }
     body { margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif; line-height:1.58; }
     a { color:var(--blue); text-decoration:none; } a:hover { text-decoration:underline; }
-    .page { width:min(1280px,calc(100% - 32px)); margin:0 auto; padding:24px 0 56px; }
+    .page { width:min(1400px,calc(100% - 32px)); margin:0 auto; padding:24px 0 56px; }
     .hero,.section,.card,.notice { background:var(--paper); border:1px solid var(--line); border-radius:8px; }
     .hero { display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:24px; padding:28px; margin-bottom:14px; }
     .eyebrow { color:var(--blue); font-weight:800; margin-bottom:8px; }
@@ -1109,8 +1229,13 @@ function html(data, iconEntries) {
     .meta { display:grid; gap:12px; color:#485566; } .meta .date { font-size:34px; font-weight:900; color:var(--ink); line-height:1.05; } .meta b { color:#344052; }
     .chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; } .chip { border:1px solid var(--line); border-radius:999px; padding:7px 12px; background:#fff; color:#344052; font-size:14px; }
     .chip.blue { color:var(--blue); background:#eef8fb; border-color:#bfdae2; } .chip.green { color:var(--green); background:#f1f8ee; border-color:#cbddc4; } .chip.red { color:var(--red); background:#fbf0f3; border-color:#e5c6ce; } .chip.gold { color:var(--gold); background:#fff8ec; border-color:#e7d2aa; }
-    nav { display:flex; flex-wrap:wrap; gap:10px; margin:16px 0; } nav a { display:inline-flex; align-items:center; min-height:42px; padding:9px 14px; border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--ink); }
-    .section { padding:24px 28px; margin-top:16px; } .section-head { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; margin-bottom:16px; } .sub { color:var(--muted); margin-top:6px; }
+    .dashboard { display:grid; grid-template-columns:220px minmax(0,1fr); gap:16px; align-items:start; }
+    .side-nav { position:sticky; top:16px; display:grid; gap:8px; padding:10px; background:#fff; border:1px solid var(--line); border-radius:8px; }
+    .side-nav button { appearance:none; border:1px solid transparent; border-radius:7px; background:transparent; color:#344052; min-height:40px; padding:9px 10px; text-align:left; font:inherit; font-weight:700; cursor:pointer; }
+    .side-nav button:hover { background:#f3f6f8; } .side-nav button.active { background:#eaf6f9; border-color:#bdd8e0; color:var(--blue); }
+    .content-panels { min-width:0; }
+    .section { padding:24px 28px; margin-top:16px; } .content-panels .section { margin-top:0; } .panel { display:none; } .panel.active { display:block; }
+    .section-head { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; margin-bottom:16px; } .sub { color:var(--muted); margin-top:6px; }
     .grid-2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; } .grid-3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
     .change-grid { display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:14px; margin-top:16px; }
     .card { padding:18px; min-width:0; } .card h3 { color:var(--blue); margin-bottom:10px; } .card p,.card li { color:#4e5b6b; }
@@ -1128,6 +1253,16 @@ function html(data, iconEntries) {
     .app-icon { width:46px; height:46px; flex:0 0 46px; display:inline-flex; align-items:center; justify-content:center; overflow:hidden; border-radius:10px; border:1px solid rgba(36,45,55,.16); background:linear-gradient(135deg,#e9f4f8,#f8f1df); color:#26313d; font-size:15px; font-weight:900; box-shadow:inset 0 0 0 1px rgba(255,255,255,.25); }
     .app-icon.large { width:58px; height:58px; flex-basis:58px; border-radius:12px; font-size:18px; } .app-icon img { width:100%; height:100%; object-fit:cover; display:block; } .app-icon.fallback { letter-spacing:0; }
     td.product-with-icon { min-width:240px; } .product-cell { display:grid; grid-template-columns:46px minmax(0,1fr); gap:10px; align-items:center; } .product-text { min-width:0; }
+    .family-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .family-card { border:1px solid var(--line); border-radius:8px; background:#fff; overflow:hidden; }
+    .family-card header { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:start; padding:16px; background:#fbfcfd; border-bottom:1px solid var(--line); }
+    .family-card header h3 { color:var(--ink); } .family-card header p { color:#526071; margin-top:5px; font-size:13px; }
+    .family-card header > span { display:inline-flex; align-items:center; justify-content:center; min-width:48px; border-radius:999px; background:#eef8fb; color:var(--blue); border:1px solid #bfdae2; font-size:12px; font-weight:900; padding:5px 8px; }
+    .family-products { display:grid; gap:0; }
+    .family-product { display:grid; grid-template-columns:46px minmax(0,1fr) 136px; gap:10px; align-items:center; padding:10px 12px; border-top:1px solid var(--line); }
+    .family-product:first-child { border-top:0; } .family-product-text { min-width:0; } .family-product-text strong { display:block; color:#20242a; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .family-product-text span { color:#526071; display:block; font-size:13px; margin-top:1px; } .family-product-text p { color:#4e5b6b; margin-top:4px; font-size:13px; }
+    .family-ranks { display:grid; gap:4px; } .family-ranks span { display:block; border-radius:6px; background:#fff8ec; border:1px solid #e7d2aa; color:var(--gold); font-size:12px; font-weight:800; line-height:1.25; padding:5px 7px; text-align:center; }
     .studio-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; align-items:start; }
     .studio-card { border:1px solid var(--line); border-radius:8px; background:#fff; overflow:hidden; min-width:0; transition:box-shadow .18s ease; }
     .studio-card[open] { box-shadow:0 10px 24px rgba(28,58,75,.08); } .studio-card summary { list-style:none; cursor:pointer; padding:16px; display:grid; gap:10px; }
@@ -1146,8 +1281,9 @@ function html(data, iconEntries) {
     .studio-rank-list span,.studio-rank-list small { display:block; border-radius:6px; background:#eef8fb; border:1px solid #bfdae2; color:var(--blue); font-size:12px; font-weight:800; line-height:1.25; padding:5px 7px; text-align:center; }
     .studio-rank-list small { background:#f7f9fb; border-color:#dce3ea; color:#657180; font-weight:700; }
     ul,ol { margin:8px 0 0 20px; padding:0; } li { margin:5px 0; } footer { color:var(--muted); margin-top:20px; font-size:13px; }
+    @media (max-width:1100px) { .dashboard { grid-template-columns:1fr; } .side-nav { position:static; grid-template-columns:repeat(4,minmax(0,1fr)); } .side-nav button { text-align:center; } }
     @media (max-width:980px) { .change-grid { grid-template-columns:1fr; } }
-    @media (max-width:860px) { .hero,.grid-2,.grid-3,.visual-strip,.studio-grid { grid-template-columns:1fr; } .studio-product { grid-template-columns:42px minmax(0,1fr); } .studio-rank-list { grid-column:1 / -1; grid-template-columns:repeat(3,minmax(0,1fr)); } .hero { padding:22px; } .section { padding:20px; } table { min-width:940px; } }
+    @media (max-width:860px) { .hero,.grid-2,.grid-3,.visual-strip,.studio-grid,.family-grid { grid-template-columns:1fr; } .side-nav { display:flex; overflow-x:auto; } .side-nav button { flex:0 0 auto; white-space:nowrap; } .studio-product,.family-product { grid-template-columns:42px minmax(0,1fr); } .studio-rank-list,.family-ranks { grid-column:1 / -1; grid-template-columns:repeat(3,minmax(0,1fr)); } .hero { padding:22px; } .section { padding:20px; } table { min-width:940px; } }
   </style>
 </head>
 <body>
@@ -1173,17 +1309,20 @@ function html(data, iconEntries) {
       </div>
     </section>
 
-    <nav>
-      <a href="#summary">今日结论</a>
-      <a href="#visual">图像速览</a>
-      <a href="#changes">动态</a>
-      <a href="#studios">厂商学习</a>
-      <a href="#puzzle">Puzzle 完整榜单</a>
-      <a href="#male">男性向 / RPG / Strategy</a>
-      <a href="#sources">来源</a>
-    </nav>
+    <div class="dashboard">
+      <aside class="side-nav" aria-label="日报分区">
+        <button type="button" class="active" data-panel="summary">今日结论</button>
+        <button type="button" data-panel="visual">图像速览</button>
+        <button type="button" data-panel="changes">榜单动态</button>
+        <button type="button" data-panel="families">玩法拆分</button>
+        <button type="button" data-panel="studios">厂商学习</button>
+        <button type="button" data-panel="puzzle">Puzzle 榜单</button>
+        <button type="button" data-panel="male">男向榜单</button>
+        <button type="button" data-panel="sources">来源口径</button>
+      </aside>
 
-    <section id="summary" class="section">
+      <div class="content-panels">
+    <section id="summary" class="section panel active">
       <h2>今日结论</h2>
       <p class="sub">先看结论，再进入榜单细节。</p>
       <div class="grid-2" style="margin-top:16px">
@@ -1191,7 +1330,7 @@ function html(data, iconEntries) {
       </div>
     </section>
 
-    <section id="visual" class="section">
+    <section id="visual" class="section panel">
       <div class="section-head">
         <div>
           <h2>图像速览</h2>
@@ -1212,7 +1351,7 @@ function html(data, iconEntries) {
       </div>
     </section>
 
-    <section id="changes" class="section">
+    <section id="changes" class="section panel">
       <h2>榜单动态与账号观察</h2>
       <div class="change-grid">
         <div class="card"><h3>上升 / 新进</h3><ul>${movers.slice(0, 6).map((row) => `<li>${escapeHtml(gameLabel(row.name))}：${escapeHtml(row.categoryShort)} #${row.rank}（${escapeHtml(row.delta)}）</li>`).join("")}</ul></div>
@@ -1221,7 +1360,18 @@ function html(data, iconEntries) {
       </div>
     </section>
 
-    <section id="studios" class="section">
+    <section id="families" class="section panel">
+      <div class="section-head">
+        <div>
+          <h2>Puzzle 玩法拆分</h2>
+          <p class="sub">按产品学习分类重新整理 Puzzle 榜单，不再只按商店大类混放。</p>
+        </div>
+      </div>
+      <div class="family-grid">${puzzleFamilyCardsHtml(data)}
+      </div>
+    </section>
+
+    <section id="studios" class="section panel">
       <div class="section-head">
         <div>
           <h2>厂商学习卡</h2>
@@ -1232,27 +1382,27 @@ function html(data, iconEntries) {
       </div>
     </section>
 
-    <section id="puzzle" class="section">
+    <section id="puzzle" class="section panel">
       <h2>Puzzle 完整榜单与简要</h2>
       <div class="notice"><strong>中文名说明：</strong>“中文参考”用于辅助学习与记忆，不等同官方译名；厂商中文称呼优先使用常见叫法，无法确认时保留英文。</div>
       <h3>${escapeHtml(data.gpPuzzleGross.label)}</h3>
-      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>${categoryRows(data.gpPuzzleGross.rows)}</tbody></table></div>
+      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>玩法族群</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>${categoryRows(data.gpPuzzleGross.rows)}</tbody></table></div>
       <h3 style="margin-top:22px">${escapeHtml(data.iosPuzzleGross.label)}</h3>
-      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>${categoryRows(data.iosPuzzleGross.rows)}</tbody></table></div>
+      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>玩法族群</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>${categoryRows(data.iosPuzzleGross.rows)}</tbody></table></div>
       <h3 style="margin-top:22px">${escapeHtml(data.gpPuzzleFree.label)}</h3>
-      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>${categoryRows(data.gpPuzzleFree.rows)}</tbody></table></div>
+      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>玩法族群</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>${categoryRows(data.gpPuzzleFree.rows)}</tbody></table></div>
     </section>
 
-    <section id="male" class="section">
+    <section id="male" class="section panel">
       <h2>男性向 / RPG / Strategy 完整榜单</h2>
       <p class="sub">用 RPG 与 Strategy 收入榜观察角色收集、IP、SLG、塔防/策略混合产品。</p>
       <h3>${escapeHtml(data.gpRpgGross.label)}</h3>
-      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>${categoryRows(data.gpRpgGross.rows)}</tbody></table></div>
+      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>玩法族群</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>${categoryRows(data.gpRpgGross.rows)}</tbody></table></div>
       <h3 style="margin-top:22px">${escapeHtml(data.gpStrategyGross.label)}</h3>
-      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>类型</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>${categoryRows(data.gpStrategyGross.rows)}</tbody></table></div>
+      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>玩法族群</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>${categoryRows(data.gpStrategyGross.rows)}</tbody></table></div>
     </section>
 
-    <section id="sources" class="section">
+    <section id="sources" class="section panel">
       <h2>来源与口径</h2>
       <ul>
         ${[...sources, { ...iosSource, sourceLabel: iosSource.sourceLabel }].map((source) => `<li><a href="${escapeHtml(source.url)}">${escapeHtml(source.sourceLabel)}</a></li>`).join("\n")}
@@ -1262,11 +1412,30 @@ function html(data, iconEntries) {
       <div class="notice"><strong>图标匹配：</strong>本日报共纳入 ${new Set(rows.map((row) => row.name)).size} 个去重游戏名；未匹配到高可信图标的游戏：${unmatched.length ? unmatched.map(escapeHtml).join("、") : "无"}。</div>
     </section>
 
+      </div>
+    </div>
+
     <footer>生成日期：${escapeHtml(generatedAt)}（Asia/Shanghai）</footer>
   </main>
 
   <script>
 ${iconMapScript(iconEntries, rows)}
+
+    function activatePanel(panelId, shouldUpdateHash = true) {
+      const targetId = panelId && document.getElementById(panelId) ? panelId : "summary";
+      document.querySelectorAll(".panel").forEach((panel) => {
+        panel.classList.toggle("active", panel.id === targetId);
+      });
+      document.querySelectorAll(".side-nav button").forEach((button) => {
+        button.classList.toggle("active", button.dataset.panel === targetId);
+      });
+      if (shouldUpdateHash) history.replaceState(null, "", \`#\${targetId}\`);
+    }
+
+    document.querySelectorAll(".side-nav button[data-panel]").forEach((button) => {
+      button.addEventListener("click", () => activatePanel(button.dataset.panel));
+    });
+    activatePanel(location.hash ? location.hash.slice(1) : "summary", false);
 
     function matchIconEntry(text) {
       const normalized = text.replace(/\\s+/g, " ").trim();
@@ -1309,9 +1478,9 @@ ${iconMapScript(iconEntries, rows)}
       if (holder && gameKey) holder.replaceWith(makeIcon(gameKey, "large"));
     });
 
-    document.querySelectorAll(".studio-product[data-game]").forEach((item) => {
+    document.querySelectorAll(".studio-product[data-game], .family-product[data-game]").forEach((item) => {
       const gameKey = item.dataset.game;
-      const holder = item.querySelector(".studio-product-icon");
+      const holder = item.querySelector(".studio-product-icon, .family-product-icon");
       const iconKey = matchIconEntry(gameKey) || gameKey;
       if (holder && gameKey) {
         const icon = makeIcon(iconKey);
