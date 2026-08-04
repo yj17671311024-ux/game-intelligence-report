@@ -1196,6 +1196,180 @@ function changeSummary(data) {
   ];
 }
 
+function productRef(data, name, preferredKey = "") {
+  const target = norm(name);
+  const matches = allRows(data).filter((row) => norm(row.name) === target);
+  const preferred = preferredKey ? matches.find((row) => row.categoryKey === preferredKey || row.categoryShort.includes(preferredKey)) : null;
+  return preferred || matches[0] || {
+    name: canonicalName(name),
+    rank: "-",
+    delta: "",
+    deltaClass: "flat",
+    categoryShort: "观察",
+    developerCn: devCn(developerByGame[canonicalName(name)] || ""),
+    point: learningPoint(canonicalName(name), "观察"),
+  };
+}
+
+function uniqueProductRows(rows) {
+  const seen = new Set();
+  const out = [];
+  for (const row of rows) {
+    const key = norm(row.name);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(row);
+  }
+  return out;
+}
+
+function rankBadges(data, row) {
+  const ranks = rankLookup(data).get(row.name) || [];
+  const labels = ranks.length ? ranks : (row.rank === "-" ? ["观察"] : [`${row.categoryShort} #${row.rank}`]);
+  return Array.from(new Set(labels)).slice(0, 3).map((label) => `<span>${escapeHtml(label)}</span>`).join("");
+}
+
+function compactProductHtml(data, row, note = "", extraClass = "") {
+  const noteText = note || row.point || learningPoint(row.name, row.categoryShort || "");
+  const delta = row.delta && row.delta !== "持平" ? `<span class="delta ${row.deltaClass}">${escapeHtml(row.delta)}</span>` : "";
+  const developer = row.developerCn ? ` · ${row.developerCn}` : "";
+  return `
+              <article class="mini-product ${extraClass}" data-game="${escapeHtml(row.name)}">
+                <span class="mini-product-icon app-icon"></span>
+                <div class="mini-product-text">
+                  <strong>${escapeHtml(row.name)}</strong>
+                  <span>中文参考：${escapeHtml(cnName(row.name))}${escapeHtml(developer)}</span>
+                  <p>${escapeHtml(noteText)}</p>
+                </div>
+                <div class="mini-ranks">${rankBadges(data, row)}${delta}</div>
+              </article>`;
+}
+
+function insightCardHtml(data, title, badge, note, items) {
+  return `
+          <article class="card insight-card">
+            <div class="insight-card-head">
+              <div>
+                <h3>${escapeHtml(title)}</h3>
+                <p>${escapeHtml(note)}</p>
+              </div>
+              <span>${escapeHtml(badge)}</span>
+            </div>
+            <div class="mini-list">${items.map((item) => compactProductHtml(data, item.row, item.note, "insight-product")).join("")}
+            </div>
+          </article>`;
+}
+
+function summaryCardsHtml(data) {
+  const revenueRows = uniqueProductRows([
+    ...data.gpPuzzleGross.rows.slice(0, 3),
+    ...data.iosPuzzleGross.rows.slice(0, 3),
+  ]).slice(0, 5);
+  const freeRows = data.gpPuzzleFree.rows.slice(0, 5);
+  const rpgRows = data.gpRpgGross.rows.slice(0, 4);
+  const strategyRows = data.gpStrategyGross.rows.slice(0, 4);
+  const watchRows = [
+    productRef(data, "Meowdoku: Brain Puzzle Games"),
+    productRef(data, "Last War: Survival Game"),
+    productRef(data, "Zenless Zone Zero"),
+  ];
+
+  return [
+    insightCardHtml(data, "Puzzle 收入头部", "收入榜", "头部仍看关卡产能、长期活动和装修/剧情目标。", revenueRows.map((row) => ({
+      row,
+      note: row.point,
+    }))),
+    insightCardHtml(data, "Puzzle 免费变化", "免费榜", "免费榜更适合看题材包装、首局节奏和素材方向。", freeRows.map((row) => ({
+      row,
+      note: row.point,
+    }))),
+    insightCardHtml(data, "RPG 主线", "男向", "看版本节点、角色池、美术资产和 IP 拉动。", rpgRows.map((row) => ({
+      row,
+      note: row.point,
+    }))),
+    insightCardHtml(data, "Strategy / 塔防主线", "男向", "看轻玩法前置、SLG 商业化和联盟/赛季活动。", strategyRows.map((row) => ({
+      row,
+      note: row.point,
+    }))),
+    insightCardHtml(data, "明天继续跟踪", "观察", "只保留最需要复看的三个信号。", watchRows.map((row) => ({
+      row,
+      note: row.name.includes("Meowdoku") ? "看免费榜第一能否守住，以及猫咪包装是否继续吸量。"
+        : row.name.includes("Last War") ? "看 Strategy #1 能否继续压住 Century 双产品。"
+        : "看版本热度是否继续把 RPG 收入维持在头部。",
+    }))),
+  ].join("");
+}
+
+function accountCardHtml(data, title, subtitle, names) {
+  return `
+              <section class="account-card">
+                <header>
+                  <strong>${escapeHtml(title)}</strong>
+                  <span>${escapeHtml(subtitle)}</span>
+                </header>
+                <div class="mini-list compact">${names.map((name) => compactProductHtml(data, productRef(data, name), "", "account-product")).join("")}
+                </div>
+              </section>`;
+}
+
+function changesPanelHtml(data, movers) {
+  const moverItems = movers.slice(0, 8).map((row) => ({
+    row,
+    note: row.deltaClass === "new" ? "新进榜单，优先看题材包装、首局和素材入口。" : `较上期${row.delta}，优先看最近版本、活动或买量素材变化。`,
+  }));
+  const watchRows = [
+    { row: productRef(data, "Meowdoku: Brain Puzzle Games"), note: "免费榜头部是否稳定，是休闲新品观察重点。" },
+    { row: productRef(data, "Last War: Survival Game"), note: "男向 Strategy 龙头是否继续压住同题材竞品。" },
+    { row: productRef(data, "Zenless Zone Zero"), note: "角色池和版本节点是否继续带动 RPG 收入。" },
+  ];
+
+  return `
+      <div class="motion-grid">
+        <div class="motion-main">
+          <article class="card motion-card">
+            <div class="motion-head">
+              <h3>上升 / 新进</h3>
+              <span>${moverItems.length} 个信号</span>
+            </div>
+            <div class="mini-list mover-list">${moverItems.map((item) => compactProductHtml(data, item.row, item.note, "mover-item")).join("")}
+            </div>
+          </article>
+          <article class="card motion-card">
+            <div class="motion-head">
+              <h3>账号与厂商观察</h3>
+              <span>按厂商看产品集</span>
+            </div>
+            <div class="account-grid">
+              ${accountCardHtml(data, "Oakever 免费矩阵", "猫咪 / 迷宫 / 纸牌 / Tile 多题材并行", ["Meowdoku: Brain Puzzle Games", "Amaze GO!", "Jigsawcard Solitaire Puzzle", "Tile Explorer - Triple Match"])}
+              ${accountCardHtml(data, "Century 男向双线", "4X / 生存 SLG 两个核心收入样本", ["Kingshot", "Whiteout Survival"])}
+              ${accountCardHtml(data, "Devsisters RPG 账号", "CookieRun IP 的 RPG 与 Idle 延展", ["CookieRun: Kingdom", "CookieRun: Crumble - Idle RPG"])}
+            </div>
+          </article>
+        </div>
+        <aside class="motion-side">
+          <article class="card motion-card">
+            <div class="motion-head">
+              <h3>明天继续看</h3>
+              <span>3 条</span>
+            </div>
+            <div class="mini-list watch-list">${watchRows.map((item) => compactProductHtml(data, item.row, item.note, "watch-item")).join("")}
+            </div>
+          </article>
+          <article class="card motion-card">
+            <div class="motion-head">
+              <h3>阅读顺序</h3>
+              <span>更省力</span>
+            </div>
+            <div class="read-path">
+              <span>先看新进/上升</span>
+              <span>再看账号产品集</span>
+              <span>最后进完整榜单核对</span>
+            </div>
+          </article>
+        </aside>
+      </div>`;
+}
+
 function html(data, iconEntries) {
   const rows = allRows(data);
   const generatedAt = `${reportDate} ${new Intl.DateTimeFormat("zh-CN", { timeZone: "Asia/Shanghai", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date())}`;
@@ -1240,6 +1414,41 @@ function html(data, iconEntries) {
     .change-grid { display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:14px; margin-top:16px; }
     .card { padding:18px; min-width:0; } .card h3 { color:var(--blue); margin-bottom:10px; } .card p,.card li { color:#4e5b6b; }
     .card ul { margin-left:0; list-style:none; } .card li { padding:7px 0 7px 14px; border-top:1px solid #edf1f4; position:relative; } .card li:first-child { border-top:0; } .card li::before { content:""; position:absolute; left:0; top:17px; width:5px; height:5px; border-radius:50%; background:var(--blue); }
+    .insight-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:16px; }
+    .insight-card { padding:0; overflow:hidden; }
+    .insight-card-head { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:start; padding:16px; background:#fbfcfd; border-bottom:1px solid var(--line); }
+    .insight-card-head h3,.motion-head h3 { margin:0; color:var(--blue); }
+    .insight-card-head p { color:#526071; font-size:14px; margin-top:6px; line-height:1.45; }
+    .insight-card-head > span,.motion-head > span { display:inline-flex; align-items:center; justify-content:center; border-radius:999px; border:1px solid #bfdae2; background:#eef8fb; color:var(--blue); font-size:12px; font-weight:900; padding:5px 9px; white-space:nowrap; }
+    .mini-list { display:grid; gap:0; }
+    .mini-list.compact { border-top:1px solid var(--line); }
+    .mini-product { display:grid; grid-template-columns:46px minmax(0,1fr) minmax(92px,auto); gap:10px; align-items:center; padding:11px 14px; border-top:1px solid var(--line); background:#fff; min-width:0; }
+    .mini-product:first-child { border-top:0; }
+    .mini-product-text { min-width:0; }
+    .mini-product-text strong { display:block; color:#20242a; overflow-wrap:anywhere; line-height:1.25; }
+    .mini-product-text span { display:block; color:#526071; font-size:12px; margin-top:2px; overflow-wrap:anywhere; line-height:1.35; }
+    .mini-product-text p { color:#4e5b6b; font-size:13px; margin-top:5px; line-height:1.42; }
+    .mini-ranks { justify-self:stretch; display:grid; gap:4px; align-content:center; min-width:92px; }
+    .mini-ranks span,.mini-ranks .delta { display:block; width:100%; border-radius:6px; background:#eef8fb; border:1px solid #bfdae2; color:var(--blue); font-size:12px; font-weight:800; line-height:1.25; padding:5px 7px; text-align:center; }
+    .mini-ranks .delta.new { background:#fff8ec; border-color:#e7d2aa; color:var(--gold); }
+    .mini-ranks .delta.up { background:#eef8ee; border-color:#c8dfc0; color:var(--green); }
+    .mini-ranks .delta.down { background:#fbf0f3; border-color:#e5c6ce; color:var(--red); }
+    .motion-grid { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr); gap:14px; margin-top:16px; }
+    .motion-main,.motion-side { display:grid; gap:14px; align-content:start; }
+    .motion-card { padding:0; overflow:hidden; }
+    .motion-head { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:center; padding:16px; background:#fbfcfd; border-bottom:1px solid var(--line); }
+    .account-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; padding:14px; }
+    .account-card { border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#fff; }
+    .account-card header { display:grid; gap:4px; padding:12px; background:#f8fafb; border-bottom:1px solid var(--line); }
+    .account-card header strong { color:#20242a; line-height:1.25; }
+    .account-card header span { color:#526071; font-size:12px; line-height:1.35; }
+    .account-card .mini-product { grid-template-columns:38px minmax(0,1fr); padding:9px 10px; }
+    .account-card .mini-product .app-icon { width:38px; height:38px; flex-basis:38px; border-radius:8px; font-size:12px; }
+    .account-card .mini-product-text p { display:none; }
+    .account-card .mini-ranks { grid-column:2; display:flex; flex-wrap:wrap; gap:4px; justify-content:flex-start; min-width:0; }
+    .account-card .mini-ranks span,.account-card .mini-ranks .delta { width:auto; padding:4px 6px; }
+    .read-path { display:grid; gap:8px; padding:14px; }
+    .read-path span { display:flex; align-items:center; min-height:36px; border:1px solid var(--line); border-radius:7px; padding:8px 10px; color:#42505f; background:#fff; font-weight:700; }
     .notice { padding:14px 16px; color:#485566; background:#fbfcfd; margin:14px 0; }
     .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:#fff; } table { width:100%; border-collapse:collapse; min-width:1080px; }
     th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; text-align:left; } th { background:#f0f4f7; color:#354252; font-size:13px; white-space:nowrap; } tr:last-child td { border-bottom:none; }
@@ -1282,8 +1491,8 @@ function html(data, iconEntries) {
     .studio-rank-list small { background:#f7f9fb; border-color:#dce3ea; color:#657180; font-weight:700; }
     ul,ol { margin:8px 0 0 20px; padding:0; } li { margin:5px 0; } footer { color:var(--muted); margin-top:20px; font-size:13px; }
     @media (max-width:1100px) { .dashboard { grid-template-columns:1fr; } .side-nav { position:static; grid-template-columns:repeat(4,minmax(0,1fr)); } .side-nav button { text-align:center; } }
-    @media (max-width:980px) { .change-grid { grid-template-columns:1fr; } }
-    @media (max-width:860px) { .hero,.grid-2,.grid-3,.visual-strip,.studio-grid,.family-grid { grid-template-columns:1fr; } .side-nav { display:flex; overflow-x:auto; } .side-nav button { flex:0 0 auto; white-space:nowrap; } .studio-product,.family-product { grid-template-columns:42px minmax(0,1fr); } .studio-rank-list,.family-ranks { grid-column:1 / -1; grid-template-columns:repeat(3,minmax(0,1fr)); } .hero { padding:22px; } .section { padding:20px; } table { min-width:940px; } }
+    @media (max-width:980px) { .change-grid,.motion-grid,.insight-grid,.account-grid { grid-template-columns:1fr; } }
+    @media (max-width:860px) { .hero,.grid-2,.grid-3,.visual-strip,.studio-grid,.family-grid { grid-template-columns:1fr; } .side-nav { display:flex; overflow-x:auto; } .side-nav button { flex:0 0 auto; white-space:nowrap; } .studio-product,.family-product,.mini-product { grid-template-columns:42px minmax(0,1fr); } .studio-rank-list,.family-ranks,.mini-ranks { grid-column:1 / -1; grid-template-columns:repeat(3,minmax(0,1fr)); } .hero { padding:22px; } .section { padding:20px; } table { min-width:940px; } }
   </style>
 </head>
 <body>
@@ -1324,9 +1533,8 @@ function html(data, iconEntries) {
       <div class="content-panels">
     <section id="summary" class="section panel active">
       <h2>今日结论</h2>
-      <p class="sub">先看结论，再进入榜单细节。</p>
-      <div class="grid-2" style="margin-top:16px">
-        ${changeSummary(data).map((card) => `<div class="card"><h3>${escapeHtml(card[0])}</h3><p>${escapeHtml(card[1])}</p></div>`).join("\n")}
+      <p class="sub">每条结论都对应具体产品，先扫图标、中文名和排名，再进入完整榜单。</p>
+      <div class="insight-grid">${summaryCardsHtml(data)}
       </div>
     </section>
 
@@ -1353,11 +1561,8 @@ function html(data, iconEntries) {
 
     <section id="changes" class="section panel">
       <h2>榜单动态与账号观察</h2>
-      <div class="change-grid">
-        <div class="card"><h3>上升 / 新进</h3><ul>${movers.slice(0, 6).map((row) => `<li>${escapeHtml(gameLabel(row.name))}：${escapeHtml(row.categoryShort)} #${row.rank}（${escapeHtml(row.delta)}）</li>`).join("")}</ul></div>
-        <div class="card"><h3>值得拆解</h3><ul><li>Oakever：${escapeHtml(gameLabel("Meowdoku: Brain Puzzle Games"))}、${escapeHtml(gameLabel("Amaze GO!"))}、${escapeHtml(gameLabel("Jigsawcard Solitaire Puzzle"))}、${escapeHtml(gameLabel("Tile Explorer - Triple Match"))} 多产品进入免费榜。</li><li>Century：${escapeHtml(gameLabel("Kingshot"))} 与 ${escapeHtml(gameLabel("Whiteout Survival"))} 仍是男向 Strategy 核心产品。</li><li>Devsisters：${escapeHtml(gameLabel("CookieRun: Kingdom"))} 与 ${escapeHtml(gameLabel("CookieRun: Crumble - Idle RPG"))} 同时进 RPG 收入榜。</li></ul></div>
-        <div class="card"><h3>明天继续看</h3><ul><li>${escapeHtml(gameLabel("Meowdoku: Brain Puzzle Games"))} 是否守住免费榜第一。</li><li>${escapeHtml(gameLabel("Last War: Survival Game"))} 是否继续压住 ${escapeHtml(gameLabel("Kingshot"))} / ${escapeHtml(gameLabel("Whiteout Survival"))}。</li><li>${escapeHtml(gameLabel("Zenless Zone Zero"))} 是否维持 RPG 头部。</li></ul></div>
-      </div>
+      <p class="sub">动态不再堆成长句，按产品和账号拆成可扫描的小行。</p>
+      ${changesPanelHtml(data, movers)}
     </section>
 
     <section id="families" class="section panel">
@@ -1478,9 +1683,9 @@ ${iconMapScript(iconEntries, rows)}
       if (holder && gameKey) holder.replaceWith(makeIcon(gameKey, "large"));
     });
 
-    document.querySelectorAll(".studio-product[data-game], .family-product[data-game]").forEach((item) => {
+    document.querySelectorAll(".studio-product[data-game], .family-product[data-game], .mini-product[data-game]").forEach((item) => {
       const gameKey = item.dataset.game;
-      const holder = item.querySelector(".studio-product-icon, .family-product-icon");
+      const holder = item.querySelector(".studio-product-icon, .family-product-icon, .mini-product-icon");
       const iconKey = matchIconEntry(gameKey) || gameKey;
       if (holder && gameKey) {
         const icon = makeIcon(iconKey);
