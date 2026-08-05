@@ -1814,7 +1814,7 @@ async function main() {
   fs.writeFileSync(reportPath, document, "utf8");
 
   fs.mkdirSync(archiveDir, { recursive: true });
-  writeHardenedWorkflow();
+  if (process.env.ENABLE_WORKFLOW_SELF_HEAL === "1") writeHardenedWorkflow();
   fs.writeFileSync(path.join(siteDir, "index.html"), document, "utf8");
   fs.writeFileSync(path.join(archiveDir, `${reportDate}.html`), document, "utf8");
   fs.writeFileSync(path.join(siteDir, "README.md"), [
