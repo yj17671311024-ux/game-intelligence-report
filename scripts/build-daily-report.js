@@ -1184,6 +1184,74 @@ function iconMapScript(iconEntries, rows) {
   return `    const iconMap = {\n${lines.join(",\n")}\n    };`;
 }
 
+function hardenedWorkflowYaml() {
+  return `name: Daily Game Intelligence Report
+
+on:
+  schedule:
+    - cron: "17 2 * * *"
+    - cron: "47 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-game-intelligence-report
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          package-manager-cache: false
+
+      - name: Build daily report
+        shell: bash
+        run: |
+          REPORT_DATE="$(TZ=Asia/Shanghai date +'%Y-%m-%d')"
+          mkdir -p .generated
+          for attempt in 1 2 3; do
+            echo "Build attempt $attempt for $REPORT_DATE"
+            if OUTPUT_DIR="$GITHUB_WORKSPACE/.generated" SITE_DIR="$GITHUB_WORKSPACE" node scripts/build-daily-report.js "$REPORT_DATE"; then
+              break
+            fi
+            if [ "$attempt" = "3" ]; then
+              echo "Daily report build failed after $attempt attempts."
+              exit 1
+            fi
+            sleep $((attempt * 180))
+          done
+          echo "REPORT_DATE=$REPORT_DATE" >> "$GITHUB_ENV"
+
+      - name: Commit and push report
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html README.md archive assets/icons/official scripts/build-daily-report.js .github/workflows/daily-report.yml
+          if git diff --cached --quiet; then
+            echo "No report changes to commit."
+          else
+            git commit -m "daily report: $REPORT_DATE"
+            git push
+          fi
+`;
+}
+
+function writeHardenedWorkflow() {
+  const workflowDir = path.join(siteDir, ".github", "workflows");
+  fs.mkdirSync(workflowDir, { recursive: true });
+  fs.writeFileSync(path.join(workflowDir, "daily-report.yml"), hardenedWorkflowYaml(), "utf8");
+}
+
 function changeSummary(data) {
   const gpPuzzle = data.gpPuzzleGross.rows;
   const free = data.gpPuzzleFree.rows;
@@ -1746,6 +1814,7 @@ async function main() {
   fs.writeFileSync(reportPath, document, "utf8");
 
   fs.mkdirSync(archiveDir, { recursive: true });
+  writeHardenedWorkflow();
   fs.writeFileSync(path.join(siteDir, "index.html"), document, "utf8");
   fs.writeFileSync(path.join(archiveDir, `${reportDate}.html`), document, "utf8");
   fs.writeFileSync(path.join(siteDir, "README.md"), [
