@@ -20,12 +20,20 @@ function todayInShanghai() {
 }
 
 function latestPreviousReport(currentDate) {
-  if (!fs.existsSync(outputDir)) return "";
   const prefix = "game-intelligence-full-";
   const suffix = ".html";
-  return fs.readdirSync(outputDir)
-    .filter((name) => name.startsWith(prefix) && name.endsWith(suffix))
-    .map((name) => name.slice(prefix.length, -suffix.length))
+  const dates = new Set();
+  if (fs.existsSync(outputDir)) {
+    for (const name of fs.readdirSync(outputDir)) {
+      if (name.startsWith(prefix) && name.endsWith(suffix)) dates.add(name.slice(prefix.length, -suffix.length));
+    }
+  }
+  if (fs.existsSync(archiveDir)) {
+    for (const name of fs.readdirSync(archiveDir)) {
+      if (name.endsWith(suffix)) dates.add(name.slice(0, -suffix.length));
+    }
+  }
+  return Array.from(dates)
     .filter((date) => /^\d{4}-\d{2}-\d{2}$/.test(date) && date < currentDate)
     .sort()
     .pop() || "";
@@ -784,11 +792,20 @@ function buildDeveloperLookup(data) {
 }
 
 function parsePreviousRanks() {
-  const previousPath = path.join(outputDir, `game-intelligence-full-${previousDate}.html`);
-  if (!fs.existsSync(previousPath)) return {};
+  const previousPaths = previousDate ? [
+    path.join(outputDir, `game-intelligence-full-${previousDate}.html`),
+    path.join(archiveDir, `${previousDate}.html`),
+  ] : [];
+  const previousPath = previousPaths.find((candidate) => fs.existsSync(candidate));
+  const out = {
+    __available: false,
+    __date: previousDate || "",
+    __path: previousPath || "",
+  };
+  if (!previousPath) return out;
   const html = fs.readFileSync(previousPath, "utf8");
-  const out = {};
   const ids = ["puzzle", "male"];
+  let parsedTables = 0;
 
   function section(id) {
     const start = html.indexOf(`<section id="${id}"`);
@@ -814,15 +831,24 @@ function parsePreviousRanks() {
         const name = productName(cells[1] || "");
         if (name) out[key].set(norm(name), index + 1);
       });
+      if (out[key].size > 0) parsedTables += 1;
     });
   }
+  out.__available = parsedTables > 0;
   return out;
 }
 
 function attachDeltas(data, previousRanks) {
+  const hasComparableSnapshot = Boolean(previousRanks && previousRanks.__available);
   for (const [key, list] of Object.entries(data)) {
-    const previous = previousRanks[key] || new Map();
+    const previous = hasComparableSnapshot ? previousRanks[key] : null;
     for (const row of list.rows) {
+      if (!previous || previous.size === 0) {
+        row.previousRank = null;
+        row.delta = "待核验";
+        row.deltaClass = "unknown";
+        continue;
+      }
       const oldRank = previous.get(norm(row.name));
       row.previousRank = oldRank || null;
       if (!oldRank) {
@@ -1506,6 +1532,7 @@ function html(data, iconEntries) {
     .mini-ranks .delta.new { background:#fff8ec; border-color:#e7d2aa; color:var(--gold); }
     .mini-ranks .delta.up { background:#eef8ee; border-color:#c8dfc0; color:var(--green); }
     .mini-ranks .delta.down { background:#fbf0f3; border-color:#e5c6ce; color:var(--red); }
+    .mini-ranks .delta.unknown { background:#f6f8fa; border-color:#d8dee7; color:#657180; }
     .motion-grid { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr); gap:14px; margin-top:16px; }
     .motion-main,.motion-side { display:grid; gap:14px; align-content:start; }
     .motion-card { padding:0; overflow:hidden; }
@@ -1528,7 +1555,7 @@ function html(data, iconEntries) {
     .rank { display:inline-flex; width:30px; height:30px; align-items:center; justify-content:center; border-radius:8px; background:var(--blue); color:#fff; font-weight:800; } .rank.soft { background:#e6edf3; color:#3d4b58; }
     .product { font-weight:800; color:#222832; } .cn { display:block; color:#526071; font-weight:500; margin-top:2px; font-size:13px; }
     .delta { display:inline-flex; align-items:center; justify-content:center; min-width:42px; border-radius:999px; padding:3px 8px; font-size:12px; font-weight:800; border:1px solid var(--line); background:#f6f8fa; color:#526071; }
-    .delta.up { background:#eef8ee; border-color:#c8dfc0; color:#507a44; } .delta.down { background:#fbf0f3; border-color:#e5c6ce; color:#9a4054; } .delta.new { background:#fff8ec; border-color:#e7d2aa; color:#9b6a22; }
+    .delta.up { background:#eef8ee; border-color:#c8dfc0; color:#507a44; } .delta.down { background:#fbf0f3; border-color:#e5c6ce; color:#9a4054; } .delta.new { background:#fff8ec; border-color:#e7d2aa; color:#9b6a22; } .delta.unknown { background:#f6f8fa; border-color:#d8dee7; color:#657180; }
     .visual-strip { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:14px; }
     .visual-card { display:grid; grid-template-columns:58px minmax(0,1fr); gap:12px; align-items:center; padding:14px; border:1px solid var(--line); border-radius:8px; background:#fff; min-width:0; }
     .visual-card strong { display:block; color:var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } .visual-card em { display:block; color:#526071; font-style:normal; font-size:12px; margin-top:1px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } .visual-card span { display:block; color:var(--muted); font-size:13px; margin-top:2px; }
