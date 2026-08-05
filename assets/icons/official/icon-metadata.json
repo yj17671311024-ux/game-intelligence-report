@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-05T03:05:53.048Z",
-  "total": 187,
-  "found": 183,
+  "preparedAt": "2026-08-05T06:50:34.266Z",
+  "total": 191,
+  "found": 187,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -721,6 +721,18 @@
       "bytes": 58307
     },
     {
+      "name": "Foodstars: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/foodstars-merge-and-cook.jpg",
+      "matchedName": "Foodstars: Merge & Cook",
+      "artistName": "Happibits Game",
+      "sourceUrl": "https://www.appbrain.com/app/foodstars-merge-cook/com.merge.game.foodstars",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5480
+    },
+    {
       "name": "Foundation: Galactic Frontier",
       "found": true,
       "initial": "FG",
@@ -1010,6 +1022,18 @@
       "bytes": 63599
     },
     {
+      "name": "Knock Fever",
+      "found": true,
+      "initial": "KF",
+      "image": "assets/icons/official/knock-fever.jpg",
+      "matchedName": "Knock Fever",
+      "artistName": "Kite Games AS",
+      "sourceUrl": "https://www.appbrain.com/app/knock-fever/com.kite.knockfever",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6379
+    },
+    {
       "name": "Knock Out",
       "found": true,
       "initial": "KO",
@@ -1259,6 +1283,19 @@
       "sourceUrl": "https://apps.apple.com/us/app/matching-story-merge-match/id1558803930?uo=4",
       "score": 142,
       "query": "Matching Story",
+      "bytes": 72429
+    },
+    {
+      "name": "Matching Story - Merge & Match",
+      "found": true,
+      "initial": "MS",
+      "image": "assets/icons/official/matching-story-merge-and-match.jpg",
+      "matchedName": "Matching Story - Merge & Match",
+      "artistName": "VERTEX GAMES PTE. LTD.",
+      "sourceUrl": "https://apps.apple.com/us/app/matching-story-merge-match/id1558803930?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 298,
+      "query": "Matching Story - Merge & Match",
       "bytes": 72429
     },
     {
@@ -2130,6 +2167,18 @@
       "score": 274,
       "query": "Water Sort Puzzle",
       "bytes": 25163
+    },
+    {
+      "name": "Water Sort Puzzle - Sort Color",
+      "found": true,
+      "initial": "WS",
+      "image": "assets/icons/official/water-sort-puzzle-sort-color.jpg",
+      "matchedName": "Water Sort Puzzle - Sort Color",
+      "artistName": "Guru Puzzle Game",
+      "sourceUrl": "https://www.appbrain.com/app/water-sort-puzzle-sort-color/water.sort.puzzle.game.color.sorting.free",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 3421
     },
     {
       "name": "Whiteout Survival",
