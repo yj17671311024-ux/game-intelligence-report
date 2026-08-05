@@ -606,12 +606,12 @@ function canonicalName(name) {
 }
 
 function cnName(name) {
-  return gameCn[name] || gameCn[canonicalName(name)] || "\u5f85\u8865\u5145";
+  return gameCn[name] || gameCn[canonicalName(name)] || "暂无公开常用译名";
 }
 
 function gameLabel(name) {
   const cn = cnName(name);
-  return cn === "\u5f85\u8865\u5145" ? name : `${name}（${cn}）`;
+  return cn === "暂无公开常用译名" ? name : `${name}（${cn}）`;
 }
 
 function norm(value) {
@@ -636,7 +636,7 @@ function initials(value) {
 }
 
 function devCn(name) {
-  return devCnRaw[name] || name || "待核验";
+  return devCnRaw[name] || name || "厂商暂缺";
 }
 
 function gameType(name, fallback) {
@@ -787,7 +787,7 @@ function buildDeveloperLookup(data) {
     "NYT Games": "The New York Times",
     "Screwdom": "Zego Global",
     "Colony Flow!": "ABI Global",
-    "Jelly Busters: Puzzle Game": "待核验",
+    "Jelly Busters: Puzzle Game": "",
   });
 }
 
@@ -845,8 +845,8 @@ function attachDeltas(data, previousRanks) {
     for (const row of list.rows) {
       if (!previous || previous.size === 0) {
         row.previousRank = null;
-        row.delta = "无前日对照";
-        row.deltaClass = "unknown";
+        row.delta = "";
+        row.deltaClass = "none";
         row.deltaVerified = false;
         continue;
       }
@@ -1060,15 +1060,20 @@ function topMovers(data) {
 }
 
 function categoryRows(rows) {
-  return rows.map((row) => `
+  return rows.map((row) => {
+    const deltaHtml = row.deltaVerified && row.delta
+      ? `<span class="delta ${row.deltaClass}">${escapeHtml(row.delta)}</span>`
+      : `<span class="muted-dash">&mdash;</span>`;
+    return `
               <tr>
                 <td><span class="${row.rank <= 10 ? "rank" : "rank soft"}">${row.rank}</span></td>
                 <td class="product">${escapeHtml(row.name)}<span class="cn">中文参考：${escapeHtml(cnName(row.name))}</span></td>
                 <td>${escapeHtml(row.developerCn)}</td>
                 <td><strong>${escapeHtml(row.family || gameFamily(row.name, row.categoryShort))}</strong><span class="cn">${escapeHtml(row.type)}</span></td>
-                <td><span class="delta ${row.deltaClass}">${escapeHtml(row.delta)}</span></td>
+                <td>${deltaHtml}</td>
                 <td>${escapeHtml(row.point)}</td>
-              </tr>`).join("");
+              </tr>`;
+  }).join("");
 }
 
 function puzzleFamilyCardsHtml(data) {
@@ -1333,7 +1338,7 @@ function rankBadges(data, row) {
 
 function compactProductHtml(data, row, note = "", extraClass = "") {
   const noteText = note || row.point || learningPoint(row.name, row.categoryShort || "");
-  const delta = row.delta && row.delta !== "持平" ? `<span class="delta ${row.deltaClass}">${escapeHtml(row.delta)}</span>` : "";
+  const delta = row.deltaVerified && row.delta && row.delta !== "持平" ? `<span class="delta ${row.deltaClass}">${escapeHtml(row.delta)}</span>` : "";
   const developer = row.developerCn ? ` · ${row.developerCn}` : "";
   return `
               <article class="mini-product ${extraClass}" data-game="${escapeHtml(row.name)}">
@@ -1479,8 +1484,8 @@ function html(data, iconEntries) {
   const rows = allRows(data);
   const generatedAt = `${reportDate} ${new Intl.DateTimeFormat("zh-CN", { timeZone: "Asia/Shanghai", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date())}`;
   const snapshotBits = [
-    `AppBrain：${data.gpPuzzleGross.updated || "待核验"}`,
-    `AppCurrents：${data.iosPuzzleGross.updated || "待核验"}`,
+    `AppBrain：${data.gpPuzzleGross.updated || "暂无快照时间"}`,
+    `AppCurrents：${data.iosPuzzleGross.updated || "暂无快照时间"}`,
   ];
   const unmatched = Array.from(new Set(rows.map((row) => row.name))).filter((name) => {
     const entry = iconEntries.get(name);
@@ -1563,6 +1568,7 @@ function html(data, iconEntries) {
     .product { font-weight:800; color:#222832; } .cn { display:block; color:#526071; font-weight:500; margin-top:2px; font-size:13px; }
     .delta { display:inline-flex; align-items:center; justify-content:center; min-width:42px; border-radius:999px; padding:3px 8px; font-size:12px; font-weight:800; border:1px solid var(--line); background:#f6f8fa; color:#526071; }
     .delta.up { background:#eef8ee; border-color:#c8dfc0; color:#507a44; } .delta.down { background:#fbf0f3; border-color:#e5c6ce; color:#9a4054; } .delta.new { background:#fff8ec; border-color:#e7d2aa; color:#9b6a22; } .delta.unknown { background:#f6f8fa; border-color:#d8dee7; color:#657180; }
+    .muted-dash { color:#9aa4af; font-weight:800; }
     .visual-strip { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:14px; }
     .visual-card { display:grid; grid-template-columns:58px minmax(0,1fr); gap:12px; align-items:center; padding:14px; border:1px solid var(--line); border-radius:8px; background:#fff; min-width:0; }
     .visual-card strong { display:block; color:var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } .visual-card em { display:block; color:#526071; font-style:normal; font-size:12px; margin-top:1px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } .visual-card span { display:block; color:var(--muted); font-size:13px; margin-top:2px; }
