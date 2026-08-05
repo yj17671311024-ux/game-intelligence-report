@@ -663,12 +663,16 @@ function learningPoint(name, categoryShort) {
 
 async function fetchText(url, expectedTitle) {
   let lastError = null;
-  for (let attempt = 1; attempt <= 4; attempt++) {
+  const maxAttempts = Number(process.env.FETCH_ATTEMPTS || 6);
+  const timeoutMs = Number(process.env.FETCH_TIMEOUT_MS || 45000);
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     try {
       const response = await fetch(url, {
+        signal: AbortSignal.timeout(timeoutMs),
         headers: {
           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) CodexGameDaily/1.0",
           "Accept": "text/html,application/xhtml+xml",
+          "Cache-Control": "no-cache",
         },
       });
       const text = await response.text();
@@ -680,7 +684,8 @@ async function fetchText(url, expectedTitle) {
       return text;
     } catch (error) {
       lastError = error;
-      await sleep(2500 * attempt);
+      console.warn(`fetch retry ${attempt}/${maxAttempts} failed for ${url}: ${error.message}`);
+      await sleep(Math.min(60000, 5000 * attempt + Math.floor(Math.random() * 2000)));
     }
   }
   throw new Error(`failed to fetch ${url}: ${lastError ? lastError.message : "unknown error"}`);
