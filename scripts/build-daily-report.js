@@ -845,14 +845,15 @@ function attachDeltas(data, previousRanks) {
     for (const row of list.rows) {
       if (!previous || previous.size === 0) {
         row.previousRank = null;
-        row.delta = "待核验";
+        row.delta = "无前日对照";
         row.deltaClass = "unknown";
+        row.deltaVerified = false;
         continue;
       }
       const oldRank = previous.get(norm(row.name));
       row.previousRank = oldRank || null;
       if (!oldRank) {
-        row.delta = "新进";
+        row.delta = "新进Top30";
         row.deltaClass = "new";
       } else if (oldRank === row.rank) {
         row.delta = "持平";
@@ -864,6 +865,7 @@ function attachDeltas(data, previousRanks) {
         row.delta = `↓${row.rank - oldRank}`;
         row.deltaClass = "down";
       }
+      row.deltaVerified = true;
     }
   }
 }
@@ -1047,7 +1049,7 @@ function rankLookup(data) {
 }
 
 function topMovers(data) {
-  const rows = allRows(data).filter((row) => row.deltaClass === "up" || row.deltaClass === "new");
+  const rows = allRows(data).filter((row) => row.deltaVerified && (row.deltaClass === "up" || row.deltaClass === "new"));
   return rows
     .sort((a, b) => {
       const scoreA = a.deltaClass === "new" ? 99 : Number(a.delta.slice(1));
@@ -1304,6 +1306,7 @@ function productRef(data, name, preferredKey = "") {
     rank: "-",
     delta: "",
     deltaClass: "flat",
+    deltaVerified: false,
     categoryShort: "观察",
     developerCn: devCn(developerByGame[canonicalName(name)] || ""),
     point: learningPoint(canonicalName(name), "观察"),
@@ -1414,8 +1417,11 @@ function accountCardHtml(data, title, subtitle, names) {
 function changesPanelHtml(data, movers) {
   const moverItems = movers.slice(0, 8).map((row) => ({
     row,
-    note: row.deltaClass === "new" ? "新进榜单，优先看题材包装、首局和素材入口。" : `较上期${row.delta}，优先看最近版本、活动或买量素材变化。`,
+    note: row.deltaClass === "new" ? "经前日同榜单对比，确认新进可见 Top30；优先看题材包装、首局和素材入口。" : `较前日同榜单${row.delta}，优先看最近版本、活动或买量素材变化。`,
   }));
+  const moverListHtml = moverItems.length
+    ? moverItems.map((item) => compactProductHtml(data, item.row, item.note, "mover-item")).join("")
+    : `<div class="empty-state">暂无可核验的新进 / 上升产品；今日动态不强行生成。</div>`;
   const watchRows = [
     { row: productRef(data, "Meowdoku: Brain Puzzle Games"), note: "免费榜头部是否稳定，是休闲新品观察重点。" },
     { row: productRef(data, "Last War: Survival Game"), note: "男向 Strategy 龙头是否继续压住同题材竞品。" },
@@ -1427,10 +1433,10 @@ function changesPanelHtml(data, movers) {
         <div class="motion-main">
           <article class="card motion-card">
             <div class="motion-head">
-              <h3>上升 / 新进</h3>
-              <span>${moverItems.length} 个信号</span>
+              <h3>核验后的上升 / 新进Top30</h3>
+              <span>${moverItems.length} 个确认信号</span>
             </div>
-            <div class="mini-list mover-list">${moverItems.map((item) => compactProductHtml(data, item.row, item.note, "mover-item")).join("")}
+            <div class="mini-list mover-list">${moverListHtml}
             </div>
           </article>
           <article class="card motion-card">
@@ -1549,6 +1555,7 @@ function html(data, iconEntries) {
     .account-card .mini-ranks span,.account-card .mini-ranks .delta { width:auto; padding:4px 6px; }
     .read-path { display:grid; gap:8px; padding:14px; }
     .read-path span { display:flex; align-items:center; min-height:36px; border:1px solid var(--line); border-radius:7px; padding:8px 10px; color:#42505f; background:#fff; font-weight:700; }
+    .empty-state { padding:18px; color:#657180; background:#f8fafb; border-top:1px solid var(--line); line-height:1.5; }
     .notice { padding:14px 16px; color:#485566; background:#fbfcfd; margin:14px 0; }
     .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:#fff; } table { width:100%; border-collapse:collapse; min-width:1080px; }
     th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; text-align:left; } th { background:#f0f4f7; color:#354252; font-size:13px; white-space:nowrap; } tr:last-child td { border-bottom:none; }
