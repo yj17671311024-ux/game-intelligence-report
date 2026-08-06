@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-05T09:58:25.218Z",
-  "total": 191,
-  "found": 187,
+  "preparedAt": "2026-08-06T11:09:27.616Z",
+  "total": 195,
+  "found": 191,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -204,6 +204,18 @@
     },
     {
       "name": "Block Crush",
+      "found": true,
+      "initial": "BC",
+      "image": "assets/icons/official/block-crush.jpg",
+      "matchedName": "Block Crush！",
+      "artistName": "Wonderful Studio",
+      "sourceUrl": "https://apps.apple.com/us/app/block-crush/id1638139403?uo=4",
+      "score": 262,
+      "query": "Block Crush",
+      "bytes": 60148
+    },
+    {
+      "name": "Block Crush!",
       "found": true,
       "initial": "BC",
       "image": "assets/icons/official/block-crush.jpg",
@@ -684,18 +696,6 @@
       }
     },
     {
-      "name": "Flambé: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge & Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6265
-    },
-    {
       "name": "Flambe: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -706,6 +706,18 @@
       "score": 94,
       "query": "Flambe: Merge & Cook",
       "bytes": 58307
+    },
+    {
+      "name": "Flambé: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge & Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6265
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1152,6 +1164,18 @@
       "score": 142,
       "query": "Lords Mobile",
       "bytes": 76186
+    },
+    {
+      "name": "Love Nikki-Dress UP Queen",
+      "found": true,
+      "initial": "LN",
+      "image": "assets/icons/official/love-nikki-dress-up-queen.jpg",
+      "matchedName": "Love Nikki-Dress UP Queen",
+      "artistName": "Elex",
+      "sourceUrl": "https://www.appbrain.com/app/love-nikki-dress-up-queen/com.elex.nikkigp",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5481
     },
     {
       "name": "Mafia City",
@@ -1755,6 +1779,18 @@
       "bytes": 53275
     },
     {
+      "name": "Search It - Hidden Objects",
+      "found": true,
+      "initial": "SI",
+      "image": "assets/icons/official/search-it-hidden-objects.jpg",
+      "matchedName": "Search It - Hidden Objects",
+      "artistName": "Leap Game Studios",
+      "sourceUrl": "https://www.appbrain.com/app/search-it-hidden-objects/com.leap.searchit",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6380
+    },
+    {
       "name": "Search It: Hidden Object Games",
       "found": true,
       "initial": "SI",
@@ -2131,6 +2167,18 @@
       "score": 274,
       "query": "Triple Match City",
       "bytes": 81194
+    },
+    {
+      "name": "War and Order",
+      "found": true,
+      "initial": "WA",
+      "image": "assets/icons/official/war-and-order.jpg",
+      "matchedName": "War and Order",
+      "artistName": "CamelStudio",
+      "sourceUrl": "https://www.appbrain.com/app/war-and-order/com.camelgames.superking",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7276
     },
     {
       "name": "Warhammer 40,000: Tacticus",
