@@ -1,0 +1,17 @@
+name = "game-intelligence-daily-trigger"
+main = "cloudflare-worker.js"
+compatibility_date = "2026-08-07"
+
+[triggers]
+crons = [
+  "8 2 * * *",
+  "27 2 * * *",
+  "47 2 * * *",
+  "17 3 * * *",
+  "17 5 * * *"
+]
+
+[vars]
+GH_OWNER = "yj17671311024-ux"
+GH_REPO = "game-intelligence-report"
+GH_WORKFLOW = "daily-report.yml"
