@@ -1059,6 +1059,239 @@ function topMovers(data) {
     .slice(0, 10);
 }
 
+function cleanInsightText(value, maxLength = 220) {
+  return String(value || "")
+    .replace(/\s+/g, " ")
+    .replace(/待核验/g, "")
+    .trim()
+    .slice(0, maxLength);
+}
+
+function validProductNameMap(data) {
+  const map = new Map();
+  for (const row of allRows(data)) map.set(norm(row.name), row.name);
+  for (const studio of studioGroups) {
+    for (const name of studio.products) map.set(norm(name), canonicalName(name));
+  }
+  return map;
+}
+
+function aiRankRows(list) {
+  return list.rows.map((row) => ({
+    name: row.name,
+    cn: cnName(row.name),
+    developer: row.developerCn,
+    rank: row.rank,
+    category: row.categoryShort,
+    family: row.family || gameFamily(row.name, row.categoryShort),
+    type: row.type,
+    deltaVerified: Boolean(row.deltaVerified),
+    delta: row.deltaVerified ? row.delta : "",
+    deltaClass: row.deltaVerified ? row.deltaClass : "",
+    currentPoint: row.point,
+  }));
+}
+
+function buildAiContext(data) {
+  return {
+    reportDate,
+    previousDate: previousDate || "",
+    strictRules: [
+      "只能依据输入榜单和 delta 字段分析，不要编造外部事实。",
+      "只有 deltaVerified=true 且 deltaClass=new 时，才可写“新进Top30”。",
+      "只有 deltaVerified=true 且 deltaClass=up 时，才可写“上升”。",
+      "deltaVerified=false 的产品不能写成新进或上升，只能写稳定观察或继续观察。",
+      "输出必须是 JSON，不要写 Markdown。",
+    ],
+    sources: {
+      gpPuzzleGross: data.gpPuzzleGross.updated,
+      gpPuzzleFree: data.gpPuzzleFree.updated,
+      gpRpgGross: data.gpRpgGross.updated,
+      gpStrategyGross: data.gpStrategyGross.updated,
+      iosPuzzleGross: data.iosPuzzleGross.updated,
+    },
+    rankings: {
+      gpPuzzleGross: aiRankRows(data.gpPuzzleGross),
+      iosPuzzleGross: aiRankRows(data.iosPuzzleGross),
+      gpPuzzleFree: aiRankRows(data.gpPuzzleFree),
+      gpRpgGross: aiRankRows(data.gpRpgGross),
+      gpStrategyGross: aiRankRows(data.gpStrategyGross),
+    },
+    verifiedMovers: topMovers(data).map((row) => ({
+      name: row.name,
+      cn: cnName(row.name),
+      developer: row.developerCn,
+      rank: row.rank,
+      category: row.categoryShort,
+      delta: row.delta,
+      deltaClass: row.deltaClass,
+    })),
+    studios: studioGroups.map((studio) => ({
+      name: studio.name,
+      cn: studio.cn,
+      type: studio.type,
+      products: studio.products,
+    })),
+  };
+}
+
+function normalizeAiInsights(raw, data) {
+  if (!raw || typeof raw !== "object") return null;
+  const validNames = validProductNameMap(data);
+  const resolveName = (name) => validNames.get(norm(name)) || "";
+  const productItem = (item) => {
+    const name = resolveName(typeof item === "string" ? item : item && item.name);
+    if (!name) return null;
+    return {
+      name,
+      note: cleanInsightText(item && item.note, 180),
+    };
+  };
+  const productMap = (obj, maxLength) => {
+    const out = {};
+    if (!obj || typeof obj !== "object") return out;
+    for (const [key, value] of Object.entries(obj)) {
+      const name = resolveName(key);
+      const text = cleanInsightText(value, maxLength);
+      if (name && text) out[name] = text;
+    }
+    return out;
+  };
+
+  const summaryCards = Array.isArray(raw.summaryCards) ? raw.summaryCards.slice(0, 5).map((card) => {
+    const products = Array.isArray(card.products) ? card.products.map(productItem).filter(Boolean).slice(0, 5) : [];
+    if (!products.length) return null;
+    return {
+      title: cleanInsightText(card.title, 28),
+      badge: cleanInsightText(card.badge, 12),
+      note: cleanInsightText(card.note, 130),
+      products,
+    };
+  }).filter(Boolean) : [];
+
+  const accountCards = Array.isArray(raw.accountCards) ? raw.accountCards.slice(0, 4).map((card) => {
+    const products = Array.isArray(card.products) ? card.products.map(productItem).filter(Boolean).slice(0, 4) : [];
+    if (!products.length) return null;
+    return {
+      title: cleanInsightText(card.title, 28),
+      subtitle: cleanInsightText(card.subtitle, 60),
+      products,
+    };
+  }).filter(Boolean) : [];
+
+  const studioNotes = {};
+  if (raw.studioNotes && typeof raw.studioNotes === "object") {
+    const studioNames = new Set(studioGroups.map((studio) => studio.name));
+    for (const [name, note] of Object.entries(raw.studioNotes)) {
+      if (!studioNames.has(name) || !note || typeof note !== "object") continue;
+      studioNotes[name] = {
+        intro: cleanInsightText(note.intro, 160),
+        thesis: cleanInsightText(note.thesis, 180),
+      };
+    }
+  }
+
+  const watch = Array.isArray(raw.watch) ? raw.watch.map(productItem).filter(Boolean).slice(0, 4) : [];
+
+  return {
+    title: cleanInsightText(raw.title, 48),
+    lead: cleanInsightText(raw.lead, 180),
+    summaryCards,
+    moverNotes: productMap(raw.moverNotes, 160),
+    watch,
+    accountCards,
+    productPoints: productMap(raw.productPoints, 170),
+    studioNotes,
+  };
+}
+
+async function requestAiInsights(data) {
+  const apiKey = String(process.env.OPENAI_API_KEY || "").trim();
+  if (!apiKey) {
+    console.log("AI insights skipped: OPENAI_API_KEY is not configured.");
+    return null;
+  }
+  if (process.env.DISABLE_AI_INSIGHTS === "1") {
+    console.log("AI insights skipped: DISABLE_AI_INSIGHTS=1.");
+    return null;
+  }
+
+  const baseUrl = String(process.env.OPENAI_API_BASE || "https://api.openai.com/v1").replace(/\/+$/, "");
+  const model = String(process.env.OPENAI_MODEL || "gpt-4.1-mini").trim();
+  const context = buildAiContext(data);
+  const messages = [
+    {
+      role: "system",
+      content: [
+        "你是游戏行业产品分析师，服务对象是游戏产品/发行团队。",
+        "你必须基于输入 JSON 中的榜单、排名、厂商和 delta 字段输出日报分析。",
+        "严禁杜撰新品、上升、下降、厂商背景或外部新闻。",
+        "如果产品没有 deltaVerified=true，不要把它写成新进或上升。",
+        "写法要短、具体、可学习，避免空话。",
+      ].join("\n"),
+    },
+    {
+      role: "user",
+      content: JSON.stringify({
+        task: "生成日报可读性增强数据。只返回 JSON。",
+        outputShape: {
+          title: "页面 H1，包含日期和一个核心结论",
+          lead: "一句说明今天读法，不写方法论指令",
+          summaryCards: [
+            { title: "短标题", badge: "短标签", note: "卡片结论", products: [{ name: "必须来自输入产品名", note: "该产品学习点" }] },
+          ],
+          moverNotes: { "产品名": "仅对 verifiedMovers 里的产品写动态原因" },
+          watch: [{ name: "必须来自输入产品名", note: "明天继续看的原因" }],
+          accountCards: [
+            { title: "厂商/账号标题", subtitle: "短说明", products: [{ name: "必须来自输入产品名", note: "账号内产品观察" }] },
+          ],
+          productPoints: { "产品名": "完整榜单里使用的简要学习点" },
+          studioNotes: { "厂商英文名": { intro: "厂商简介", thesis: "产品方法观察" } },
+        },
+        context,
+      }),
+    },
+  ];
+
+  try {
+    const response = await fetch(`${baseUrl}/chat/completions`, {
+      method: "POST",
+      signal: AbortSignal.timeout(Number(process.env.OPENAI_TIMEOUT_MS || 90000)),
+      headers: {
+        "Authorization": `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model,
+        temperature: Number(process.env.OPENAI_TEMPERATURE || 0.2),
+        response_format: { type: "json_object" },
+        messages,
+      }),
+    });
+    const text = await response.text();
+    if (!response.ok) throw new Error(`OpenAI HTTP ${response.status}: ${text.slice(0, 240)}`);
+    const payload = JSON.parse(text);
+    const content = payload.choices?.[0]?.message?.content || "";
+    const parsed = JSON.parse(content);
+    const normalized = normalizeAiInsights(parsed, data);
+    if (!normalized) throw new Error("OpenAI returned an empty insight object.");
+    console.log(`AI insights applied with model ${model}.`);
+    return normalized;
+  } catch (error) {
+    if (process.env.AI_INSIGHTS_REQUIRED === "1") throw error;
+    console.warn(`AI insights fallback: ${error.message}`);
+    return null;
+  }
+}
+
+function applyAiInsights(data, insights) {
+  if (!insights || !insights.productPoints) return;
+  for (const row of allRows(data)) {
+    const point = insights.productPoints[row.name];
+    if (point) row.point = point;
+  }
+}
+
 function categoryRows(rows) {
   return rows.map((row) => {
     const deltaHtml = row.deltaVerified && row.delta
@@ -1139,21 +1372,23 @@ function puzzleFamilyCardsHtml(data) {
   return familyCards.join("\n");
 }
 
-function studioCardsHtml(data) {
+function studioCardsHtml(data, insights = null) {
   const ranks = rankLookup(data);
   return studioGroups.map((studio, index) => {
+    const studioNote = insights?.studioNotes?.[studio.name] || {};
     const productHtml = studio.products.map((name) => {
       const rankItems = ranks.get(name) || [];
       const rankHtml = rankItems.length
         ? rankItems.slice(0, 3).map((label) => `<span>${escapeHtml(label)}</span>`).join("")
         : `<span>本期未进 Top 30</span><small>代表作观察</small>`;
+      const productPoint = insights?.productPoints?.[name] || pointMap[name] || learningPoint(name, "厂商作品集");
       return `
               <article class="studio-product" data-game="${escapeHtml(name)}">
                 <span class="studio-product-icon app-icon"></span>
                 <div class="studio-product-text">
                   <strong>${escapeHtml(name)}</strong>
                   <span>中文参考：${escapeHtml(cnName(name))}</span>
-                  <p>${escapeHtml(pointMap[name] || learningPoint(name, "厂商作品集"))}</p>
+                  <p>${escapeHtml(productPoint)}</p>
                 </div>
                 <div class="studio-rank-list">${rankHtml}</div>
               </article>`;
@@ -1170,7 +1405,7 @@ function studioCardsHtml(data) {
               </div>
               <div class="studio-toggle">展开</div>
             </div>
-            <p class="studio-intro">${escapeHtml(studio.intro)}</p>
+            <p class="studio-intro">${escapeHtml(studioNote.intro || studio.intro)}</p>
             <div class="studio-metrics">
               <span>${studio.products.length} 款标志产品</span>
               <span>${escapeHtml(studio.type)}</span>
@@ -1178,7 +1413,7 @@ function studioCardsHtml(data) {
             </div>
           </summary>
           <div class="studio-body">
-            <p class="studio-thesis">${escapeHtml(studio.thesis)}</p>
+            <p class="studio-thesis">${escapeHtml(studioNote.thesis || studio.thesis)}</p>
             <div class="studio-products">${productHtml}
             </div>
           </div>
@@ -1222,9 +1457,18 @@ function hardenedWorkflowYaml() {
 
 on:
   schedule:
-    - cron: "17 2 * * *"
+    - cron: "8 2 * * *"
+    - cron: "27 2 * * *"
     - cron: "47 2 * * *"
+    - cron: "17 3 * * *"
+    - cron: "17 5 * * *"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Force rebuild even if today's report already exists"
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -1246,10 +1490,28 @@ jobs:
           node-version: "24"
           package-manager-cache: false
 
-      - name: Build daily report
+      - name: Decide whether to build
         shell: bash
         run: |
           REPORT_DATE="$(TZ=Asia/Shanghai date +'%Y-%m-%d')"
+          FORCE="\${{ github.event.inputs.force || 'false' }}"
+          echo "REPORT_DATE=$REPORT_DATE" >> "$GITHUB_ENV"
+          if [ "$FORCE" != "true" ] && [ -f index.html ] && grep -q "<div class=\"date\">$REPORT_DATE</div>" index.html; then
+            echo "Today's report already exists. Skip this safety run."
+            echo "SKIP_BUILD=1" >> "$GITHUB_ENV"
+          else
+            echo "SKIP_BUILD=0" >> "$GITHUB_ENV"
+          fi
+
+      - name: Build daily report
+        if: env.SKIP_BUILD != '1'
+        shell: bash
+        env:
+          OPENAI_API_KEY: \${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: \${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
+          FETCH_ATTEMPTS: "8"
+          FETCH_TIMEOUT_MS: "60000"
+        run: |
           mkdir -p .generated
           for attempt in 1 2 3; do
             echo "Build attempt $attempt for $REPORT_DATE"
@@ -1262,14 +1524,14 @@ jobs:
             fi
             sleep $((attempt * 180))
           done
-          echo "REPORT_DATE=$REPORT_DATE" >> "$GITHUB_ENV"
 
       - name: Commit and push report
+        if: env.SKIP_BUILD != '1'
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html README.md archive assets/icons/official scripts/build-daily-report.js .github/workflows/daily-report.yml
+          git add index.html README.md archive assets/icons/official scripts/build-daily-report.js
           if git diff --cached --quiet; then
             echo "No report changes to commit."
           else
@@ -1367,7 +1629,20 @@ function insightCardHtml(data, title, badge, note, items) {
           </article>`;
 }
 
-function summaryCardsHtml(data) {
+function summaryCardsHtml(data, insights = null) {
+  if (insights?.summaryCards?.length) {
+    return insights.summaryCards.map((card) => insightCardHtml(
+      data,
+      card.title || "今日观察",
+      card.badge || "观察",
+      card.note || "结合当天榜单和前日对比阅读。",
+      card.products.map((item) => ({
+        row: productRef(data, item.name),
+        note: item.note,
+      }))
+    )).join("");
+  }
+
   const revenueRows = uniqueProductRows([
     ...data.gpPuzzleGross.rows.slice(0, 3),
     ...data.iosPuzzleGross.rows.slice(0, 3),
@@ -1408,30 +1683,42 @@ function summaryCardsHtml(data) {
 }
 
 function accountCardHtml(data, title, subtitle, names) {
+  const items = names.map((item) => typeof item === "string" ? { name: item, note: "" } : item);
   return `
               <section class="account-card">
                 <header>
                   <strong>${escapeHtml(title)}</strong>
                   <span>${escapeHtml(subtitle)}</span>
                 </header>
-                <div class="mini-list compact">${names.map((name) => compactProductHtml(data, productRef(data, name), "", "account-product")).join("")}
+                <div class="mini-list compact">${items.map((item) => compactProductHtml(data, productRef(data, item.name), item.note || "", "account-product")).join("")}
                 </div>
               </section>`;
 }
 
-function changesPanelHtml(data, movers) {
+function changesPanelHtml(data, movers, insights = null) {
   const moverItems = movers.slice(0, 8).map((row) => ({
     row,
-    note: row.deltaClass === "new" ? "经前日同榜单对比，确认新进可见 Top30；优先看题材包装、首局和素材入口。" : `较前日同榜单${row.delta}，优先看最近版本、活动或买量素材变化。`,
+    note: insights?.moverNotes?.[row.name]
+      || (row.deltaClass === "new" ? "经前日同榜单对比，确认新进可见 Top30；优先看题材包装、首局和素材入口。" : `较前日同榜单${row.delta}，优先看最近版本、活动或买量素材变化。`),
   }));
   const moverListHtml = moverItems.length
     ? moverItems.map((item) => compactProductHtml(data, item.row, item.note, "mover-item")).join("")
     : `<div class="empty-state">暂无可核验的新进 / 上升产品；今日动态不强行生成。</div>`;
-  const watchRows = [
+  const watchRows = insights?.watch?.length ? insights.watch.map((item) => ({
+    row: productRef(data, item.name),
+    note: item.note,
+  })) : [
     { row: productRef(data, "Meowdoku: Brain Puzzle Games"), note: "免费榜头部是否稳定，是休闲新品观察重点。" },
     { row: productRef(data, "Last War: Survival Game"), note: "男向 Strategy 龙头是否继续压住同题材竞品。" },
     { row: productRef(data, "Zenless Zone Zero"), note: "角色池和版本节点是否继续带动 RPG 收入。" },
   ];
+  const accountHtml = insights?.accountCards?.length
+    ? insights.accountCards.map((card) => accountCardHtml(data, card.title || "账号观察", card.subtitle || "按产品集观察", card.products)).join("")
+    : [
+      accountCardHtml(data, "Oakever 免费矩阵", "猫咪 / 迷宫 / 纸牌 / Tile 多题材并行", ["Meowdoku: Brain Puzzle Games", "Amaze GO!", "Jigsawcard Solitaire Puzzle", "Tile Explorer - Triple Match"]),
+      accountCardHtml(data, "Century 男向双线", "4X / 生存 SLG 两个核心收入样本", ["Kingshot", "Whiteout Survival"]),
+      accountCardHtml(data, "Devsisters RPG 账号", "CookieRun IP 的 RPG 与 Idle 延展", ["CookieRun: Kingdom", "CookieRun: Crumble - Idle RPG"]),
+    ].join("");
 
   return `
       <div class="motion-grid">
@@ -1450,9 +1737,7 @@ function changesPanelHtml(data, movers) {
               <span>按厂商看产品集</span>
             </div>
             <div class="account-grid">
-              ${accountCardHtml(data, "Oakever 免费矩阵", "猫咪 / 迷宫 / 纸牌 / Tile 多题材并行", ["Meowdoku: Brain Puzzle Games", "Amaze GO!", "Jigsawcard Solitaire Puzzle", "Tile Explorer - Triple Match"])}
-              ${accountCardHtml(data, "Century 男向双线", "4X / 生存 SLG 两个核心收入样本", ["Kingshot", "Whiteout Survival"])}
-              ${accountCardHtml(data, "Devsisters RPG 账号", "CookieRun IP 的 RPG 与 Idle 延展", ["CookieRun: Kingdom", "CookieRun: Crumble - Idle RPG"])}
+              ${accountHtml}
             </div>
           </article>
         </div>
@@ -1480,13 +1765,17 @@ function changesPanelHtml(data, movers) {
       </div>`;
 }
 
-function html(data, iconEntries) {
+function html(data, iconEntries, insights = null) {
   const rows = allRows(data);
   const generatedAt = `${reportDate} ${new Intl.DateTimeFormat("zh-CN", { timeZone: "Asia/Shanghai", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date())}`;
   const snapshotBits = [
     `AppBrain：${data.gpPuzzleGross.updated || "暂无快照时间"}`,
     `AppCurrents：${data.iosPuzzleGross.updated || "暂无快照时间"}`,
   ];
+  const fallbackTitle = `${displayMonthDay(reportDate)}更新：免费 Puzzle 换头部，Strategy 男向竞争更激烈`;
+  const fallbackLead = `公开榜单源当前可见最新快照为 ${snapshotBits.join("；")}；日报日期为 ${reportDate}。先看结论和动态，再看厂商学习卡，最后查完整榜单。`;
+  const titleText = insights?.title || fallbackTitle;
+  const leadText = insights?.lead || fallbackLead;
   const unmatched = Array.from(new Set(rows.map((row) => row.name))).filter((name) => {
     const entry = iconEntries.get(name);
     return !entry || !entry.found;
@@ -1613,8 +1902,8 @@ function html(data, iconEntries) {
     <section class="hero">
       <div>
         <div class="eyebrow">游戏产品动态与厂商学习日报</div>
-        <h1>${displayMonthDay(reportDate)}更新：免费 Puzzle 换头部，Strategy 男向竞争更激烈</h1>
-        <p class="lead">公开榜单源当前可见最新快照为 ${escapeHtml(snapshotBits.join("；"))}；日报日期为 ${reportDate}。先看结论和动态，再看厂商学习卡，最后查完整榜单。</p>
+        <h1>${escapeHtml(titleText)}</h1>
+        <p class="lead">${escapeHtml(leadText)}</p>
         <div class="chips">
           <span class="chip blue">Puzzle 完整榜单</span>
           <span class="chip green">图像速览</span>
@@ -1647,7 +1936,7 @@ function html(data, iconEntries) {
     <section id="summary" class="section panel active">
       <h2>今日结论</h2>
       <p class="sub">每条结论都对应具体产品，先扫图标、中文名和排名，再进入完整榜单。</p>
-      <div class="insight-grid">${summaryCardsHtml(data)}
+      <div class="insight-grid">${summaryCardsHtml(data, insights)}
       </div>
     </section>
 
@@ -1675,7 +1964,7 @@ function html(data, iconEntries) {
     <section id="changes" class="section panel">
       <h2>榜单动态与账号观察</h2>
       <p class="sub">动态不再堆成长句，按产品和账号拆成可扫描的小行。</p>
-      ${changesPanelHtml(data, movers)}
+      ${changesPanelHtml(data, movers, insights)}
     </section>
 
     <section id="families" class="section panel">
@@ -1696,7 +1985,7 @@ function html(data, iconEntries) {
           <p class="sub">按厂商聚合产品矩阵。点开每张卡，可以看到代表产品、当前排名和可学习点。</p>
         </div>
       </div>
-      <div class="studio-grid">${studioCardsHtml(data)}
+      <div class="studio-grid">${studioCardsHtml(data, insights)}
       </div>
     </section>
 
@@ -1845,11 +2134,13 @@ async function main() {
 
   const previousRanks = parsePreviousRanks();
   attachDeltas(data, previousRanks);
+  const aiInsights = await requestAiInsights(data);
+  applyAiInsights(data, aiInsights);
 
   const rows = allRows(data);
   const iconEntries = await ensureIcons(rows);
   const reportPath = path.join(outputDir, `game-intelligence-full-${reportDate}.html`);
-  const document = html(data, iconEntries);
+  const document = html(data, iconEntries, aiInsights);
   fs.mkdirSync(outputDir, { recursive: true });
   fs.writeFileSync(reportPath, document, "utf8");
 
