@@ -2,9 +2,18 @@ name: Daily Game Intelligence Report
 
 on:
   schedule:
-    - cron: "17 2 * * *"
+    - cron: "8 2 * * *"
+    - cron: "27 2 * * *"
     - cron: "47 2 * * *"
+    - cron: "17 3 * * *"
+    - cron: "17 5 * * *"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Force rebuild even if today's report already exists"
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -26,10 +35,28 @@ jobs:
           node-version: "24"
           package-manager-cache: false
 
-      - name: Build daily report
+      - name: Decide whether to build
         shell: bash
         run: |
           REPORT_DATE="$(TZ=Asia/Shanghai date +'%Y-%m-%d')"
+          FORCE="${{ github.event.inputs.force || 'false' }}"
+          echo "REPORT_DATE=$REPORT_DATE" >> "$GITHUB_ENV"
+          if [ "$FORCE" != "true" ] && [ -f index.html ] && grep -q "<div class=\"date\">$REPORT_DATE</div>" index.html; then
+            echo "Today's report already exists. Skip this safety run."
+            echo "SKIP_BUILD=1" >> "$GITHUB_ENV"
+          else
+            echo "SKIP_BUILD=0" >> "$GITHUB_ENV"
+          fi
+
+      - name: Build daily report
+        if: env.SKIP_BUILD != '1'
+        shell: bash
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
+          FETCH_ATTEMPTS: "8"
+          FETCH_TIMEOUT_MS: "60000"
+        run: |
           mkdir -p .generated
           for attempt in 1 2 3; do
             echo "Build attempt $attempt for $REPORT_DATE"
@@ -42,9 +69,9 @@ jobs:
             fi
             sleep $((attempt * 180))
           done
-          echo "REPORT_DATE=$REPORT_DATE" >> "$GITHUB_ENV"
 
       - name: Commit and push report
+        if: env.SKIP_BUILD != '1'
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
