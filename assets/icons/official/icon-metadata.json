@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-07T02:03:22.516Z",
-  "total": 195,
-  "found": 191,
+  "preparedAt": "2026-08-07T03:07:55.538Z",
+  "total": 197,
+  "found": 193,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -14,6 +14,18 @@
       "score": 262,
       "query": "AFK Arena",
       "bytes": 101437
+    },
+    {
+      "name": "AFK Journey",
+      "found": true,
+      "initial": "AJ",
+      "image": "assets/icons/official/afk-journey.jpg",
+      "matchedName": "AFK Journey",
+      "artistName": "FARLIGHT",
+      "sourceUrl": "https://www.appbrain.com/app/afk-journey/com.farlightgames.igame.gp",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 3021
     },
     {
       "name": "Age of Origins",
@@ -815,6 +827,18 @@
       "score": 298,
       "query": "Gossip Harbor: Merge & Story",
       "bytes": 58273
+    },
+    {
+      "name": "Grand Summoners - Anime RPG",
+      "found": true,
+      "initial": "GS",
+      "image": "assets/icons/official/grand-summoners-anime-rpg.jpg",
+      "matchedName": "Grand Summoners - Anime RPG",
+      "artistName": "株式会社NextNinja",
+      "sourceUrl": "https://www.appbrain.com/app/grand-summoners-anime-rpg/jp.goodsmile.grandsummonersglobal_android",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 2995
     },
     {
       "name": "Grass Master: Lawn Mowing 3D",
