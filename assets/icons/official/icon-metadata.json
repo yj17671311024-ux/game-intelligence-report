@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-07T03:07:55.538Z",
-  "total": 197,
-  "found": 193,
+  "preparedAt": "2026-08-07T06:18:51.354Z",
+  "total": 198,
+  "found": 194,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -708,18 +708,6 @@
       }
     },
     {
-      "name": "Flambé: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge & Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6265
-    },
-    {
       "name": "Flambe: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -730,6 +718,18 @@
       "score": 94,
       "query": "Flambe: Merge & Cook",
       "bytes": 58307
+    },
+    {
+      "name": "Flambé: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge & Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6265
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1272,6 +1272,18 @@
       "score": 262,
       "query": "Marble Sort!",
       "bytes": 56132
+    },
+    {
+      "name": "MARVEL SNAP: Hero Strategy CCG",
+      "found": true,
+      "initial": "MS",
+      "image": "assets/icons/official/marvel-snap-hero-strategy-ccg.jpg",
+      "matchedName": "MARVEL SNAP: Hero Strategy CCG",
+      "artistName": "Second Dinner",
+      "sourceUrl": "https://www.appbrain.com/app/marvel-snap-hero-strategy-ccg/com.nvsgames.snap",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5623
     },
     {
       "name": "MARVEL Strike Force",
