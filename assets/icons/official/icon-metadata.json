@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-08-06T11:34:49.013Z",
+  "preparedAt": "2026-08-07T02:03:22.516Z",
   "total": 195,
   "found": 191,
   "metadata": [
@@ -696,18 +696,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -718,6 +706,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1175,7 +1175,7 @@
       "sourceUrl": "https://www.appbrain.com/app/love-nikki-dress-up-queen/com.elex.nikkigp",
       "source": "AppBrain Google Play icon",
       "score": 100,
-      "bytes": 5481
+      "bytes": 4704
     },
     {
       "name": "Mafia City",
