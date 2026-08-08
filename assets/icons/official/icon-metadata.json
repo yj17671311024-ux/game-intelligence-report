@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-07T06:18:51.354Z",
-  "total": 198,
-  "found": 194,
+  "preparedAt": "2026-08-08T02:09:12.926Z",
+  "total": 201,
+  "found": 197,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -683,6 +683,18 @@
       "bytes": 129269
     },
     {
+      "name": "Find It Out - Hidden Object",
+      "found": true,
+      "initial": "FI",
+      "image": "assets/icons/official/find-it-out-hidden-object.jpg",
+      "matchedName": "Find It Out® - Hidden Object",
+      "artistName": "Guru Puzzle Game",
+      "sourceUrl": "https://www.appbrain.com/app/find-it-out%C2%AE-hidden-object/find.out.hidden.objects.seek.puzzle.games.free",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 2781
+    },
+    {
       "name": "Fishdom",
       "found": true,
       "initial": "F",
@@ -803,6 +815,18 @@
       "score": 286,
       "query": "GODDESS OF VICTORY: NIKKE",
       "bytes": 121305
+    },
+    {
+      "name": "Goods Puzzle: 3D Sorting Games",
+      "found": true,
+      "initial": "GP",
+      "image": "assets/icons/official/goods-puzzle-3d-sorting-games.jpg",
+      "matchedName": "Goods Puzzle: 3D Sorting Games",
+      "artistName": "Guru Puzzle Game",
+      "sourceUrl": "https://www.appbrain.com/app/goods-puzzle-3d-sorting-games/sorting.games.goods.sort.triple.match3d.puzzle.stuff",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6215
     },
     {
       "name": "Gossip Harbor",
@@ -2275,6 +2299,18 @@
       "score": 262,
       "query": "Whiteout Survival",
       "bytes": 81862
+    },
+    {
+      "name": "Whoa Adventure",
+      "found": true,
+      "initial": "WA",
+      "image": "assets/icons/official/whoa-adventure.jpg",
+      "matchedName": "Whoa Adventure",
+      "artistName": "Joy Nice Games",
+      "sourceUrl": "https://www.appbrain.com/app/whoa-adventure/com.yzlmus.google",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5858
     },
     {
       "name": "Wizardry Variants Daphne",
