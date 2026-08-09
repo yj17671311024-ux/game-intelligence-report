@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-08T02:09:12.926Z",
-  "total": 201,
-  "found": 197,
+  "preparedAt": "2026-08-09T02:09:12.418Z",
+  "total": 204,
+  "found": 200,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -321,6 +321,18 @@
       "score": 274,
       "query": "Bus Traffic Fever",
       "bytes": 60682
+    },
+    {
+      "name": "Butcher hero: hook'n'chew RPG",
+      "found": true,
+      "initial": "BH",
+      "image": "assets/icons/official/butcher-hero-hook-n-chew-rpg.jpg",
+      "matchedName": "Butcher hero: hook'n'chew RPG",
+      "artistName": "MULTICAST GAMES",
+      "sourceUrl": "https://www.appbrain.com/app/butcher-hero-hooknchew-rpg/com.multicastgames.butcher",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 4234
     },
     {
       "name": "Candy Crush Saga",
@@ -805,6 +817,18 @@
       "bytes": 63678
     },
     {
+      "name": "GIRLS' FRONTLINE 2: EXILIUM",
+      "found": true,
+      "initial": "GF",
+      "image": "assets/icons/official/girls-frontline-2-exilium.jpg",
+      "matchedName": "GIRLS' FRONTLINE 2: EXILIUM",
+      "artistName": "Darkwinter Software Co., Ltd.",
+      "sourceUrl": "https://www.appbrain.com/app/girls-frontline-2-exilium/com.Sunborn.SnqxExilium.Glo",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5481
+    },
+    {
       "name": "GODDESS OF VICTORY: NIKKE",
       "found": true,
       "initial": "GO",
@@ -1164,6 +1188,18 @@
       "score": 154,
       "query": "Little Farm Story",
       "bytes": 75208
+    },
+    {
+      "name": "Little Farm Story: Idle Tycoon",
+      "found": true,
+      "initial": "LF",
+      "image": "assets/icons/official/little-farm-story-idle-tycoon.jpg",
+      "matchedName": "Little Farm Story: Idle Tycoon",
+      "artistName": "SayGames Ltd",
+      "sourceUrl": "https://www.appbrain.com/app/little-farm-story-idle-tycoon/com.h8games.littlefarmstory",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6450
     },
     {
       "name": "Loop Master",
