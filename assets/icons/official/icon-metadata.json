@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-10T02:01:24.693Z",
-  "total": 203,
-  "found": 199,
+  "preparedAt": "2026-08-10T08:17:41.469Z",
+  "total": 205,
+  "found": 201,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -503,6 +503,18 @@
       "bytes": 84375
     },
     {
+      "name": "CubeAway - 3DPuzzle",
+      "found": true,
+      "initial": "C3",
+      "image": "assets/icons/official/cubeaway-3dpuzzle.jpg",
+      "matchedName": "CubeAway - 3DPuzzle",
+      "artistName": "GOODROID,Inc.",
+      "sourceUrl": "https://www.appbrain.com/app/cubeaway-3dpuzzle/jp.co.goodroid.hyper.puzzle.arrows3dcubepuzzle",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5062
+    },
+    {
       "name": "Dark War Survival",
       "found": true,
       "initial": "DW",
@@ -693,6 +705,18 @@
       "score": 298,
       "query": "Find Hidden Objects - Spot It!",
       "bytes": 129269
+    },
+    {
+      "name": "Find It Out - Hidden Object",
+      "found": true,
+      "initial": "FI",
+      "image": "assets/icons/official/find-it-out-hidden-object.jpg",
+      "matchedName": "Find It Out® - Hidden Object",
+      "artistName": "Guru Puzzle Game",
+      "sourceUrl": "https://www.appbrain.com/app/find-it-out%C2%AE-hidden-object/find.out.hidden.objects.seek.puzzle.games.free",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 2781
     },
     {
       "name": "Fishdom",
