@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-09T02:09:12.418Z",
-  "total": 204,
-  "found": 200,
+  "preparedAt": "2026-08-10T02:01:24.693Z",
+  "total": 203,
+  "found": 199,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -695,18 +695,6 @@
       "bytes": 129269
     },
     {
-      "name": "Find It Out - Hidden Object",
-      "found": true,
-      "initial": "FI",
-      "image": "assets/icons/official/find-it-out-hidden-object.jpg",
-      "matchedName": "Find It Out® - Hidden Object",
-      "artistName": "Guru Puzzle Game",
-      "sourceUrl": "https://www.appbrain.com/app/find-it-out%C2%AE-hidden-object/find.out.hidden.objects.seek.puzzle.games.free",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 2781
-    },
-    {
       "name": "Fishdom",
       "found": true,
       "initial": "F",
@@ -732,18 +720,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -754,6 +730,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
