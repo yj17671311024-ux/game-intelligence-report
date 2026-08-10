@@ -377,11 +377,23 @@ const typeMap = {
   "Sword x Staff": "Action RPG",
   "Zenless Zone Zero": "Action RPG / 二游",
   "GODDESS OF VICTORY: NIKKE": "二游 / 角色收集",
+  "AFK Journey": "放置 RPG / 角色收集",
+  "AFK Arena": "放置 RPG",
+  "Hero Wars": "放置 RPG / 养成",
+  "Isekai: Slow Life": "放置 RPG / 模拟经营",
+  "CookieRun: Crumble - Idle RPG": "放置 RPG",
+  "MapleStory: Idle RPG": "放置 RPG",
+  "Top Heroes": "放置 RPG / Kingdom",
   "Last War: Survival Game": "轻玩法 + SLG",
   "Kingshot": "Survival Strategy",
   "Whiteout Survival": "Survival SLG",
   "Puzzles & Survival": "Puzzle + SLG",
   "Arknights": "塔防 / 二游",
+  "Age of Origins": "4X SLG / 塔防",
+  "Kingdom Guard": "塔防 / 合成",
+  "The Tower - Idle Tower Defense": "放置塔防",
+  "Raid Rush: Tower Defense TD": "塔防 / TD",
+  "Grow Castle - Tower Defense": "塔防 / TD",
 };
 
 const familyDefs = [
@@ -645,10 +657,13 @@ function gameType(name, fallback) {
 
 function gameFamily(name, categoryShort = "") {
   const raw = `${name || ""} ${typeMap[name] || ""}`.toLowerCase();
+  if (/tower|td|defen[cs]e|塔防|arknights|age of origins|kingdom guard|grow castle/.test(raw)) return "塔防 / TD";
+  if (/idle|afk|放置|slow life|top heroes|hero wars|maplestory idle|crumble/.test(raw)) return "放置 RPG / Idle";
   if (categoryShort.includes("RPG")) return "RPG / 角色收集";
   if (categoryShort.includes("Strategy")) {
+    if (/tower|td|defen[cs]e|塔防|arknights|age of origins|kingdom guard|grow castle/.test(raw)) return "塔防 / TD";
     if (/puzzles? & (survival|chaos)|puzzle \+ slg|puzzle/.test(raw)) return "Puzzle + Meta / SLG";
-    return "Strategy / SLG";
+    return "SLG / 4X / 生存策略";
   }
   if (/puzzles? & (survival|chaos)|empires & puzzles|puzzle rpg|puzzle \+ slg|slg/.test(raw)) return "Puzzle + Meta / SLG";
   if (/merge|cook|mansion|harbor|travel town|seaside|dragons|flambe|mystery town|tasty travels/.test(raw)) return "Merge / Story / Cook";
@@ -663,6 +678,9 @@ function gameFamily(name, categoryShort = "") {
 
 function learningPoint(name, categoryShort) {
   if (pointMap[name]) return pointMap[name];
+  const raw = `${name || ""} ${typeMap[name] || ""}`.toLowerCase();
+  if (/tower|td|defen[cs]e|塔防|arknights|age of origins|kingdom guard|grow castle/.test(raw)) return "塔防/TD 线索，重点看防线构筑、关卡压力、角色/塔成长和活动商业化。";
+  if (/idle|afk|放置|slow life|top heroes|hero wars|maplestory idle|crumble/.test(raw)) return "放置 RPG 线索，重点看离线收益、养成深度、角色收集和低操作长期留存。";
   if (categoryShort.includes("免费")) return "免费榜流量线索，适合看素材包装、首局体验和广告变现入口。";
   if (categoryShort.includes("RPG")) return "RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。";
   if (categoryShort.includes("Strategy")) return "策略/SLG 收入线索，适合看题材包装、联盟系统、买量素材和长线活动。";
@@ -1059,6 +1077,77 @@ function topMovers(data) {
     .slice(0, 10);
 }
 
+const maleSegmentDefinitions = [
+  {
+    key: "coreRpg",
+    title: "核心 RPG / 角色收集",
+    badge: "RPG",
+    desc: "角色池、版本节点、IP/美术资产和抽卡活动驱动收入。",
+    match: (row) => row.categoryShort.includes("RPG") && !/idle|afk|放置|slow life|top heroes|hero wars|maplestory idle|crumble/i.test(`${row.name} ${row.type} ${row.family}`) && !/tower|td|defen[cs]e|塔防|arknights/i.test(`${row.name} ${row.type} ${row.family}`),
+  },
+  {
+    key: "idleRpg",
+    title: "放置 RPG / Idle",
+    badge: "Idle",
+    desc: "低操作、离线收益、长线养成和角色收集，适合和核心 RPG 分开看。",
+    match: (row) => /idle|afk|放置|slow life|top heroes|hero wars|maplestory idle|crumble/i.test(`${row.name} ${row.type} ${row.family}`),
+  },
+  {
+    key: "towerDefense",
+    title: "塔防 / TD",
+    badge: "TD",
+    desc: "防线构筑、关卡压力、塔/角色成长和活动变现，不再混在泛 Strategy 里。",
+    match: (row) => /tower|td|defen[cs]e|塔防|arknights|age of origins|kingdom guard|grow castle/i.test(`${row.name} ${row.type} ${row.family}`),
+  },
+  {
+    key: "slg",
+    title: "SLG / 4X / 生存策略",
+    badge: "SLG",
+    desc: "联盟、赛季、城建、战争和生存题材，是男向 Strategy 主干。",
+    match: (row) => row.categoryShort.includes("Strategy") && !/puzzles? &|puzzle \+ slg|tower|td|defen[cs]e|塔防/i.test(`${row.name} ${row.type} ${row.family}`),
+  },
+  {
+    key: "puzzleSlg",
+    title: "Puzzle + SLG / 混合外层",
+    badge: "Hybrid",
+    desc: "用轻 Puzzle 做入口，外层接 SLG/RPG 数值和联盟商业化。",
+    match: (row) => /puzzles? &|puzzle \+ slg|puzzle \+ meta|empires & puzzles/i.test(`${row.name} ${row.type} ${row.family}`),
+  },
+];
+
+function maleSourceRows(data) {
+  return uniqueProductRows([
+    ...data.gpRpgGross.rows,
+    ...data.gpStrategyGross.rows,
+  ]).sort((a, b) => {
+    const weight = (row) => row.categoryShort.includes("RPG") ? 0 : 30;
+    return (a.rank + weight(a)) - (b.rank + weight(b));
+  });
+}
+
+function buildMaleSegments(data) {
+  const rows = maleSourceRows(data);
+  return maleSegmentDefinitions.map((segment) => ({
+    ...segment,
+    rows: rows.filter(segment.match).slice(0, 6),
+  })).filter((segment) => segment.rows.length);
+}
+
+function maleSegmentCardsHtml(data) {
+  return buildMaleSegments(data).map((segment) => `
+          <article class="card insight-card male-segment-card">
+            <div class="insight-card-head">
+              <div>
+                <h3>${escapeHtml(segment.title)}</h3>
+                <p>${escapeHtml(segment.desc)}</p>
+              </div>
+              <span>${escapeHtml(segment.badge)}</span>
+            </div>
+            <div class="mini-list">${segment.rows.map((row) => compactProductHtml(data, row, row.point, "male-segment-product")).join("")}
+            </div>
+          </article>`).join("");
+}
+
 function cleanInsightText(value, maxLength = 220) {
   return String(value || "")
     .replace(/\s+/g, " ")
@@ -1125,6 +1214,19 @@ function buildAiContext(data) {
       category: row.categoryShort,
       delta: row.delta,
       deltaClass: row.deltaClass,
+    })),
+    maleSegments: buildMaleSegments(data).map((segment) => ({
+      title: segment.title,
+      desc: segment.desc,
+      products: segment.rows.map((row) => ({
+        name: row.name,
+        cn: cnName(row.name),
+        developer: row.developerCn,
+        rank: row.rank,
+        category: row.categoryShort,
+        type: row.type,
+        delta: row.deltaVerified ? row.delta : "",
+      })),
     })),
     studios: studioGroups.map((studio) => ({
       name: studio.name,
@@ -1648,8 +1750,14 @@ function summaryCardsHtml(data, insights = null) {
     ...data.iosPuzzleGross.rows.slice(0, 3),
   ]).slice(0, 5);
   const freeRows = data.gpPuzzleFree.rows.slice(0, 5);
-  const rpgRows = data.gpRpgGross.rows.slice(0, 4);
-  const strategyRows = data.gpStrategyGross.rows.slice(0, 4);
+  const maleSegments = buildMaleSegments(data);
+  const rpgRows = maleSegments.find((segment) => segment.key === "coreRpg")?.rows || data.gpRpgGross.rows.slice(0, 4);
+  const idleRows = maleSegments.find((segment) => segment.key === "idleRpg")?.rows || [];
+  const towerRows = maleSegments.find((segment) => segment.key === "towerDefense")?.rows || [];
+  const strategyRows = [
+    ...(maleSegments.find((segment) => segment.key === "slg")?.rows || []),
+    ...(maleSegments.find((segment) => segment.key === "puzzleSlg")?.rows || []),
+  ].slice(0, 4);
   const watchRows = [
     productRef(data, "Meowdoku: Brain Puzzle Games"),
     productRef(data, "Last War: Survival Game"),
@@ -1665,11 +1773,19 @@ function summaryCardsHtml(data, insights = null) {
       row,
       note: row.point,
     }))),
-    insightCardHtml(data, "RPG 主线", "男向", "看版本节点、角色池、美术资产和 IP 拉动。", rpgRows.map((row) => ({
+    insightCardHtml(data, "核心 RPG 主线", "男向", "看版本节点、角色池、美术资产和 IP 拉动。", rpgRows.slice(0, 4).map((row) => ({
       row,
       note: row.point,
     }))),
-    insightCardHtml(data, "Strategy / 塔防主线", "男向", "看轻玩法前置、SLG 商业化和联盟/赛季活动。", strategyRows.map((row) => ({
+    ...(idleRows.length ? [insightCardHtml(data, "放置 RPG 补充", "Idle", "放置 RPG 单独看离线收益、养成深度和长线留存。", idleRows.slice(0, 4).map((row) => ({
+      row,
+      note: row.point,
+    })))] : []),
+    ...(towerRows.length ? [insightCardHtml(data, "塔防 / TD 补充", "TD", "塔防产品单独看防线构筑、关卡压力和塔/角色成长。", towerRows.slice(0, 4).map((row) => ({
+      row,
+      note: row.point,
+    })))] : []),
+    insightCardHtml(data, "SLG / Strategy 主线", "男向", "看轻玩法前置、SLG 商业化、联盟和赛季活动。", strategyRows.map((row) => ({
       row,
       note: row.point,
     }))),
@@ -1772,7 +1888,7 @@ function html(data, iconEntries, insights = null) {
     `AppBrain：${data.gpPuzzleGross.updated || "暂无快照时间"}`,
     `AppCurrents：${data.iosPuzzleGross.updated || "暂无快照时间"}`,
   ];
-  const fallbackTitle = `${displayMonthDay(reportDate)}更新：免费 Puzzle 换头部，Strategy 男向竞争更激烈`;
+  const fallbackTitle = `${displayMonthDay(reportDate)}更新：Puzzle 与男向细分榜单观察`;
   const fallbackLead = `公开榜单源当前可见最新快照为 ${snapshotBits.join("；")}；日报日期为 ${reportDate}。先看结论和动态，再看厂商学习卡，最后查完整榜单。`;
   const titleText = insights?.title || fallbackTitle;
   const leadText = insights?.lead || fallbackLead;
@@ -1907,7 +2023,7 @@ function html(data, iconEntries, insights = null) {
         <div class="chips">
           <span class="chip blue">Puzzle 完整榜单</span>
           <span class="chip green">图像速览</span>
-          <span class="chip red">RPG / Strategy 动态</span>
+          <span class="chip red">RPG / 放置 / 塔防 / Strategy</span>
           <span class="chip gold">厂商作品集</span>
           <span class="chip">对比 ${previousDate}</span>
         </div>
@@ -1953,10 +2069,10 @@ function html(data, iconEntries, insights = null) {
           ["Magic Sort!", "GP 免费 #2 / 收入 #15"],
           ["Royal Match", "GP/iOS Puzzle 收入 #1"],
           ["Zenless Zone Zero", "GP RPG 收入 #2"],
+          ["Arknights", "塔防 / 二游样本"],
           ["Last War: Survival Game", "GP Strategy 收入 #1"],
           ["Kingshot", "GP Strategy 收入 #2"],
           ["Whiteout Survival", "GP Strategy 收入 #3"],
-          ["Puzzles & Survival", "Puzzle + SLG，Strategy #10"],
         ].map((item) => `<div class="visual-card" data-game="${escapeHtml(item[0])}"><span class="app-icon large"></span><div><strong>${escapeHtml(item[0])}</strong><em>中文参考：${escapeHtml(cnName(item[0]))}</em><span>${escapeHtml(item[1])}</span></div></div>`).join("\n")}
       </div>
     </section>
@@ -2001,8 +2117,11 @@ function html(data, iconEntries, insights = null) {
     </section>
 
     <section id="male" class="section panel">
-      <h2>男性向 / RPG / Strategy 完整榜单</h2>
-      <p class="sub">用 RPG 与 Strategy 收入榜观察角色收集、IP、SLG、塔防/策略混合产品。</p>
+      <h2>男性向 / RPG / 放置 RPG / 塔防 / Strategy</h2>
+      <p class="sub">先按男向细分玩法拆开看，再回到 Google Play RPG 与 Strategy 原始完整榜单核对。</p>
+      <div class="notice"><strong>细分口径：</strong>RPG 榜不再只看泛角色收集；会单独拎出放置 RPG / Idle。Strategy 榜也会拆出塔防 / TD、SLG / 4X、生存策略和 Puzzle + SLG 混合外层。</div>
+      <div class="insight-grid">${maleSegmentCardsHtml(data)}
+      </div>
       <h3>${escapeHtml(data.gpRpgGross.label)}</h3>
       <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>玩法族群</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>${categoryRows(data.gpRpgGross.rows)}</tbody></table></div>
       <h3 style="margin-top:22px">${escapeHtml(data.gpStrategyGross.label)}</h3>
