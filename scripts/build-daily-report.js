@@ -454,6 +454,10 @@ const familyDefs = [
     desc: "排序、Jam、路线与堵塞类轻谜题，重点看首局压力、素材表达和广告变现入口。",
   },
   {
+    name: "Traffic / Route / Escape",
+    desc: "交通疏导、箭头路径、逃脱和车辆排序题，重点看规则一眼懂、堵点反馈和失败重试节奏。",
+  },
+  {
     name: "3D Match / Object",
     desc: "3D 物件匹配和找物清屏，重点看物件识别、触感反馈和关卡节奏。",
   },
@@ -464,6 +468,10 @@ const familyDefs = [
   {
     name: "Word / Sudoku / Brain",
     desc: "文字、数独、纸牌、麻将和脑力题，重点看日常留存、题库组织和轻量化包装。",
+  },
+  {
+    name: "Card / Mahjong / Domino",
+    desc: "纸牌、麻将、多米诺和拼图纸牌题，重点看日常挑战、收集目标和低压力长期留存。",
   },
   {
     name: "Arcade / Logic Puzzle",
@@ -731,9 +739,11 @@ function gameFamily(name, categoryShort = "") {
   if (/puzzles? & (survival|chaos)|empires & puzzles|puzzle rpg|puzzle \+ slg|slg/.test(raw)) return "Puzzle + Meta / SLG";
   if (/merge|cook|mansion|harbor|travel town|seaside|dragons|flambe|mystery town|tasty travels/.test(raw)) return "Merge / Story / Cook";
   if (/match factory|3d match|triple match|object/.test(raw)) return "3D Match / Object";
-  if (/sort|jam|line|loop|yarn|marble|car sort|bus traffic|arrow/.test(raw)) return "Sort / Jam / Line";
+  if (/bus traffic|car sort|arrow|arrows|point out|escape|route|traffic/.test(raw)) return "Traffic / Route / Escape";
+  if (/domino|solitaire|jigsawcard|mahjong|jigsaw drop/.test(raw)) return "Card / Mahjong / Domino";
+  if (/sort|jam|line|loop|yarn|marble/.test(raw)) return "Sort / Jam / Line";
   if (/hidden|seek|search|find/.test(raw)) return "Hidden Object / Search";
-  if (/\bword\b|sudoku|brain|nyt|mahjong|domino|solitaire|jigsawcard/.test(raw)) return "Word / Sudoku / Brain";
+  if (/\bword\b|sudoku|brain|nyt/.test(raw)) return "Word / Sudoku / Brain";
   if (/block|screw|hole|pixel|flow|knock|tile|cube|woodoku|jigsaw|point out|color block/.test(raw)) return "Arcade / Logic Puzzle";
   if (/match-3|candy|royal match|royal kingdom|toon blast|toy blast|fishdom|gardenscapes|homescapes|township/.test(raw)) return "Match-3 / Blast";
   return "Arcade / Logic Puzzle";
@@ -1504,11 +1514,26 @@ function puzzleFamilyCardsHtml(data) {
     ...data.gpPuzzleGross.rows,
     ...data.iosPuzzleGross.rows,
     ...data.gpPuzzleFree.rows,
+    ...allRows(data).filter((row) => {
+      const familyName = row.family || gameFamily(row.name, row.categoryShort);
+      return familyName === "Puzzle + Meta / SLG" || /puzzle/i.test(`${row.name} ${row.type || ""}`);
+    }),
   ];
   const byName = new Map();
+  const sourceScore = (item) => {
+    if (!item) return 9999;
+    const sourceWeight = item.categoryKey === "gpPuzzleGross" ? 0
+      : item.categoryKey === "iosPuzzleGross" ? 4
+      : item.categoryKey === "gpPuzzleFree" ? 12
+      : item.categoryKey === "gpStrategyGross" ? 18
+      : item.categoryKey === "iosStrategyGross" ? 24
+      : item.categoryKey === "gpRpgGross" ? 26
+      : 40;
+    return sourceWeight + Number(item.rank || 999);
+  };
   for (const row of puzzleRows) {
     const existing = byName.get(row.name);
-    if (!existing || row.rank < existing.rank || row.categoryShort.includes("收入")) byName.set(row.name, row);
+    if (!existing || sourceScore(row) < sourceScore(existing)) byName.set(row.name, row);
   }
 
   const groups = new Map(familyDefs.map((family) => [family.name, []]));
@@ -1528,7 +1553,7 @@ function puzzleFamilyCardsHtml(data) {
         const scoreB = b.categoryShort.includes("收入") ? b.rank : b.rank + 35;
         return scoreA - scoreB;
       });
-      const productHtml = sorted.slice(0, 6).map((row) => {
+      const productCard = (row) => {
         const rankHtml = (ranks.get(row.name) || [`${row.categoryShort} #${row.rank}`])
           .slice(0, 3)
           .map((label) => `<span>${escapeHtml(label)}</span>`)
@@ -1543,7 +1568,16 @@ function puzzleFamilyCardsHtml(data) {
                   </div>
                   <div class="family-ranks">${rankHtml}</div>
                 </article>`;
-      }).join("");
+      };
+      const primaryRows = sorted.slice(0, 8);
+      const extraRows = sorted.slice(8, 14);
+      const productHtml = primaryRows.map(productCard).join("");
+      const extraHtml = extraRows.length ? `
+              <details class="family-more">
+                <summary>展开更多 ${extraRows.length} 款同板块产品</summary>
+                <div class="family-products extra">${extraRows.map(productCard).join("")}
+                </div>
+              </details>` : "";
       return `
           <article class="family-card">
             <header>
@@ -1555,6 +1589,7 @@ function puzzleFamilyCardsHtml(data) {
             </header>
             <div class="family-products">${productHtml}
             </div>
+            ${extraHtml}
           </article>`;
     });
 
@@ -2090,6 +2125,12 @@ function html(data, iconEntries, insights = null) {
     .family-card header h3 { color:var(--ink); } .family-card header p { color:#526071; margin-top:5px; font-size:13px; }
     .family-card header > span { display:inline-flex; align-items:center; justify-content:center; min-width:48px; border-radius:999px; background:#eef8fb; color:var(--blue); border:1px solid #bfdae2; font-size:12px; font-weight:900; padding:5px 8px; }
     .family-products { display:grid; gap:0; }
+    .family-more { border-top:1px solid var(--line); background:#fbfcfd; }
+    .family-more summary { cursor:pointer; list-style:none; min-height:40px; display:flex; align-items:center; justify-content:center; padding:8px 12px; color:var(--blue); font-weight:800; font-size:13px; }
+    .family-more summary::-webkit-details-marker { display:none; }
+    .family-more summary::after { content:"+"; margin-left:8px; width:20px; height:20px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; border:1px solid #bfdae2; background:#eef8fb; }
+    .family-more[open] summary::after { content:"-"; }
+    .family-products.extra { border-top:1px solid var(--line); }
     .family-product { display:grid; grid-template-columns:46px minmax(0,1fr) 136px; gap:10px; align-items:center; padding:10px 12px; border-top:1px solid var(--line); }
     .family-product:first-child { border-top:0; } .family-product-text { min-width:0; } .family-product-text strong { display:block; color:#20242a; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     .family-product-text span { color:#526071; display:block; font-size:13px; margin-top:1px; } .family-product-text p { color:#4e5b6b; margin-top:4px; font-size:13px; }
