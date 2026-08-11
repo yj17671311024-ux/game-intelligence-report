@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-11T02:01:18.429Z",
-  "total": 205,
-  "found": 201,
+  "preparedAt": "2026-08-11T04:03:38.113Z",
+  "total": 260,
+  "found": 256,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -28,6 +28,18 @@
       "bytes": 3021
     },
     {
+      "name": "Age of Empires Mobile",
+      "found": true,
+      "initial": "AO",
+      "image": "assets/icons/official/age-of-empires-mobile.jpg",
+      "matchedName": "Age of Empires Mobile",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/age-of-empires-mobile/ios-6476261995",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6424
+    },
+    {
       "name": "Age of Origins",
       "found": true,
       "initial": "AO",
@@ -38,6 +50,30 @@
       "score": 154,
       "query": "Age of Origins",
       "bytes": 65450
+    },
+    {
+      "name": "Age of Origins:Tower Defense",
+      "found": true,
+      "initial": "AO",
+      "image": "assets/icons/official/age-of-origins-tower-defense.jpg",
+      "matchedName": "Age of Origins:Tower Defense",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/age-of-origins-tower-defense/ios-1376515087",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5712
+    },
+    {
+      "name": "Aliens vs Zombies: Invasion",
+      "found": true,
+      "initial": "AV",
+      "image": "assets/icons/official/aliens-vs-zombies-invasion.jpg",
+      "matchedName": "Aliens vs Zombies: Invasion",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/aliens-vs-zombies-invasion/ios-6740232087",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6857
     },
     {
       "name": "All in Hole",
@@ -263,6 +299,30 @@
       "bytes": 39061
     },
     {
+      "name": "Bloons TD 6",
+      "found": true,
+      "initial": "BT",
+      "image": "assets/icons/official/bloons-td-6.jpg",
+      "matchedName": "Bloons TD 6",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/bloons-td-6/ios-1118115766",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8143
+    },
+    {
+      "name": "Boom Beach: War Strategy Game",
+      "found": true,
+      "initial": "BB",
+      "image": "assets/icons/official/boom-beach-war-strategy-game.jpg",
+      "matchedName": "Boom Beach: War Strategy Game",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/boom-beach-war-strategy-game/ios-672150402",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6563
+    },
+    {
       "name": "Brain Puzzle 3",
       "found": true,
       "initial": "BP",
@@ -335,6 +395,18 @@
       "bytes": 4234
     },
     {
+      "name": "Call of Dragons",
+      "found": true,
+      "initial": "CO",
+      "image": "assets/icons/official/call-of-dragons.jpg",
+      "matchedName": "Call of Dragons",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/call-of-dragons/ios-1605558677",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6854
+    },
+    {
       "name": "Candy Crush Saga",
       "found": true,
       "initial": "CC",
@@ -395,6 +467,30 @@
       "bytes": 84642
     },
     {
+      "name": "Castle Busters: Tower Defense",
+      "found": true,
+      "initial": "CB",
+      "image": "assets/icons/official/castle-busters-tower-defense.jpg",
+      "matchedName": "Castle Busters",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/castle-busters/ios-6746328263",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6363
+    },
+    {
+      "name": "Cell Survivor - Shoot Defense",
+      "found": true,
+      "initial": "CS",
+      "image": "assets/icons/official/cell-survivor-shoot-defense.jpg",
+      "matchedName": "Cell Survivor - Shoot Defense",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/cell-survivor-shoot-defense/ios-6746465127",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 9430
+    },
+    {
       "name": "Chaos Zero Nightmare",
       "found": true,
       "initial": "CZ",
@@ -405,6 +501,18 @@
       "score": 274,
       "query": "Chaos Zero Nightmare",
       "bytes": 78349
+    },
+    {
+      "name": "Chess.com - Play and Learn",
+      "found": true,
+      "initial": "CC",
+      "image": "assets/icons/official/chess-com-play-and-learn.jpg",
+      "matchedName": "Chess.com - Play and Learn",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/chess-com-play-and-learn/ios-329218549",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 3094
     },
     {
       "name": "Clash of Clans",
@@ -527,6 +635,18 @@
       "bytes": 64430
     },
     {
+      "name": "Dark War:Survival",
+      "found": true,
+      "initial": "DW",
+      "image": "assets/icons/official/dark-war-survival.jpg",
+      "matchedName": "Dark War:Survival",
+      "artistName": "Omnilojo Pte Ltd",
+      "sourceUrl": "https://apps.apple.com/us/app/dark-war-survival/id6670441558?uo=4",
+      "score": 274,
+      "query": "Dark War Survival",
+      "bytes": 64430
+    },
+    {
       "name": "Diablo Immortal",
       "found": true,
       "initial": "DI",
@@ -587,6 +707,18 @@
       "bytes": 49032
     },
     {
+      "name": "Draft Showdown",
+      "found": true,
+      "initial": "DS",
+      "image": "assets/icons/official/draft-showdown.jpg",
+      "matchedName": "Draft Showdown",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/draft-showdown/ios-6743368869",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5991
+    },
+    {
       "name": "Dragon Ball Z Dokkan Battle",
       "found": true,
       "initial": "DB",
@@ -597,6 +729,18 @@
       "score": 286,
       "query": "Dragon Ball Z Dokkan Battle",
       "bytes": 110579
+    },
+    {
+      "name": "Dragon Traveler",
+      "found": true,
+      "initial": "DT",
+      "image": "assets/icons/official/dragon-traveler.jpg",
+      "matchedName": "Dragon Traveler",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/dragon-traveler/ios-6751086804",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7468
     },
     {
       "name": "Duck Survival",
@@ -671,6 +815,18 @@
       "bytes": 103614
     },
     {
+      "name": "Evony",
+      "found": true,
+      "initial": "E",
+      "image": "assets/icons/official/evony.jpg",
+      "matchedName": "Evony",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/evony/ios-1098157959",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6186
+    },
+    {
       "name": "Evony: The King's Return",
       "found": true,
       "initial": "ET",
@@ -717,6 +873,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 2781
+    },
+    {
+      "name": "Fire Emblem Heroes",
+      "found": true,
+      "initial": "FE",
+      "image": "assets/icons/official/fire-emblem-heroes.jpg",
+      "matchedName": "Fire Emblem Heroes",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/fire-emblem-heroes/ios-1181774280",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8028
     },
     {
       "name": "Fishdom",
@@ -793,6 +961,18 @@
       "bytes": 5480
     },
     {
+      "name": "Forge Master – Idle RPG",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/forge-master-idle-rpg.jpg",
+      "matchedName": "Forge Master – Idle RPG",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/forge-master-idle-rpg/ios-6746636289",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 2420
+    },
+    {
       "name": "Foundation: Galactic Frontier",
       "found": true,
       "initial": "FG",
@@ -803,6 +983,42 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5512
+    },
+    {
+      "name": "Galaxy Defense: Fortress TD",
+      "found": true,
+      "initial": "GD",
+      "image": "assets/icons/official/galaxy-defense-fortress-td.jpg",
+      "matchedName": "Galaxy Defense: Fortress TD",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/galaxy-defense-fortress-td/ios-6740189002",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5433
+    },
+    {
+      "name": "Game of Kings:The Blood Throne",
+      "found": true,
+      "initial": "GO",
+      "image": "assets/icons/official/game-of-kings-the-blood-throne.jpg",
+      "matchedName": "Game of Kings:The Blood Throne",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/game-of-kings-the-blood-throne/ios-1071673198",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8019
+    },
+    {
+      "name": "Game of Thrones: Conquest",
+      "found": true,
+      "initial": "GO",
+      "image": "assets/icons/official/game-of-thrones-conquest.jpg",
+      "matchedName": "Game of Thrones: Conquest ™",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/game-of-thrones-conquest-%E2%84%A2/ios-1035712810",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6830
     },
     {
       "name": "Game of Thrones: Dragonfire",
@@ -925,6 +1141,18 @@
       "bytes": 68322
     },
     {
+      "name": "Hearthstone",
+      "found": true,
+      "initial": "H",
+      "image": "assets/icons/official/hearthstone.jpg",
+      "matchedName": "Hearthstone",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/hearthstone/ios-625257520",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6053
+    },
+    {
       "name": "Hero Wars",
       "found": true,
       "initial": "HW",
@@ -971,6 +1199,18 @@
       "score": 130,
       "query": "Homescapes",
       "bytes": 65310
+    },
+    {
+      "name": "Idle Heroes - Idle Games",
+      "found": true,
+      "initial": "IH",
+      "image": "assets/icons/official/idle-heroes-idle-games.jpg",
+      "matchedName": "Idle Heroes - Idle Games",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/idle-heroes-idle-games/ios-1153461915",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7053
     },
     {
       "name": "Infinity Kingdom",
@@ -1106,6 +1346,30 @@
       "bytes": 5728
     },
     {
+      "name": "Kingdom Clash：Medieval Defense",
+      "found": true,
+      "initial": "KC",
+      "image": "assets/icons/official/kingdom-clash-medieval-defense.jpg",
+      "matchedName": "Kingdom Clash：Medieval Defense",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/kingdom-clash%EF%BC%9Amedieval-defense/ios-1611722542",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6738
+    },
+    {
+      "name": "Kingdom Guard",
+      "found": true,
+      "initial": "KG",
+      "image": "assets/icons/official/kingdom-guard.jpg",
+      "matchedName": "Kingdom Guard:Tower Defense TD",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/kingdom-guard-tower-defense-td/ios-1570095804",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7847
+    },
+    {
       "name": "Kingshot",
       "found": true,
       "initial": "K",
@@ -1166,6 +1430,42 @@
       "bytes": 84925
     },
     {
+      "name": "Last Day on Earth: Survival",
+      "found": true,
+      "initial": "LD",
+      "image": "assets/icons/official/last-day-on-earth-survival.jpg",
+      "matchedName": "Last Day on Earth: Survival",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/last-day-on-earth-survival/ios-1241932094",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5061
+    },
+    {
+      "name": "Last Fortress: Underground",
+      "found": true,
+      "initial": "LF",
+      "image": "assets/icons/official/last-fortress-underground.jpg",
+      "matchedName": "Last Fortress: Underground",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/last-fortress-underground/ios-1540557475",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6365
+    },
+    {
+      "name": "Last Shelter: Survival",
+      "found": true,
+      "initial": "LS",
+      "image": "assets/icons/official/last-shelter-survival.jpg",
+      "matchedName": "Last Shelter: Survival",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/last-shelter-survival/ios-1342290011",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6734
+    },
+    {
       "name": "Last War: Survival Game",
       "found": true,
       "initial": "LW",
@@ -1178,6 +1478,18 @@
       "bytes": 60013
     },
     {
+      "name": "Last War:Survival",
+      "found": true,
+      "initial": "LW",
+      "image": "assets/icons/official/last-war-survival.jpg",
+      "matchedName": "Last War:Survival",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/last-war-survival/ios-6448786147",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7644
+    },
+    {
       "name": "Last Z: Survival Shooter",
       "found": true,
       "initial": "LS",
@@ -1188,6 +1500,18 @@
       "score": 274,
       "query": "Last Z: Survival Shooter",
       "bytes": 77297
+    },
+    {
+      "name": "League of Legends: Wild Rift",
+      "found": true,
+      "initial": "LO",
+      "image": "assets/icons/official/league-of-legends-wild-rift.jpg",
+      "matchedName": "League of Legends: Wild Rift",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/league-of-legends-wild-rift/ios-1480616990",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6810
     },
     {
       "name": "Little Farm Story",
@@ -1250,6 +1574,18 @@
       "bytes": 42306
     },
     {
+      "name": "Lordrush",
+      "found": true,
+      "initial": "L",
+      "image": "assets/icons/official/lordrush.jpg",
+      "matchedName": "Lordrush",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/lordrush/ios-6759788962",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6751
+    },
+    {
       "name": "Lords Mobile",
       "found": true,
       "initial": "LM",
@@ -1298,6 +1634,18 @@
       "bytes": 68385
     },
     {
+      "name": "Magic: The Gathering Arena",
+      "found": true,
+      "initial": "MT",
+      "image": "assets/icons/official/magic-the-gathering-arena.jpg",
+      "matchedName": "Magic: The Gathering Arena",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/magic-the-gathering-arena/ios-1496227521",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 3978
+    },
+    {
       "name": "Mahjong Master",
       "found": true,
       "initial": "MM",
@@ -1344,6 +1692,18 @@
       "score": 262,
       "query": "Marble Sort!",
       "bytes": 56132
+    },
+    {
+      "name": "MARVEL SNAP",
+      "found": true,
+      "initial": "MS",
+      "image": "assets/icons/official/marvel-snap.jpg",
+      "matchedName": "MARVEL SNAP",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/marvel-snap/ios-1592081003",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8542
     },
     {
       "name": "MARVEL SNAP: Hero Strategy CCG",
@@ -1503,6 +1863,30 @@
       "bytes": 53056
     },
     {
+      "name": "Mob Control",
+      "found": true,
+      "initial": "MC",
+      "image": "assets/icons/official/mob-control.jpg",
+      "matchedName": "Mob Control",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/mob-control/ios-1562817072",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8069
+    },
+    {
+      "name": "Mobile Legends: Bang Bang.US",
+      "found": true,
+      "initial": "ML",
+      "image": "assets/icons/official/mobile-legends-bang-bang-us.jpg",
+      "matchedName": "Mobile Legends: Bang Bang.US",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/mobile-legends-bang-bang-us/ios-6741568655",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7820
+    },
+    {
       "name": "Mystery Town",
       "found": true,
       "initial": "MT",
@@ -1561,6 +1945,18 @@
       "score": 302,
       "query": "Offline Games - No Wifi Games",
       "bytes": 30447
+    },
+    {
+      "name": "Overgeared Hero: Merge RPG",
+      "found": true,
+      "initial": "OH",
+      "image": "assets/icons/official/overgeared-hero-merge-rpg.jpg",
+      "matchedName": "Overgeared Hero: Merge RPG",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/overgeared-hero-merge-rpg/ios-6755585789",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8039
     },
     {
       "name": "Overmortal",
@@ -1671,6 +2067,18 @@
       "bytes": 3529
     },
     {
+      "name": "Pokémon GO",
+      "found": true,
+      "initial": "PM",
+      "image": "assets/icons/official/pok-mon-go.jpg",
+      "matchedName": "Pokémon GO",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/pok%C3%A9mon-go/ios-1094591345",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5762
+    },
+    {
       "name": "Pokémon Masters EX",
       "found": true,
       "initial": "PM",
@@ -1707,6 +2115,18 @@
       "bytes": 53197
     },
     {
+      "name": "PUBG MOBILE",
+      "found": true,
+      "initial": "PM",
+      "image": "assets/icons/official/pubg-mobile.jpg",
+      "matchedName": "PUBG MOBILE",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/pubg-mobile/ios-1330123889",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8089
+    },
+    {
       "name": "Puzzles & Chaos",
       "found": true,
       "initial": "PA",
@@ -1741,6 +2161,18 @@
       "score": 274,
       "query": "Puzzles & Survival",
       "bytes": 90036
+    },
+    {
+      "name": "Raid Rush: Tower Defense TD",
+      "found": true,
+      "initial": "RR",
+      "image": "assets/icons/official/raid-rush-tower-defense-td.jpg",
+      "matchedName": "Raid Rush: Tower Defense TD",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/raid-rush-tower-defense-td/ios-1662335371",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6625
     },
     {
       "name": "RAID: Shadow Legends",
@@ -1789,6 +2221,18 @@
       "score": 274,
       "query": "RF ONLINE NEXT",
       "bytes": 68914
+    },
+    {
+      "name": "Rise of Castles: Fire and War",
+      "found": true,
+      "initial": "RO",
+      "image": "assets/icons/official/rise-of-castles-fire-and-war.jpg",
+      "matchedName": "Rise of Castles: Fire and War",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/rise-of-castles-fire-and-war/ios-1411917616",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6434
     },
     {
       "name": "Rise of Castles: Ice and Fire",
@@ -1887,6 +2331,18 @@
       "bytes": 53275
     },
     {
+      "name": "Sea War: Uboat Raid",
+      "found": true,
+      "initial": "SW",
+      "image": "assets/icons/official/sea-war-uboat-raid.jpg",
+      "matchedName": "Sea War: Uboat Raid",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/sea-war-uboat-raid/ios-6447612873",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5756
+    },
+    {
       "name": "Search It - Hidden Objects",
       "found": true,
       "initial": "SI",
@@ -1933,6 +2389,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5958
+    },
+    {
+      "name": "SimCity BuildIt",
+      "found": true,
+      "initial": "SB",
+      "image": "assets/icons/official/simcity-buildit.jpg",
+      "matchedName": "SimCity BuildIt",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/simcity-buildit/ios-913292932",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7524
     },
     {
       "name": "Smash Fest!",
@@ -1989,6 +2457,18 @@
       "bytes": 66387
     },
     {
+      "name": "State of Survival: Zombie War",
+      "found": true,
+      "initial": "SO",
+      "image": "assets/icons/official/state-of-survival-zombie-war.jpg",
+      "matchedName": "State of Survival: Zombie War",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/state-of-survival-zombie-war/ios-1452474937",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7479
+    },
+    {
       "name": "Stormshot",
       "found": true,
       "initial": "S",
@@ -2011,6 +2491,18 @@
       "score": 274,
       "query": "Summoners War X Frieren",
       "bytes": 58077
+    },
+    {
+      "name": "Supremacy: World War 3",
+      "found": true,
+      "initial": "SW",
+      "image": "assets/icons/official/supremacy-world-war-3.jpg",
+      "matchedName": "Supremacy: World War 3",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/supremacy-world-war-3/ios-1510997559",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6650
     },
     {
       "name": "Sword x Staff",
@@ -2037,6 +2529,18 @@
       "bytes": 61682
     },
     {
+      "name": "The Battle Cats",
+      "found": true,
+      "initial": "TB",
+      "image": "assets/icons/official/the-battle-cats.jpg",
+      "matchedName": "The Battle Cats",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/the-battle-cats/ios-850057092",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8828
+    },
+    {
       "name": "The Grand Mafia",
       "found": true,
       "initial": "TG",
@@ -2059,6 +2563,18 @@
       "score": 286,
       "query": "The Seven Deadly Sins",
       "bytes": 123817
+    },
+    {
+      "name": "The Tower - Idle Tower Defense",
+      "found": true,
+      "initial": "TT",
+      "image": "assets/icons/official/the-tower-idle-tower-defense.jpg",
+      "matchedName": "The Tower - Idle Tower Defense",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/the-tower-idle-tower-defense/ios-1575590830",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5272
     },
     {
       "name": "Tile Explorer",
@@ -2133,6 +2649,18 @@
       "bytes": 56948
     },
     {
+      "name": "Titan Rush: Survival",
+      "found": true,
+      "initial": "TR",
+      "image": "assets/icons/official/titan-rush-survival.jpg",
+      "matchedName": "Titan Rush: Survival",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/titan-rush-survival/ios-6759817762",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7371
+    },
+    {
       "name": "Toon Blast",
       "found": true,
       "initial": "TB",
@@ -2143,6 +2671,18 @@
       "score": 262,
       "query": "Toon Blast",
       "bytes": 33696
+    },
+    {
+      "name": "Top Force: Commander",
+      "found": true,
+      "initial": "TF",
+      "image": "assets/icons/official/top-force-commander.jpg",
+      "matchedName": "Top Force: Commander",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/top-force-commander/ios-6761893238",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6560
     },
     {
       "name": "Top Girl",
@@ -2167,6 +2707,18 @@
       "score": 142,
       "query": "Top Heroes",
       "bytes": 102012
+    },
+    {
+      "name": "Top Lords",
+      "found": true,
+      "initial": "TL",
+      "image": "assets/icons/official/top-lords.jpg",
+      "matchedName": "Top Lords",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/top-lords/ios-6767834940",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7568
     },
     {
       "name": "Top War",
@@ -2277,6 +2829,30 @@
       "bytes": 81194
     },
     {
+      "name": "Viking Rise",
+      "found": true,
+      "initial": "VR",
+      "image": "assets/icons/official/viking-rise.jpg",
+      "matchedName": "Viking Rise",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/viking-rise/ios-6443577184",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6584
+    },
+    {
+      "name": "Vikings: War of Clans PvP",
+      "found": true,
+      "initial": "VW",
+      "image": "assets/icons/official/vikings-war-of-clans-pvp.jpg",
+      "matchedName": "Vikings: War of Clans PvP",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/vikings-war-of-clans-pvp/ios-966810173",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7368
+    },
+    {
       "name": "War and Order",
       "found": true,
       "initial": "WA",
@@ -2289,6 +2865,30 @@
       "bytes": 7276
     },
     {
+      "name": "War Inc: Rising",
+      "found": true,
+      "initial": "WI",
+      "image": "assets/icons/official/war-inc-rising.jpg",
+      "matchedName": "War Inc: Rising",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/war-inc-rising/ios-6747767390",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7125
+    },
+    {
+      "name": "War Machines：Battle Tank Games",
+      "found": true,
+      "initial": "WM",
+      "image": "assets/icons/official/war-machines-battle-tank-games.jpg",
+      "matchedName": "War Machines：Battle Tank Games",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/war-machines%EF%BC%9Abattle-tank-games/ios-1058528141",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6160
+    },
+    {
       "name": "Warhammer 40,000: Tacticus",
       "found": true,
       "initial": "W4",
@@ -2299,6 +2899,18 @@
       "score": 286,
       "query": "Warhammer 40,000: Tacticus",
       "bytes": 80219
+    },
+    {
+      "name": "Warline: Sniper Strike",
+      "found": true,
+      "initial": "WS",
+      "image": "assets/icons/official/warline-sniper-strike.jpg",
+      "matchedName": "Warline: Sniper Strike",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/warline-sniper-strike/ios-6742809194",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5715
     },
     {
       "name": "Watcher of Realms",
@@ -2335,6 +2947,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 3421
+    },
+    {
+      "name": "West Game",
+      "found": true,
+      "initial": "WG",
+      "image": "assets/icons/official/west-game.jpg",
+      "matchedName": "West Game",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/west-game/ios-1453356737",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7000
     },
     {
       "name": "Whiteout Survival",
@@ -2421,6 +3045,18 @@
       "bytes": 115378
     },
     {
+      "name": "X-Clash: Survival Challenge",
+      "found": true,
+      "initial": "CS",
+      "image": "assets/icons/official/x-clash-survival-challenge.jpg",
+      "matchedName": "X-Clash: Survival Challenge",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/x-clash-survival-challenge/ios-6744812012",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7438
+    },
+    {
       "name": "XP Hero",
       "found": true,
       "initial": "XH",
@@ -2443,6 +3079,30 @@
       "score": 262,
       "query": "Yarn Loop",
       "bytes": 65631
+    },
+    {
+      "name": "Yu-Gi-Oh! Master Duel",
+      "found": true,
+      "initial": "YG",
+      "image": "assets/icons/official/yu-gi-oh-master-duel.jpg",
+      "matchedName": "Yu-Gi-Oh! Master Duel",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/yu-gi-oh-master-duel/ios-1554247785",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8841
+    },
+    {
+      "name": "Z Route: Redemption",
+      "found": true,
+      "initial": "RR",
+      "image": "assets/icons/official/z-route-redemption.jpg",
+      "matchedName": "Z Route: Redemption",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/z-route-redemption/ios-6762268182",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7313
     },
     {
       "name": "Zenless Zone Zero",
