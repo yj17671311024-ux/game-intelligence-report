@@ -81,6 +81,15 @@ const sources = [
     expectedTitle: "Strategy Games",
     sourceLabel: "AppBrain Google Play - Top Grossing Strategy / US",
   },
+  {
+    key: "iosStrategyGross",
+    label: "iOS Strategy 收入榜 Top 80",
+    short: "iOS Strategy 收入",
+    url: "https://www.appbrain.com/stats/appstore-rankings/top_grossing/games_strategy/us",
+    expectedTitle: "Strategy Games",
+    sourceLabel: "AppBrain App Store - Top Grossing Strategy / US",
+    limit: 80,
+  },
 ];
 
 const iosSource = {
@@ -128,6 +137,12 @@ const aliasMap = new Map(Object.entries({
   "Rogue Legend - Roguelike RPG": "Rogue Legend",
   "WWE Champions: Wrestling RPG": "WWE Champions",
   "Last War:Survival Game": "Last War: Survival Game",
+  "Castle Busters": "Castle Busters: Tower Defense",
+  "Castle Busters - Tower Defense": "Castle Busters: Tower Defense",
+  "Kingdom Guard:Tower Defense TD": "Kingdom Guard",
+  "Tower War": "Tower War - Tactical Conquest",
+  "Tower War: Tactical Conquest": "Tower War - Tactical Conquest",
+  "Rush Royale": "Rush Royale: Tower Defense TD",
   "Total Battle: War Strategy": "Total Battle",
   "Puzzles & Chaos: Frozen Castle": "Puzzles & Chaos",
   "Rise of Kingdoms: Lost Crusade": "Rise of Kingdoms",
@@ -234,6 +249,16 @@ const gameCn = {
   "WWE Champions": "WWE 冠军",
   "AFK Arena": "剑与远征",
   "Last War: Survival Game": "最后战争：生存游戏",
+  "Castle Busters: Tower Defense": "城堡破坏者：塔防",
+  "Kingdom Guard": "王国守卫",
+  "Bloons TD 6": "气球塔防 6",
+  "Bloons TD Battles 2": "气球塔防对战 2",
+  "Tower War - Tactical Conquest": "塔楼战争",
+  "Tower War: Tactical Conquest": "塔楼战争",
+  "Rush Royale: Tower Defense TD": "皇家冲冲冲",
+  "The Tower - Idle Tower Defense": "放置高塔防御",
+  "Raid Rush: Tower Defense TD": "突袭塔防",
+  "Grow Castle - Tower Defense": "成长城堡",
   "King's Choice: Rule Your Fate": "\u56fd\u738b\u7684\u9009\u62e9\uff1a\u547d\u8fd0\u6cd5\u5219",
   "Kingshot": "王国射击",
   "Whiteout Survival": "无尽冬日",
@@ -346,6 +371,15 @@ const devCnRaw = {
   "FunPlus International AG": "FunPlus",
   "RiverGame": "RiverGame",
   "Joy Nice Games": "Joy Nice Games",
+  "Gimica GmbH": "Gimica",
+  "Ninja Kiwi": "Ninja Kiwi（气球塔防团队）",
+  "MY.GAMES B.V.": "MY.GAMES",
+  "Gear Games": "Gear Games",
+  "Gear Inc.": "Gear Inc.",
+  "Gear Inc": "Gear Inc.",
+  "Easybrain Ltd": "Easybrain",
+  "Game Duo Co.,Ltd.": "Game Duo",
+  "Game Duo Co., Ltd.": "Game Duo",
 };
 
 const typeMap = {
@@ -385,15 +419,25 @@ const typeMap = {
   "MapleStory: Idle RPG": "放置 RPG",
   "Top Heroes": "放置 RPG / Kingdom",
   "Last War: Survival Game": "轻玩法 + SLG",
+  "Last Z: Survival Shooter": "轻射击 + 生存策略",
   "Kingshot": "Survival Strategy",
   "Whiteout Survival": "Survival SLG",
   "Puzzles & Survival": "Puzzle + SLG",
+  "Clash Royale": "卡牌 / 轻策略",
+  "Tiles Survive!": "Tile + 生存策略",
+  "Duck Survival": "轻量生存策略",
+  "Castle Busters: Tower Defense": "休闲塔防 / TD",
   "Arknights": "塔防 / 二游",
   "Age of Origins": "4X SLG / 塔防",
-  "Kingdom Guard": "塔防 / 合成",
-  "The Tower - Idle Tower Defense": "放置塔防",
-  "Raid Rush: Tower Defense TD": "塔防 / TD",
-  "Grow Castle - Tower Defense": "塔防 / TD",
+  "Kingdom Guard": "中轻度塔防 / 合成",
+  "The Tower - Idle Tower Defense": "放置塔防 / 中轻度",
+  "Raid Rush: Tower Defense TD": "中轻度塔防 / TD",
+  "Grow Castle - Tower Defense": "中轻度塔防 / TD",
+  "Rush Royale: Tower Defense TD": "中轻度塔防 / 卡牌",
+  "Bloons TD 6": "经典休闲塔防",
+  "Bloons TD Battles 2": "休闲塔防 / PVP",
+  "Tower War - Tactical Conquest": "休闲塔防 / 轻策略",
+  "Tower War: Tactical Conquest": "休闲塔防 / 轻策略",
 };
 
 const familyDefs = [
@@ -655,13 +699,32 @@ function gameType(name, fallback) {
   return typeMap[name] || fallback || "待观察";
 }
 
+function rowText(name, categoryShort = "") {
+  return `${name || ""} ${typeMap[name] || ""} ${categoryShort || ""}`.toLowerCase();
+}
+
+function isMidLightTowerDefenseText(raw) {
+  return /castle busters|kingdom guard|bloons td|tower war|rush royale|raid rush|grow castle|the tower|idle tower|中轻度塔防|休闲塔防|放置塔防|经典休闲塔防/.test(raw);
+}
+
+function isTowerDefenseText(raw) {
+  return isMidLightTowerDefenseText(raw) || /tower|td|defen[cs]e|塔防|arknights|age of origins/.test(raw);
+}
+
+function isCasualStrategyText(raw) {
+  return /last war|last z|clash royale|tiles survive|duck survival|轻玩法|轻射击|卡牌 \/ 轻策略|tile \+ 生存|轻量生存/.test(raw);
+}
+
 function gameFamily(name, categoryShort = "") {
-  const raw = `${name || ""} ${typeMap[name] || ""}`.toLowerCase();
-  if (/tower|td|defen[cs]e|塔防|arknights|age of origins|kingdom guard|grow castle/.test(raw)) return "塔防 / TD";
+  const raw = rowText(name, categoryShort);
+  if (isMidLightTowerDefenseText(raw)) return "休闲 / 中轻度塔防";
+  if (isTowerDefenseText(raw)) return "重度塔防 / 策略塔防";
   if (/idle|afk|放置|slow life|top heroes|hero wars|maplestory idle|crumble/.test(raw)) return "放置 RPG / Idle";
   if (categoryShort.includes("RPG")) return "RPG / 角色收集";
   if (categoryShort.includes("Strategy")) {
-    if (/tower|td|defen[cs]e|塔防|arknights|age of origins|kingdom guard|grow castle/.test(raw)) return "塔防 / TD";
+    if (isMidLightTowerDefenseText(raw)) return "休闲 / 中轻度塔防";
+    if (isTowerDefenseText(raw)) return "重度塔防 / 策略塔防";
+    if (isCasualStrategyText(raw)) return "休闲策略 / 轻 SLG 入口";
     if (/puzzles? & (survival|chaos)|puzzle \+ slg|puzzle/.test(raw)) return "Puzzle + Meta / SLG";
     return "SLG / 4X / 生存策略";
   }
@@ -678,8 +741,10 @@ function gameFamily(name, categoryShort = "") {
 
 function learningPoint(name, categoryShort) {
   if (pointMap[name]) return pointMap[name];
-  const raw = `${name || ""} ${typeMap[name] || ""}`.toLowerCase();
-  if (/tower|td|defen[cs]e|塔防|arknights|age of origins|kingdom guard|grow castle/.test(raw)) return "塔防/TD 线索，重点看防线构筑、关卡压力、角色/塔成长和活动商业化。";
+  const raw = rowText(name, categoryShort);
+  if (isMidLightTowerDefenseText(raw)) return "休闲/中轻度塔防线索，重点看首局可解释性、塔/单位成长、关卡压力和广告到内购转化。";
+  if (isTowerDefenseText(raw)) return "重度塔防/策略塔防线索，重点看防线构筑、角色深度、版本节点和活动商业化。";
+  if (isCasualStrategyText(raw)) return "休闲策略线索，重点看轻玩法前置、素材吸量、短局反馈和中长期 SLG 外层承接。";
   if (/idle|afk|放置|slow life|top heroes|hero wars|maplestory idle|crumble/.test(raw)) return "放置 RPG 线索，重点看离线收益、养成深度、角色收集和低操作长期留存。";
   if (categoryShort.includes("免费")) return "免费榜流量线索，适合看素材包装、首局体验和广告变现入口。";
   if (categoryShort.includes("RPG")) return "RPG 收入线索，适合看角色池、版本活动、IP/美术资产与付费节奏。";
@@ -722,7 +787,7 @@ function parseAppBrain(html, config) {
   const rows = [...html.matchAll(/<tr>[\s\S]*?<\/tr>/g)]
     .map((match) => match[0])
     .filter((row) => row.includes("ranking-rank") && row.includes("ranking-app-cell"))
-    .slice(0, 30)
+    .slice(0, config.limit || 30)
     .map((row) => {
       const rank = Number(stripTags(/<td class="ranking-rank">([\s\S]*?)<\/td>/i.exec(row)?.[1] || ""));
       const appCell = /<td class="ranking-app-cell">([\s\S]*?)<\/td>/i.exec(row)?.[1] || "";
@@ -839,7 +904,7 @@ function parsePreviousRanks() {
   for (const id of ids) {
     const sectionHtml = section(id);
     const bodies = [...sectionHtml.matchAll(/<tbody>([\s\S]*?)<\/tbody>/g)].map((match) => match[1]);
-    const keys = id === "puzzle" ? ["gpPuzzleGross", "iosPuzzleGross", "gpPuzzleFree"] : ["gpRpgGross", "gpStrategyGross"];
+    const keys = id === "puzzle" ? ["gpPuzzleGross", "iosPuzzleGross", "gpPuzzleFree"] : ["gpRpgGross", "gpStrategyGross", "iosStrategyGross"];
     bodies.forEach((tbody, tableIndex) => {
       const key = keys[tableIndex];
       if (!key) return;
@@ -1079,6 +1144,20 @@ function topMovers(data) {
 
 const maleSegmentDefinitions = [
   {
+    key: "casualTowerDefense",
+    title: "休闲 / 中轻度塔防",
+    badge: "轻TD",
+    desc: "优先看规则是否一眼懂、首局压力、塔/单位成长，以及广告流量到内购的承接。",
+    match: (row) => isMidLightTowerDefenseText(rowText(row.name, row.categoryShort)),
+  },
+  {
+    key: "casualStrategy",
+    title: "休闲策略 / 轻 SLG 入口",
+    badge: "轻策略",
+    desc: "轻操作玩法先吸量，再用城建、生存、卡牌或联盟外层承接长期留存。",
+    match: (row) => isCasualStrategyText(rowText(row.name, row.categoryShort)),
+  },
+  {
     key: "coreRpg",
     title: "核心 RPG / 角色收集",
     badge: "RPG",
@@ -1094,17 +1173,17 @@ const maleSegmentDefinitions = [
   },
   {
     key: "towerDefense",
-    title: "塔防 / TD",
-    badge: "TD",
-    desc: "防线构筑、关卡压力、塔/角色成长和活动变现，不再混在泛 Strategy 里。",
-    match: (row) => /tower|td|defen[cs]e|塔防|arknights|age of origins|kingdom guard|grow castle/i.test(`${row.name} ${row.type} ${row.family}`),
+    title: "重度塔防 / 策略塔防",
+    badge: "重TD",
+    desc: "角色、阵营、版本活动和策略外层更重，适合和休闲塔防拆开阅读。",
+    match: (row) => isTowerDefenseText(rowText(row.name, row.categoryShort)) && !isMidLightTowerDefenseText(rowText(row.name, row.categoryShort)),
   },
   {
     key: "slg",
     title: "SLG / 4X / 生存策略",
     badge: "SLG",
     desc: "联盟、赛季、城建、战争和生存题材，是男向 Strategy 主干。",
-    match: (row) => row.categoryShort.includes("Strategy") && !/puzzles? &|puzzle \+ slg|tower|td|defen[cs]e|塔防/i.test(`${row.name} ${row.type} ${row.family}`),
+    match: (row) => row.categoryShort.includes("Strategy") && !isTowerDefenseText(rowText(row.name, row.categoryShort)) && !isCasualStrategyText(rowText(row.name, row.categoryShort)) && !/puzzles? &|puzzle \+ slg/i.test(`${row.name} ${row.type} ${row.family}`),
   },
   {
     key: "puzzleSlg",
@@ -1119,8 +1198,14 @@ function maleSourceRows(data) {
   return uniqueProductRows([
     ...data.gpRpgGross.rows,
     ...data.gpStrategyGross.rows,
+    ...(data.iosStrategyGross?.rows || []),
   ]).sort((a, b) => {
-    const weight = (row) => row.categoryShort.includes("RPG") ? 0 : 30;
+    const weight = (row) => {
+      if (row.categoryShort.includes("RPG")) return 0;
+      if (row.categoryShort.includes("GP Strategy")) return 24;
+      if (row.categoryShort.includes("iOS Strategy")) return 28;
+      return 35;
+    };
     return (a.rank + weight(a)) - (b.rank + weight(b));
   });
 }
@@ -1197,6 +1282,7 @@ function buildAiContext(data) {
       gpPuzzleFree: data.gpPuzzleFree.updated,
       gpRpgGross: data.gpRpgGross.updated,
       gpStrategyGross: data.gpStrategyGross.updated,
+      iosStrategyGross: data.iosStrategyGross?.updated || "",
       iosPuzzleGross: data.iosPuzzleGross.updated,
     },
     rankings: {
@@ -1205,6 +1291,7 @@ function buildAiContext(data) {
       gpPuzzleFree: aiRankRows(data.gpPuzzleFree),
       gpRpgGross: aiRankRows(data.gpRpgGross),
       gpStrategyGross: aiRankRows(data.gpStrategyGross),
+      iosStrategyGross: data.iosStrategyGross ? aiRankRows(data.iosStrategyGross) : [],
     },
     verifiedMovers: topMovers(data).map((row) => ({
       name: row.name,
@@ -1751,6 +1838,8 @@ function summaryCardsHtml(data, insights = null) {
   ]).slice(0, 5);
   const freeRows = data.gpPuzzleFree.rows.slice(0, 5);
   const maleSegments = buildMaleSegments(data);
+  const casualTowerRows = maleSegments.find((segment) => segment.key === "casualTowerDefense")?.rows || [];
+  const casualStrategyRows = maleSegments.find((segment) => segment.key === "casualStrategy")?.rows || [];
   const rpgRows = maleSegments.find((segment) => segment.key === "coreRpg")?.rows || data.gpRpgGross.rows.slice(0, 4);
   const idleRows = maleSegments.find((segment) => segment.key === "idleRpg")?.rows || [];
   const towerRows = maleSegments.find((segment) => segment.key === "towerDefense")?.rows || [];
@@ -1758,21 +1847,30 @@ function summaryCardsHtml(data, insights = null) {
     ...(maleSegments.find((segment) => segment.key === "slg")?.rows || []),
     ...(maleSegments.find((segment) => segment.key === "puzzleSlg")?.rows || []),
   ].slice(0, 4);
-  const watchRows = [
+  const watchRows = uniqueProductRows([
+    casualTowerRows[0],
+    casualTowerRows[1],
     productRef(data, "Meowdoku: Brain Puzzle Games"),
-    productRef(data, "Last War: Survival Game"),
-    productRef(data, "Zenless Zone Zero"),
-  ];
+    casualStrategyRows[0],
+  ].filter(Boolean)).slice(0, 3);
 
   return [
     insightCardHtml(data, "Puzzle 收入头部", "收入榜", "头部仍看关卡产能、长期活动和装修/剧情目标。", revenueRows.map((row) => ({
       row,
       note: row.point,
     }))),
-    insightCardHtml(data, "Puzzle 免费变化", "免费榜", "免费榜更适合看题材包装、首局节奏和素材方向。", freeRows.map((row) => ({
+    insightCardHtml(data, "Puzzle 免费头部", "免费榜", "免费榜更适合看题材包装、首局节奏和素材方向；是否变化只看已核验的动态区。", freeRows.map((row) => ({
       row,
       note: row.point,
     }))),
+    ...(casualTowerRows.length ? [insightCardHtml(data, "休闲 / 中轻度塔防", "轻TD", "优先看规则一眼懂、首局压力、塔/单位成长和广告流量承接。", casualTowerRows.slice(0, 4).map((row) => ({
+      row,
+      note: row.point,
+    })))] : []),
+    ...(casualStrategyRows.length ? [insightCardHtml(data, "休闲策略 / 轻 SLG 入口", "轻策略", "看轻玩法前置是否降低买量理解门槛，再看 SLG/卡牌/生存外层承接。", casualStrategyRows.slice(0, 4).map((row) => ({
+      row,
+      note: row.point,
+    })))] : []),
     insightCardHtml(data, "核心 RPG 主线", "男向", "看版本节点、角色池、美术资产和 IP 拉动。", rpgRows.slice(0, 4).map((row) => ({
       row,
       note: row.point,
@@ -1781,7 +1879,7 @@ function summaryCardsHtml(data, insights = null) {
       row,
       note: row.point,
     })))] : []),
-    ...(towerRows.length ? [insightCardHtml(data, "塔防 / TD 补充", "TD", "塔防产品单独看防线构筑、关卡压力和塔/角色成长。", towerRows.slice(0, 4).map((row) => ({
+    ...(towerRows.length ? [insightCardHtml(data, "重度塔防 / 策略塔防", "重TD", "和中轻度塔防分开看，重点看角色深度、版本内容和策略外层。", towerRows.slice(0, 4).map((row) => ({
       row,
       note: row.point,
     })))] : []),
@@ -1791,9 +1889,10 @@ function summaryCardsHtml(data, insights = null) {
     }))),
     insightCardHtml(data, "明天继续跟踪", "观察", "只保留最需要复看的三个信号。", watchRows.map((row) => ({
       row,
-      note: row.name.includes("Meowdoku") ? "看免费榜第一能否守住，以及猫咪包装是否继续吸量。"
-        : row.name.includes("Last War") ? "看 Strategy #1 能否继续压住 Century 双产品。"
-        : "看版本热度是否继续把 RPG 收入维持在头部。",
+      note: isMidLightTowerDefenseText(rowText(row.name, row.categoryShort)) ? "复看该产品在塔防/策略榜的位置是否稳定，并拆首局和成长线。"
+        : row.name.includes("Meowdoku") ? "看免费榜第一能否守住，以及猫咪包装是否继续吸量。"
+        : isCasualStrategyText(rowText(row.name, row.categoryShort)) ? "复看轻玩法前置是否继续带动策略榜位置。"
+        : "复看榜内位置是否稳定，避免把未核验变化写成新进或上升。",
     }))),
   ].join("");
 }
@@ -1820,18 +1919,22 @@ function changesPanelHtml(data, movers, insights = null) {
   const moverListHtml = moverItems.length
     ? moverItems.map((item) => compactProductHtml(data, item.row, item.note, "mover-item")).join("")
     : `<div class="empty-state">暂无可核验的新进 / 上升产品；今日动态不强行生成。</div>`;
+  const segments = buildMaleSegments(data);
+  const casualTowerRows = segments.find((segment) => segment.key === "casualTowerDefense")?.rows || [];
+  const casualStrategyRows = segments.find((segment) => segment.key === "casualStrategy")?.rows || [];
   const watchRows = insights?.watch?.length ? insights.watch.map((item) => ({
     row: productRef(data, item.name),
     note: item.note,
   })) : [
     { row: productRef(data, "Meowdoku: Brain Puzzle Games"), note: "免费榜头部是否稳定，是休闲新品观察重点。" },
-    { row: productRef(data, "Last War: Survival Game"), note: "男向 Strategy 龙头是否继续压住同题材竞品。" },
-    { row: productRef(data, "Zenless Zone Zero"), note: "角色池和版本节点是否继续带动 RPG 收入。" },
+    ...(casualTowerRows[0] ? [{ row: casualTowerRows[0], note: "中轻度塔防样本优先看榜内位置、首局压力和成长线是否稳定。" }] : []),
+    ...(casualStrategyRows[0] ? [{ row: casualStrategyRows[0], note: "休闲策略样本优先看轻玩法入口与 SLG 外层承接。" }] : []),
   ];
   const accountHtml = insights?.accountCards?.length
     ? insights.accountCards.map((card) => accountCardHtml(data, card.title || "账号观察", card.subtitle || "按产品集观察", card.products)).join("")
     : [
       accountCardHtml(data, "Oakever 免费矩阵", "猫咪 / 迷宫 / 纸牌 / Tile 多题材并行", ["Meowdoku: Brain Puzzle Games", "Amaze GO!", "Jigsawcard Solitaire Puzzle", "Tile Explorer - Triple Match"]),
+      accountCardHtml(data, "中轻度塔防观察池", "休闲 TD / 放置 TD / 卡牌 TD 分开看", ["Castle Busters: Tower Defense", "Kingdom Guard", "The Tower - Idle Tower Defense", "Bloons TD 6"]),
       accountCardHtml(data, "Century 男向双线", "4X / 生存 SLG 两个核心收入样本", ["Kingshot", "Whiteout Survival"]),
       accountCardHtml(data, "Devsisters RPG 账号", "CookieRun IP 的 RPG 与 Idle 延展", ["CookieRun: Kingdom", "CookieRun: Crumble - Idle RPG"]),
     ].join("");
@@ -1861,7 +1964,7 @@ function changesPanelHtml(data, movers, insights = null) {
           <article class="card motion-card">
             <div class="motion-head">
               <h3>明天继续看</h3>
-              <span>3 条</span>
+              <span>${watchRows.length} 条</span>
             </div>
             <div class="mini-list watch-list">${watchRows.map((item) => compactProductHtml(data, item.row, item.note, "watch-item")).join("")}
             </div>
@@ -1886,10 +1989,11 @@ function html(data, iconEntries, insights = null) {
   const generatedAt = `${reportDate} ${new Intl.DateTimeFormat("zh-CN", { timeZone: "Asia/Shanghai", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date())}`;
   const snapshotBits = [
     `AppBrain：${data.gpPuzzleGross.updated || "暂无快照时间"}`,
+    `iOS Strategy：${data.iosStrategyGross?.updated || "暂无快照时间"}`,
     `AppCurrents：${data.iosPuzzleGross.updated || "暂无快照时间"}`,
   ];
-  const fallbackTitle = `${displayMonthDay(reportDate)}更新：Puzzle 与男向细分榜单观察`;
-  const fallbackLead = `公开榜单源当前可见最新快照为 ${snapshotBits.join("；")}；日报日期为 ${reportDate}。先看结论和动态，再看厂商学习卡，最后查完整榜单。`;
+  const fallbackTitle = `${displayMonthDay(reportDate)}更新：休闲、Puzzle 与中轻度塔防观察`;
+  const fallbackLead = `公开榜单源当前可见最新快照为 ${snapshotBits.join("；")}；日报日期为 ${reportDate}。排名只展示来源抓到的原始名次，动态只在同榜单有昨日快照可比时标注。`;
   const titleText = insights?.title || fallbackTitle;
   const leadText = insights?.lead || fallbackLead;
   const unmatched = Array.from(new Set(rows.map((row) => row.name))).filter((name) => {
@@ -2023,7 +2127,7 @@ function html(data, iconEntries, insights = null) {
         <div class="chips">
           <span class="chip blue">Puzzle 完整榜单</span>
           <span class="chip green">图像速览</span>
-          <span class="chip red">RPG / 放置 / 塔防 / Strategy</span>
+          <span class="chip red">休闲塔防 / 放置 / RPG / Strategy</span>
           <span class="chip gold">厂商作品集</span>
           <span class="chip">对比 ${previousDate}</span>
         </div>
@@ -2068,8 +2172,8 @@ function html(data, iconEntries, insights = null) {
           ["Meowdoku: Brain Puzzle Games", "GP Puzzle 免费 #1，新免费头部"],
           ["Magic Sort!", "GP 免费 #2 / 收入 #15"],
           ["Royal Match", "GP/iOS Puzzle 收入 #1"],
-          ["Zenless Zone Zero", "GP RPG 收入 #2"],
-          ["Arknights", "塔防 / 二游样本"],
+          ["Castle Busters: Tower Defense", "iOS Strategy 中轻度塔防样本"],
+          ["Kingdom Guard", "中轻度塔防 / 合成样本"],
           ["Last War: Survival Game", "GP Strategy 收入 #1"],
           ["Kingshot", "GP Strategy 收入 #2"],
           ["Whiteout Survival", "GP Strategy 收入 #3"],
@@ -2117,15 +2221,18 @@ function html(data, iconEntries, insights = null) {
     </section>
 
     <section id="male" class="section panel">
-      <h2>男性向 / RPG / 放置 RPG / 塔防 / Strategy</h2>
-      <p class="sub">先按男向细分玩法拆开看，再回到 Google Play RPG 与 Strategy 原始完整榜单核对。</p>
-      <div class="notice"><strong>细分口径：</strong>RPG 榜不再只看泛角色收集；会单独拎出放置 RPG / Idle。Strategy 榜也会拆出塔防 / TD、SLG / 4X、生存策略和 Puzzle + SLG 混合外层。</div>
+      <h2>男性向 / 休闲策略 / 中轻度塔防 / RPG / Strategy</h2>
+      <p class="sub">先按休闲策略、中轻度塔防、放置 RPG、核心 RPG、SLG 拆开看，再回到原始完整榜单核对来源名次。</p>
+      <div class="notice"><strong>细分口径：</strong>中轻度塔防优先看 iOS Strategy 深榜和 Google Play Strategy 榜内样本；RPG 榜单独拎出放置 RPG / Idle；Strategy 榜继续拆出休闲策略入口、重度塔防、SLG / 4X、生存策略和 Puzzle + SLG 混合外层。</div>
       <div class="insight-grid">${maleSegmentCardsHtml(data)}
       </div>
       <h3>${escapeHtml(data.gpRpgGross.label)}</h3>
       <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>玩法族群</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>${categoryRows(data.gpRpgGross.rows)}</tbody></table></div>
       <h3 style="margin-top:22px">${escapeHtml(data.gpStrategyGross.label)}</h3>
       <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>玩法族群</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>${categoryRows(data.gpStrategyGross.rows)}</tbody></table></div>
+      <h3 style="margin-top:22px">${escapeHtml(data.iosStrategyGross.label)}</h3>
+      <div class="notice"><strong>用途：</strong>这个深榜主要用于补充中轻度塔防和休闲策略样本；页面会保留原始来源排名，不把深榜名次改写成 Top30。</div>
+      <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>玩法族群</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>${categoryRows(data.iosStrategyGross.rows)}</tbody></table></div>
     </section>
 
     <section id="sources" class="section panel">
@@ -2134,7 +2241,7 @@ function html(data, iconEntries, insights = null) {
         ${[...sources, { ...iosSource, sourceLabel: iosSource.sourceLabel }].map((source) => `<li><a href="${escapeHtml(source.url)}">${escapeHtml(source.sourceLabel)}</a></li>`).join("\n")}
         <li><a href="https://itunes.apple.com/search">Apple iTunes Search API - 游戏图标参考</a></li>
       </ul>
-      <div class="notice"><strong>口径：</strong>Google Play 榜单使用 AppBrain 美国区公开榜单，iOS Puzzle 使用 AppCurrents 美国区当前页。第三方榜单可能存在估算、延迟和分类差异，本日报用于产品学习与趋势观察。</div>
+      <div class="notice"><strong>口径：</strong>Google Play 榜单与 iOS Strategy 深榜使用 AppBrain 美国区公开榜单，iOS Puzzle 使用 AppCurrents 美国区当前页。第三方榜单可能存在估算、延迟和分类差异，本日报用于产品学习与趋势观察；所有排名徽标均保留来源榜单名和原始名次。</div>
       <div class="notice"><strong>图标匹配：</strong>本日报共纳入 ${new Set(rows.map((row) => row.name)).size} 个去重游戏名；未匹配到高可信图标的游戏：${unmatched.length ? unmatched.map(escapeHtml).join("、") : "无"}。</div>
     </section>
 
