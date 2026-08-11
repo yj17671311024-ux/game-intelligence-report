@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-11T04:03:38.113Z",
-  "total": 260,
-  "found": 256,
+  "preparedAt": "2026-08-11T09:46:03.760Z",
+  "total": 262,
+  "found": 258,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -333,6 +333,18 @@
       "score": 142,
       "query": "Brain Puzzle 3",
       "bytes": 71162
+    },
+    {
+      "name": "Brain Puzzle 3: Crazy Mind",
+      "found": true,
+      "initial": "BP",
+      "image": "assets/icons/official/brain-puzzle-3-crazy-mind.jpg",
+      "matchedName": "Brain Puzzle 3: Crazy Mind",
+      "artistName": "JoyGame Studio",
+      "sourceUrl": "https://www.appbrain.com/app/brain-puzzle-3-crazy-mind/com.brain.crazy.joygame",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5137
     },
     {
       "name": "Brain Puzzle: Tricky Quest",
@@ -947,6 +959,18 @@
       "score": 286,
       "query": "Flambé: Merge and Cook",
       "bytes": 58307
+    },
+    {
+      "name": "Food Hunt: Pixel Puzzle",
+      "found": true,
+      "initial": "FH",
+      "image": "assets/icons/official/food-hunt-pixel-puzzle.jpg",
+      "matchedName": "Food Hunt: Pixel Puzzle",
+      "artistName": "EVERFUN",
+      "sourceUrl": "https://www.appbrain.com/app/food-hunt-pixel-puzzle/com.vigafun.funfinity.foodhunt",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6206
     },
     {
       "name": "Foodstars: Merge & Cook",
