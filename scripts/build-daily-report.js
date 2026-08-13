@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const { execFileSync } = require("child_process");
+const { createRequire } = require("module");
 
 const outputDir = process.env.OUTPUT_DIR || "C:\\Users\\admin\\Documents\\Codex\\2026-07-28\\new-chat\\outputs";
 const siteDir = process.env.SITE_DIR || path.join(outputDir, "cloudflare-pages-site");
@@ -7,6 +9,8 @@ const archiveDir = path.join(siteDir, "archive");
 const siteOfficialIconDir = path.join(siteDir, "assets", "icons", "official");
 const localOfficialIconDir = path.join(outputDir, "assets", "icons", "official");
 const metadataPath = path.join(siteOfficialIconDir, "icon-metadata.json");
+const siteRequire = createRequire(path.join(siteDir, "package.json"));
+let googlePlayScraperCache = null;
 
 function todayInShanghai() {
   const parts = new Intl.DateTimeFormat("en-CA", {
@@ -56,6 +60,14 @@ const sources = [
     url: "https://www.appbrain.com/stats/google-play-rankings/top_grossing/puzzle/us",
     expectedTitle: "Puzzle Games",
     sourceLabel: "AppBrain Google Play - Top Grossing Puzzle / US",
+    sourceProvider: "appbrain",
+    official: {
+      category: "GAME_PUZZLE",
+      collection: "GROSSING",
+      url: "https://play.google.com/store/apps/category/GAME_PUZZLE?hl=en_US&gl=US",
+      sourceLabel: "Google Play official - Top Grossing Puzzle / US",
+      sourceProvider: "google-play-official",
+    },
   },
   {
     key: "gpPuzzleFree",
@@ -64,6 +76,14 @@ const sources = [
     url: "https://www.appbrain.com/stats/google-play-rankings/top_free/puzzle/us",
     expectedTitle: "Puzzle Games",
     sourceLabel: "AppBrain Google Play - Top Free Puzzle / US",
+    sourceProvider: "appbrain",
+    official: {
+      category: "GAME_PUZZLE",
+      collection: "TOP_FREE",
+      url: "https://play.google.com/store/apps/category/GAME_PUZZLE?hl=en_US&gl=US",
+      sourceLabel: "Google Play official - Top Free Puzzle / US",
+      sourceProvider: "google-play-official",
+    },
   },
   {
     key: "gpRpgGross",
@@ -72,6 +92,14 @@ const sources = [
     url: "https://www.appbrain.com/stats/google-play-rankings/top_grossing/role_playing/us",
     expectedTitle: "Role Playing Games",
     sourceLabel: "AppBrain Google Play - Top Grossing Role Playing / US",
+    sourceProvider: "appbrain",
+    official: {
+      category: "GAME_ROLE_PLAYING",
+      collection: "GROSSING",
+      url: "https://play.google.com/store/apps/category/GAME_ROLE_PLAYING?hl=en_US&gl=US",
+      sourceLabel: "Google Play official - Top Grossing Role Playing / US",
+      sourceProvider: "google-play-official",
+    },
   },
   {
     key: "gpStrategyGross",
@@ -80,6 +108,14 @@ const sources = [
     url: "https://www.appbrain.com/stats/google-play-rankings/top_grossing/strategy/us",
     expectedTitle: "Strategy Games",
     sourceLabel: "AppBrain Google Play - Top Grossing Strategy / US",
+    sourceProvider: "appbrain",
+    official: {
+      category: "GAME_STRATEGY",
+      collection: "GROSSING",
+      url: "https://play.google.com/store/apps/category/GAME_STRATEGY?hl=en_US&gl=US",
+      sourceLabel: "Google Play official - Top Grossing Strategy / US",
+      sourceProvider: "google-play-official",
+    },
   },
   {
     key: "iosStrategyGross",
@@ -88,6 +124,7 @@ const sources = [
     url: "https://www.appbrain.com/stats/appstore-rankings/top_grossing/games_strategy/us",
     expectedTitle: "Strategy Games",
     sourceLabel: "AppBrain App Store - Top Grossing Strategy / US",
+    sourceProvider: "appbrain",
     limit: 80,
   },
 ];
@@ -98,6 +135,7 @@ const iosSource = {
   short: "iOS Puzzle 收入",
   url: "https://appcurrents.com/charts/us/puzzle-games",
   sourceLabel: "AppCurrents iOS - Top Grossing Puzzle / US",
+  sourceProvider: "appcurrents",
 };
 
 const aliasMap = new Map(Object.entries({
@@ -792,6 +830,100 @@ async function fetchText(url, expectedTitle) {
   throw new Error(`failed to fetch ${url}: ${lastError ? lastError.message : "unknown error"}`);
 }
 
+function loadGooglePlayScraper() {
+  if (process.env.DISABLE_GOOGLE_PLAY_OFFICIAL === "1") return null;
+  if (googlePlayScraperCache) return googlePlayScraperCache;
+  try {
+    const loaded = siteRequire("google-play-scraper");
+    googlePlayScraperCache = loaded.default || loaded;
+    return googlePlayScraperCache;
+  } catch (firstError) {
+    if (process.env.DISABLE_AUTO_NPM_INSTALL === "1") {
+      console.warn(`Google Play official scraper unavailable: ${firstError.message}`);
+      return null;
+    }
+    try {
+      const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
+      console.log("install google-play-scraper@10.1.3 for official Google Play rankings");
+      execFileSync(npmCommand, ["install", "google-play-scraper@10.1.3", "--no-save", "--no-audit", "--no-fund"], {
+        cwd: siteDir,
+        stdio: "inherit",
+        timeout: 180000,
+      });
+      const loaded = siteRequire("google-play-scraper");
+      googlePlayScraperCache = loaded.default || loaded;
+      return googlePlayScraperCache;
+    } catch (installError) {
+      console.warn(`Google Play official scraper install failed: ${installError.message}`);
+      return null;
+    }
+  }
+}
+
+async function fetchGooglePlayOfficial(config) {
+  const official = config.official;
+  if (!official) throw new Error("missing official Google Play config");
+  const gplay = loadGooglePlayScraper();
+  if (!gplay || !gplay.list || !gplay.category || !gplay.collection) {
+    throw new Error("google-play-scraper is not available");
+  }
+  const apps = await gplay.list({
+    category: gplay.category[official.category] || official.category,
+    collection: gplay.collection[official.collection] || official.collection,
+    num: config.limit || 30,
+    lang: "en",
+    country: "us",
+    fullDetail: false,
+  });
+  if (!Array.isArray(apps) || apps.length === 0) {
+    throw new Error(`Google Play official list returned no rows for ${config.key}`);
+  }
+  const rows = apps.slice(0, config.limit || 30).map((app, index) => {
+    const rawName = app.title || "";
+    const name = canonicalName(rawName);
+    const developer = app.developer || "";
+    return {
+      rank: index + 1,
+      rawName,
+      name,
+      developer,
+      developerCn: devCn(developer),
+      type: gameType(name, config.short),
+      family: gameFamily(name, config.short),
+      point: learningPoint(name, config.short),
+      categoryKey: config.key,
+      categoryShort: config.short,
+      icon: app.icon || "",
+      appId: app.appId || "",
+      sourceUrl: app.url || (app.appId ? `https://play.google.com/store/apps/details?id=${encodeURIComponent(app.appId)}&hl=en_US&gl=US` : official.url),
+      sourceProvider: official.sourceProvider,
+    };
+  });
+  return {
+    updated: todayInShanghai(),
+    rows,
+    url: official.url,
+    sourceLabel: official.sourceLabel,
+    sourceProvider: official.sourceProvider,
+    fallbackSourceLabel: config.sourceLabel,
+    fallbackUrl: config.url,
+  };
+}
+
+async function fetchRankList(config) {
+  if (config.official) {
+    try {
+      console.log(`fetch official ${config.key}`);
+      return { ...config, ...await fetchGooglePlayOfficial(config) };
+    } catch (error) {
+      console.warn(`official Google Play failed for ${config.key}, fallback to AppBrain: ${error.message}`);
+    }
+  }
+  console.log(`fetch fallback ${config.key}`);
+  const html = await fetchText(config.url, config.expectedTitle);
+  return { ...config, ...parseAppBrain(html, config) };
+}
+
 function parseAppBrain(html, config) {
   const updated = /Last updated:\s*<time>([^<]+)/i.exec(html)?.[1] || "";
   const rows = [...html.matchAll(/<tr>[\s\S]*?<\/tr>/g)]
@@ -820,9 +952,10 @@ function parseAppBrain(html, config) {
         categoryShort: config.short,
         icon,
         sourceUrl: appbrainUrl,
+        sourceProvider: config.sourceProvider || "appbrain",
       };
     });
-  return { updated, rows };
+  return { updated, rows, sourceProvider: config.sourceProvider || "appbrain" };
 }
 
 function parseAppCurrents(html) {
@@ -851,8 +984,10 @@ function parseAppCurrents(html) {
             categoryShort: iosSource.short,
             icon: "",
             sourceUrl: item.url || iosSource.url,
+            sourceProvider: iosSource.sourceProvider || "appcurrents",
           };
         }),
+        sourceProvider: iosSource.sourceProvider || "appcurrents",
       };
     } catch {
       // Keep looking for a parseable JSON-LD block.
@@ -894,9 +1029,21 @@ function parsePreviousRanks() {
     __available: false,
     __date: previousDate || "",
     __path: previousPath || "",
+    __providers: {},
   };
   if (!previousPath) return out;
   const html = fs.readFileSync(previousPath, "utf8");
+  try {
+    const sourceSnapshot = /<script id="rank-source-snapshot" type="application\/json">([\s\S]*?)<\/script>/i.exec(html)?.[1] || "";
+    if (sourceSnapshot) {
+      const parsed = JSON.parse(decodeHtml(sourceSnapshot));
+      for (const [key, value] of Object.entries(parsed || {})) {
+        out.__providers[key] = value.sourceProvider || "";
+      }
+    }
+  } catch {
+    out.__providers = {};
+  }
   const ids = ["puzzle", "male"];
   let parsedTables = 0;
 
@@ -934,7 +1081,10 @@ function parsePreviousRanks() {
 function attachDeltas(data, previousRanks) {
   const hasComparableSnapshot = Boolean(previousRanks && previousRanks.__available);
   for (const [key, list] of Object.entries(data)) {
-    const previous = hasComparableSnapshot ? previousRanks[key] : null;
+    const currentProvider = list.sourceProvider || "";
+    const previousProvider = previousRanks?.__providers?.[key] || "";
+    const sameSource = Boolean(currentProvider && previousProvider && currentProvider === previousProvider);
+    const previous = hasComparableSnapshot && sameSource ? previousRanks[key] : null;
     for (const row of list.rows) {
       if (!previous || previous.size === 0) {
         row.previousRank = null;
@@ -1508,6 +1658,38 @@ function categoryRows(rows) {
   }).join("");
 }
 
+function rankSourceSnapshot(data) {
+  const snapshot = {};
+  for (const [key, list] of Object.entries(data)) {
+    snapshot[key] = {
+      sourceProvider: list.sourceProvider || "",
+      sourceLabel: list.sourceLabel || "",
+      url: list.url || "",
+      updated: list.updated || "",
+    };
+  }
+  return JSON.stringify(snapshot);
+}
+
+function sourceSummary(data) {
+  const providers = new Set(Object.values(data).map((list) => list.sourceProvider || "").filter(Boolean));
+  const gpOfficial = providers.has("google-play-official");
+  const labels = [];
+  if (gpOfficial) labels.push("Google Play 官方公开榜单");
+  if (providers.has("appbrain")) labels.push("AppBrain");
+  if (providers.has("appcurrents")) labels.push("AppCurrents");
+  return labels.join(" / ") || "公开榜单源";
+}
+
+function sourceListHtml(data) {
+  return Object.values(data)
+    .map((source) => {
+      const fallback = source.fallbackSourceLabel ? `（兜底源：${source.fallbackSourceLabel}）` : "";
+      return `<li><a href="${escapeHtml(source.url)}">${escapeHtml(source.sourceLabel || source.label)}</a>${escapeHtml(fallback)}</li>`;
+    })
+    .join("\n");
+}
+
 function puzzleFamilyCardsHtml(data) {
   const ranks = rankLookup(data);
   const puzzleRows = [
@@ -2027,6 +2209,7 @@ function html(data, iconEntries, insights = null) {
     `iOS Strategy：${data.iosStrategyGross?.updated || "暂无快照时间"}`,
     `AppCurrents：${data.iosPuzzleGross.updated || "暂无快照时间"}`,
   ];
+  snapshotBits[0] = `${data.gpPuzzleGross.sourceLabel || "Google Play"}: ${data.gpPuzzleGross.updated || "no snapshot time"}`;
   const fallbackTitle = `${displayMonthDay(reportDate)}更新：休闲、Puzzle 与中轻度塔防观察`;
   const fallbackLead = `公开榜单源当前可见最新快照为 ${snapshotBits.join("；")}；日报日期为 ${reportDate}。排名只展示来源抓到的原始名次，动态只在同榜单有昨日快照可比时标注。`;
   const titleText = insights?.title || fallbackTitle;
@@ -2177,7 +2360,7 @@ function html(data, iconEntries, insights = null) {
         <div><b>日报日期</b><div class="date">${reportDate}</div></div>
         <p><b>地区：</b>美国区</p>
         <p><b>平台：</b>Google Play / iOS</p>
-        <p><b>榜单源：</b>AppBrain / AppCurrents 公开榜单</p>
+        <p><b>榜单源：</b>${escapeHtml(sourceSummary(data))}</p>
       </div>
     </section>
 
@@ -2279,7 +2462,7 @@ function html(data, iconEntries, insights = null) {
     <section id="sources" class="section panel">
       <h2>来源与口径</h2>
       <ul>
-        ${[...sources, { ...iosSource, sourceLabel: iosSource.sourceLabel }].map((source) => `<li><a href="${escapeHtml(source.url)}">${escapeHtml(source.sourceLabel)}</a></li>`).join("\n")}
+        ${sourceListHtml(data)}
         <li><a href="https://itunes.apple.com/search">Apple iTunes Search API - 游戏图标参考</a></li>
       </ul>
       <div class="notice"><strong>口径：</strong>Google Play 榜单与 iOS Strategy 深榜使用 AppBrain 美国区公开榜单，iOS Puzzle 使用 AppCurrents 美国区当前页。第三方榜单可能存在估算、延迟和分类差异，本日报用于产品学习与趋势观察；所有排名徽标均保留来源榜单名和原始名次。</div>
@@ -2292,6 +2475,7 @@ function html(data, iconEntries, insights = null) {
     <footer>生成日期：${escapeHtml(generatedAt)}（Asia/Shanghai）</footer>
   </main>
 
+  <script id="rank-source-snapshot" type="application/json">${escapeHtml(rankSourceSnapshot(data))}</script>
   <script>
 ${iconMapScript(iconEntries, rows)}
 
@@ -2387,9 +2571,7 @@ ${iconMapScript(iconEntries, rows)}
 async function main() {
   const data = {};
   for (const config of sources) {
-    console.log(`fetch ${config.key}`);
-    const html = await fetchText(config.url, config.expectedTitle);
-    data[config.key] = { ...config, ...parseAppBrain(html, config) };
+    data[config.key] = await fetchRankList(config);
     await sleep(1600);
   }
 
