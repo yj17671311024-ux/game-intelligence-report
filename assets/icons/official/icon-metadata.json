@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-13T02:00:51.525Z",
-  "total": 270,
-  "found": 266,
+  "preparedAt": "2026-08-13T10:52:33.047Z",
+  "total": 272,
+  "found": 268,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -2319,6 +2319,18 @@
       "bytes": 91049
     },
     {
+      "name": "Reverse: 1999 - 3rd Anniv.",
+      "found": true,
+      "initial": "R1",
+      "image": "assets/icons/official/reverse-1999-3rd-anniv.jpg",
+      "matchedName": "Reverse: 1999 - 3rd Anniv.",
+      "artistName": "Bluepoch Co.,Ltd.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.bluepoch.m.en.reverse1999",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 452020
+    },
+    {
       "name": "RF ONLINE NEXT",
       "found": true,
       "initial": "RO",
@@ -3235,6 +3247,18 @@
       "score": 154,
       "query": "Zenless Zone Zero",
       "bytes": 62442
+    },
+    {
+      "name": "Zoodoku",
+      "found": true,
+      "initial": "Z",
+      "image": "assets/icons/official/zoodoku.jpg",
+      "matchedName": "Zoodoku",
+      "artistName": "Nebula  Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.nebula.zoodoku",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 347737
     }
   ]
 }
