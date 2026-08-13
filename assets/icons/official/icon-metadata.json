@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-12T02:05:09.879Z",
-  "total": 262,
-  "found": 258,
+  "preparedAt": "2026-08-13T02:00:51.525Z",
+  "total": 270,
+  "found": 266,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -188,6 +188,18 @@
       "score": 274,
       "query": "Arrows - Puzzle Escape",
       "bytes": 23488
+    },
+    {
+      "name": "Avatar: Realms Collide",
+      "found": true,
+      "initial": "AR",
+      "image": "assets/icons/official/avatar-realms-collide.jpg",
+      "matchedName": "Avatar: Realms Collide",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/avatar-realms-collide/ios-6479603752",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7163
     },
     {
       "name": "Ball Sort Puzzle - Color Games",
@@ -611,6 +623,18 @@
       "bytes": 79964
     },
     {
+      "name": "Cooking Diary Restaurant Game",
+      "found": true,
+      "initial": "CD",
+      "image": "assets/icons/official/cooking-diary-restaurant-game.jpg",
+      "matchedName": "Cooking Diary® Restaurant Game",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/cooking-diary%C2%AE-restaurant-game/ios-1214763610",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8261
+    },
+    {
       "name": "Cube Land Puzzle Game",
       "found": true,
       "initial": "CL",
@@ -657,6 +681,18 @@
       "score": 274,
       "query": "Dark War Survival",
       "bytes": 64430
+    },
+    {
+      "name": "DC: Dark Legion",
+      "found": true,
+      "initial": "DD",
+      "image": "assets/icons/official/dc-dark-legion.jpg",
+      "matchedName": "DC: Dark Legion™",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/dc-dark-legion%E2%84%A2/ios-6479020757",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7282
     },
     {
       "name": "Diablo Immortal",
@@ -717,6 +753,18 @@
       "score": 262,
       "query": "Domino Dreams",
       "bytes": 49032
+    },
+    {
+      "name": "Doomsday: Odysseus Returns",
+      "found": true,
+      "initial": "DO",
+      "image": "assets/icons/official/doomsday-odysseus-returns.jpg",
+      "matchedName": "Doomsday: Odysseus Returns",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/doomsday-odysseus-returns/ios-1552206075",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5953
     },
     {
       "name": "Draft Showdown",
@@ -849,6 +897,18 @@
       "score": 95,
       "query": "Evony: The King's Return",
       "bytes": 45384
+    },
+    {
+      "name": "F1 Clash - Official 2026 Game",
+      "found": true,
+      "initial": "FC",
+      "image": "assets/icons/official/f1-clash-official-2026-game.jpg",
+      "matchedName": "F1® Clash - Official 2026 Game",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/f1%C2%AE-clash-official-2026-game/ios-1434561536",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7236
     },
     {
       "name": "Fate/Grand Order",
@@ -1923,6 +1983,18 @@
       "bytes": 48716
     },
     {
+      "name": "Narco Empire",
+      "found": true,
+      "initial": "NE",
+      "image": "assets/icons/official/narco-empire.jpg",
+      "matchedName": "Narco Empire",
+      "artistName": "Sparkhaven HK Limited",
+      "sourceUrl": "https://www.appbrain.com/app/narco-empire/com.spark.sp.gp",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 1927
+    },
+    {
       "name": "NTE: Neverness to Everness",
       "found": true,
       "initial": "NN",
@@ -1933,6 +2005,18 @@
       "score": 286,
       "query": "NTE: Neverness to Everness",
       "bytes": 103006
+    },
+    {
+      "name": "Number Match - Number Games",
+      "found": true,
+      "initial": "NM",
+      "image": "assets/icons/official/number-match-number-games.jpg",
+      "matchedName": "Number Match - Number Games",
+      "artistName": "Easybrain",
+      "sourceUrl": "https://www.appbrain.com/app/number-match-number-games/com.easybrain.number.puzzle.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 2038
     },
     {
       "name": "NYT Games",
@@ -2935,6 +3019,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5715
+    },
+    {
+      "name": "Warpath: Ace Shooter",
+      "found": true,
+      "initial": "WA",
+      "image": "assets/icons/official/warpath-ace-shooter.jpg",
+      "matchedName": "Warpath: Ace Shooter",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/warpath-ace-shooter/ios-1529067679",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6156
     },
     {
       "name": "Watcher of Realms",
