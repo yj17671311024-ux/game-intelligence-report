@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-13T10:52:33.047Z",
-  "total": 272,
-  "found": 268,
+  "preparedAt": "2026-08-14T02:09:06.472Z",
+  "total": 278,
+  "found": 274,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -815,6 +815,18 @@
       "bytes": 63919
     },
     {
+      "name": "Egg, Inc.",
+      "found": true,
+      "initial": "EI",
+      "image": "assets/icons/official/egg-inc.jpg",
+      "matchedName": "Egg, Inc.",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/egg-inc/ios-993492744",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 3922
+    },
+    {
       "name": "Emoji Match: Fun Puzzle Game",
       "found": true,
       "initial": "EM",
@@ -984,18 +996,6 @@
       }
     },
     {
-      "name": "Flambé: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge & Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6265
-    },
-    {
       "name": "Flambe: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1006,6 +1006,18 @@
       "score": 94,
       "query": "Flambe: Merge & Cook",
       "bytes": 58307
+    },
+    {
+      "name": "Flambé: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge & Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6265
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1406,6 +1418,18 @@
       "bytes": 93598
     },
     {
+      "name": "JoJo's Bizarre Adventure: GS",
+      "found": true,
+      "initial": "JB",
+      "image": "assets/icons/official/jojo-s-bizarre-adventure-gs.jpg",
+      "matchedName": "JoJo's Bizarre Adventure: GS",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/jojos-bizarre-adventure-gs/ios-6757908157",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8963
+    },
+    {
       "name": "King's Choice",
       "found": true,
       "initial": "KC",
@@ -1778,6 +1802,18 @@
       "bytes": 56132
     },
     {
+      "name": "MARVEL Future Fight",
+      "found": true,
+      "initial": "MF",
+      "image": "assets/icons/official/marvel-future-fight.jpg",
+      "matchedName": "MARVEL Future Fight",
+      "artistName": "Netmarble",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.netmarble.mherosgb",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 249362
+    },
+    {
       "name": "MARVEL SNAP",
       "found": true,
       "initial": "MS",
@@ -1969,6 +2005,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 7820
+    },
+    {
+      "name": "Monster Legends - Battle Game",
+      "found": true,
+      "initial": "ML",
+      "image": "assets/icons/official/monster-legends-battle-game.jpg",
+      "matchedName": "Monster Legends - Battle Game",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/monster-legends-battle-game/ios-653508448",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6326
     },
     {
       "name": "Mystery Town",
@@ -2449,6 +2497,18 @@
       "score": 95,
       "query": "Screwdom 3D",
       "bytes": 53275
+    },
+    {
+      "name": "SD Gundam G Generation ETERNAL",
+      "found": true,
+      "initial": "SG",
+      "image": "assets/icons/official/sd-gundam-g-generation-eternal.jpg",
+      "matchedName": "SD Gundam G Generation ETERNAL",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/sd-gundam-g-generation-eternal/ios-6692615881",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 9707
     },
     {
       "name": "Sea War: Uboat Raid",
@@ -3259,6 +3319,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 347737
+    },
+    {
+      "name": "لعبة مزاين",
+      "found": true,
+      "initial": "GM",
+      "image": "assets/icons/official/game.jpg",
+      "matchedName": "لعبة مزاين",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/%D9%84%D8%B9%D8%A8%D8%A9-%D9%85%D8%B2%D8%A7%D9%8A%D9%86/ios-6761799882",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5766
     }
   ]
 }
