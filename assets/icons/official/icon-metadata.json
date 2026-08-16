@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-15T02:09:11.305Z",
-  "total": 280,
-  "found": 276,
+  "preparedAt": "2026-08-16T02:09:09.513Z",
+  "total": 284,
+  "found": 280,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -1742,6 +1742,18 @@
       "bytes": 8517
     },
     {
+      "name": "LUDUS・PvP Merge Battle Game",
+      "found": true,
+      "initial": "LP",
+      "image": "assets/icons/official/ludus-pvp-merge-battle-game.jpg",
+      "matchedName": "LUDUS・PvP Merge Battle Game",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/ludus%E3%83%BBpvp-merge-battle-game/ios-6446642912",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6900
+    },
+    {
       "name": "Mafia City",
       "found": true,
       "initial": "MC",
@@ -1824,6 +1836,18 @@
       "score": 262,
       "query": "Marble Sort!",
       "bytes": 56132
+    },
+    {
+      "name": "MARVEL Future Fight",
+      "found": true,
+      "initial": "MF",
+      "image": "assets/icons/official/marvel-future-fight.jpg",
+      "matchedName": "MARVEL Future Fight",
+      "artistName": "Netmarble",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.netmarble.mherosgb",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 249362
     },
     {
       "name": "MARVEL SNAP",
@@ -2733,6 +2757,18 @@
       "bytes": 61682
     },
     {
+      "name": "Tavern Legend",
+      "found": true,
+      "initial": "TL",
+      "image": "assets/icons/official/tavern-legend.jpg",
+      "matchedName": "Tavern Legend",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/tavern-legend/ios-6747248118",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7078
+    },
+    {
       "name": "The Battle Cats",
       "found": true,
       "initial": "TB",
@@ -3163,6 +3199,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 3421
+    },
+    {
+      "name": "Watermelon Maker 2048",
+      "found": true,
+      "initial": "WM",
+      "image": "assets/icons/official/watermelon-maker-2048.jpg",
+      "matchedName": "Watermelon Maker 2048",
+      "artistName": "mobirix",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.mobirix.ldwm",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 262844
     },
     {
       "name": "West Game",
