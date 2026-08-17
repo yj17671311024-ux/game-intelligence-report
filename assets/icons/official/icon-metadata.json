@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-17T02:09:11.575Z",
-  "total": 286,
-  "found": 282,
+  "preparedAt": "2026-08-14T04:12:14.861Z",
+  "total": 279,
+  "found": 275,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -539,18 +539,6 @@
       "bytes": 3094
     },
     {
-      "name": "Chirpy Sort: Bird Color Puzzle",
-      "found": true,
-      "initial": "CS",
-      "image": "assets/icons/official/chirpy-sort-bird-color-puzzle.jpg",
-      "matchedName": "Chirpy Sort: Bird Color Puzzle",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/chirpy-sort-bird-color-puzzle/ios-6756289996",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 8103
-    },
-    {
       "name": "Clash of Clans",
       "found": true,
       "initial": "CO",
@@ -1020,18 +1008,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1042,6 +1018,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1742,30 +1730,6 @@
       "bytes": 4704
     },
     {
-      "name": "Lucky Defense!",
-      "found": true,
-      "initial": "LD",
-      "image": "assets/icons/official/lucky-defense.jpg",
-      "matchedName": "Lucky Defense!",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/lucky-defense/ios-6482291732",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 8517
-    },
-    {
-      "name": "LUDUS・PvP Merge Battle Game",
-      "found": true,
-      "initial": "LP",
-      "image": "assets/icons/official/ludus-pvp-merge-battle-game.jpg",
-      "matchedName": "LUDUS・PvP Merge Battle Game",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/ludus%E3%83%BBpvp-merge-battle-game/ios-6446642912",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6900
-    },
-    {
       "name": "Mafia City",
       "found": true,
       "initial": "MC",
@@ -1848,18 +1812,6 @@
       "score": 262,
       "query": "Marble Sort!",
       "bytes": 56132
-    },
-    {
-      "name": "MARVEL Future Fight",
-      "found": true,
-      "initial": "MF",
-      "image": "assets/icons/official/marvel-future-fight.jpg",
-      "matchedName": "MARVEL Future Fight",
-      "artistName": "Netmarble",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.netmarble.mherosgb",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 249362
     },
     {
       "name": "MARVEL SNAP",
@@ -2029,18 +1981,6 @@
       "score": 142,
       "query": "Merge Mansion",
       "bytes": 53056
-    },
-    {
-      "name": "Mix Blox",
-      "found": true,
-      "initial": "MB",
-      "image": "assets/icons/official/mix-blox.jpg",
-      "matchedName": "Mix Blox",
-      "artistName": "Gimica GmbH",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.gimica.mixblox",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 140876
     },
     {
       "name": "Mob Control",
@@ -2781,18 +2721,6 @@
       "bytes": 61682
     },
     {
-      "name": "Tavern Legend",
-      "found": true,
-      "initial": "TL",
-      "image": "assets/icons/official/tavern-legend.jpg",
-      "matchedName": "Tavern Legend",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/tavern-legend/ios-6747248118",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 7078
-    },
-    {
       "name": "The Battle Cats",
       "found": true,
       "initial": "TB",
@@ -3223,18 +3151,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 3421
-    },
-    {
-      "name": "Watermelon Maker 2048",
-      "found": true,
-      "initial": "WM",
-      "image": "assets/icons/official/watermelon-maker-2048.jpg",
-      "matchedName": "Watermelon Maker 2048",
-      "artistName": "mobirix",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.mobirix.ldwm",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 262844
     },
     {
       "name": "West Game",
