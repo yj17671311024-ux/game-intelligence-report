@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-16T02:09:09.513Z",
-  "total": 284,
-  "found": 280,
+  "preparedAt": "2026-08-17T02:09:11.575Z",
+  "total": 286,
+  "found": 282,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -537,6 +537,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 3094
+    },
+    {
+      "name": "Chirpy Sort: Bird Color Puzzle",
+      "found": true,
+      "initial": "CS",
+      "image": "assets/icons/official/chirpy-sort-bird-color-puzzle.jpg",
+      "matchedName": "Chirpy Sort: Bird Color Puzzle",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/chirpy-sort-bird-color-puzzle/ios-6756289996",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8103
     },
     {
       "name": "Clash of Clans",
@@ -2017,6 +2029,18 @@
       "score": 142,
       "query": "Merge Mansion",
       "bytes": 53056
+    },
+    {
+      "name": "Mix Blox",
+      "found": true,
+      "initial": "MB",
+      "image": "assets/icons/official/mix-blox.jpg",
+      "matchedName": "Mix Blox",
+      "artistName": "Gimica GmbH",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.gimica.mixblox",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 140876
     },
     {
       "name": "Mob Control",
