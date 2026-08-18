@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-14T04:12:14.861Z",
-  "total": 279,
-  "found": 275,
+  "preparedAt": "2026-08-18T02:09:05.187Z",
+  "total": 285,
+  "found": 281,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -539,6 +539,18 @@
       "bytes": 3094
     },
     {
+      "name": "Chirpy Sort: Bird Color Puzzle",
+      "found": true,
+      "initial": "CS",
+      "image": "assets/icons/official/chirpy-sort-bird-color-puzzle.jpg",
+      "matchedName": "Chirpy Sort: Bird Color Puzzle",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/chirpy-sort-bird-color-puzzle/ios-6756289996",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8103
+    },
+    {
       "name": "Clash of Clans",
       "found": true,
       "initial": "CO",
@@ -1008,18 +1020,6 @@
       }
     },
     {
-      "name": "Flambé: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge & Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6265
-    },
-    {
       "name": "Flambe: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1030,6 +1030,18 @@
       "score": 94,
       "query": "Flambe: Merge & Cook",
       "bytes": 58307
+    },
+    {
+      "name": "Flambé: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge & Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6265
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1319,6 +1331,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 7053
+    },
+    {
+      "name": "Idol Company",
+      "found": true,
+      "initial": "IC",
+      "image": "assets/icons/official/idol-company.jpg",
+      "matchedName": "Idol Company",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/idol-company/ios-6744967286",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5860
     },
     {
       "name": "Infinity Kingdom",
@@ -1814,6 +1838,18 @@
       "bytes": 56132
     },
     {
+      "name": "MARVEL Future Fight",
+      "found": true,
+      "initial": "MF",
+      "image": "assets/icons/official/marvel-future-fight.jpg",
+      "matchedName": "MARVEL Future Fight",
+      "artistName": "Netmarble",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.netmarble.mherosgb",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 249362
+    },
+    {
       "name": "MARVEL SNAP",
       "found": true,
       "initial": "MS",
@@ -2221,6 +2257,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 3529
+    },
+    {
+      "name": "Pokémon Champions",
+      "found": true,
+      "initial": "PM",
+      "image": "assets/icons/official/pok-mon-champions.jpg",
+      "matchedName": "Pokémon Champions",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/pok%C3%A9mon-champions/ios-6741503079",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8328
     },
     {
       "name": "Pokémon GO",
@@ -2769,6 +2817,18 @@
       "bytes": 5272
     },
     {
+      "name": "The Walking Dead: Survivors",
+      "found": true,
+      "initial": "TW",
+      "image": "assets/icons/official/the-walking-dead-survivors.jpg",
+      "matchedName": "The Walking Dead: Survivors",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/the-walking-dead-survivors/ios-1514546586",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7157
+    },
+    {
       "name": "Tile Explorer",
       "found": true,
       "initial": "TE",
@@ -3151,6 +3211,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 3421
+    },
+    {
+      "name": "Watermelon Maker 2048",
+      "found": true,
+      "initial": "WM",
+      "image": "assets/icons/official/watermelon-maker-2048.jpg",
+      "matchedName": "Watermelon Maker 2048",
+      "artistName": "mobirix",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.mobirix.ldwm",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 262844
     },
     {
       "name": "West Game",
