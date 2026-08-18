@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-18T02:09:05.187Z",
-  "total": 285,
-  "found": 281,
+  "preparedAt": "2026-08-18T04:02:29.166Z",
+  "total": 311,
+  "found": 307,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -110,6 +110,18 @@
       "score": 262,
       "query": "Amaze GO!",
       "bytes": 24315
+    },
+    {
+      "name": "Among Us",
+      "found": true,
+      "initial": "AU",
+      "image": "assets/icons/official/among-us.jpg",
+      "matchedName": "Among Us",
+      "artistName": "Innersloth LLC",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.innersloth.spacemafia",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 67423
     },
     {
       "name": "Angry Birds 2",
@@ -261,6 +273,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 3424
+    },
+    {
+      "name": "Block Craft 3D：Building Game",
+      "found": true,
+      "initial": "BC",
+      "image": "assets/icons/official/block-craft-3d-building-game.jpg",
+      "matchedName": "Block Craft 3D：Building Game",
+      "artistName": "Wildlife Studios",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.fungames.blockcraft",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 267371
     },
     {
       "name": "Block Crush",
@@ -1093,6 +1117,18 @@
       "bytes": 2420
     },
     {
+      "name": "Fortnite",
+      "found": true,
+      "initial": "F",
+      "image": "assets/icons/official/fortnite.jpg",
+      "matchedName": "Fortnite",
+      "artistName": "Epic Games, Inc",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 475504
+    },
+    {
       "name": "Foundation: Galactic Frontier",
       "found": true,
       "initial": "FG",
@@ -1163,6 +1199,18 @@
       "score": 250,
       "query": "Gardenscapes",
       "bytes": 63678
+    },
+    {
+      "name": "Geometry Dash Lite",
+      "found": true,
+      "initial": "GD",
+      "image": "assets/icons/official/geometry-dash-lite.jpg",
+      "matchedName": "Geometry Dash Lite",
+      "artistName": "RobTop Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.robtopx.geometryjumplite",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 96688
     },
     {
       "name": "GIRLS' FRONTLINE 2: EXILIUM",
@@ -1261,6 +1309,18 @@
       "bytes": 68322
     },
     {
+      "name": "Happy Color: Color by Number",
+      "found": true,
+      "initial": "HC",
+      "image": "assets/icons/official/happy-color-color-by-number.jpg",
+      "matchedName": "Happy Color®: Color by Number",
+      "artistName": "X-FLOW",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.pixel.art.coloring.color.number",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 100952
+    },
+    {
       "name": "Hearthstone",
       "found": true,
       "initial": "H",
@@ -1307,6 +1367,18 @@
       "score": 142,
       "query": "Hole Stars",
       "bytes": 55745
+    },
+    {
+      "name": "Hole.io",
+      "found": true,
+      "initial": "HI",
+      "image": "assets/icons/official/hole-io.jpg",
+      "matchedName": "Hole.io",
+      "artistName": "VOODOO",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=io.voodoo.holeio",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 470496
     },
     {
       "name": "Homescapes",
@@ -1416,6 +1488,18 @@
       "score": 286,
       "query": "Jelly Busters: Puzzle Game",
       "bytes": 46227
+    },
+    {
+      "name": "Jewel Coloring",
+      "found": true,
+      "initial": "JC",
+      "image": "assets/icons/official/jewel-coloring.jpg",
+      "matchedName": "Jewel Coloring",
+      "artistName": "TaTa Game Technology Limited",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=color.number.paint.pixle.art.sort.jigsaw",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 272812
     },
     {
       "name": "Jigsaw Drop",
@@ -1658,6 +1742,18 @@
       "bytes": 6810
     },
     {
+      "name": "Level Devil - NOT A Troll Game",
+      "found": true,
+      "initial": "LD",
+      "image": "assets/icons/official/level-devil-not-a-troll-game.jpg",
+      "matchedName": "Level Devil - NOT A Troll Game",
+      "artistName": "WebVentures B.V.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.unept.leveldevil",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 9573
+    },
+    {
       "name": "Little Farm Story",
       "found": true,
       "initial": "LF",
@@ -1778,6 +1874,18 @@
       "bytes": 68385
     },
     {
+      "name": "Magic Tiles 3 - Piano Game",
+      "found": true,
+      "initial": "MT",
+      "image": "assets/icons/official/magic-tiles-3-piano-game.jpg",
+      "matchedName": "Magic Tiles 3™ - Piano Game",
+      "artistName": "AMANOTES PTE. LTD.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.youmusic.magictiles",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 35862
+    },
+    {
       "name": "Magic: The Gathering Arena",
       "found": true,
       "initial": "MT",
@@ -1788,6 +1896,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 3978
+    },
+    {
+      "name": "Mahjong Blast",
+      "found": true,
+      "initial": "MB",
+      "image": "assets/icons/official/mahjong-blast.jpg",
+      "matchedName": "Mahjong Blast",
+      "artistName": "Nebula  Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.nebula.mahjongtile",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 311661
     },
     {
       "name": "Mahjong Master",
@@ -1959,6 +2079,18 @@
       "bytes": 34586
     },
     {
+      "name": "Melon Sandbox",
+      "found": true,
+      "initial": "MS",
+      "image": "assets/icons/official/melon-sandbox.jpg",
+      "matchedName": "Melon Sandbox",
+      "artistName": "playducky.com",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.studio27.MelonPlayground",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 56174
+    },
+    {
       "name": "Meowdoku",
       "found": true,
       "initial": "M",
@@ -2043,6 +2175,18 @@
       "bytes": 7820
     },
     {
+      "name": "MONOPOLY GO!",
+      "found": true,
+      "initial": "MG",
+      "image": "assets/icons/official/monopoly-go.jpg",
+      "matchedName": "MONOPOLY GO!",
+      "artistName": "Scopely",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.scopely.monopolygo",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 263552
+    },
+    {
       "name": "Monster Legends - Battle Game",
       "found": true,
       "initial": "ML",
@@ -2053,6 +2197,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6326
+    },
+    {
+      "name": "Mystery Dumpling Blind Box",
+      "found": true,
+      "initial": "MD",
+      "image": "assets/icons/official/mystery-dumpling-blind-box.jpg",
+      "matchedName": "Mystery Dumpling: Unbox ASMR",
+      "artistName": "Brocker Bus Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.mystery.dumplings.asmr.unboxing.squishy",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 452210
     },
     {
       "name": "Mystery Town",
@@ -2139,6 +2295,18 @@
       "bytes": 30447
     },
     {
+      "name": "OOC: The Playable Anime",
+      "found": true,
+      "initial": "OT",
+      "image": "assets/icons/official/ooc-the-playable-anime.jpg",
+      "matchedName": "OOC: The Playable Anime",
+      "artistName": "OOC",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.newai.ooc",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8043
+    },
+    {
       "name": "Overgeared Hero: Merge RPG",
       "found": true,
       "initial": "OH",
@@ -2175,6 +2343,18 @@
       "bytes": 6523
     },
     {
+      "name": "Paint & Hide: Color Guys",
+      "found": true,
+      "initial": "PA",
+      "image": "assets/icons/official/paint-and-hide-color-guys.jpg",
+      "matchedName": "Paint & Hide: Color Guys",
+      "artistName": "HIGAME GLOBAL",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.hp.hide.hunt.paint",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 673504
+    },
+    {
       "name": "Palmon: Survival",
       "found": true,
       "initial": "PS",
@@ -2185,6 +2365,18 @@
       "score": 262,
       "query": "Palmon: Survival",
       "bytes": 51706
+    },
+    {
+      "name": "Paper.io 2",
+      "found": true,
+      "initial": "PI",
+      "image": "assets/icons/official/paper-io-2.jpg",
+      "matchedName": "Paper.io 2",
+      "artistName": "VOODOO",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=io.voodoo.paper2",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 246798
     },
     {
       "name": "Piggy Kingdom",
@@ -2475,6 +2667,18 @@
       "bytes": 40739
     },
     {
+      "name": "Roblox",
+      "found": true,
+      "initial": "R",
+      "image": "assets/icons/official/roblox.jpg",
+      "matchedName": "Roblox",
+      "artistName": "Roblox Corporation",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.roblox.client",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6477
+    },
+    {
       "name": "Rogue Legend",
       "found": true,
       "initial": "RL",
@@ -2521,6 +2725,18 @@
       "score": 262,
       "query": "Royal Match",
       "bytes": 53240
+    },
+    {
+      "name": "Royal Smash! - Physics Puzzle",
+      "found": true,
+      "initial": "RS",
+      "image": "assets/icons/official/royal-smash-physics-puzzle.jpg",
+      "matchedName": "Royal Smash! - Physics Puzzle",
+      "artistName": "Cypher Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.cyphergames.royalsmash",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 323647
     },
     {
       "name": "Screwdom",
@@ -2631,6 +2847,30 @@
       "bytes": 7524
     },
     {
+      "name": "Sled Surfers",
+      "found": true,
+      "initial": "SS",
+      "image": "assets/icons/official/sled-surfers.jpg",
+      "matchedName": "Sled Surfers",
+      "artistName": "CrazyLabs LTD",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.sled.surfers.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 461656
+    },
+    {
+      "name": "Slow Mo Strike: Knives in Time",
+      "found": true,
+      "initial": "SM",
+      "image": "assets/icons/official/slow-mo-strike-knives-in-time.jpg",
+      "matchedName": "Slow Mo Strike: Knives in Time",
+      "artistName": "KAYAC Inc.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.kayac.slow_mo_strike",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 79072
+    },
+    {
       "name": "Smash Fest!",
       "found": true,
       "initial": "SF",
@@ -2641,6 +2881,30 @@
       "score": 262,
       "query": "Smash Fest!",
       "bytes": 55283
+    },
+    {
+      "name": "Snake Clash!",
+      "found": true,
+      "initial": "SC",
+      "image": "assets/icons/official/snake-clash.jpg",
+      "matchedName": "Snake Clash!",
+      "artistName": "Supercent, Inc.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=io.supercent.linkedcubic",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 144115
+    },
+    {
+      "name": "Solitaire - Classic Card Games",
+      "found": true,
+      "initial": "SC",
+      "image": "assets/icons/official/solitaire-classic-card-games.jpg",
+      "matchedName": "Solitaire - Classic Card Games",
+      "artistName": "Guru Puzzle Game",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=solitaire.patience.card.games.klondike.free",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 241072
     },
     {
       "name": "Stack Smash",
@@ -2707,6 +2971,18 @@
       "score": 130,
       "query": "Stormshot",
       "bytes": 74498
+    },
+    {
+      "name": "Subway Surfers",
+      "found": true,
+      "initial": "SS",
+      "image": "assets/icons/official/subway-surfers.jpg",
+      "matchedName": "Subway Surfers",
+      "artistName": "SYBO Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 404768
     },
     {
       "name": "Summoners War X Frieren",
@@ -2913,6 +3189,18 @@
       "bytes": 7371
     },
     {
+      "name": "Toca Boca World",
+      "found": true,
+      "initial": "TB",
+      "image": "assets/icons/official/toca-boca-world.jpg",
+      "matchedName": "Toca Boca World",
+      "artistName": "Toca Boca",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tocaboca.tocalifeworld",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 151080
+    },
+    {
       "name": "Toon Blast",
       "found": true,
       "initial": "TB",
@@ -3103,6 +3391,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 7368
+    },
+    {
+      "name": "Vita Mahjong",
+      "found": true,
+      "initial": "VM",
+      "image": "assets/icons/official/vita-mahjong.jpg",
+      "matchedName": "Vita Mahjong",
+      "artistName": "Vita Studio.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.vitastudio.mahjong",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 106684
     },
     {
       "name": "War and Order",
@@ -3379,6 +3679,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 7313
+    },
+    {
+      "name": "Zen Word - Relax Puzzle Game",
+      "found": true,
+      "initial": "ZW",
+      "image": "assets/icons/official/zen-word-relax-puzzle-game.jpg",
+      "matchedName": "Zen Word® - Relax Puzzle Game",
+      "artistName": "Oakever Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=kidultlovin.word.zen",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 472276
     },
     {
       "name": "Zenless Zone Zero",
