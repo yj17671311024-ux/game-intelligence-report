@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-18T04:02:29.166Z",
-  "total": 311,
-  "found": 307,
+  "preparedAt": "2026-08-19T02:09:06.372Z",
+  "total": 314,
+  "found": 310,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -345,6 +345,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 8143
+    },
+    {
+      "name": "Blue Archive",
+      "found": true,
+      "initial": "BA",
+      "image": "assets/icons/official/blue-archive.jpg",
+      "matchedName": "Blue Archive",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/blue-archive/ios-1571873795",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7126
     },
     {
       "name": "Boom Beach: War Strategy Game",
@@ -1608,6 +1620,18 @@
       "score": 250,
       "query": "Kingshot",
       "bytes": 63599
+    },
+    {
+      "name": "Kiss of War",
+      "found": true,
+      "initial": "KO",
+      "image": "assets/icons/official/kiss-of-war.jpg",
+      "matchedName": "Kiss of War",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/kiss-of-war/ios-1465860096",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7197
     },
     {
       "name": "Knock Fever",
@@ -3295,6 +3319,18 @@
       "score": 142,
       "query": "Total Battle",
       "bytes": 92235
+    },
+    {
+      "name": "Tower War - Tactical Conquest",
+      "found": true,
+      "initial": "TW",
+      "image": "assets/icons/official/tower-war-tactical-conquest.jpg",
+      "matchedName": "Tower War - Tactical Conquest",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/tower-war-tactical-conquest/ios-1579356887",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7467
     },
     {
       "name": "Township",
