@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-20T02:09:06.155Z",
-  "total": 315,
-  "found": 311,
+  "preparedAt": "2026-08-20T06:51:04.851Z",
+  "total": 321,
+  "found": 317,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -335,6 +335,18 @@
       "bytes": 39061
     },
     {
+      "name": "Block World - Craft City",
+      "found": true,
+      "initial": "BW",
+      "image": "assets/icons/official/block-world-craft-city.jpg",
+      "matchedName": "Block World - Craft City",
+      "artistName": "Patane Global",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.diamond.city.house.best.building.craft.vip",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 491531
+    },
+    {
       "name": "Bloons TD 6",
       "found": true,
       "initial": "BT",
@@ -611,6 +623,18 @@
       "bytes": 78269
     },
     {
+      "name": "Climb & Jump: Obby 3D Tower",
+      "found": true,
+      "initial": "CA",
+      "image": "assets/icons/official/climb-and-jump-obby-3d-tower.jpg",
+      "matchedName": "Climb & Jump: Obby 3D Tower",
+      "artistName": "Metagame.Ltd",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.metax.climb.jump.tower.obby.challenge",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 586147
+    },
+    {
       "name": "Colony Flow!",
       "found": true,
       "initial": "CF",
@@ -705,6 +729,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 370316
+    },
+    {
+      "name": "Craft Explore: Block Builder",
+      "found": true,
+      "initial": "CE",
+      "image": "assets/icons/official/craft-explore-block-builder.jpg",
+      "matchedName": "Craft Explore: Block Builder",
+      "artistName": "LogicLabs Limited",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.craft.city.blockbuilder.pro",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 294521
     },
     {
       "name": "Cube Land Puzzle Game",
@@ -1163,6 +1199,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5512
+    },
+    {
+      "name": "Fruit Ninja",
+      "found": true,
+      "initial": "FN",
+      "image": "assets/icons/official/fruit-ninja.jpg",
+      "matchedName": "Fruit Ninja®",
+      "artistName": "Halfbrick Studios",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.halfbrick.fruitninjafree",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 292456
     },
     {
       "name": "Galaxy Defense: Fortress TD",
@@ -1896,6 +1944,18 @@
       "score": 142,
       "query": "Mafia City",
       "bytes": 104918
+    },
+    {
+      "name": "Magic Jigsaw Puzzles－Games HD",
+      "found": true,
+      "initial": "MJ",
+      "image": "assets/icons/official/magic-jigsaw-puzzles-games-hd.jpg",
+      "matchedName": "Magic Jigsaw Puzzles－Games HD",
+      "artistName": "ZiMAD",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.bandagames.mpuzzle.gp",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 473171
     },
     {
       "name": "Magic Sort!",
@@ -3583,6 +3643,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 7000
+    },
+    {
+      "name": "Wheelie Master: Moto Ride 3D",
+      "found": true,
+      "initial": "WM",
+      "image": "assets/icons/official/wheelie-master-moto-ride-3d.jpg",
+      "matchedName": "Wheelie Master: Moto Ride 3D",
+      "artistName": "Wayfu Game Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=wheelie.master.street.elite.bikegame",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 149944
     },
     {
       "name": "Whiteout Survival",
