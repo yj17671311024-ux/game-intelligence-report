@@ -2614,7 +2614,7 @@ ${iconMapScript(iconEntries, rows)}
       }
     });
 
-    document.querySelectorAll("#puzzle tbody tr, #male tbody tr").forEach((row) => {
+    document.querySelectorAll("#free tbody tr, #puzzle tbody tr, #male tbody tr").forEach((row) => {
       const cell = row.children[1];
       if (!cell || cell.querySelector(".product-cell")) return;
       const key = matchIconEntry(cell.textContent);
