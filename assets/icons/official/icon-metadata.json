@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-19T02:09:06.372Z",
-  "total": 314,
-  "found": 310,
+  "preparedAt": "2026-08-20T02:09:06.155Z",
+  "total": 315,
+  "found": 311,
   "metadata": [
     {
       "name": "AFK Arena",
@@ -681,6 +681,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 8261
+    },
+    {
+      "name": "Cooking Fever: Restaurant Game",
+      "found": true,
+      "initial": "CF",
+      "image": "assets/icons/official/cooking-fever-restaurant-game.jpg",
+      "matchedName": "Cooking Fever: Restaurant Game",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/cooking-fever-restaurant-game/ios-714796093",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7956
     },
     {
       "name": "Courtyard Zen: Quest",
