@@ -1,8 +1,20 @@
 {
-  "preparedAt": "2026-08-20T06:51:04.851Z",
-  "total": 321,
-  "found": 317,
+  "preparedAt": "2026-08-21T02:09:05.911Z",
+  "total": 325,
+  "found": 321,
   "metadata": [
+    {
+      "name": "82-0.com",
+      "found": true,
+      "initial": "8C",
+      "image": "assets/icons/official/82-0-com.jpg",
+      "matchedName": "82-0.com",
+      "artistName": "Vaulty Studios Inc.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.vaultystudios.eightytwoand0",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 158710
+    },
     {
       "name": "AFK Arena",
       "found": true,
@@ -224,6 +236,18 @@
       "score": 298,
       "query": "Ball Sort Puzzle - Color Games",
       "bytes": 41839
+    },
+    {
+      "name": "Bendy's Nightmare Run",
+      "found": true,
+      "initial": "BN",
+      "image": "assets/icons/official/bendy-s-nightmare-run.jpg",
+      "matchedName": "Bendy's Nightmare Run",
+      "artistName": "Joey Drew Studios",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.jds.bnr",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 346798
     },
     {
       "name": "Block Blast!",
@@ -1764,6 +1788,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6365
+    },
+    {
+      "name": "Last Light: Wasteland",
+      "found": true,
+      "initial": "LL",
+      "image": "assets/icons/official/last-light-wasteland.jpg",
+      "matchedName": "Last Light: Wasteland",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/last-light-wasteland/ios-6754545818",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7988
     },
     {
       "name": "Last Shelter: Survival",
@@ -3427,6 +3463,18 @@
       "score": 262,
       "query": "Toy Blast",
       "bytes": 72517
+    },
+    {
+      "name": "Train Station 3: Rail Tycoon",
+      "found": true,
+      "initial": "TS",
+      "image": "assets/icons/official/train-station-3-rail-tycoon.jpg",
+      "matchedName": "Train Station 3: Rail Tycoon",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/train-station-3-rail-tycoon/ios-6670169904",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5743
     },
     {
       "name": "Travel Town",
