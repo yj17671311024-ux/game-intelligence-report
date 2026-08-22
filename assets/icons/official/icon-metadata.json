@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-21T02:09:05.911Z",
-  "total": 325,
-  "found": 321,
+  "preparedAt": "2026-08-22T02:09:05.736Z",
+  "total": 328,
+  "found": 324,
   "metadata": [
     {
       "name": "82-0.com",
@@ -3015,6 +3015,18 @@
       "bytes": 55283
     },
     {
+      "name": "Smash Land!",
+      "found": true,
+      "initial": "SL",
+      "image": "assets/icons/official/smash-land.jpg",
+      "matchedName": "Smash Land!",
+      "artistName": "Flow Games A.S.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.flow.smashparty",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 398646
+    },
+    {
       "name": "Snake Clash!",
       "found": true,
       "initial": "SC",
@@ -3813,6 +3825,18 @@
       "bytes": 57676
     },
     {
+      "name": "Yarn Fever! Unravel Puzzle",
+      "found": true,
+      "initial": "YF",
+      "image": "assets/icons/official/yarn-fever-unravel-puzzle.jpg",
+      "matchedName": "Yarn Fever! Unravel Puzzle",
+      "artistName": "Brave HK Limited",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=puzzle.yarn.fever.unravel.puzzle",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 476624
+    },
+    {
       "name": "Yarn Loop",
       "found": true,
       "initial": "YL",
@@ -3878,6 +3902,18 @@
       "initial": "Z",
       "image": "assets/icons/official/zoodoku.jpg",
       "matchedName": "Zoodoku",
+      "artistName": "Nebula  Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.nebula.zoodoku",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 347737
+    },
+    {
+      "name": "Zoodoku: Brain Puzzle Games",
+      "found": true,
+      "initial": "ZB",
+      "image": "assets/icons/official/zoodoku-brain-puzzle-games.jpg",
+      "matchedName": "Zoodoku: Brain Puzzle Games",
       "artistName": "Nebula  Studio",
       "sourceUrl": "https://play.google.com/store/apps/details?id=com.nebula.zoodoku",
       "source": "AppBrain Google Play icon",
