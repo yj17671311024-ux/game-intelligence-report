@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-22T02:09:05.736Z",
-  "total": 328,
-  "found": 324,
+  "preparedAt": "2026-08-23T02:08:43.132Z",
+  "total": 332,
+  "found": 328,
   "metadata": [
     {
       "name": "82-0.com",
@@ -455,6 +455,18 @@
       "bytes": 5678
     },
     {
+      "name": "Bus Jam: Traffic Trouble",
+      "found": true,
+      "initial": "BJ",
+      "image": "assets/icons/official/bus-jam-traffic-trouble.jpg",
+      "matchedName": "Bus Jam: Traffic Trouble",
+      "artistName": "Gimica GmbH",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.gimica.busjam",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 280800
+    },
+    {
       "name": "Bus Out",
       "found": true,
       "initial": "BO",
@@ -741,6 +753,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 7956
+    },
+    {
+      "name": "Coop TD: Together",
+      "found": true,
+      "initial": "CT",
+      "image": "assets/icons/official/coop-td-together.jpg",
+      "matchedName": "Coop TD: Together",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/coop-td-together/ios-6503702666",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 4904
     },
     {
       "name": "Courtyard Zen: Quest",
@@ -1223,6 +1247,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5512
+    },
+    {
+      "name": "Frost & Flame: King of Avalon",
+      "found": true,
+      "initial": "FA",
+      "image": "assets/icons/official/frost-and-flame-king-of-avalon.jpg",
+      "matchedName": "Frost & Flame: King of Avalon",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/frost-flame-king-of-avalon/ios-1084930849",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 4832
     },
     {
       "name": "Fruit Ninja",
@@ -2461,6 +2497,18 @@
       "score": 130,
       "query": "Overmortal",
       "bytes": 71182
+    },
+    {
+      "name": "Overmortal-Idle RPG",
+      "found": true,
+      "initial": "OI",
+      "image": "assets/icons/official/overmortal-idle-rpg.jpg",
+      "matchedName": "Overmortal-Idle RPG",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/overmortal-idle-rpg/ios-6450879111",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7551
     },
     {
       "name": "P5X | Persona5: The Phantom X",
