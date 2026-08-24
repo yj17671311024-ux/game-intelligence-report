@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-23T02:08:43.132Z",
-  "total": 332,
-  "found": 328,
+  "preparedAt": "2026-08-24T02:08:43.726Z",
+  "total": 333,
+  "found": 329,
   "metadata": [
     {
       "name": "82-0.com",
@@ -2917,6 +2917,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 323647
+    },
+    {
+      "name": "Screw Out 3D: Nut Sort Jam",
+      "found": true,
+      "initial": "SO",
+      "image": "assets/icons/official/screw-out-3d-nut-sort-jam.jpg",
+      "matchedName": "Screw Out 3D: Nut Sort Jam",
+      "artistName": "Unico Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=net.happywit.screw.out.jam",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 348212
     },
     {
       "name": "Screwdom",
