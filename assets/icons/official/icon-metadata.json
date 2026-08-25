@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-24T02:08:43.726Z",
-  "total": 333,
-  "found": 329,
+  "preparedAt": "2026-08-25T02:03:16.508Z",
+  "total": 310,
+  "found": 306,
   "metadata": [
     {
       "name": "82-0.com",
@@ -238,18 +238,6 @@
       "bytes": 41839
     },
     {
-      "name": "Bendy's Nightmare Run",
-      "found": true,
-      "initial": "BN",
-      "image": "assets/icons/official/bendy-s-nightmare-run.jpg",
-      "matchedName": "Bendy's Nightmare Run",
-      "artistName": "Joey Drew Studios",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.jds.bnr",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 346798
-    },
-    {
       "name": "Block Blast!",
       "found": true,
       "initial": "BB",
@@ -359,18 +347,6 @@
       "bytes": 39061
     },
     {
-      "name": "Block World - Craft City",
-      "found": true,
-      "initial": "BW",
-      "image": "assets/icons/official/block-world-craft-city.jpg",
-      "matchedName": "Block World - Craft City",
-      "artistName": "Patane Global",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.diamond.city.house.best.building.craft.vip",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 491531
-    },
-    {
       "name": "Bloons TD 6",
       "found": true,
       "initial": "BT",
@@ -388,11 +364,11 @@
       "initial": "BA",
       "image": "assets/icons/official/blue-archive.jpg",
       "matchedName": "Blue Archive",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/blue-archive/ios-1571873795",
+      "artistName": "NEXON Company",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.nexon.bluearchive",
       "source": "AppBrain Google Play icon",
       "score": 100,
-      "bytes": 7126
+      "bytes": 300069
     },
     {
       "name": "Boom Beach: War Strategy Game",
@@ -453,18 +429,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5678
-    },
-    {
-      "name": "Bus Jam: Traffic Trouble",
-      "found": true,
-      "initial": "BJ",
-      "image": "assets/icons/official/bus-jam-traffic-trouble.jpg",
-      "matchedName": "Bus Jam: Traffic Trouble",
-      "artistName": "Gimica GmbH",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.gimica.busjam",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 280800
     },
     {
       "name": "Bus Out",
@@ -623,18 +587,6 @@
       "bytes": 3094
     },
     {
-      "name": "Chirpy Sort: Bird Color Puzzle",
-      "found": true,
-      "initial": "CS",
-      "image": "assets/icons/official/chirpy-sort-bird-color-puzzle.jpg",
-      "matchedName": "Chirpy Sort: Bird Color Puzzle",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/chirpy-sort-bird-color-puzzle/ios-6756289996",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 8103
-    },
-    {
       "name": "Clash of Clans",
       "found": true,
       "initial": "CO",
@@ -657,18 +609,6 @@
       "score": 262,
       "query": "Clash Royale",
       "bytes": 78269
-    },
-    {
-      "name": "Climb & Jump: Obby 3D Tower",
-      "found": true,
-      "initial": "CA",
-      "image": "assets/icons/official/climb-and-jump-obby-3d-tower.jpg",
-      "matchedName": "Climb & Jump: Obby 3D Tower",
-      "artistName": "Metagame.Ltd",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.metax.climb.jump.tower.obby.challenge",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 586147
     },
     {
       "name": "Colony Flow!",
@@ -743,18 +683,6 @@
       "bytes": 8261
     },
     {
-      "name": "Cooking Fever: Restaurant Game",
-      "found": true,
-      "initial": "CF",
-      "image": "assets/icons/official/cooking-fever-restaurant-game.jpg",
-      "matchedName": "Cooking Fever: Restaurant Game",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/cooking-fever-restaurant-game/ios-714796093",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 7956
-    },
-    {
       "name": "Coop TD: Together",
       "found": true,
       "initial": "CT",
@@ -777,18 +705,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 370316
-    },
-    {
-      "name": "Craft Explore: Block Builder",
-      "found": true,
-      "initial": "CE",
-      "image": "assets/icons/official/craft-explore-block-builder.jpg",
-      "matchedName": "Craft Explore: Block Builder",
-      "artistName": "LogicLabs Limited",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.craft.city.blockbuilder.pro",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 294521
     },
     {
       "name": "Cube Land Puzzle Game",
@@ -1152,18 +1068,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1174,6 +1078,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1234,7 +1150,7 @@
       "sourceUrl": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite",
       "source": "AppBrain Google Play icon",
       "score": 100,
-      "bytes": 475504
+      "bytes": 374240
     },
     {
       "name": "Foundation: Galactic Frontier",
@@ -1247,18 +1163,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5512
-    },
-    {
-      "name": "Frost & Flame: King of Avalon",
-      "found": true,
-      "initial": "FA",
-      "image": "assets/icons/official/frost-and-flame-king-of-avalon.jpg",
-      "matchedName": "Frost & Flame: King of Avalon",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/frost-flame-king-of-avalon/ios-1084930849",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 4832
     },
     {
       "name": "Fruit Ninja",
@@ -1537,18 +1441,6 @@
       "bytes": 7053
     },
     {
-      "name": "Idol Company",
-      "found": true,
-      "initial": "IC",
-      "image": "assets/icons/official/idol-company.jpg",
-      "matchedName": "Idol Company",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/idol-company/ios-6744967286",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 5860
-    },
-    {
       "name": "Infinity Kingdom",
       "found": true,
       "initial": "IK",
@@ -1620,18 +1512,6 @@
       "score": 286,
       "query": "Jelly Busters: Puzzle Game",
       "bytes": 46227
-    },
-    {
-      "name": "Jewel Coloring",
-      "found": true,
-      "initial": "JC",
-      "image": "assets/icons/official/jewel-coloring.jpg",
-      "matchedName": "Jewel Coloring",
-      "artistName": "TaTa Game Technology Limited",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=color.number.paint.pixle.art.sort.jigsaw",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 272812
     },
     {
       "name": "Jigsaw Drop",
@@ -1898,18 +1778,6 @@
       "bytes": 6810
     },
     {
-      "name": "Level Devil - NOT A Troll Game",
-      "found": true,
-      "initial": "LD",
-      "image": "assets/icons/official/level-devil-not-a-troll-game.jpg",
-      "matchedName": "Level Devil - NOT A Troll Game",
-      "artistName": "WebVentures B.V.",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.unept.leveldevil",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 9573
-    },
-    {
       "name": "Little Farm Story",
       "found": true,
       "initial": "LF",
@@ -2018,18 +1886,6 @@
       "bytes": 104918
     },
     {
-      "name": "Magic Jigsaw Puzzles－Games HD",
-      "found": true,
-      "initial": "MJ",
-      "image": "assets/icons/official/magic-jigsaw-puzzles-games-hd.jpg",
-      "matchedName": "Magic Jigsaw Puzzles－Games HD",
-      "artistName": "ZiMAD",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.bandagames.mpuzzle.gp",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 473171
-    },
-    {
       "name": "Magic Sort!",
       "found": true,
       "initial": "MS",
@@ -2124,18 +1980,6 @@
       "score": 262,
       "query": "Marble Sort!",
       "bytes": 56132
-    },
-    {
-      "name": "MARVEL Future Fight",
-      "found": true,
-      "initial": "MF",
-      "image": "assets/icons/official/marvel-future-fight.jpg",
-      "matchedName": "MARVEL Future Fight",
-      "artistName": "Netmarble",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.netmarble.mherosgb",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 249362
     },
     {
       "name": "MARVEL SNAP",
@@ -2376,7 +2220,7 @@
       "sourceUrl": "https://play.google.com/store/apps/details?id=com.mystery.dumplings.asmr.unboxing.squishy",
       "source": "AppBrain Google Play icon",
       "score": 100,
-      "bytes": 452210
+      "bytes": 588415
     },
     {
       "name": "Mystery Town",
@@ -2463,18 +2307,6 @@
       "bytes": 30447
     },
     {
-      "name": "OOC: The Playable Anime",
-      "found": true,
-      "initial": "OT",
-      "image": "assets/icons/official/ooc-the-playable-anime.jpg",
-      "matchedName": "OOC: The Playable Anime",
-      "artistName": "OOC",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.newai.ooc",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 8043
-    },
-    {
       "name": "Overgeared Hero: Merge RPG",
       "found": true,
       "initial": "OH",
@@ -2521,18 +2353,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6523
-    },
-    {
-      "name": "Paint & Hide: Color Guys",
-      "found": true,
-      "initial": "PA",
-      "image": "assets/icons/official/paint-and-hide-color-guys.jpg",
-      "matchedName": "Paint & Hide: Color Guys",
-      "artistName": "HIGAME GLOBAL",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.hp.hide.hunt.paint",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 673504
     },
     {
       "name": "Palmon: Survival",
@@ -2629,18 +2449,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 3529
-    },
-    {
-      "name": "Pokémon Champions",
-      "found": true,
-      "initial": "PM",
-      "image": "assets/icons/official/pok-mon-champions.jpg",
-      "matchedName": "Pokémon Champions",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/pok%C3%A9mon-champions/ios-6741503079",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 8328
     },
     {
       "name": "Pokémon GO",
@@ -2917,18 +2725,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 323647
-    },
-    {
-      "name": "Screw Out 3D: Nut Sort Jam",
-      "found": true,
-      "initial": "SO",
-      "image": "assets/icons/official/screw-out-3d-nut-sort-jam.jpg",
-      "matchedName": "Screw Out 3D: Nut Sort Jam",
-      "artistName": "Unico Studio",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=net.happywit.screw.out.jam",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 348212
     },
     {
       "name": "Screwdom",
@@ -3297,18 +3093,6 @@
       "bytes": 5272
     },
     {
-      "name": "The Walking Dead: Survivors",
-      "found": true,
-      "initial": "TW",
-      "image": "assets/icons/official/the-walking-dead-survivors.jpg",
-      "matchedName": "The Walking Dead: Survivors",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/the-walking-dead-survivors/ios-1514546586",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 7157
-    },
-    {
       "name": "Tile Explorer",
       "found": true,
       "initial": "TE",
@@ -3501,18 +3285,6 @@
       "bytes": 92235
     },
     {
-      "name": "Tower War - Tactical Conquest",
-      "found": true,
-      "initial": "TW",
-      "image": "assets/icons/official/tower-war-tactical-conquest.jpg",
-      "matchedName": "Tower War - Tactical Conquest",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/tower-war-tactical-conquest/ios-1579356887",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 7467
-    },
-    {
       "name": "Township",
       "found": true,
       "initial": "T",
@@ -3535,18 +3307,6 @@
       "score": 262,
       "query": "Toy Blast",
       "bytes": 72517
-    },
-    {
-      "name": "Train Station 3: Rail Tycoon",
-      "found": true,
-      "initial": "TS",
-      "image": "assets/icons/official/train-station-3-rail-tycoon.jpg",
-      "matchedName": "Train Station 3: Rail Tycoon",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/train-station-3-rail-tycoon/ios-6670169904",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 5743
     },
     {
       "name": "Travel Town",
@@ -3741,18 +3501,6 @@
       "bytes": 3421
     },
     {
-      "name": "Watermelon Maker 2048",
-      "found": true,
-      "initial": "WM",
-      "image": "assets/icons/official/watermelon-maker-2048.jpg",
-      "matchedName": "Watermelon Maker 2048",
-      "artistName": "mobirix",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.mobirix.ldwm",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 262844
-    },
-    {
       "name": "West Game",
       "found": true,
       "initial": "WG",
@@ -3763,18 +3511,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 7000
-    },
-    {
-      "name": "Wheelie Master: Moto Ride 3D",
-      "found": true,
-      "initial": "WM",
-      "image": "assets/icons/official/wheelie-master-moto-ride-3d.jpg",
-      "matchedName": "Wheelie Master: Moto Ride 3D",
-      "artistName": "Wayfu Game Studio",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=wheelie.master.street.elite.bikegame",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 149944
     },
     {
       "name": "Whiteout Survival",
@@ -3962,18 +3698,6 @@
       "initial": "Z",
       "image": "assets/icons/official/zoodoku.jpg",
       "matchedName": "Zoodoku",
-      "artistName": "Nebula  Studio",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.nebula.zoodoku",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 347737
-    },
-    {
-      "name": "Zoodoku: Brain Puzzle Games",
-      "found": true,
-      "initial": "ZB",
-      "image": "assets/icons/official/zoodoku-brain-puzzle-games.jpg",
-      "matchedName": "Zoodoku: Brain Puzzle Games",
       "artistName": "Nebula  Studio",
       "sourceUrl": "https://play.google.com/store/apps/details?id=com.nebula.zoodoku",
       "source": "AppBrain Google Play icon",
