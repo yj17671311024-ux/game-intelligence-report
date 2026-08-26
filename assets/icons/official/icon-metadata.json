@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-25T02:03:16.508Z",
-  "total": 310,
-  "found": 306,
+  "preparedAt": "2026-08-26T02:09:27.378Z",
+  "total": 312,
+  "found": 308,
   "metadata": [
     {
       "name": "82-0.com",
@@ -1068,18 +1068,6 @@
       }
     },
     {
-      "name": "Flambé: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge & Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6265
-    },
-    {
       "name": "Flambe: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1090,6 +1078,18 @@
       "score": 94,
       "query": "Flambe: Merge & Cook",
       "bytes": 58307
+    },
+    {
+      "name": "Flambé: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge & Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6265
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1427,6 +1427,18 @@
       "score": 130,
       "query": "Homescapes",
       "bytes": 65310
+    },
+    {
+      "name": "Idle Cat Gunner: Shooter RPG",
+      "found": true,
+      "initial": "IC",
+      "image": "assets/icons/official/idle-cat-gunner-shooter-rpg.jpg",
+      "matchedName": "Idle Cat Gunner: Shooter RPG",
+      "artistName": "TREEPLLA",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.Chodun.CatGunner",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 457972
     },
     {
       "name": "Idle Heroes - Idle Games",
@@ -2725,6 +2737,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 323647
+    },
+    {
+      "name": "Rush Royale: Tower Defense RPG",
+      "found": true,
+      "initial": "RR",
+      "image": "assets/icons/official/rush-royale-tower-defense-rpg.jpg",
+      "matchedName": "Rush Royale: Tower Defense RPG",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/rush-royale-tower-defense-rpg/ios-1526121033",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5904
     },
     {
       "name": "Screwdom",
