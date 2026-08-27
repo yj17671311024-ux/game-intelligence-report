@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-26T02:09:27.378Z",
-  "total": 312,
-  "found": 308,
+  "preparedAt": "2026-08-27T02:08:47.107Z",
+  "total": 316,
+  "found": 312,
   "metadata": [
     {
       "name": "82-0.com",
@@ -1574,6 +1574,18 @@
       "bytes": 8963
     },
     {
+      "name": "Jurassic World Alive",
+      "found": true,
+      "initial": "JW",
+      "image": "assets/icons/official/jurassic-world-alive.jpg",
+      "matchedName": "Jurassic World Alive",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/jurassic-world-alive/ios-1231085864",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5477
+    },
+    {
       "name": "King's Choice",
       "found": true,
       "initial": "KC",
@@ -2257,6 +2269,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 1927
+    },
+    {
+      "name": "NBA 2K HQ",
+      "found": true,
+      "initial": "N2",
+      "image": "assets/icons/official/nba-2k-hq.jpg",
+      "matchedName": "NBA 2K HQ",
+      "artistName": "2K, Inc. - a Take-Two Interactive affiliate",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.VisualConcepts.MyNBASherpa",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 260392
     },
     {
       "name": "NTE: Neverness to Everness",
@@ -3609,6 +3633,18 @@
       "bytes": 58140
     },
     {
+      "name": "World of Tanks Blitz",
+      "found": true,
+      "initial": "WO",
+      "image": "assets/icons/official/world-of-tanks-blitz.jpg",
+      "matchedName": "World of Tanks Blitz™",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/world-of-tanks-blitz%E2%84%A2/ios-859204347",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7284
+    },
+    {
       "name": "WWE Champions",
       "found": true,
       "initial": "WC",
@@ -3667,6 +3703,18 @@
       "score": 262,
       "query": "Yarn Loop",
       "bytes": 65631
+    },
+    {
+      "name": "You Know: Associations",
+      "found": true,
+      "initial": "YK",
+      "image": "assets/icons/official/you-know-associations.jpg",
+      "matchedName": "You Know: Associations",
+      "artistName": "Tripledot Studios Limited",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tripledot.cardassociation",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 328585
     },
     {
       "name": "Yu-Gi-Oh! Master Duel",
