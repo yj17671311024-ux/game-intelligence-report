@@ -208,6 +208,27 @@ const aliasMap = new Map(Object.entries({
   "Top Heroes: Kingdom Saga": "Top Heroes",
   "Top War: Battle Game": "Top War",
   "Warhammer 40,000: Tacticus ™": "Warhammer 40,000: Tacticus",
+  "Sudoku.com - Number Games": "Sudoku.com",
+  "Blockudoku®: Block Puzzle Game": "Blockudoku",
+  "Blockudoku: Block Puzzle Game": "Blockudoku",
+  "Nonogram.com - Number Games": "Nonogram.com",
+  "Art Puzzle - Jigsaw Pictures": "Art Puzzle",
+  "Number Match - Number Games": "Number Match",
+  "Woodoku - Wood Block Puzzle": "Woodoku",
+  "Woodoku: Wood Block Puzzle": "Woodoku",
+  "Triple Tile: Match Puzzle Game": "Triple Tile",
+  "Solitaire: Classic Card Games": "Solitaire Classic Card Games",
+  "Wordoku – Word Puzzle Game": "Wordoku",
+  "Wordoku - Word Puzzle Game": "Wordoku",
+  "Word Cookies! ®": "Word Cookies",
+  "Roll the Ball® - slide puzzle": "Roll the Ball",
+  "Roll the Ball - slide puzzle": "Roll the Ball",
+  "DOP 2: Delete One Part": "DOP 2",
+  "Color Fill 3D": "Color Fill 3D",
+  "Fill The Fridge: Organizing Game": "Fill The Fridge",
+  "Who is? Brain Teaser & Riddles": "Who Is?",
+  "Brain Test: Tricky Puzzles": "Brain Test",
+  "Brain Test 2: Tricky Stories": "Brain Test 2",
 }));
 
 const gameCn = {
@@ -349,6 +370,45 @@ const gameCn = {
   "Foundation: Galactic Frontier": "基地：银河边境",
   "Top Heroes": "顶级英雄",
   "Guns of Glory: Lost Island": "火枪纪元：失落之岛",
+  "Sudoku.com": "数独.com",
+  "Blockudoku": "方块数独",
+  "Nonogram.com": "数织.com",
+  "Art Puzzle": "艺术拼图",
+  "Number Match": "数字配对",
+  "Woodoku": "木块数独",
+  "Triple Tile": "三重瓷砖",
+  "Solitaire Classic Card Games": "经典纸牌",
+  "Wordoku": "字词数独",
+  "Wordscapes": "文字风景",
+  "Wordscapes Search": "文字风景搜索",
+  "Word Stacks": "文字堆栈",
+  "Wordscapes In Bloom": "文字花园",
+  "Parking Jam 3D": "停车堵塞 3D",
+  "Pull the Pin": "拉针解谜",
+  "Tap Away": "点击移除",
+  "Scavenger Hunt": "寻物大搜寻",
+  "Brain Test": "脑洞测试",
+  "Brain Test 2": "脑洞测试 2",
+  "Who Is?": "这是谁？脑筋急转弯",
+  "Braindom": "脑洞王国",
+  "Word Cookies": "文字饼干",
+  "Roll the Ball": "滚动小球",
+  "Block! Hexa Puzzle": "六边形方块",
+  "Line Puzzle": "线条拼图",
+  "DOP 2": "删除一部分 2",
+  "Sand Balls": "沙球",
+  "Save the Girl": "救救女孩",
+  "Color Fill 3D": "颜色填充 3D",
+  "Screw Jam": "螺丝堵塞",
+  "Tangle Master 3D": "绳结大师 3D",
+  "Go Knots 3D": "解结 3D",
+  "Fill The Fridge": "填满冰箱",
+  "Cookie Jam": "饼干果酱",
+  "Panda Pop": "熊猫泡泡",
+  "Harry Potter: Puzzles & Spells": "哈利波特：谜题与咒语",
+  "Spider Solitaire": "蜘蛛纸牌",
+  "FreeCell Solitaire": "空当接龙",
+  "Mahjong Solitaire": "麻将纸牌",
 };
 
 const devCnRaw = {
@@ -438,6 +498,21 @@ const devCnRaw = {
   "Gear Inc.": "Gear Inc.",
   "Gear Inc": "Gear Inc.",
   "Easybrain Ltd": "Easybrain",
+  "PeopleFun": "PeopleFun",
+  "PeopleFun, Inc.": "PeopleFun",
+  "Tripledot Studios": "Tripledot Studios",
+  "Popcore Games": "Popcore",
+  "Popcore GmbH": "Popcore",
+  "Unico Studio": "Unico Studio",
+  "Unico Studio LLC": "Unico Studio",
+  "BitMango": "BitMango",
+  "BitMango, Inc.": "BitMango",
+  "BitMango, Inc": "BitMango",
+  "PlaySimple Games": "PlaySimple Games",
+  "PlaySimple Games Pte Ltd": "PlaySimple Games",
+  "MobilityWare": "MobilityWare",
+  "MobilityWare, Inc.": "MobilityWare",
+  "Rollic Games Oyun Yazilim ve Pazarlama A.S.": "Rollic Games",
   "Game Duo Co.,Ltd.": "Game Duo",
   "Game Duo Co., Ltd.": "Game Duo",
 };
@@ -499,6 +574,45 @@ const typeMap = {
   "Bloons TD Battles 2": "休闲塔防 / PVP",
   "Tower War - Tactical Conquest": "休闲塔防 / 轻策略",
   "Tower War: Tactical Conquest": "休闲塔防 / 轻策略",
+  "Sudoku.com": "Sudoku / Daily Puzzle",
+  "Blockudoku": "Block / Woodoku",
+  "Nonogram.com": "Nonogram / Logic",
+  "Art Puzzle": "Jigsaw / Art",
+  "Number Match": "Number / Logic",
+  "Woodoku": "Wood Block / Board",
+  "Triple Tile": "Tile / Triple Match",
+  "Solitaire Classic Card Games": "Card / Solitaire",
+  "Wordoku": "Word / Sudoku",
+  "Wordscapes": "Word / Crossword",
+  "Wordscapes Search": "Word Search",
+  "Word Stacks": "Word / Stack",
+  "Wordscapes In Bloom": "Word / Theme",
+  "Parking Jam 3D": "Traffic / Jam",
+  "Pull the Pin": "Pin / Physics",
+  "Tap Away": "Tap / Logic",
+  "Scavenger Hunt": "Hidden Object",
+  "Brain Test": "Brain Teaser",
+  "Brain Test 2": "Brain Teaser",
+  "Who Is?": "Brain Teaser",
+  "Braindom": "Brain Teaser",
+  "Word Cookies": "Word / Puzzle",
+  "Roll the Ball": "Route / Slide",
+  "Block! Hexa Puzzle": "Block / Hexa",
+  "Line Puzzle": "Line / Logic",
+  "DOP 2": "Delete / Brain",
+  "Sand Balls": "Physics / Sand",
+  "Save the Girl": "Choice Puzzle",
+  "Color Fill 3D": "Area Fill",
+  "Screw Jam": "Screw / Jam",
+  "Tangle Master 3D": "Rope / Untangle",
+  "Go Knots 3D": "Knot / Logic",
+  "Fill The Fridge": "Sort / Organize",
+  "Cookie Jam": "Match-3",
+  "Panda Pop": "Bubble Shooter",
+  "Harry Potter: Puzzles & Spells": "Match-3 / IP",
+  "Spider Solitaire": "Card / Solitaire",
+  "FreeCell Solitaire": "Card / Solitaire",
+  "Mahjong Solitaire": "Mahjong / Solitaire",
 };
 
 const familyDefs = [
@@ -511,8 +625,8 @@ const familyDefs = [
     desc: "合成、订单、装修、剧情和烹饪题材，重点看叙事包装、任务链和内容消耗。",
   },
   {
-    name: "Sort / Jam / Line",
-    desc: "排序、Jam、路线与堵塞类轻谜题，重点看首局压力、素材表达和广告变现入口。",
+    name: "Sort / Jam / Queue",
+    desc: "排序、Jam、排队和容器整理类，重点看首局压力、颜色/空间约束和广告变现入口。",
   },
   {
     name: "Traffic / Route / Escape",
@@ -528,15 +642,31 @@ const familyDefs = [
   },
   {
     name: "Word / Sudoku / Brain",
-    desc: "文字、数独、纸牌、麻将和脑力题，重点看日常留存、题库组织和轻量化包装。",
+    desc: "文字、数独、脑力训练和每日挑战，重点看题库组织、日常留存和轻量化包装。",
   },
   {
     name: "Card / Mahjong / Domino",
     desc: "纸牌、麻将、多米诺和拼图纸牌题，重点看日常挑战、收集目标和低压力长期留存。",
   },
   {
-    name: "Arcade / Logic Puzzle",
-    desc: "Block、Screw、Hole、Tile 等机制型 Puzzle，重点看单局爽感和素材可解释性。",
+    name: "Tile / Block / Woodoku",
+    desc: "方块、Tile、Woodoku 和棋盘填充类，重点看空间规划、关卡失败点和短局循环。",
+  },
+  {
+    name: "Screw / Pin / Hardware",
+    desc: "螺丝、插销、硬件拆解类，重点看操作顺序、层级遮挡和触感反馈。",
+  },
+  {
+    name: "Hole / Collect / Clean-up",
+    desc: "黑洞吞噬、收集、清屏和整理类，重点看爽感、成长反馈和素材传播性。",
+  },
+  {
+    name: "Jigsaw / Pixel / Art",
+    desc: "拼图、像素、涂色和艺术修复类，重点看内容题材、完成反馈和低压力留存。",
+  },
+  {
+    name: "Physics / Logic Puzzle",
+    desc: "物理、机关和逻辑解谜类，重点看规则表达、失败反馈和关卡可复用性。",
   },
   {
     name: "Puzzle + Meta / SLG",
@@ -564,6 +694,45 @@ const pointMap = {
   "Whiteout Survival": "冰雪生存 SLG 标杆，适合拆建筑、联盟和活动节奏。",
   "Puzzles & Survival": "Puzzle + SLG 核心样本，今天 Strategy 前 10。",
   "Arknights": "塔防/二游长线代表，适合看版本节点与角色内容拉动。",
+  "Sudoku.com": "数独长期留存样本，重点看每日挑战、难度分层、提示付费和广告展示节奏。",
+  "Blockudoku": "木块 + 数独棋盘的经典混合，适合拆空间压力、失败点和短局循环。",
+  "Nonogram.com": "数织题库型产品，重点看题库组织、每日挑战和低压力长期留存。",
+  "Art Puzzle": "拼图与艺术完成反馈结合，适合看低压力题材、内容消耗和视觉奖励。",
+  "Number Match": "数字配对脑力题，重点看规则教学、难度爬坡和题库复用。",
+  "Woodoku": "木块棋盘代表作，适合对照 Block Blast/Blockudoku 看棋盘压力和广告节奏。",
+  "Triple Tile": "Tile 三消代表作，重点看图案识别、收集目标和关卡节奏。",
+  "Solitaire Classic Card Games": "经典纸牌商业化样本，适合看日常挑战、轻付费和中老年用户留存。",
+  "Wordoku": "文字与数独结合的轻脑力样本，适合看题材差异化和题库包装。",
+  "Wordscapes": "文字品类头部样本，重点看关卡量、每日挑战、词库难度和长期活动。",
+  "Wordscapes Search": "找词玩法样本，适合看低门槛搜索反馈和主题关卡包装。",
+  "Word Stacks": "文字堆叠变体，适合看同一词库能力如何做规则差异化。",
+  "Wordscapes In Bloom": "女性向轻包装文字产品，适合看美术主题与关卡留存结合。",
+  "Parking Jam 3D": "交通 Jam 经典样本，重点看车辆阻塞反馈、关卡失败点和素材吸量。",
+  "Pull the Pin": "拉针物理解谜代表作，适合看机关顺序、失败反馈和关卡复用。",
+  "Tap Away": "清屏逻辑样本，重点看方向约束、堆叠结构和爽感反馈。",
+  "Scavenger Hunt": "找物玩法参考，重点看场景信息量、目标提示和内容生产效率。",
+  "Brain Test": "脑筋急转弯标杆，适合看反直觉题目、短视频素材和关卡惊喜感。",
+  "Brain Test 2": "Brain Test 系列化样本，重点看题目包装和剧情化关卡扩展。",
+  "Who Is?": "脑洞问答样本，适合看人物关系、轻剧情和谜题提示节奏。",
+  "Braindom": "脑洞题材矩阵参考，重点看题目模板化和素材传播性。",
+  "Word Cookies": "文字拼词经典产品，适合看题库消耗、主题包装和轻运营节奏。",
+  "Roll the Ball": "滑块路径解谜代表作，重点看路线规划、关卡结构和低门槛失败反馈。",
+  "Block! Hexa Puzzle": "六边形方块填充样本，适合看棋盘形状变化和空间约束。",
+  "Line Puzzle": "线条逻辑题，适合看一笔画/路径规划的关卡复用方式。",
+  "DOP 2": "删除一部分脑洞题，重点看题目反差、低成本关卡和广告素材表现。",
+  "Sand Balls": "沙粒物理题材样本，适合看触感、路径挖掘和视觉反馈。",
+  "Save the Girl": "选择式解谜样本，重点看剧情桥段、二选一反馈和素材钩子。",
+  "Color Fill 3D": "填色占区玩法样本，适合看空间路线、关卡密度和爽感反馈。",
+  "Screw Jam": "螺丝 Jam 玩法样本，重点看颜色槽位、拆解顺序和卡点设计。",
+  "Tangle Master 3D": "解绳结代表作，适合看空间遮挡、操作顺序和触觉反馈。",
+  "Go Knots 3D": "解结轻谜题样本，重点看单局时长、视觉清晰度和关卡变体。",
+  "Fill The Fridge": "整理收纳题材样本，适合看容器空间、ASMR 反馈和女性向素材。",
+  "Cookie Jam": "老牌 Match-3 样本，适合看关卡池、活动运营和题材包装。",
+  "Panda Pop": "泡泡龙长线样本，重点看角色目标、关卡道具和老产品回流。",
+  "Harry Potter: Puzzles & Spells": "IP + Match-3 样本，适合看授权题材、角色收集和活动节奏。",
+  "Spider Solitaire": "经典纸牌变体，适合看成熟规则下的日常任务和广告变现。",
+  "FreeCell Solitaire": "空当接龙样本，重点看高认知规则、题库和用户留存。",
+  "Mahjong Solitaire": "麻将消除/连连看类参考，适合看牌面识别、主题皮肤和日常挑战。",
 };
 
 const studioGroups = [
@@ -620,6 +789,96 @@ const studioGroups = [
     intro: "全球经典 Match-3 厂商之一，强项是品牌资产、关卡池和活动运营。",
     thesis: "学习重点：老产品持续变现、品牌认知、活动节奏、关卡难度曲线。",
     products: ["Candy Crush Saga", "Candy Crush Soda Saga"],
+  },
+  {
+    name: "Easybrain",
+    cn: "Easybrain（脑力与题库型 Puzzle 厂商）",
+    mark: "Easy",
+    type: "Brain / Board / Art Puzzle",
+    intro: "头部脑力休闲厂商，产品覆盖数独、木块、数织、数字配对和艺术拼图，适合作为题库型 Puzzle 的长期竞品库。",
+    thesis: "学习重点：题库规模、每日挑战、难度阶梯、提示/撤销设计、广告展示节奏，以及同一用户群的多产品矩阵。",
+    products: ["Sudoku.com", "Blockudoku", "Nonogram.com", "Art Puzzle", "Number Match"],
+  },
+  {
+    name: "Tripledot Studios",
+    cn: "Tripledot Studios（三点工作室）",
+    mark: "Triple",
+    type: "Board / Tile / Classic",
+    intro: "英国休闲游戏厂商，强项是把木块、纸牌、Tile、文字等成熟规则做成高完成度、低学习成本的长线产品。",
+    thesis: "学习重点：经典规则年轻化包装、首局无压力、关卡/题库供给、广告变现位置和跨品类买量素材。",
+    products: ["Woodoku", "Triple Tile", "Solitaire Classic Card Games", "Wordoku"],
+  },
+  {
+    name: "PeopleFun",
+    cn: "PeopleFun（文字 Puzzle 厂商）",
+    mark: "Words",
+    type: "Word Puzzle",
+    intro: "文字 Puzzle 头部厂商，围绕 Wordscapes 做系列矩阵，适合研究词库、每日挑战和主题包装。",
+    thesis: "学习重点：词库难度、关卡量、主题皮肤、每日挑战、轻社交排行，以及同一 IP/用户群的系列化扩展。",
+    products: ["Wordscapes", "Wordscapes Search", "Word Stacks", "Wordscapes In Bloom"],
+  },
+  {
+    name: "Popcore",
+    cn: "Popcore（轻解谜 / 超休闲 Puzzle 厂商）",
+    mark: "Pop",
+    type: "Traffic / Pin / Hidden",
+    intro: "轻解谜和超休闲 Puzzle 代表厂商，擅长用一眼懂的物理、交通、找物和清屏规则切入免费榜。",
+    thesis: "学习重点：3 秒看懂的素材表达、关卡失败反馈、短局重试、广告变现入口，以及玩法原型快速系列化。",
+    products: ["Parking Jam 3D", "Pull the Pin", "Tap Away", "Scavenger Hunt"],
+  },
+  {
+    name: "Unico Studio",
+    cn: "Unico Studio（脑洞解谜厂商）",
+    mark: "Brain",
+    type: "Brain Teaser",
+    intro: "脑洞问答与反常识解谜代表厂商，适合观察低成本关卡如何通过题目反差和剧情包装形成传播。",
+    thesis: "学习重点：反直觉题目、提示设计、关卡模板复用、短视频素材钩子，以及轻剧情对留存的帮助。",
+    products: ["Brain Test", "Brain Test 2", "Who Is?", "Braindom"],
+  },
+  {
+    name: "BitMango",
+    cn: "BitMango（韩国休闲 Puzzle 厂商）",
+    mark: "Mango",
+    type: "Word / Block / Logic",
+    intro: "韩国老牌休闲 Puzzle 厂商，产品覆盖拼词、滑块、方块、线条和泡泡龙，适合做成熟规则的横向参考。",
+    thesis: "学习重点：多规则产品矩阵、经典玩法包装、题库与关卡复用、老产品维护和广告变现节奏。",
+    products: ["Word Cookies", "Roll the Ball", "Block! Hexa Puzzle", "Line Puzzle"],
+  },
+  {
+    name: "SayGames",
+    cn: "SayGames（超休闲与轻 Puzzle 发行商）",
+    mark: "Say",
+    type: "Hyper-casual Puzzle",
+    intro: "超休闲发行和轻 Puzzle 代表厂商，适合观察素材先行、规则极简、短局强反馈的免费榜产品方法。",
+    thesis: "学习重点：买量素材、首局表达、关卡快速反馈、低门槛物理/选择题，以及广告驱动的产品节奏。",
+    products: ["DOP 2", "Sand Balls", "Save the Girl", "Color Fill 3D"],
+  },
+  {
+    name: "Rollic Games",
+    cn: "Rollic Games（土耳其轻休闲发行商）",
+    mark: "Rollic",
+    type: "Screw / Rope / Organize",
+    intro: "轻休闲发行商，常见方向包括螺丝、绳结、收纳、整理等强触感机制，适合观察新玩法快速验证。",
+    thesis: "学习重点：视觉钩子、可操作物件、强反馈机制、关卡卡点，以及免费榜素材测试到产品化的路径。",
+    products: ["Screw Jam", "Tangle Master 3D", "Go Knots 3D", "Fill The Fridge"],
+  },
+  {
+    name: "Jam City",
+    cn: "Jam City（IP 与 Match-3 厂商）",
+    mark: "Jam",
+    type: "IP / Match-3 / Bubble",
+    intro: "美国休闲厂商，长期经营 Match-3、泡泡龙和 IP 题材 Puzzle，适合对照纯玩法产品看 IP 包装价值。",
+    thesis: "学习重点：授权 IP 的活动节奏、角色/剧情承接、老产品回流、关卡池运营和主题活动商业化。",
+    products: ["Cookie Jam", "Panda Pop", "Disney Emoji Blitz", "Harry Potter: Puzzles & Spells"],
+  },
+  {
+    name: "MobilityWare",
+    cn: "MobilityWare（经典纸牌与麻将厂商）",
+    mark: "Cards",
+    type: "Card / Mahjong Classic",
+    intro: "经典纸牌和麻将类厂商，适合观察成熟规则产品如何靠日常挑战、皮肤和轻运营长期留存。",
+    thesis: "学习重点：经典规则低门槛、日常任务、连胜/挑战目标、广告展示节奏和中长期留存。",
+    products: ["Solitaire Classic Card Games", "Spider Solitaire", "FreeCell Solitaire", "Mahjong Solitaire"],
   },
   {
     name: "Century Games",
@@ -803,12 +1062,16 @@ function gameFamily(name, categoryShort = "") {
   if (/match factory|3d match|triple match|object/.test(raw)) return "3D Match / Object";
   if (/bus traffic|car sort|arrow|arrows|point out|escape|route|traffic/.test(raw)) return "Traffic / Route / Escape";
   if (/domino|solitaire|jigsawcard|mahjong|jigsaw drop/.test(raw)) return "Card / Mahjong / Domino";
-  if (/sort|jam|line|loop|yarn|marble/.test(raw)) return "Sort / Jam / Line";
+  if (/sort|jam|line|loop|yarn|marble|queue/.test(raw)) return "Sort / Jam / Queue";
   if (/hidden|seek|search|find/.test(raw)) return "Hidden Object / Search";
   if (/\bword\b|sudoku|brain|nyt/.test(raw)) return "Word / Sudoku / Brain";
-  if (/block|screw|hole|pixel|flow|knock|tile|cube|woodoku|jigsaw|point out|color block/.test(raw)) return "Arcade / Logic Puzzle";
+  if (/screw|pin|bolt|nut|hardware/.test(raw)) return "Screw / Pin / Hardware";
+  if (/hole|collect|clean|cleanup|sweep/.test(raw)) return "Hole / Collect / Clean-up";
+  if (/jigsaw|pixel|paint|color|art|flow/.test(raw)) return "Jigsaw / Pixel / Art";
+  if (/block|tile|cube|woodoku|color block/.test(raw)) return "Tile / Block / Woodoku";
+  if (/physics|logic|knock|pull|rescue|water|sand|rope/.test(raw)) return "Physics / Logic Puzzle";
   if (/match-3|candy|royal match|royal kingdom|toon blast|toy blast|fishdom|gardenscapes|homescapes|township/.test(raw)) return "Match-3 / Blast";
-  return "Arcade / Logic Puzzle";
+  return "Physics / Logic Puzzle";
 }
 
 function learningPoint(name, categoryShort) {
@@ -1721,31 +1984,45 @@ function sourceListHtml(data) {
 
 function puzzleFamilyCardsHtml(data) {
   const ranks = rankLookup(data);
+  const puzzleTerms = /puzzle|match-?3|merge|sort|jam|queue|traffic|route|escape|3d match|triple match|object|hidden|seek|find|\bword\b|sudoku|brain|mahjong|domino|solitaire|jigsaw|block|tile|woodoku|screw|pin|bolt|nut|hole|collect|clean|pixel|paint|color|art|logic|physics|flow|loop|yarn|marble/i;
+  const chartWeight = (item) => {
+    if (!item) return 120;
+    if (item.categoryKey === "gpPuzzleGross") return 0;
+    if (item.categoryKey === "iosPuzzleGross") return 4;
+    if (item.categoryKey === "gpPuzzleFree") return 14;
+    if (item.categoryKey === "gpGamesFree") return 18;
+    if (item.categoryKey === "gpStrategyGross") return 28;
+    if (item.categoryKey === "iosStrategyGross") return 32;
+    if (item.categoryKey === "gpRpgGross") return 34;
+    return 48;
+  };
+  const isPuzzleReferenceRow = (row) => {
+    const familyName = row.family || gameFamily(row.name, row.categoryShort);
+    const raw = `${row.name || ""} ${row.type || ""} ${row.categoryShort || ""}`;
+    return row.categoryKey === "gpPuzzleGross"
+      || row.categoryKey === "iosPuzzleGross"
+      || row.categoryKey === "gpPuzzleFree"
+      || familyName === "Puzzle + Meta / SLG"
+      || puzzleTerms.test(raw);
+  };
+  const referenceScore = (item) => {
+    if (!item) return 9999;
+    const rankItems = ranks.get(item.name) || [];
+    const rank = Number(item.rank || 999);
+    const crossChartBonus = Math.min(Math.max(rankItems.length - 1, 0), 4) * 10;
+    const topBonus = rank <= 3 ? 18 : rank <= 10 ? 10 : rank <= 20 ? 4 : 0;
+    return chartWeight(item) + rank - crossChartBonus - topBonus;
+  };
   const puzzleRows = [
     ...data.gpPuzzleGross.rows,
     ...data.iosPuzzleGross.rows,
     ...data.gpPuzzleFree.rows,
-    ...allRows(data).filter((row) => {
-      const familyName = row.family || gameFamily(row.name, row.categoryShort);
-      return familyName === "Puzzle + Meta / SLG" || /puzzle/i.test(`${row.name} ${row.type || ""}`);
-    }),
+    ...allRows(data).filter(isPuzzleReferenceRow),
   ];
   const byName = new Map();
-  const sourceScore = (item) => {
-    if (!item) return 9999;
-    const sourceWeight = item.categoryKey === "gpPuzzleGross" ? 0
-      : item.categoryKey === "iosPuzzleGross" ? 4
-      : item.categoryKey === "gpPuzzleFree" ? 12
-      : item.categoryKey === "gpStrategyGross" ? 18
-      : item.categoryKey === "iosStrategyGross" ? 24
-      : item.categoryKey === "gpRpgGross" ? 26
-      : item.categoryKey === "gpGamesFree" ? 32
-      : 40;
-    return sourceWeight + Number(item.rank || 999);
-  };
   for (const row of puzzleRows) {
     const existing = byName.get(row.name);
-    if (!existing || sourceScore(row) < sourceScore(existing)) byName.set(row.name, row);
+    if (!existing || referenceScore(row) < referenceScore(existing)) byName.set(row.name, row);
   }
 
   const groups = new Map(familyDefs.map((family) => [family.name, []]));
@@ -1760,14 +2037,10 @@ function puzzleFamilyCardsHtml(data) {
     .sort((a, b) => (familyOrder.get(a[0]) ?? 99) - (familyOrder.get(b[0]) ?? 99))
     .map(([familyName, rows]) => {
       const def = familyDefs.find((item) => item.name === familyName);
-      const sorted = rows.sort((a, b) => {
-        const scoreA = a.categoryShort.includes("收入") ? a.rank : a.rank + 35;
-        const scoreB = b.categoryShort.includes("收入") ? b.rank : b.rank + 35;
-        return scoreA - scoreB;
-      });
+      const sorted = rows.sort((a, b) => referenceScore(a) - referenceScore(b));
       const productCard = (row) => {
         const rankHtml = (ranks.get(row.name) || [`${row.categoryShort} #${row.rank}`])
-          .slice(0, 3)
+          .slice(0, 4)
           .map((label) => `<span>${escapeHtml(label)}</span>`)
           .join("");
         return `
@@ -1781,12 +2054,12 @@ function puzzleFamilyCardsHtml(data) {
                   <div class="family-ranks">${rankHtml}</div>
                 </article>`;
       };
-      const primaryRows = sorted.slice(0, 8);
-      const extraRows = sorted.slice(8, 14);
+      const primaryRows = sorted.slice(0, 10);
+      const extraRows = sorted.slice(10, 28);
       const productHtml = primaryRows.map(productCard).join("");
       const extraHtml = extraRows.length ? `
               <details class="family-more">
-                <summary>展开更多 ${extraRows.length} 款同板块产品</summary>
+                <summary>展开更多 ${extraRows.length} 款参考竞品</summary>
                 <div class="family-products extra">${extraRows.map(productCard).join("")}
                 </div>
               </details>` : "";
@@ -1797,7 +2070,7 @@ function puzzleFamilyCardsHtml(data) {
                 <h3>${escapeHtml(familyName)}</h3>
                 <p>${escapeHtml(def?.desc || "本期 Puzzle 榜单中的机制类产品集合。")}</p>
               </div>
-              <span>${sorted.length} 款</span>
+              <span>展示 ${Math.min(sorted.length, 28)} / ${sorted.length}</span>
             </header>
             <div class="family-products">${productHtml}
             </div>
@@ -2371,7 +2644,7 @@ function html(data, iconEntries, insights = null) {
     .family-card { border:1px solid var(--line); border-radius:8px; background:#fff; overflow:hidden; }
     .family-card header { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:start; padding:16px; background:#fbfcfd; border-bottom:1px solid var(--line); }
     .family-card header h3 { color:var(--ink); } .family-card header p { color:#526071; margin-top:5px; font-size:13px; }
-    .family-card header > span { display:inline-flex; align-items:center; justify-content:center; min-width:48px; border-radius:999px; background:#eef8fb; color:var(--blue); border:1px solid #bfdae2; font-size:12px; font-weight:900; padding:5px 8px; }
+    .family-card header > span { display:inline-flex; align-items:center; justify-content:center; min-width:76px; white-space:nowrap; border-radius:999px; background:#eef8fb; color:var(--blue); border:1px solid #bfdae2; font-size:12px; font-weight:900; padding:5px 8px; }
     .family-products { display:grid; gap:0; }
     .family-more { border-top:1px solid var(--line); background:#fbfcfd; }
     .family-more summary { cursor:pointer; list-style:none; min-height:40px; display:flex; align-items:center; justify-content:center; padding:8px 12px; color:var(--blue); font-weight:800; font-size:13px; }
@@ -2379,9 +2652,9 @@ function html(data, iconEntries, insights = null) {
     .family-more summary::after { content:"+"; margin-left:8px; width:20px; height:20px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; border:1px solid #bfdae2; background:#eef8fb; }
     .family-more[open] summary::after { content:"-"; }
     .family-products.extra { border-top:1px solid var(--line); }
-    .family-product { display:grid; grid-template-columns:46px minmax(0,1fr) 136px; gap:10px; align-items:center; padding:10px 12px; border-top:1px solid var(--line); }
-    .family-product:first-child { border-top:0; } .family-product-text { min-width:0; } .family-product-text strong { display:block; color:#20242a; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-    .family-product-text span { color:#526071; display:block; font-size:13px; margin-top:1px; } .family-product-text p { color:#4e5b6b; margin-top:4px; font-size:13px; }
+    .family-product { display:grid; grid-template-columns:46px minmax(0,1fr) 152px; gap:10px; align-items:center; padding:10px 12px; border-top:1px solid var(--line); }
+    .family-product:first-child { border-top:0; } .family-product-text { min-width:0; } .family-product-text strong { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; color:#20242a; overflow:hidden; }
+    .family-product-text span { color:#526071; display:block; font-size:13px; margin-top:1px; } .family-product-text p { color:#4e5b6b; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin-top:4px; font-size:13px; }
     .family-ranks { display:grid; gap:4px; } .family-ranks span { display:block; border-radius:6px; background:#fff8ec; border:1px solid #e7d2aa; color:var(--gold); font-size:12px; font-weight:800; line-height:1.25; padding:5px 7px; text-align:center; }
     .studio-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; align-items:start; }
     .studio-card { border:1px solid var(--line); border-radius:8px; background:#fff; overflow:hidden; min-width:0; transition:box-shadow .18s ease; }
@@ -2394,9 +2667,9 @@ function html(data, iconEntries, insights = null) {
     .studio-intro { color:#4e5b6b; margin:0; } .studio-metrics { display:flex; flex-wrap:wrap; gap:8px; } .studio-metrics span { border:1px solid var(--line); background:#f6f8fa; color:#495664; border-radius:999px; padding:4px 8px; font-size:12px; }
     .studio-body { padding:14px 16px 16px; } .studio-thesis { color:#3f4d5c; margin-bottom:12px; }
     .studio-products { display:grid; gap:0; border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#fff; }
-    .studio-product { display:grid; grid-template-columns:46px minmax(0,1fr) 136px; gap:10px; align-items:center; padding:10px; border-top:1px solid var(--line); background:#fff; }
-    .studio-product:first-child { border-top:0; } .studio-product-text { min-width:0; } .studio-product-text strong { display:block; color:#20242a; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-    .studio-product-text span { color:#526071; display:block; font-size:13px; margin-top:1px; } .studio-product-text p { color:#4e5b6b; margin-top:5px; font-size:13px; }
+    .studio-product { display:grid; grid-template-columns:46px minmax(0,1fr) 152px; gap:10px; align-items:center; padding:10px; border-top:1px solid var(--line); background:#fff; }
+    .studio-product:first-child { border-top:0; } .studio-product-text { min-width:0; } .studio-product-text strong { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; color:#20242a; overflow:hidden; }
+    .studio-product-text span { color:#526071; display:block; font-size:13px; margin-top:1px; } .studio-product-text p { color:#4e5b6b; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin-top:5px; font-size:13px; }
     .studio-rank-list { justify-self:stretch; display:grid; gap:4px; align-content:center; }
     .studio-rank-list span,.studio-rank-list small { display:block; border-radius:6px; background:#eef8fb; border:1px solid #bfdae2; color:var(--blue); font-size:12px; font-weight:800; line-height:1.25; padding:5px 7px; text-align:center; }
     .studio-rank-list small { background:#f7f9fb; border-color:#dce3ea; color:#657180; font-weight:700; }
@@ -2481,7 +2754,7 @@ function html(data, iconEntries, insights = null) {
       <div class="section-head">
         <div>
           <h2>Puzzle 玩法拆分</h2>
-          <p class="sub">按产品学习分类重新整理 Puzzle 榜单，不再只按商店大类混放。</p>
+          <p class="sub">按竞品参考价值重新整理 Puzzle 玩法板块，优先展示收入榜、免费榜前排和跨榜出现的标杆产品。</p>
         </div>
       </div>
       <div class="family-grid">${puzzleFamilyCardsHtml(data)}
@@ -2492,7 +2765,7 @@ function html(data, iconEntries, insights = null) {
       <div class="section-head">
         <div>
           <h2>厂商学习卡</h2>
-          <p class="sub">按厂商聚合产品矩阵。点开每张卡，可以看到代表产品、当前排名和可学习点。</p>
+          <p class="sub">按厂商聚合产品矩阵，Puzzle 厂商优先展示。点开每张卡，可以看到代表产品、当前排名和可学习点。</p>
         </div>
       </div>
       <div class="studio-grid">${studioCardsHtml(data, insights)}
