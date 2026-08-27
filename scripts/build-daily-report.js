@@ -672,6 +672,10 @@ const familyDefs = [
     name: "Puzzle + Meta / SLG",
     desc: "Puzzle 与 RPG、SLG、养成等外层系统混合，重点看玩法入口和商业化外层。",
   },
+  {
+    name: "Cross-category / Free Chart",
+    desc: "免费榜中被系统归入 Puzzle 或与 Puzzle 用户重叠、但玩法不属于传统 Puzzle 的产品，重点看题材、素材和分类交叉带来的流量机会。",
+  },
 ];
 
 const familyOrder = new Map(familyDefs.map((family, index) => [family.name, index]));
@@ -1046,6 +1050,7 @@ function isCasualStrategyText(raw) {
 function gameFamily(name, categoryShort = "") {
   const raw = rowText(name, categoryShort);
   if (/mystery dumpling|blind box|unbox|asmr/.test(raw)) return "Unbox / ASMR / 休闲模拟";
+  if (/roblox|duck survival/.test(raw) && categoryShort.includes("Puzzle")) return "Cross-category / Free Chart";
   if (isMidLightTowerDefenseText(raw)) return "休闲 / 中轻度塔防";
   if (isTowerDefenseText(raw)) return "重度塔防 / 策略塔防";
   if (/idle|afk|放置|slow life|top heroes|hero wars|maplestory idle|crumble/.test(raw)) return "放置 RPG / Idle";
@@ -1984,7 +1989,14 @@ function sourceListHtml(data) {
 
 function puzzleFamilyCardsHtml(data) {
   const ranks = rankLookup(data);
+  const everyRow = allRows(data);
   const puzzleTerms = /puzzle|match-?3|merge|sort|jam|queue|traffic|route|escape|3d match|triple match|object|hidden|seek|find|\bword\b|sudoku|brain|mahjong|domino|solitaire|jigsaw|block|tile|woodoku|screw|pin|bolt|nut|hole|collect|clean|pixel|paint|color|art|logic|physics|flow|loop|yarn|marble/i;
+  const freeRowsByName = new Map();
+  for (const row of everyRow) {
+    if (row.categoryKey !== "gpPuzzleFree" && row.categoryKey !== "gpGamesFree") continue;
+    if (!freeRowsByName.has(row.name)) freeRowsByName.set(row.name, []);
+    freeRowsByName.get(row.name).push(row);
+  }
   const chartWeight = (item) => {
     if (!item) return 120;
     if (item.categoryKey === "gpPuzzleGross") return 0;
@@ -2008,16 +2020,36 @@ function puzzleFamilyCardsHtml(data) {
   const referenceScore = (item) => {
     if (!item) return 9999;
     const rankItems = ranks.get(item.name) || [];
-    const rank = Number(item.rank || 999);
+    const rankNumber = Number(item.rank);
+    const rank = Number.isFinite(rankNumber) ? rankNumber : 999;
+    const freeRows = freeRowsByName.get(item.name) || [];
     const crossChartBonus = Math.min(Math.max(rankItems.length - 1, 0), 4) * 10;
     const topBonus = rank <= 3 ? 18 : rank <= 10 ? 10 : rank <= 20 ? 4 : 0;
-    return chartWeight(item) + rank - crossChartBonus - topBonus;
+    const freeSignalBonus = freeRows.some((row) => row.deltaVerified && row.deltaClass === "new") ? 30
+      : freeRows.some((row) => row.deltaVerified && row.deltaClass === "up") ? 18
+      : freeRows.some((row) => Number(row.rank || 999) <= 10) ? 8
+      : 0;
+    return chartWeight(item) + rank - crossChartBonus - topBonus - freeSignalBonus;
+  };
+  const freeSignalLabels = (name) => {
+    const freeRows = freeRowsByName.get(name) || [];
+    const labels = [];
+    if (freeRows.some((row) => row.deltaVerified && row.deltaClass === "new")) labels.push("免费榜新进");
+    if (freeRows.some((row) => row.deltaVerified && row.deltaClass === "up")) labels.push("免费榜上升");
+    const bestFree = freeRows
+      .filter((row) => Number.isFinite(Number(row.rank)))
+      .sort((a, b) => Number(a.rank) - Number(b.rank))[0];
+    if (bestFree) labels.push(`${bestFree.categoryShort} #${bestFree.rank}`);
+    return labels;
   };
   const puzzleRows = [
     ...data.gpPuzzleGross.rows,
     ...data.iosPuzzleGross.rows,
     ...data.gpPuzzleFree.rows,
     ...allRows(data).filter(isPuzzleReferenceRow),
+    ...studioGroups
+      .filter((studio) => /puzzle|match|merge|board|tile|word|brain|card|jam|screw|rope|organize|hyper-casual|classic|休闲|纸牌|麻将|脑力|解谜|拼图/i.test(`${studio.type} ${studio.cn}`))
+      .flatMap((studio) => studio.products.map((name) => productRef(data, name))),
   ];
   const byName = new Map();
   for (const row of puzzleRows) {
@@ -2039,8 +2071,9 @@ function puzzleFamilyCardsHtml(data) {
       const def = familyDefs.find((item) => item.name === familyName);
       const sorted = rows.sort((a, b) => referenceScore(a) - referenceScore(b));
       const productCard = (row) => {
-        const rankHtml = (ranks.get(row.name) || [`${row.categoryShort} #${row.rank}`])
-          .slice(0, 4)
+        const rankLabels = [...freeSignalLabels(row.name), ...(ranks.get(row.name) || [`${row.categoryShort} #${row.rank}`])];
+        const rankHtml = Array.from(new Set(rankLabels))
+          .slice(0, 5)
           .map((label) => `<span>${escapeHtml(label)}</span>`)
           .join("");
         return `
@@ -2055,11 +2088,11 @@ function puzzleFamilyCardsHtml(data) {
                 </article>`;
       };
       const primaryRows = sorted.slice(0, 10);
-      const extraRows = sorted.slice(10, 28);
+      const extraRows = sorted.slice(10);
       const productHtml = primaryRows.map(productCard).join("");
       const extraHtml = extraRows.length ? `
               <details class="family-more">
-                <summary>展开更多 ${extraRows.length} 款参考竞品</summary>
+                <summary>展开剩余 ${extraRows.length} 款同板块竞品</summary>
                 <div class="family-products extra">${extraRows.map(productCard).join("")}
                 </div>
               </details>` : "";
@@ -2070,7 +2103,7 @@ function puzzleFamilyCardsHtml(data) {
                 <h3>${escapeHtml(familyName)}</h3>
                 <p>${escapeHtml(def?.desc || "本期 Puzzle 榜单中的机制类产品集合。")}</p>
               </div>
-              <span>展示 ${Math.min(sorted.length, 28)} / ${sorted.length}</span>
+              <span>${sorted.length} 款</span>
             </header>
             <div class="family-products">${productHtml}
             </div>
@@ -2754,7 +2787,7 @@ function html(data, iconEntries, insights = null) {
       <div class="section-head">
         <div>
           <h2>Puzzle 玩法拆分</h2>
-          <p class="sub">按竞品参考价值重新整理 Puzzle 玩法板块，优先展示收入榜、免费榜前排和跨榜出现的标杆产品。</p>
+          <p class="sub">按竞品参考价值重新整理 Puzzle 玩法板块：GP Puzzle 免费榜 Top30 全量纳入，同时保留收入榜、跨榜出现和玩法标杆产品。</p>
         </div>
       </div>
       <div class="family-grid">${puzzleFamilyCardsHtml(data)}
