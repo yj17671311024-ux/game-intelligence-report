@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-28T02:04:49.041Z",
-  "total": 320,
-  "found": 316,
+  "preparedAt": "2026-08-28T02:56:16.103Z",
+  "total": 358,
+  "found": 354,
   "metadata": [
     {
       "name": "82-0.com",
@@ -214,6 +214,19 @@
       "bytes": 23488
     },
     {
+      "name": "Art Puzzle",
+      "found": true,
+      "initial": "AP",
+      "image": "assets/icons/official/art-puzzle.jpg",
+      "matchedName": "Art Puzzle - Jigsaw Games",
+      "artistName": "Easybrain Ltd",
+      "sourceUrl": "https://apps.apple.com/us/app/art-puzzle-jigsaw-games/id1519174001?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 142,
+      "query": "Art Puzzle",
+      "bytes": 97602
+    },
+    {
       "name": "Avatar: Realms Collide",
       "found": true,
       "initial": "AR",
@@ -347,6 +360,32 @@
       "bytes": 39061
     },
     {
+      "name": "Block! Hexa Puzzle",
+      "found": true,
+      "initial": "BH",
+      "image": "assets/icons/official/block-hexa-puzzle.jpg",
+      "matchedName": "Block! Hexa Puzzle™",
+      "artistName": "BitMango, Inc.",
+      "sourceUrl": "https://apps.apple.com/us/app/block-hexa-puzzle/id1095572547?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 274,
+      "query": "Block! Hexa Puzzle",
+      "bytes": 54235
+    },
+    {
+      "name": "Blockudoku",
+      "found": true,
+      "initial": "B",
+      "image": "assets/icons/official/blockudoku.jpg",
+      "matchedName": "Blockudoku - Block Puzzle Game",
+      "artistName": "Easybrain Ltd",
+      "sourceUrl": "https://apps.apple.com/us/app/blockudoku-block-puzzle-game/id1452227871?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 130,
+      "query": "Blockudoku",
+      "bytes": 18620
+    },
+    {
       "name": "Bloons TD 6",
       "found": true,
       "initial": "BT",
@@ -417,6 +456,45 @@
       "score": 286,
       "query": "Brain Puzzle: Tricky Quest",
       "bytes": 75442
+    },
+    {
+      "name": "Brain Test",
+      "found": true,
+      "initial": "BT",
+      "image": "assets/icons/official/brain-test.jpg",
+      "matchedName": "Brain Test: Tricky Puzzles",
+      "artistName": "UNICO STUDIO",
+      "sourceUrl": "https://apps.apple.com/us/app/brain-test-tricky-puzzles/id1486214495?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 262,
+      "query": "Brain Test",
+      "bytes": 95119
+    },
+    {
+      "name": "Brain Test 2",
+      "found": true,
+      "initial": "BT",
+      "image": "assets/icons/official/brain-test-2.jpg",
+      "matchedName": "Brain Test 2: Tricky Stories",
+      "artistName": "UNICO STUDIO",
+      "sourceUrl": "https://apps.apple.com/us/app/brain-test-2-tricky-stories/id1509517244?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 262,
+      "query": "Brain Test 2",
+      "bytes": 90949
+    },
+    {
+      "name": "Braindom",
+      "found": true,
+      "initial": "B",
+      "image": "assets/icons/official/braindom.jpg",
+      "matchedName": "Braindom: Brain Games Test Out",
+      "artistName": "Lahana Games",
+      "sourceUrl": "https://apps.apple.com/us/app/braindom-brain-games-test-out/id1513009813?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 130,
+      "query": "Braindom",
+      "bytes": 40208
     },
     {
       "name": "BrownDust2 - Full Burst RPG",
@@ -647,6 +725,32 @@
       "bytes": 43352
     },
     {
+      "name": "Color Fill 3D",
+      "found": true,
+      "initial": "CF",
+      "image": "assets/icons/official/color-fill-3d.jpg",
+      "matchedName": "Color Fill 3D: Maze Game",
+      "artistName": "AI Games FZ",
+      "sourceUrl": "https://apps.apple.com/us/app/color-fill-3d-maze-game/id1473024868?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 154,
+      "query": "Color Fill 3D",
+      "bytes": 54364
+    },
+    {
+      "name": "Cookie Jam",
+      "found": true,
+      "initial": "CJ",
+      "image": "assets/icons/official/cookie-jam.jpg",
+      "matchedName": "Cookie Jam: Match 3 Games",
+      "artistName": "Jam City, Inc.",
+      "sourceUrl": "https://apps.apple.com/us/app/cookie-jam-match-3-games/id727296976?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 142,
+      "query": "Cookie Jam",
+      "bytes": 45978
+    },
+    {
       "name": "CookieRun: Crumble - Idle RPG",
       "found": true,
       "initial": "CC",
@@ -839,6 +943,19 @@
       "bytes": 5953
     },
     {
+      "name": "DOP 2",
+      "found": true,
+      "initial": "D",
+      "image": "assets/icons/official/dop-2.jpg",
+      "matchedName": "DOP 2: Delete One Part",
+      "artistName": "SayGames LTD",
+      "sourceUrl": "https://apps.apple.com/us/app/dop-2-delete-one-part/id1543160727?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 250,
+      "query": "DOP 2",
+      "bytes": 53362
+    },
+    {
       "name": "Draft Showdown",
       "found": true,
       "initial": "DS",
@@ -1007,6 +1124,19 @@
       "bytes": 98313
     },
     {
+      "name": "Fill The Fridge",
+      "found": true,
+      "initial": "FT",
+      "image": "assets/icons/official/fill-the-fridge.jpg",
+      "matchedName": "Fill The Fridge!",
+      "artistName": "Rollic Games",
+      "sourceUrl": "https://apps.apple.com/us/app/fill-the-fridge/id1605936806?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 274,
+      "query": "Fill The Fridge",
+      "bytes": 107214
+    },
+    {
       "name": "Find Hidden Objects - Spot It!",
       "found": true,
       "initial": "FH",
@@ -1165,6 +1295,19 @@
       "bytes": 5512
     },
     {
+      "name": "FreeCell Solitaire",
+      "found": true,
+      "initial": "FS",
+      "image": "assets/icons/official/freecell-solitaire.jpg",
+      "matchedName": "FreeCell ▻ Solitaire",
+      "artistName": "PeopleFun CG, LLC",
+      "sourceUrl": "https://apps.apple.com/us/app/freecell-solitaire/id500964912?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 262,
+      "query": "FreeCell Solitaire",
+      "bytes": 46298
+    },
+    {
       "name": "Fruit Ninja",
       "found": true,
       "initial": "FN",
@@ -1261,6 +1404,19 @@
       "bytes": 5481
     },
     {
+      "name": "Go Knots 3D",
+      "found": true,
+      "initial": "GK",
+      "image": "assets/icons/official/go-knots-3d.jpg",
+      "matchedName": "Go Knots 3D",
+      "artistName": "Rollic Games",
+      "sourceUrl": "https://apps.apple.com/us/app/go-knots-3d/id1503028915?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 274,
+      "query": "Go Knots 3D",
+      "bytes": 43893
+    },
+    {
       "name": "GODDESS OF VICTORY: NIKKE",
       "found": true,
       "initial": "GO",
@@ -1355,6 +1511,19 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 100952
+    },
+    {
+      "name": "Harry Potter: Puzzles & Spells",
+      "found": true,
+      "initial": "HP",
+      "image": "assets/icons/official/harry-potter-puzzles-and-spells.jpg",
+      "matchedName": "Harry Potter: Puzzles & Spells",
+      "artistName": "Zynga Inc.",
+      "sourceUrl": "https://apps.apple.com/us/app/harry-potter-puzzles-spells/id1434505322?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 298,
+      "query": "Harry Potter: Puzzles & Spells",
+      "bytes": 80889
     },
     {
       "name": "Hearthstone",
@@ -1814,6 +1983,19 @@
       "bytes": 6810
     },
     {
+      "name": "Line Puzzle",
+      "found": true,
+      "initial": "LP",
+      "image": "assets/icons/official/line-puzzle.jpg",
+      "matchedName": "Connect Balls - Line Puzzle -",
+      "artistName": "BAF, Ltd.",
+      "sourceUrl": "https://apps.apple.com/us/app/connect-balls-line-puzzle/id1626781939?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 142,
+      "query": "Line Puzzle",
+      "bytes": 33158
+    },
+    {
       "name": "Little Farm Story",
       "found": true,
       "initial": "LF",
@@ -1980,6 +2162,19 @@
       "score": 262,
       "query": "Mahjong Master",
       "bytes": 104704
+    },
+    {
+      "name": "Mahjong Solitaire",
+      "found": true,
+      "initial": "MS",
+      "image": "assets/icons/official/mahjong-solitaire.jpg",
+      "matchedName": "Mahjong Solitaire•",
+      "artistName": "MobilityWare",
+      "sourceUrl": "https://apps.apple.com/us/app/mahjong-solitaire/id1444813385?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 262,
+      "query": "Mahjong Solitaire",
+      "bytes": 93397
     },
     {
       "name": "MapleStory M - Fantasy MMORPG",
@@ -2295,6 +2490,19 @@
       "bytes": 260392
     },
     {
+      "name": "Nonogram.com",
+      "found": true,
+      "initial": "NC",
+      "image": "assets/icons/official/nonogram-com.jpg",
+      "matchedName": "Nonogram.com - Number Games",
+      "artistName": "Easybrain Ltd",
+      "sourceUrl": "https://apps.apple.com/us/app/nonogram-com-number-games/id1452992954?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 262,
+      "query": "Nonogram.com",
+      "bytes": 22198
+    },
+    {
       "name": "NTE: Neverness to Everness",
       "found": true,
       "initial": "NN",
@@ -2305,6 +2513,18 @@
       "score": 286,
       "query": "NTE: Neverness to Everness",
       "bytes": 103006
+    },
+    {
+      "name": "Number Match",
+      "found": true,
+      "initial": "NM",
+      "image": "assets/icons/official/number-match-number-games.jpg",
+      "matchedName": "Number Match - Number Games",
+      "artistName": "Easybrain",
+      "sourceUrl": "https://www.appbrain.com/app/number-match-number-games/com.easybrain.number.puzzle.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 2038
     },
     {
       "name": "Number Match - Number Games",
@@ -2451,6 +2671,19 @@
       "bytes": 51706
     },
     {
+      "name": "Panda Pop",
+      "found": true,
+      "initial": "PP",
+      "image": "assets/icons/official/panda-pop.jpg",
+      "matchedName": "Bubble Shooter - Panda Pop!",
+      "artistName": "Jam City, Inc.",
+      "sourceUrl": "https://apps.apple.com/us/app/bubble-shooter-panda-pop/id700970012?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 142,
+      "query": "Panda Pop",
+      "bytes": 93629
+    },
+    {
       "name": "Paper.io 2",
       "found": true,
       "initial": "PI",
@@ -2461,6 +2694,19 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 246798
+    },
+    {
+      "name": "Parking Jam 3D",
+      "found": true,
+      "initial": "PJ",
+      "image": "assets/icons/official/parking-jam-3d.jpg",
+      "matchedName": "Parking Jam 3D",
+      "artistName": "Popcore GmbH",
+      "sourceUrl": "https://apps.apple.com/us/app/parking-jam-3d/id1498229533?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 274,
+      "query": "Parking Jam 3D",
+      "bytes": 108151
     },
     {
       "name": "Piggy Kingdom",
@@ -2593,6 +2839,19 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 8089
+    },
+    {
+      "name": "Pull the Pin",
+      "found": true,
+      "initial": "PT",
+      "image": "assets/icons/official/pull-the-pin.jpg",
+      "matchedName": "Pull the Pin",
+      "artistName": "Popcore GmbH",
+      "sourceUrl": "https://apps.apple.com/us/app/pull-the-pin/id1496150467?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 274,
+      "query": "Pull the Pin",
+      "bytes": 156923
     },
     {
       "name": "Puzzles & Chaos",
@@ -2763,6 +3022,19 @@
       "bytes": 74219
     },
     {
+      "name": "Roll the Ball",
+      "found": true,
+      "initial": "RT",
+      "image": "assets/icons/official/roll-the-ball.jpg",
+      "matchedName": "Roll the Ball® - slide puzzle",
+      "artistName": "BitMango, Inc.",
+      "sourceUrl": "https://apps.apple.com/us/app/roll-the-ball-slide-puzzle/id961875786?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 274,
+      "query": "Roll the Ball",
+      "bytes": 63785
+    },
+    {
       "name": "Romantic Nuts & Bolts Sorting",
       "found": true,
       "initial": "RN",
@@ -2809,6 +3081,58 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 323647
+    },
+    {
+      "name": "Sand Balls",
+      "found": true,
+      "initial": "SB",
+      "image": "assets/icons/official/sand-balls.jpg",
+      "matchedName": "Sand Balls - Digger Puzzle",
+      "artistName": "SayGames LTD",
+      "sourceUrl": "https://apps.apple.com/us/app/sand-balls-digger-puzzle/id1474046667?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 142,
+      "query": "Sand Balls",
+      "bytes": 46701
+    },
+    {
+      "name": "Save the Girl",
+      "found": true,
+      "initial": "ST",
+      "image": "assets/icons/official/save-the-girl.jpg",
+      "matchedName": "Save The Girl!",
+      "artistName": "Lion Studios",
+      "sourceUrl": "https://apps.apple.com/us/app/save-the-girl/id1490384223?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 274,
+      "query": "Save the Girl",
+      "bytes": 57909
+    },
+    {
+      "name": "Scavenger Hunt",
+      "found": true,
+      "initial": "SH",
+      "image": "assets/icons/official/scavenger-hunt.jpg",
+      "matchedName": "Scavenger Hunt!",
+      "artistName": "Popcore GmbH",
+      "sourceUrl": "https://apps.apple.com/us/app/scavenger-hunt/id1613687713?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 262,
+      "query": "Scavenger Hunt",
+      "bytes": 91214
+    },
+    {
+      "name": "Screw Jam",
+      "found": true,
+      "initial": "SJ",
+      "image": "assets/icons/official/screw-jam.jpg",
+      "matchedName": "Screw Jam",
+      "artistName": "Rollic Games",
+      "sourceUrl": "https://apps.apple.com/us/app/screw-jam/id6471490579?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 262,
+      "query": "Screw Jam",
+      "bytes": 93955
     },
     {
       "name": "Screwdom",
@@ -2991,6 +3315,19 @@
       "bytes": 241072
     },
     {
+      "name": "Spider Solitaire",
+      "found": true,
+      "initial": "SS",
+      "image": "assets/icons/official/spider-solitaire.jpg",
+      "matchedName": "Spider ▻ Solitaire",
+      "artistName": "PeopleFun CG, LLC",
+      "sourceUrl": "https://apps.apple.com/us/app/spider-solitaire/id500962489?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 262,
+      "query": "Spider Solitaire",
+      "bytes": 62372
+    },
+    {
       "name": "Stack Smash",
       "found": false,
       "initial": "SS",
@@ -3069,6 +3406,19 @@
       "bytes": 404768
     },
     {
+      "name": "Sudoku.com",
+      "found": true,
+      "initial": "SC",
+      "image": "assets/icons/official/sudoku-com.jpg",
+      "matchedName": "Sudoku.com - Number Games",
+      "artistName": "Easybrain Ltd",
+      "sourceUrl": "https://apps.apple.com/us/app/sudoku-com-number-games/id1193508329?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 262,
+      "query": "Sudoku.com",
+      "bytes": 32689
+    },
+    {
       "name": "Summoners War",
       "found": true,
       "initial": "SW",
@@ -3115,6 +3465,32 @@
       "score": 262,
       "query": "Sword x Staff",
       "bytes": 74296
+    },
+    {
+      "name": "Tangle Master 3D",
+      "found": true,
+      "initial": "TM",
+      "image": "assets/icons/official/tangle-master-3d.jpg",
+      "matchedName": "Tangle Master 3D",
+      "artistName": "Rollic Games",
+      "sourceUrl": "https://apps.apple.com/us/app/tangle-master-3d/id1512799121?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 274,
+      "query": "Tangle Master 3D",
+      "bytes": 72119
+    },
+    {
+      "name": "Tap Away",
+      "found": true,
+      "initial": "TA",
+      "image": "assets/icons/official/tap-away.jpg",
+      "matchedName": "Tap Away 3D",
+      "artistName": "Popcore GmbH",
+      "sourceUrl": "https://apps.apple.com/us/app/tap-away-3d/id1568058543?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 142,
+      "query": "Tap Away",
+      "bytes": 61667
     },
     {
       "name": "Tap Tile!",
@@ -3453,6 +3829,19 @@
       "bytes": 81194
     },
     {
+      "name": "Triple Tile",
+      "found": true,
+      "initial": "TT",
+      "image": "assets/icons/official/triple-tile.jpg",
+      "matchedName": "Triple Tile: Match Puzzle Game",
+      "artistName": "Tripledot Studios",
+      "sourceUrl": "https://apps.apple.com/us/app/triple-tile-match-puzzle-game/id1572661625?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 262,
+      "query": "Triple Tile",
+      "bytes": 81740
+    },
+    {
       "name": "Viking Rise",
       "found": true,
       "initial": "VR",
@@ -3621,6 +4010,19 @@
       "bytes": 81862
     },
     {
+      "name": "Who Is?",
+      "found": true,
+      "initial": "WI",
+      "image": "assets/icons/official/who-is.jpg",
+      "matchedName": "Who is? Brain Teaser & Riddles",
+      "artistName": "UNICO STUDIO",
+      "sourceUrl": "https://apps.apple.com/us/app/who-is-brain-teaser-riddles/id1531582123?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 262,
+      "query": "Who Is?",
+      "bytes": 79373
+    },
+    {
       "name": "Whoa Adventure",
       "found": true,
       "initial": "WA",
@@ -3657,6 +4059,18 @@
       "bytes": 61347
     },
     {
+      "name": "Woodoku",
+      "found": true,
+      "initial": "WW",
+      "image": "assets/icons/official/woodoku-wood-block-puzzle.jpg",
+      "matchedName": "Woodoku - Wood Block Puzzles",
+      "artistName": "Tripledot Studios",
+      "sourceUrl": "https://apps.apple.com/us/app/woodoku-wood-block-puzzles/id1496354836?uo=4",
+      "score": 154,
+      "query": "Woodoku: Wood Block Puzzle",
+      "bytes": 58140
+    },
+    {
       "name": "Woodoku Blast",
       "found": true,
       "initial": "WB",
@@ -3679,6 +4093,84 @@
       "score": 154,
       "query": "Woodoku: Wood Block Puzzle",
       "bytes": 58140
+    },
+    {
+      "name": "Word Cookies",
+      "found": true,
+      "initial": "WC",
+      "image": "assets/icons/official/word-cookies.jpg",
+      "matchedName": "Word Cookies!®",
+      "artistName": "BitMango, Inc.",
+      "sourceUrl": "https://apps.apple.com/us/app/word-cookies/id1153883316?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 262,
+      "query": "Word Cookies",
+      "bytes": 59800
+    },
+    {
+      "name": "Word Stacks",
+      "found": true,
+      "initial": "WS",
+      "image": "assets/icons/official/word-stacks.jpg",
+      "matchedName": "Word Stacks",
+      "artistName": "PeopleFun, Inc.",
+      "sourceUrl": "https://apps.apple.com/us/app/word-stacks/id1413942319?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 262,
+      "query": "Word Stacks",
+      "bytes": 71690
+    },
+    {
+      "name": "Wordoku",
+      "found": true,
+      "initial": "W",
+      "image": "assets/icons/official/wordoku.jpg",
+      "matchedName": "Wordoku",
+      "artistName": "Joaquin Almora",
+      "sourceUrl": "https://apps.apple.com/us/app/wordoku/id6762939318?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 250,
+      "query": "Wordoku",
+      "bytes": 23522
+    },
+    {
+      "name": "Wordscapes",
+      "found": true,
+      "initial": "W",
+      "image": "assets/icons/official/wordscapes.jpg",
+      "matchedName": "Wordscapes - Word Game",
+      "artistName": "PeopleFun, Inc.",
+      "sourceUrl": "https://apps.apple.com/us/app/wordscapes-word-game/id1207472156?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 130,
+      "query": "Wordscapes",
+      "bytes": 94086
+    },
+    {
+      "name": "Wordscapes In Bloom",
+      "found": true,
+      "initial": "WI",
+      "image": "assets/icons/official/wordscapes-in-bloom.jpg",
+      "matchedName": "Wordscapes In Bloom",
+      "artistName": "PeopleFun, Inc.",
+      "sourceUrl": "https://apps.apple.com/us/app/wordscapes-in-bloom/id1313561414?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 274,
+      "query": "Wordscapes In Bloom",
+      "bytes": 76492
+    },
+    {
+      "name": "Wordscapes Search",
+      "found": true,
+      "initial": "WS",
+      "image": "assets/icons/official/wordscapes-search.jpg",
+      "matchedName": "Wordscapes Search - Word Game",
+      "artistName": "PeopleFun, Inc.",
+      "sourceUrl": "https://apps.apple.com/us/app/wordscapes-search-word-game/id1420294918?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 142,
+      "query": "Wordscapes Search",
+      "bytes": 60839
     },
     {
       "name": "World of Tanks Blitz",
