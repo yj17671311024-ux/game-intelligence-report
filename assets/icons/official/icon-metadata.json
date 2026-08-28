@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-28T02:56:16.103Z",
-  "total": 358,
-  "found": 354,
+  "preparedAt": "2026-08-28T21:13:21.296Z",
+  "total": 360,
+  "found": 356,
   "metadata": [
     {
       "name": "82-0.com",
@@ -1198,18 +1198,6 @@
       }
     },
     {
-      "name": "Flambé: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge & Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6265
-    },
-    {
       "name": "Flambe: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1220,6 +1208,18 @@
       "score": 94,
       "query": "Flambe: Merge & Cook",
       "bytes": 58307
+    },
+    {
+      "name": "Flambé: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge & Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6265
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -3517,6 +3517,18 @@
       "bytes": 61682
     },
     {
+      "name": "TFT: Teamfight Tactics",
+      "found": true,
+      "initial": "TT",
+      "image": "assets/icons/official/tft-teamfight-tactics.jpg",
+      "matchedName": "TFT: Teamfight Tactics",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/tft-teamfight-tactics/ios-1480616748",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8181
+    },
+    {
       "name": "The Battle Cats",
       "found": true,
       "initial": "TB",
@@ -3671,6 +3683,18 @@
       "score": 262,
       "query": "Toon Blast",
       "bytes": 33696
+    },
+    {
+      "name": "Top Drives - Car Race Battles",
+      "found": true,
+      "initial": "TD",
+      "image": "assets/icons/official/top-drives-car-race-battles.jpg",
+      "matchedName": "Top Drives - Car Race Battles",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/top-drives-car-race-battles/ios-1069370674",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6249
     },
     {
       "name": "Top Force: Commander",
