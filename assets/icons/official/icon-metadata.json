@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-27T02:08:47.107Z",
-  "total": 316,
-  "found": 312,
+  "preparedAt": "2026-08-28T02:04:49.041Z",
+  "total": 320,
+  "found": 316,
   "metadata": [
     {
       "name": "82-0.com",
@@ -1068,18 +1068,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1090,6 +1078,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1451,6 +1451,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 7053
+    },
+    {
+      "name": "IdleOn - The Incremental MMO",
+      "found": true,
+      "initial": "IT",
+      "image": "assets/icons/official/idleon-the-incremental-mmo.jpg",
+      "matchedName": "IdleOn - The Incremental MMO",
+      "artistName": "LavaFlame2",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.lavaflame.MMO",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 193299
     },
     {
       "name": "Infinity Kingdom",
@@ -2343,6 +2355,30 @@
       "bytes": 30447
     },
     {
+      "name": "Offline Games No WiFi internet",
+      "found": true,
+      "initial": "OG",
+      "image": "assets/icons/official/offline-games-no-wifi-internet.jpg",
+      "matchedName": "Offline Games No WiFi internet",
+      "artistName": "Fun Offline Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.media720.games2020",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 584736
+    },
+    {
+      "name": "ONE PIECE TREASURE CRUISE-RPG",
+      "found": true,
+      "initial": "OP",
+      "image": "assets/icons/official/one-piece-treasure-cruise-rpg.jpg",
+      "matchedName": "ONE PIECE TREASURE CRUISE-RPG",
+      "artistName": "Bandai Namco Entertainment Inc.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.namcobandaigames.spmoja010E",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 151913
+    },
+    {
       "name": "Overgeared Hero: Merge RPG",
       "found": true,
       "initial": "OH",
@@ -2389,6 +2425,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6523
+    },
+    {
+      "name": "Paint & Hide: Color Guys",
+      "found": true,
+      "initial": "PA",
+      "image": "assets/icons/official/paint-and-hide-color-guys.jpg",
+      "matchedName": "Paint & Hide: Color Guys",
+      "artistName": "HIGAME GLOBAL",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.hp.hide.hunt.paint",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 673504
     },
     {
       "name": "Palmon: Survival",
@@ -2763,18 +2811,6 @@
       "bytes": 323647
     },
     {
-      "name": "Rush Royale: Tower Defense RPG",
-      "found": true,
-      "initial": "RR",
-      "image": "assets/icons/official/rush-royale-tower-defense-rpg.jpg",
-      "matchedName": "Rush Royale: Tower Defense RPG",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/rush-royale-tower-defense-rpg/ios-1526121033",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 5904
-    },
-    {
       "name": "Screwdom",
       "found": true,
       "initial": "S",
@@ -3031,6 +3067,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 404768
+    },
+    {
+      "name": "Summoners War",
+      "found": true,
+      "initial": "SW",
+      "image": "assets/icons/official/summoners-war.jpg",
+      "matchedName": "Summoners War",
+      "artistName": "Com2uS",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.com2us.smon.normal.freefull.google.kr.android.common",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 258174
     },
     {
       "name": "Summoners War X Frieren",
