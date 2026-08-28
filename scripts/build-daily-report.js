@@ -2336,6 +2336,13 @@ function uniqueProductRows(rows) {
   return out;
 }
 
+function iconSourceRows(data) {
+  return uniqueProductRows([
+    ...allRows(data),
+    ...studioGroups.flatMap((studio) => studio.products.map((name) => productRef(data, name))),
+  ]);
+}
+
 function rankBadges(data, row) {
   const ranks = rankLookup(data).get(row.name) || [];
   const labels = ranks.length ? ranks : (row.rank === "-" ? ["观察"] : [`${row.categoryShort} #${row.rank}`]);
@@ -2574,6 +2581,7 @@ function visualHighlightItems(data) {
 
 function html(data, iconEntries, insights = null) {
   const rows = allRows(data);
+  const iconRows = iconSourceRows(data);
   const generatedAt = `${reportDate} ${new Intl.DateTimeFormat("zh-CN", { timeZone: "Asia/Shanghai", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date())}`;
   const snapshotBits = [
     `${data.gpGamesFree?.sourceLabel || "Google Play 游戏免费总榜"}: ${data.gpGamesFree?.updated || "暂无快照时间"}`,
@@ -2585,7 +2593,7 @@ function html(data, iconEntries, insights = null) {
   const fallbackLead = `公开榜单源当前可见最新快照为 ${snapshotBits.join("；")}；日报日期为 ${reportDate}。排名只展示来源抓到的原始名次，动态只在同榜单有昨日快照可比时标注。`;
   const titleText = insights?.title || fallbackTitle;
   const leadText = insights?.lead || fallbackLead;
-  const unmatched = Array.from(new Set(rows.map((row) => row.name))).filter((name) => {
+  const unmatched = Array.from(new Set(iconRows.map((row) => row.name))).filter((name) => {
     const entry = iconEntries.get(name);
     return !entry || !entry.found;
   });
@@ -2838,7 +2846,7 @@ function html(data, iconEntries, insights = null) {
         <li><a href="https://itunes.apple.com/search">Apple iTunes Search API - 游戏图标参考</a></li>
       </ul>
       <div class="notice"><strong>口径：</strong>Google Play 榜单优先使用官方公开榜单；如官方抓取失败，会回退到 AppBrain 对应公开榜单。iOS Puzzle 使用 AppCurrents 美国区当前页，iOS Strategy 深榜使用 AppBrain。第三方榜单可能存在估算、延迟和分类差异，本日报用于产品学习与趋势观察；所有排名徽标均保留来源榜单名和原始名次。</div>
-      <div class="notice"><strong>图标匹配：</strong>本日报共纳入 ${new Set(rows.map((row) => row.name)).size} 个去重游戏名；未匹配到高可信图标的游戏：${unmatched.length ? unmatched.map(escapeHtml).join("、") : "无"}。</div>
+      <div class="notice"><strong>图标匹配：</strong>本日报共纳入 ${new Set(iconRows.map((row) => row.name)).size} 个去重游戏名；未匹配到高可信图标的游戏：${unmatched.length ? unmatched.map(escapeHtml).join("、") : "无"}。</div>
     </section>
 
       </div>
@@ -2959,7 +2967,7 @@ async function main() {
   applyAiInsights(data, aiInsights);
 
   const rows = allRows(data);
-  const iconEntries = await ensureIcons(rows);
+  const iconEntries = await ensureIcons(iconSourceRows(data));
   const reportPath = path.join(outputDir, `game-intelligence-full-${reportDate}.html`);
   const document = html(data, iconEntries, aiInsights);
   fs.mkdirSync(outputDir, { recursive: true });
