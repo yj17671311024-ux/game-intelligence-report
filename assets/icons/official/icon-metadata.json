@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-28T21:13:21.296Z",
-  "total": 360,
-  "found": 356,
+  "preparedAt": "2026-08-30T02:08:41.730Z",
+  "total": 363,
+  "found": 359,
   "metadata": [
     {
       "name": "82-0.com",
@@ -1562,6 +1562,18 @@
       "bytes": 81331
     },
     {
+      "name": "Hit Fortune - Casino Slots",
+      "found": true,
+      "initial": "HF",
+      "image": "assets/icons/official/hit-fortune-casino-slots.jpg",
+      "matchedName": "Hit Fortune - Casino Slots",
+      "artistName": "BRAVOOCEAN INDIA PRIVATE LIMITED",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.pawakuma.hitfortune",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 490188
+    },
+    {
       "name": "Hole Stars",
       "found": true,
       "initial": "HS",
@@ -2090,6 +2102,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 4704
+    },
+    {
+      "name": "Lucky Defense!",
+      "found": true,
+      "initial": "LD",
+      "image": "assets/icons/official/lucky-defense.jpg",
+      "matchedName": "Lucky Defense!",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/lucky-defense/ios-6482291732",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8517
     },
     {
       "name": "Mafia City",
@@ -3304,6 +3328,18 @@
     },
     {
       "name": "Solitaire - Classic Card Games",
+      "found": true,
+      "initial": "SC",
+      "image": "assets/icons/official/solitaire-classic-card-games.jpg",
+      "matchedName": "Solitaire - Classic Card Games",
+      "artistName": "Guru Puzzle Game",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=solitaire.patience.card.games.klondike.free",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 241072
+    },
+    {
+      "name": "Solitaire Classic Card Games",
       "found": true,
       "initial": "SC",
       "image": "assets/icons/official/solitaire-classic-card-games.jpg",
