@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-08-30T02:08:41.730Z",
-  "total": 363,
-  "found": 359,
+  "preparedAt": "2026-08-31T02:08:53.051Z",
+  "total": 365,
+  "found": 361,
   "metadata": [
     {
       "name": "82-0.com",
@@ -509,6 +509,18 @@
       "bytes": 5678
     },
     {
+      "name": "Bus Fever! Car Jam Escape",
+      "found": true,
+      "initial": "BF",
+      "image": "assets/icons/official/bus-fever-car-jam-escape.jpg",
+      "matchedName": "Bus Fever! Car Jam Escape",
+      "artistName": "Lumi Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=gridplus.busjam.carpuzzle",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 139810
+    },
+    {
       "name": "Bus Out",
       "found": true,
       "initial": "BO",
@@ -969,6 +981,18 @@
     },
     {
       "name": "Dragon Ball Z Dokkan Battle",
+      "found": true,
+      "initial": "DB",
+      "image": "assets/icons/official/dragon-ball-z-dokkan-battle.jpg",
+      "matchedName": "DRAGON BALL Z DOKKAN BATTLE",
+      "artistName": "Bandai Namco Entertainment Inc.",
+      "sourceUrl": "https://apps.apple.com/us/app/dragon-ball-z-dokkan-battle/id951627425?uo=4",
+      "score": 286,
+      "query": "Dragon Ball Z Dokkan Battle",
+      "bytes": 110579
+    },
+    {
+      "name": "DRAGON BALL Z DOKKAN BATTLE",
       "found": true,
       "initial": "DB",
       "image": "assets/icons/official/dragon-ball-z-dokkan-battle.jpg",
