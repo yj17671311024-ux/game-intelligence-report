@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-01T02:01:15.681Z",
-  "total": 363,
-  "found": 359,
+  "preparedAt": "2026-09-02T02:08:31.260Z",
+  "total": 366,
+  "found": 362,
   "metadata": [
     {
       "name": "82-0.com",
@@ -555,6 +555,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 4234
+    },
+    {
+      "name": "Butcher Hero: Monster Idle RPG",
+      "found": true,
+      "initial": "BH",
+      "image": "assets/icons/official/butcher-hero-monster-idle-rpg.jpg",
+      "matchedName": "Butcher Hero: Monster Idle RPG",
+      "artistName": "MULTICAST GAMES",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.multicastgames.butcher",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 274258
     },
     {
       "name": "Call of Dragons",
@@ -1222,18 +1234,6 @@
       }
     },
     {
-      "name": "Flambé: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge & Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6265
-    },
-    {
       "name": "Flambe: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1244,6 +1244,18 @@
       "score": 94,
       "query": "Flambe: Merge & Cook",
       "bytes": 58307
+    },
+    {
+      "name": "Flambé: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge & Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6265
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -2128,6 +2140,18 @@
       "bytes": 4704
     },
     {
+      "name": "Lucky Defense!",
+      "found": true,
+      "initial": "LD",
+      "image": "assets/icons/official/lucky-defense.jpg",
+      "matchedName": "Lucky Defense!",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/lucky-defense/ios-6482291732",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8517
+    },
+    {
       "name": "Mafia City",
       "found": true,
       "initial": "MC",
@@ -2621,6 +2645,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 584736
+    },
+    {
+      "name": "Offline Games: No WiFi - FunOn",
+      "found": true,
+      "initial": "OG",
+      "image": "assets/icons/official/offline-games-no-wifi-funon.jpg",
+      "matchedName": "Offline Games: No WiFi - FunOn",
+      "artistName": "Fun Offline Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.media720.games2020",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 612647
     },
     {
       "name": "ONE PIECE TREASURE CRUISE-RPG",
