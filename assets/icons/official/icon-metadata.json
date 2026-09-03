@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-02T02:08:31.260Z",
-  "total": 366,
-  "found": 362,
+  "preparedAt": "2026-09-03T02:08:40.319Z",
+  "total": 368,
+  "found": 364,
   "metadata": [
     {
       "name": "82-0.com",
@@ -507,6 +507,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5678
+    },
+    {
+      "name": "Bus Fever Party!",
+      "found": true,
+      "initial": "BF",
+      "image": "assets/icons/official/bus-fever-party.jpg",
+      "matchedName": "Bus Fever Party!",
+      "artistName": "Lumi Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=gridplus.busjam.carpuzzle",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 139810
     },
     {
       "name": "Bus Fever! Car Jam Escape",
@@ -2271,6 +2283,18 @@
       "score": 262,
       "query": "Marble Sort!",
       "bytes": 56132
+    },
+    {
+      "name": "MARVEL Future Fight",
+      "found": true,
+      "initial": "MF",
+      "image": "assets/icons/official/marvel-future-fight.jpg",
+      "matchedName": "MARVEL Future Fight",
+      "artistName": "Netmarble",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.netmarble.mherosgb",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 261474
     },
     {
       "name": "MARVEL SNAP",
