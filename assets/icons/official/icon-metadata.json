@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-04T02:08:52.930Z",
-  "total": 387,
-  "found": 383,
+  "preparedAt": "2026-09-05T02:08:57.051Z",
+  "total": 388,
+  "found": 384,
   "metadata": [
     {
       "name": "82-0.com",
@@ -603,6 +603,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6854
+    },
+    {
+      "name": "Call of Duty: Mobile",
+      "found": true,
+      "initial": "CO",
+      "image": "assets/icons/official/call-of-duty-mobile.jpg",
+      "matchedName": "Call of Duty®: Mobile",
+      "artistName": "Activision Publishing, Inc.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 130105
     },
     {
       "name": "Candy Crush Saga",
