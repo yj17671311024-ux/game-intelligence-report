@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-05T02:08:57.051Z",
-  "total": 388,
-  "found": 384,
+  "preparedAt": "2026-09-06T02:08:54.122Z",
+  "total": 390,
+  "found": 386,
   "metadata": [
     {
       "name": "82-0.com",
@@ -1426,6 +1426,18 @@
       "score": 262,
       "query": "FreeCell Solitaire",
       "bytes": 46298
+    },
+    {
+      "name": "Frost & Flame: King of Avalon",
+      "found": true,
+      "initial": "FA",
+      "image": "assets/icons/official/frost-and-flame-king-of-avalon.jpg",
+      "matchedName": "Frost & Flame: King of Avalon",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/frost-flame-king-of-avalon/ios-1084930849",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 4832
     },
     {
       "name": "Fruit Merge Drop",
@@ -3728,6 +3740,18 @@
       "score": 130,
       "query": "Stormshot",
       "bytes": 74498
+    },
+    {
+      "name": "Stormshot: Isle of Adventure",
+      "found": true,
+      "initial": "SI",
+      "image": "assets/icons/official/stormshot-isle-of-adventure.jpg",
+      "matchedName": "Stormshot: Isle of Adventure",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/stormshot-isle-of-adventure/ios-6443388218",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5734
     },
     {
       "name": "Subway Surfers",
