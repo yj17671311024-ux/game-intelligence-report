@@ -1,8 +1,20 @@
 {
-  "preparedAt": "2026-09-06T02:08:54.122Z",
-  "total": 390,
-  "found": 386,
+  "preparedAt": "2026-09-07T02:09:14.196Z",
+  "total": 394,
+  "found": 390,
   "metadata": [
+    {
+      "name": "8 Ball Pool",
+      "found": true,
+      "initial": "BP",
+      "image": "assets/icons/official/8-ball-pool.jpg",
+      "matchedName": "8 Ball Pool",
+      "artistName": "Miniclip.com",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.miniclip.eightballpool",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 358332
+    },
     {
       "name": "82-0.com",
       "found": true,
@@ -723,6 +735,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 3094
+    },
+    {
+      "name": "Chirpy Sort: Bird Color Puzzle",
+      "found": true,
+      "initial": "CS",
+      "image": "assets/icons/official/chirpy-sort-bird-color-puzzle.jpg",
+      "matchedName": "Chirpy Sort: Bird Color Puzzle",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/chirpy-sort-bird-color-puzzle/ios-6756289996",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8103
     },
     {
       "name": "Clash of Clans",
@@ -2380,6 +2404,18 @@
       "bytes": 104918
     },
     {
+      "name": "Mafia City: War of Underworld",
+      "found": true,
+      "initial": "MC",
+      "image": "assets/icons/official/mafia-city-war-of-underworld.jpg",
+      "matchedName": "Mafia City: War of Underworld",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/mafia-city-war-of-underworld/ios-1235569398",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7060
+    },
+    {
       "name": "Magic Sort!",
       "found": true,
       "initial": "MS",
@@ -3935,6 +3971,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5272
+    },
+    {
+      "name": "The Walking Dead: Survivors",
+      "found": true,
+      "initial": "TW",
+      "image": "assets/icons/official/the-walking-dead-survivors.jpg",
+      "matchedName": "The Walking Dead: Survivors",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/the-walking-dead-survivors/ios-1514546586",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7175
     },
     {
       "name": "Tile Explorer",
