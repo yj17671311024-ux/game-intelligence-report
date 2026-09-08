@@ -2199,11 +2199,11 @@ function hardenedWorkflowYaml() {
 
 on:
   schedule:
+    - cron: "30 1 * * *"
+    - cron: "47 1 * * *"
     - cron: "8 2 * * *"
     - cron: "27 2 * * *"
-    - cron: "47 2 * * *"
     - cron: "17 3 * * *"
-    - cron: "17 5 * * *"
   workflow_dispatch:
     inputs:
       force:
