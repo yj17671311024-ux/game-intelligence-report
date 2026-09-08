@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-07T02:09:14.196Z",
-  "total": 394,
-  "found": 390,
+  "preparedAt": "2026-09-08T02:04:08.140Z",
+  "total": 371,
+  "found": 367,
   "metadata": [
     {
       "name": "8 Ball Pool",
@@ -158,18 +158,6 @@
       "score": 262,
       "query": "Angry Birds 2",
       "bytes": 44325
-    },
-    {
-      "name": "Apex Hunter: Animal Shooting",
-      "found": true,
-      "initial": "AH",
-      "image": "assets/icons/official/apex-hunter-animal-shooting.jpg",
-      "matchedName": "Apex Hunter: Animal Shooting",
-      "artistName": "CozyCraft",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.animal.hunter.shooting.apex",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 507073
     },
     {
       "name": "Arknights",
@@ -617,18 +605,6 @@
       "bytes": 6854
     },
     {
-      "name": "Call of Duty: Mobile",
-      "found": true,
-      "initial": "CO",
-      "image": "assets/icons/official/call-of-duty-mobile.jpg",
-      "matchedName": "Call of Duty®: Mobile",
-      "artistName": "Activision Publishing, Inc.",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 130105
-    },
-    {
       "name": "Candy Crush Saga",
       "found": true,
       "initial": "CC",
@@ -735,18 +711,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 3094
-    },
-    {
-      "name": "Chirpy Sort: Bird Color Puzzle",
-      "found": true,
-      "initial": "CS",
-      "image": "assets/icons/official/chirpy-sort-bird-color-puzzle.jpg",
-      "matchedName": "Chirpy Sort: Bird Color Puzzle",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/chirpy-sort-bird-color-puzzle/ios-6756289996",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 8103
     },
     {
       "name": "Clash of Clans",
@@ -893,18 +857,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 370316
-    },
-    {
-      "name": "Craft Battle: Block Wars",
-      "found": true,
-      "initial": "CB",
-      "image": "assets/icons/official/craft-battle-block-wars.jpg",
-      "matchedName": "Craft Battle: Block Wars",
-      "artistName": "Coup Coup LTD",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.novas.craft.battle.mod.block.war",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 328643
     },
     {
       "name": "Cube Land Puzzle Game",
@@ -1245,18 +1197,6 @@
       "bytes": 107214
     },
     {
-      "name": "Find Em All! - Hidden Objects",
-      "found": true,
-      "initial": "FE",
-      "image": "assets/icons/official/find-em-all-hidden-objects.jpg",
-      "matchedName": "Find Em All! - Hidden Objects",
-      "artistName": "Agave Games",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.agavegames.findemall",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 274558
-    },
-    {
       "name": "Find Hidden Objects - Spot It!",
       "found": true,
       "initial": "FH",
@@ -1279,18 +1219,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 2781
-    },
-    {
-      "name": "Find The Cat 2 - Spot It!",
-      "found": true,
-      "initial": "FT",
-      "image": "assets/icons/official/find-the-cat-2-spot-it.jpg",
-      "matchedName": "Find The Cat 2 - Spot It!",
-      "artistName": "Agave Games",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.agavegames.findthecat2",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 452318
     },
     {
       "name": "Fire Emblem Heroes",
@@ -1330,18 +1258,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1352,6 +1268,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1365,18 +1293,6 @@
       "score": 286,
       "query": "Flambé: Merge and Cook",
       "bytes": 58307
-    },
-    {
-      "name": "Fluffy Drop - No Timer",
-      "found": true,
-      "initial": "FD",
-      "image": "assets/icons/official/fluffy-drop-no-timer.jpg",
-      "matchedName": "Fluffy Drop - No Timer",
-      "artistName": "UniRise Studio",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.fluffydrop.op.gp",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 545297
     },
     {
       "name": "Food Hunt: Pixel Puzzle",
@@ -1461,19 +1377,7 @@
       "sourceUrl": "https://www.appbrain.com/appstore/frost-flame-king-of-avalon/ios-1084930849",
       "source": "AppBrain Google Play icon",
       "score": 100,
-      "bytes": 4832
-    },
-    {
-      "name": "Fruit Merge Drop",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/fruit-merge-drop.jpg",
-      "matchedName": "Fruit Merge Drop",
-      "artistName": "Gimica GmbH",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.gimica.fruitmergedrop",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 376744
+      "bytes": 6868
     },
     {
       "name": "Fruit Ninja",
@@ -1558,18 +1462,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 96688
-    },
-    {
-      "name": "Get Color Pack: Sort Puzzle",
-      "found": true,
-      "initial": "GC",
-      "image": "assets/icons/official/get-color-pack-sort-puzzle.jpg",
-      "matchedName": "Get Color Pack: Sort Puzzle",
-      "artistName": "Tripledot Studios Limited",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.zm.waterpack",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 107044
     },
     {
       "name": "GIRLS' FRONTLINE 2: EXILIUM",
@@ -1657,18 +1549,6 @@
       "bytes": 2995
     },
     {
-      "name": "Grass Master – Cutting Game",
-      "found": true,
-      "initial": "GM",
-      "image": "assets/icons/official/grass-master-cutting-game.jpg",
-      "matchedName": "Grass Master – Cutting Game",
-      "artistName": "SayGames Ltd",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.grass.cut.game",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 459876
-    },
-    {
       "name": "Grass Master: Lawn Mowing 3D",
       "found": true,
       "initial": "GM",
@@ -1679,18 +1559,6 @@
       "score": 298,
       "query": "Grass Master: Lawn Mowing 3D",
       "bytes": 106591
-    },
-    {
-      "name": "Gugu Gaga: Keyboard Escape",
-      "found": true,
-      "initial": "GG",
-      "image": "assets/icons/official/gugu-gaga-keyboard-escape.jpg",
-      "matchedName": "Gugu Gaga: Keyboard Escape",
-      "artistName": "Goldoint",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.metax.obby.escape.run",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 108038
     },
     {
       "name": "Guns of Glory: Lost Island",
@@ -1766,18 +1634,6 @@
       "bytes": 81331
     },
     {
-      "name": "Hit Fortune - Casino Slots",
-      "found": true,
-      "initial": "HF",
-      "image": "assets/icons/official/hit-fortune-casino-slots.jpg",
-      "matchedName": "Hit Fortune - Casino Slots",
-      "artistName": "BRAVOOCEAN INDIA PRIVATE LIMITED",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.pawakuma.hitfortune",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 490188
-    },
-    {
       "name": "Hole Stars",
       "found": true,
       "initial": "HS",
@@ -1836,18 +1692,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 7053
-    },
-    {
-      "name": "Idle Lumber Empire - Wood Game",
-      "found": true,
-      "initial": "IL",
-      "image": "assets/icons/official/idle-lumber-empire-wood-game.jpg",
-      "matchedName": "Idle Lumber Empire - Wood Game",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/idle-lumber-empire-wood-game/ios-1552153525",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6504
     },
     {
       "name": "IdleOn - The Incremental MMO",
@@ -1945,18 +1789,6 @@
       "score": 286,
       "query": "Jelly Busters: Puzzle Game",
       "bytes": 46227
-    },
-    {
-      "name": "Jewel Coloring",
-      "found": true,
-      "initial": "JC",
-      "image": "assets/icons/official/jewel-coloring.jpg",
-      "matchedName": "Jewel Coloring",
-      "artistName": "TaTa Game Technology Limited",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=color.number.paint.pixle.art.sort.jigsaw",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 272812
     },
     {
       "name": "Jigsaw Drop",
@@ -2187,18 +2019,6 @@
       "bytes": 6734
     },
     {
-      "name": "Last Shelter: War Z",
-      "found": true,
-      "initial": "LS",
-      "image": "assets/icons/official/last-shelter-war-z.jpg",
-      "matchedName": "Last Shelter: War Z",
-      "artistName": "LAST ORIGIN STUDIO LIMITED",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.more.lastshelter.gp",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 273821
-    },
-    {
       "name": "Last War: Survival Game",
       "found": true,
       "initial": "LW",
@@ -2245,18 +2065,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6810
-    },
-    {
-      "name": "Limbus Company",
-      "found": true,
-      "initial": "LC",
-      "image": "assets/icons/official/limbus-company.jpg",
-      "matchedName": "Limbus Company",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/limbus-company/ios-6444112366",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6718
     },
     {
       "name": "Line Puzzle",
@@ -2366,30 +2174,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 4704
-    },
-    {
-      "name": "Lucky Defense!",
-      "found": true,
-      "initial": "LD",
-      "image": "assets/icons/official/lucky-defense.jpg",
-      "matchedName": "Lucky Defense!",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/lucky-defense/ios-6482291732",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 8517
-    },
-    {
-      "name": "LUDUS・PvP Merge Battle Game",
-      "found": true,
-      "initial": "LP",
-      "image": "assets/icons/official/ludus-pvp-merge-battle-game.jpg",
-      "matchedName": "LUDUS・PvP Merge Battle Game",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/ludus%E3%83%BBpvp-merge-battle-game/ios-6446642912",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6900
     },
     {
       "name": "Mafia City",
@@ -2911,18 +2695,6 @@
       "bytes": 584736
     },
     {
-      "name": "Offline Games: No WiFi - FunOn",
-      "found": true,
-      "initial": "OG",
-      "image": "assets/icons/official/offline-games-no-wifi-funon.jpg",
-      "matchedName": "Offline Games: No WiFi - FunOn",
-      "artistName": "Fun Offline Games",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.media720.games2020",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 612647
-    },
-    {
       "name": "ONE PIECE TREASURE CRUISE-RPG",
       "found": true,
       "initial": "OP",
@@ -3067,18 +2839,6 @@
       "score": 262,
       "query": "Pixel Flow!",
       "bytes": 37230
-    },
-    {
-      "name": "Pizza Ready!",
-      "found": true,
-      "initial": "PR",
-      "image": "assets/icons/official/pizza-ready.jpg",
-      "matchedName": "Pizza Ready!",
-      "artistName": "Supercent, Inc.",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=io.supercent.pizzaidle",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 400665
     },
     {
       "name": "Plants on Fire",
@@ -3443,18 +3203,6 @@
       "bytes": 323647
     },
     {
-      "name": "Rush Royale: Tower Defense RPG",
-      "found": true,
-      "initial": "RR",
-      "image": "assets/icons/official/rush-royale-tower-defense-rpg.jpg",
-      "matchedName": "Rush Royale: Tower Defense RPG",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/rush-royale-tower-defense-rpg/ios-1526121033",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 5904
-    },
-    {
       "name": "Sand Balls",
       "found": true,
       "initial": "SB",
@@ -3778,18 +3526,6 @@
       "bytes": 74498
     },
     {
-      "name": "Stormshot: Isle of Adventure",
-      "found": true,
-      "initial": "SI",
-      "image": "assets/icons/official/stormshot-isle-of-adventure.jpg",
-      "matchedName": "Stormshot: Isle of Adventure",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/stormshot-isle-of-adventure/ios-6443388218",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 5734
-    },
-    {
       "name": "Subway Surfers",
       "found": true,
       "initial": "SS",
@@ -3911,18 +3647,6 @@
       "score": 142,
       "query": "Tasty Travels",
       "bytes": 61682
-    },
-    {
-      "name": "The Ants: Underground Kingdom",
-      "found": true,
-      "initial": "TA",
-      "image": "assets/icons/official/the-ants-underground-kingdom.jpg",
-      "matchedName": "The Ants: Underground Kingdom",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/the-ants-underground-kingdom/ios-1568415097",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6926
     },
     {
       "name": "The Battle Cats",
