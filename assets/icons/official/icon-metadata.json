@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-08T02:04:08.140Z",
-  "total": 371,
-  "found": 367,
+  "preparedAt": "2026-09-09T02:03:14.554Z",
+  "total": 373,
+  "found": 369,
   "metadata": [
     {
       "name": "8 Ball Pool",
@@ -1632,6 +1632,18 @@
       "score": 298,
       "query": "Hidden Object Games: Seek It",
       "bytes": 81331
+    },
+    {
+      "name": "Hit Fortune - Casino Slots",
+      "found": true,
+      "initial": "HF",
+      "image": "assets/icons/official/hit-fortune-casino-slots.jpg",
+      "matchedName": "Hit Fortune - Casino Slots",
+      "artistName": "BRAVOOCEAN INDIA PRIVATE LIMITED",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.pawakuma.hitfortune",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 490188
     },
     {
       "name": "Hole Stars",
@@ -4262,6 +4274,18 @@
       "score": 262,
       "query": "Word Cookies",
       "bytes": 59800
+    },
+    {
+      "name": "Word Search Explorer",
+      "found": true,
+      "initial": "WS",
+      "image": "assets/icons/official/word-search-explorer.jpg",
+      "matchedName": "Word Search Explorer",
+      "artistName": "PlaySimple Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=in.playsimple.wordsearch",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 52149
     },
     {
       "name": "Word Stacks",
