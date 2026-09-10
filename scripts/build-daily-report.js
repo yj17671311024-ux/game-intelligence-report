@@ -1323,6 +1323,7 @@ function parsePreviousRanks() {
     __date: previousDate || "",
     __path: previousPath || "",
     __providers: {},
+    __snapshots: {},
   };
   if (!previousPath) return out;
   const html = fs.readFileSync(previousPath, "utf8");
@@ -1330,6 +1331,7 @@ function parsePreviousRanks() {
     const sourceSnapshot = /<script id="rank-source-snapshot" type="application\/json">([\s\S]*?)<\/script>/i.exec(html)?.[1] || "";
     if (sourceSnapshot) {
       const parsed = JSON.parse(decodeHtml(sourceSnapshot));
+      out.__snapshots = parsed;
       for (const [key, value] of Object.entries(parsed || {})) {
         out.__providers[key] = value.sourceProvider || "";
       }
@@ -1364,13 +1366,42 @@ function parsePreviousRanks() {
       [...tbody.matchAll(/<tr>([\s\S]*?)<\/tr>/g)].forEach((match, index) => {
         const cells = [...match[1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map((cell) => cell[1]);
         const name = productName(cells[1] || "");
-        if (name) out[key].set(norm(name), index + 1);
+        const rank = Number(stripTags(cells[0] || ""));
+        if (name && Number.isInteger(rank) && rank > 0) out[key].set(norm(name), rank);
       });
       if (out[key].size > 0) parsedTables += 1;
     });
   }
   out.__available = parsedTables > 0;
+  for (const [key, snapshot] of Object.entries(out.__snapshots)) {
+    if (!Array.isArray(snapshot.rows)) continue;
+    out[key] = new Map(snapshot.rows.map((row) => [rankIdentity(row), row.rank]));
+    if (out[key].size) out.__available = true;
+  }
   return out;
+}
+
+function calendarDate(value) {
+  if (!value || typeof value !== "string") return "";
+  let candidate = /^(\d{4}-\d{2}-\d{2})(?:T|$)/.exec(value)?.[1];
+  if (!candidate) {
+    const parts = /^([a-z]+)\s+(\d{1,2}),?\s+(\d{4})$/i.exec(value.trim());
+    const months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+    const month = parts ? months.indexOf(parts[1].slice(0, 3).toLowerCase()) + 1 : 0;
+    if (!month) return "";
+    candidate = `${parts[3]}-${String(month).padStart(2, "0")}-${parts[2].padStart(2, "0")}`;
+  }
+  const date = new Date(candidate + "T00:00:00Z");
+  return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === candidate ? candidate : "";
+}
+
+function rankIdentity(row) {
+  return row.appId ? `app:${row.appId}` : norm(row.name);
+}
+
+function completeTop30(rows) {
+  const ranks = new Set(rows);
+  return Array.from({ length: 30 }, (_, i) => i + 1).every((rank) => ranks.has(rank));
 }
 
 function attachDeltas(data, previousRanks) {
@@ -1379,8 +1410,15 @@ function attachDeltas(data, previousRanks) {
     const currentProvider = list.sourceProvider || "";
     const previousProvider = previousRanks?.__providers?.[key] || "";
     const sameSource = Boolean(currentProvider && previousProvider && currentProvider === previousProvider);
-    const previous = hasComparableSnapshot && sameSource ? previousRanks[key] : null;
+    const yesterday = new Date(Date.parse(reportDate + "T00:00:00Z") - 86400000).toISOString().slice(0, 10);
+    const previousSnapshot = previousRanks?.__snapshots?.[key];
+    const fresh = previousRanks?.__date === yesterday
+      && calendarDate(list.updated) === reportDate
+      && calendarDate(previousSnapshot?.updated) === yesterday;
+    const previous = hasComparableSnapshot && sameSource && fresh ? previousRanks[key] : null;
+    const top30Comparable = previous && completeTop30(previous.values()) && completeTop30(list.rows.map((row) => row.rank));
     for (const row of list.rows) {
+      row.enteredTop30 = false;
       if (!previous || previous.size === 0) {
         row.previousRank = null;
         row.delta = "";
@@ -1388,11 +1426,13 @@ function attachDeltas(data, previousRanks) {
         row.deltaVerified = false;
         continue;
       }
-      const oldRank = previous.get(norm(row.name));
+      const oldRank = previous.get(rankIdentity(row)) ?? previous.get(norm(row.name));
       row.previousRank = oldRank || null;
+      row.enteredTop30 = Boolean(top30Comparable && row.rank <= 30 && (!oldRank || oldRank > 30));
+      row.comparisonDate = previousRanks.__date;
       if (!oldRank) {
-        row.delta = "新进Top30";
-        row.deltaClass = "new";
+        row.delta = row.enteredTop30 ? "新进Top30" : "";
+        row.deltaClass = row.enteredTop30 ? "new" : "none";
       } else if (oldRank === row.rank) {
         row.delta = "持平";
         row.deltaClass = "flat";
@@ -1597,24 +1637,90 @@ function topMovers(data) {
     .slice(0, 10);
 }
 
+const signalChartKeys = new Set(["gpGamesFree", "gpPuzzleGross", "gpPuzzleFree", "gpRpgGross", "gpStrategyGross", "iosPuzzleGross", "iosStrategyGross"]);
+
+function signalFlags(row, asOf = reportDate) {
+  const age = row.release?.verified && row.release.date
+    ? (Date.parse(asOf + "T00:00:00Z") - Date.parse(row.release.date + "T00:00:00Z")) / 86400000 : NaN;
+  return {
+    entered: Boolean(row.deltaVerified && row.enteredTop30),
+    rising: Boolean(row.deltaVerified && row.previousRank > 0 && row.previousRank - row.rank > 5),
+    launch: Boolean(age >= 0 && age <= 30),
+    age,
+  };
+}
+
 function priorityMovers(data) {
-  const preferredKeys = new Set(["gpGamesFree", "gpPuzzleGross", "gpPuzzleFree", "gpRpgGross", "gpStrategyGross"]);
-  const rows = allRows(data).filter((row) => {
-    if (!row.deltaVerified || !preferredKeys.has(row.categoryKey)) return false;
-    if (row.deltaClass === "new") return true;
-    return row.deltaClass === "up" && Number(row.delta.replace(/[^0-9]/g, "")) >= 3;
-  });
-  const seen = new Set();
-  return rows.sort((a, b) => {
-    const score = (row) => (row.deltaClass === "new" ? 100 : Number(row.delta.replace(/[^0-9]/g, "")))
-      + (row.categoryKey === "gpGamesFree" ? 12 : row.categoryKey.includes("Puzzle") ? 8 : 4);
-    return score(b) - score(a) || a.rank - b.rank;
-  }).filter((row) => {
-    const key = norm(row.name);
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  }).slice(0, 6);
+  return allRows(data).filter((row) => {
+    if (!signalChartKeys.has(row.categoryKey) || calendarDate(data[row.categoryKey].updated) !== reportDate) return false;
+    const flags = signalFlags(row);
+    return flags.entered || flags.rising || flags.launch;
+  }).sort((a, b) => a.rank - b.rank);
+}
+
+function storeIdentity(row) {
+  if (row.categoryKey.startsWith("gp")) {
+    const id = row.appId || /[?&]id=([^&]+)/.exec(row.sourceUrl || "")?.[1]
+      || /\/([a-zA-Z0-9_]+(?:\.[a-zA-Z0-9_]+)+)\/?$/.exec(row.sourceUrl || "")?.[1];
+    return id ? { platform: "gp", id: decodeURIComponent(id) } : null;
+  }
+  const id = /(?:\/id|\/ios-|\/)(\d{6,})(?:[/?#]|$)/.exec(row.sourceUrl || "")?.[1];
+  return id ? { platform: "ios", id } : null;
+}
+
+async function attachReleaseDates(data, previousRanks) {
+  const cached = new Map();
+  let currentSnapshots = {};
+  try {
+    const currentHtml = fs.readFileSync(path.join(siteDir, "index.html"), "utf8");
+    const embedded = /<script id="rank-source-snapshot" type="application\/json">([\s\S]*?)<\/script>/i.exec(currentHtml)?.[1];
+    if (embedded) currentSnapshots = JSON.parse(decodeHtml(embedded));
+  } catch { /* A first build has no release-date cache. */ }
+  for (const snapshot of [...Object.values(previousRanks.__snapshots || {}), ...Object.values(currentSnapshots)]) {
+    for (const row of snapshot.rows || []) {
+      const identity = storeIdentity(row);
+      if (identity && row.release?.verified) cached.set(`${identity.platform}:${identity.id}`, row.release);
+    }
+  }
+  const products = new Map();
+  for (const row of allRows(data)) {
+    const identity = storeIdentity(row);
+    if (!identity) continue;
+    const key = `${identity.platform}:${identity.id}`;
+    if (!products.has(key)) products.set(key, { identity, rows: [] });
+    products.get(key).rows.push(row);
+  }
+  const pending = [...products.entries()];
+  let next = 0;
+  await Promise.all(Array.from({ length: 5 }, async () => {
+    while (next < pending.length) {
+      const [key, { identity, rows }] = pending[next++];
+      let release = cached.get(key);
+      if (!release) {
+        try {
+          let date, url;
+          if (identity.platform === "gp") {
+            const app = await loadGooglePlayScraper().app({ appId: identity.id, country: "us", lang: "en", requestOptions: { timeout: { request: 12000 }, retry: { limit: 1 } } });
+            date = calendarDate(app.released);
+            url = app.url;
+          } else {
+            const response = await fetch(`https://itunes.apple.com/lookup?id=${identity.id}&country=us`, { signal: AbortSignal.timeout(12000) });
+            if (!response.ok) throw new Error(`Apple HTTP ${response.status}`);
+            const json = await response.json();
+            const app = json.results?.find((item) => String(item.trackId) === identity.id);
+            date = calendarDate(app?.releaseDate);
+            url = app?.trackViewUrl;
+          }
+          release = date && date <= reportDate && url ? { date, url, verified: true, checkedAt: new Date().toISOString() } : null;
+        } catch {
+          release = null;
+        }
+      }
+      for (const row of rows) row.release = release;
+    }
+  }));
+  const missing = allRows(data).filter((row) => !row.release?.verified);
+  console.log(`Store release dates: ${products.size} identified apps; ${missing.length} chart rows without verified dates`);
 }
 
 const maleSegmentDefinitions = [
@@ -1983,6 +2089,7 @@ function rankSourceSnapshot(data) {
       sourceLabel: list.sourceLabel || "",
       url: list.url || "",
       updated: list.updated || "",
+      rows: list.rows,
     };
   }
   return JSON.stringify(snapshot);
@@ -2401,19 +2508,7 @@ function insightCardHtml(data, title, badge, note, items) {
 }
 
 function summaryCardsHtml(data, insights = null) {
-  const moverRows = priorityMovers(data);
-  const moverCard = insightCardHtml(
-    data,
-    "重点变动 / 新上榜",
-    `${moverRows.length} 个信号`,
-    "只列免费总榜、Puzzle、RPG、策略榜中已完成昨日同榜对比的新品或明显上升产品。",
-    moverRows.map((row) => ({
-      row,
-      note: row.deltaClass === "new"
-        ? "新进同榜可见 Top30，优先看题材包装、首局体验和买量素材。"
-        : `较昨日同榜上升 ${row.delta}，优先复看版本、活动或素材变化。`,
-    }))
-  );
+  const moverCard = dailySignalsHtml(data);
   if (insights?.summaryCards?.length) {
     return [moverCard, ...insights.summaryCards.map((card) => insightCardHtml(
       data,
@@ -2497,6 +2592,48 @@ function summaryCardsHtml(data, insights = null) {
         : "复看榜内位置是否稳定，避免把未核验变化写成新进或上升。",
     }))),
   ].join("");
+}
+
+function dailySignalsHtml(data) {
+  const rows = priorityMovers(data);
+  const groups = [
+    { key: "entered", title: "新进 Top30", desc: "昨日在前30名之外，今日进入前30名" },
+    { key: "rising", title: "上升超过 5 位", desc: "同榜较昨日上升至少6位" },
+    { key: "launch", title: "新发行上榜", desc: "商店发行日期距今30天内，已进入本日报收录榜单" },
+  ];
+  const groupHtml = groups.map((group) => {
+    const games = new Map();
+    for (const row of rows.filter((item) => signalFlags(item)[group.key])) {
+      const identity = storeIdentity(row);
+      const key = identity ? `${identity.platform}:${identity.id}` : `${row.categoryKey.startsWith("gp") ? "gp" : "ios"}:${norm(row.name)}`;
+      if (!games.has(key)) games.set(key, []);
+      games.get(key).push(row);
+    }
+    const items = [...games.values()].sort((a, b) => group.key === "rising"
+      ? Math.max(...b.map((r) => r.previousRank - r.rank)) - Math.max(...a.map((r) => r.previousRank - r.rank))
+      : group.key === "launch" ? signalFlags(a[0]).age - signalFlags(b[0]).age : a[0].rank - b[0].rank);
+    const products = items.map((matches) => {
+      const row = matches[0];
+      const evidence = matches.map((match) => {
+        const before = match.previousRank ? `#${match.previousRank}` : "30名外";
+        const move = group.key === "launch" ? `#${match.rank}` : `${before} → #${match.rank}`;
+        const gain = group.key === "rising" ? ` · ↑${match.previousRank - match.rank}` : "";
+        return `<a href="${escapeHtml(data[match.categoryKey].url)}" target="_blank" rel="noopener">${escapeHtml(match.categoryShort)} · ${escapeHtml(move + gain)}</a>`;
+      }).join("");
+      const release = group.key === "launch" ? `<a class="signal-release" href="${escapeHtml(row.release.url)}" target="_blank" rel="noopener">商店发行 ${escapeHtml(row.release.date)} · ${signalFlags(row).age} 天</a>` : "";
+      return `<article class="mini-product signal-product" data-game="${escapeHtml(row.name)}">
+        <span class="mini-product-icon app-icon"></span>
+        <div class="mini-product-text"><strong>${escapeHtml(row.name)}</strong><span>${escapeHtml(cnName(row.name))}</span><span>${escapeHtml(row.developerCn || row.developer || "")}</span></div>
+        <div class="signal-evidence">${evidence}${release}</div>
+        <p class="signal-point">${escapeHtml(row.point)}</p>
+      </article>`;
+    });
+    const empty = group.key === "launch" ? "暂无已核实发行日期且符合条件的产品" : "暂无可核实的符合条件产品";
+    return `<section class="signal-group"><header><h3>${group.title}</h3><span>${items.length} 款</span><p>${group.desc}</p></header>
+      ${products.slice(0, 4).join("") || `<p class="empty-state">${empty}</p>`}
+      ${products.length > 4 ? `<details class="signal-more"><summary>展开其余 ${products.length - 4} 款</summary>${products.slice(4).join("")}</details>` : ""}</section>`;
+  }).join("");
+  return `<section class="daily-signals"><h2>今日信号</h2><p class="sub">Puzzle · 男性向 · 免费总榜 | 对比 ${escapeHtml(previousDate)} | 新进 Top30 不代表首次发行</p><div class="signal-groups">${groupHtml}</div></section>`;
 }
 
 function accountCardHtml(data, title, subtitle, names) {
@@ -2621,7 +2758,7 @@ function html(data, iconEntries, insights = null) {
     `${data.gpGamesFree?.sourceLabel || "Google Play 游戏免费总榜"}: ${data.gpGamesFree?.updated || "暂无快照时间"}`,
     `${data.gpPuzzleGross.sourceLabel || "Google Play Puzzle 收入榜"}: ${data.gpPuzzleGross.updated || "暂无快照时间"}`,
     `iOS Strategy：${data.iosStrategyGross?.updated || "暂无快照时间"}`,
-    `AppCurrents：${data.iosPuzzleGross.updated || "暂无快照时间"}`,
+    `${data.iosPuzzleGross.sourceLabel}：${data.iosPuzzleGross.updated || "今日数据不可用"}`,
   ];
   const fallbackTitle = `${displayMonthDay(reportDate)}更新：休闲、Puzzle 与中轻度塔防观察`;
   const fallbackLead = `公开榜单源当前可见最新快照为 ${snapshotBits.join("；")}；日报日期为 ${reportDate}。排名只展示来源抓到的原始名次，动态只在同榜单有昨日快照可比时标注。`;
@@ -2664,7 +2801,20 @@ function html(data, iconEntries, insights = null) {
     .change-grid { display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:14px; margin-top:16px; }
     .card { padding:18px; min-width:0; } .card h3 { color:var(--blue); margin-bottom:10px; } .card p,.card li { color:#4e5b6b; }
     .card ul { margin-left:0; list-style:none; } .card li { padding:7px 0 7px 14px; border-top:1px solid #edf1f4; position:relative; } .card li:first-child { border-top:0; } .card li::before { content:""; position:absolute; left:0; top:17px; width:5px; height:5px; border-radius:50%; background:var(--blue); }
-    .insight-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:16px; }
+    .insight-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:16px; }
+    .daily-signals { grid-column:1 / -1; min-width:0; margin-bottom:12px; }
+    .daily-signals h2 { font-size:22px; }
+    .signal-groups { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:14px; align-items:start; }
+    .signal-group { min-width:0; border-top:3px solid var(--blue); }
+    .signal-group:nth-child(2) { border-color:var(--green); } .signal-group:nth-child(3) { border-color:var(--gold); }
+    .signal-group header { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px; padding:14px 0; }
+    .signal-group header p { grid-column:1 / -1; font-size:12px; color:var(--muted); }
+    .signal-product.mini-product { grid-template-columns:46px minmax(0,1fr); padding:14px 0; align-items:start; }
+    .signal-evidence,.signal-point { grid-column:1 / -1; min-width:0; }
+    .signal-evidence { display:grid; gap:4px; font-size:12px; font-weight:700; }
+    .signal-evidence a { overflow-wrap:anywhere; } .signal-evidence .signal-release { color:var(--gold); }
+    .signal-point { font-size:13px; color:var(--muted); overflow-wrap:anywhere; }
+    .signal-more summary { cursor:pointer; color:var(--blue); font-weight:700; padding:12px 0; border-top:1px solid var(--line); }
     .insight-card { padding:0; overflow:hidden; }
     .insight-card-head { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:start; padding:16px; background:#fbfcfd; border-bottom:1px solid var(--line); }
     .insight-card-head h3,.motion-head h3 { margin:0; color:var(--blue); }
@@ -2751,7 +2901,7 @@ function html(data, iconEntries, insights = null) {
     ul,ol { margin:8px 0 0 20px; padding:0; } li { margin:5px 0; } footer { color:var(--muted); margin-top:20px; font-size:13px; }
     @media (max-width:1100px) { .dashboard { grid-template-columns:1fr; } .side-nav { position:static; grid-template-columns:repeat(4,minmax(0,1fr)); } .side-nav button { text-align:center; } }
     @media (max-width:1200px) { .insight-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-    @media (max-width:980px) { .change-grid,.motion-grid,.insight-grid,.account-grid { grid-template-columns:1fr; } }
+    @media (max-width:980px) { .change-grid,.motion-grid,.insight-grid,.account-grid,.signal-groups { grid-template-columns:1fr; } }
     @media (max-width:860px) { .hero,.grid-2,.grid-3,.visual-strip,.studio-grid,.family-grid { grid-template-columns:1fr; } .side-nav { display:flex; overflow-x:auto; } .side-nav button { flex:0 0 auto; white-space:nowrap; } .studio-product,.family-product,.mini-product { grid-template-columns:42px minmax(0,1fr); } .studio-rank-list,.family-ranks,.mini-ranks { grid-column:1 / -1; grid-template-columns:repeat(3,minmax(0,1fr)); } .hero { padding:22px; } .section { padding:20px; } table { min-width:940px; } }
   </style>
 </head>
@@ -2876,6 +3026,7 @@ function html(data, iconEntries, insights = null) {
 
     <section id="sources" class="section panel">
       <h2>来源与口径</h2>
+      <div class="notice"><strong>今日信号：</strong>新进 Top30 和上升超过5位仅使用相邻两日、同来源同榜单的有效快照。新发行上榜按官方商店发行日期距日报日期0至30天计，不使用版本更新日期。发行日期未核实的榜单记录：${allRows(data).filter((row) => !row.release?.verified).length} 条，不计入新发行上榜。</div>
       <ul>
         ${sourceListHtml(data)}
         <li><a href="https://itunes.apple.com/search">Apple iTunes Search API - 游戏图标参考</a></li>
@@ -3024,6 +3175,7 @@ async function main() {
 
   const previousRanks = parsePreviousRanks();
   attachDeltas(data, previousRanks);
+  await attachReleaseDates(data, previousRanks);
   const aiInsights = await requestAiInsights(data);
   applyAiInsights(data, aiInsights);
 
@@ -3054,7 +3206,9 @@ async function main() {
   console.log(`prepared ${path.join(siteDir, "index.html")}`);
 }
 
-main().catch((error) => {
+module.exports = { attachDeltas, signalFlags, priorityMovers, calendarDate, completeTop30, dailySignalsHtml, storeIdentity };
+
+if (require.main === module) main().catch((error) => {
   console.error(error);
   process.exit(1);
 });
