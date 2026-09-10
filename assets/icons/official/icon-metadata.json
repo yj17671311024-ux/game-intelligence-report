@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-09T02:03:14.554Z",
-  "total": 373,
-  "found": 369,
+  "preparedAt": "2026-09-10T02:42:12.538Z",
+  "total": 381,
+  "found": 377,
   "metadata": [
     {
       "name": "8 Ball Pool",
@@ -605,6 +605,18 @@
       "bytes": 6854
     },
     {
+      "name": "Call of Duty: Mobile",
+      "found": true,
+      "initial": "CO",
+      "image": "assets/icons/official/call-of-duty-mobile.jpg",
+      "matchedName": "Call of Duty®: Mobile",
+      "artistName": "Activision Publishing, Inc.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 130105
+    },
+    {
       "name": "Candy Crush Saga",
       "found": true,
       "initial": "CC",
@@ -713,6 +725,18 @@
       "bytes": 3094
     },
     {
+      "name": "Chirpy Sort: Bird Color Puzzle",
+      "found": true,
+      "initial": "CS",
+      "image": "assets/icons/official/chirpy-sort-bird-color-puzzle.jpg",
+      "matchedName": "Chirpy Sort: Bird Color Puzzle",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/chirpy-sort-bird-color-puzzle/ios-6756289996",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8103
+    },
+    {
       "name": "Clash of Clans",
       "found": true,
       "initial": "CO",
@@ -784,6 +808,18 @@
       "score": 154,
       "query": "Color Fill 3D",
       "bytes": 54364
+    },
+    {
+      "name": "Colorever: Gem Art Puzzle",
+      "found": true,
+      "initial": "CG",
+      "image": "assets/icons/official/colorever-gem-art-puzzle.jpg",
+      "matchedName": "Colorever: Gem Art Puzzle",
+      "artistName": "Oakever Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.oakever.gemcoloring",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 323995
     },
     {
       "name": "Cookie Jam",
@@ -1002,6 +1038,30 @@
       "score": 250,
       "query": "DOP 2",
       "bytes": 53362
+    },
+    {
+      "name": "Dot Link - Connect the Dots",
+      "found": true,
+      "initial": "DL",
+      "image": "assets/icons/official/dot-link-connect-the-dots.jpg",
+      "matchedName": "Dot Link - Connect the Dots",
+      "artistName": "Bluetile",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.playvalve.connect.dots",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 462078
+    },
+    {
+      "name": "Double Tile!",
+      "found": true,
+      "initial": "DT",
+      "image": "assets/icons/official/double-tile.jpg",
+      "matchedName": "Double Tile!",
+      "artistName": "HungryStudio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.hungrystudio.mahjong",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 200577
     },
     {
       "name": "Draft Showdown",
@@ -1231,6 +1291,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 8028
+    },
+    {
+      "name": "Fish Sort Puzzle: Fish Games",
+      "found": true,
+      "initial": "FS",
+      "image": "assets/icons/official/fish-sort-puzzle-fish-games.jpg",
+      "matchedName": "Fish Sort Puzzle: Fish Games",
+      "artistName": "Shycheese",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=triple.sorting.bubble.fish.match",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 504037
     },
     {
       "name": "Fishdom",
@@ -1559,6 +1631,18 @@
       "score": 298,
       "query": "Grass Master: Lawn Mowing 3D",
       "bytes": 106591
+    },
+    {
+      "name": "Gugu Gaga: Keyboard Escape",
+      "found": true,
+      "initial": "GG",
+      "image": "assets/icons/official/gugu-gaga-keyboard-escape.jpg",
+      "matchedName": "Gugu Gaga: Keyboard Escape",
+      "artistName": "Goldoint",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.metax.obby.escape.run",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 108038
     },
     {
       "name": "Guns of Glory: Lost Island",
@@ -2911,6 +2995,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 3529
+    },
+    {
+      "name": "Pokémon Champions",
+      "found": true,
+      "initial": "PM",
+      "image": "assets/icons/official/pok-mon-champions.jpg",
+      "matchedName": "Pokémon Champions",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/pok%C3%A9mon-champions/ios-6741503079",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8328
     },
     {
       "name": "Pokémon GO",
