@@ -2957,8 +2957,34 @@ async function main() {
 
   buildDeveloperLookup(data);
   console.log("fetch iosPuzzleGross");
-  const iosHtml = await fetchText(iosSource.url);
-  data.iosPuzzleGross = { ...iosSource, ...parseAppCurrents(iosHtml) };
+  try {
+    const iosHtml = await fetchText(iosSource.url);
+    data.iosPuzzleGross = { ...iosSource, ...parseAppCurrents(iosHtml) };
+  } catch (error) {
+    console.warn(`AppCurrents iOS Puzzle failed, fallback to AppBrain: ${error.message}`);
+    const iosFallback = {
+      ...iosSource,
+      url: "https://www.appbrain.com/stats/appstore-rankings/top_grossing/games_puzzle/us",
+      expectedTitle: "Puzzle Games",
+      sourceLabel: "AppBrain App Store - Top Grossing Puzzle / US",
+      sourceProvider: "appbrain",
+      fallbackSourceLabel: iosSource.sourceLabel,
+      fallbackUrl: iosSource.url,
+    };
+    try {
+      const fallbackHtml = await fetchText(iosFallback.url, iosFallback.expectedTitle);
+      data.iosPuzzleGross = { ...iosFallback, ...parseAppBrain(fallbackHtml, iosFallback) };
+    } catch (fallbackError) {
+      console.warn(`AppBrain iOS Puzzle fallback failed: ${fallbackError.message}`);
+      data.iosPuzzleGross = {
+        ...iosSource,
+        updated: "",
+        rows: [],
+        sourceProvider: "appcurrents-unavailable",
+        unavailableReason: fallbackError.message,
+      };
+    }
+  }
   buildDeveloperLookup(data);
 
   const previousRanks = parsePreviousRanks();
