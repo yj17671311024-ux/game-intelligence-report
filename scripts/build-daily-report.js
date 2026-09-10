@@ -1597,6 +1597,26 @@ function topMovers(data) {
     .slice(0, 10);
 }
 
+function priorityMovers(data) {
+  const preferredKeys = new Set(["gpGamesFree", "gpPuzzleGross", "gpPuzzleFree", "gpRpgGross", "gpStrategyGross"]);
+  const rows = allRows(data).filter((row) => {
+    if (!row.deltaVerified || !preferredKeys.has(row.categoryKey)) return false;
+    if (row.deltaClass === "new") return true;
+    return row.deltaClass === "up" && Number(row.delta.replace(/[^0-9]/g, "")) >= 3;
+  });
+  const seen = new Set();
+  return rows.sort((a, b) => {
+    const score = (row) => (row.deltaClass === "new" ? 100 : Number(row.delta.replace(/[^0-9]/g, "")))
+      + (row.categoryKey === "gpGamesFree" ? 12 : row.categoryKey.includes("Puzzle") ? 8 : 4);
+    return score(b) - score(a) || a.rank - b.rank;
+  }).filter((row) => {
+    const key = norm(row.name);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  }).slice(0, 6);
+}
+
 const maleSegmentDefinitions = [
   {
     key: "casualTowerDefense",
@@ -2381,8 +2401,21 @@ function insightCardHtml(data, title, badge, note, items) {
 }
 
 function summaryCardsHtml(data, insights = null) {
+  const moverRows = priorityMovers(data);
+  const moverCard = insightCardHtml(
+    data,
+    "重点变动 / 新上榜",
+    `${moverRows.length} 个信号`,
+    "只列免费总榜、Puzzle、RPG、策略榜中已完成昨日同榜对比的新品或明显上升产品。",
+    moverRows.map((row) => ({
+      row,
+      note: row.deltaClass === "new"
+        ? "新进同榜可见 Top30，优先看题材包装、首局体验和买量素材。"
+        : `较昨日同榜上升 ${row.delta}，优先复看版本、活动或素材变化。`,
+    }))
+  );
   if (insights?.summaryCards?.length) {
-    return insights.summaryCards.map((card) => insightCardHtml(
+    return [moverCard, ...insights.summaryCards.map((card) => insightCardHtml(
       data,
       card.title || "今日观察",
       card.badge || "观察",
@@ -2391,7 +2424,7 @@ function summaryCardsHtml(data, insights = null) {
         row: productRef(data, item.name),
         note: item.note,
       }))
-    )).join("");
+    ))].join("");
   }
 
   const revenueRows = uniqueProductRows([
@@ -2419,6 +2452,7 @@ function summaryCardsHtml(data, insights = null) {
   ].filter(Boolean)).slice(0, 3);
 
   return [
+    moverCard,
     ...(gamesFreeRows.length ? [insightCardHtml(data, "游戏免费总榜雷达", "全游戏免费榜", "先看所有游戏免费榜，捕捉不在 Puzzle 分类里的突发冲榜产品。", gamesFreeRows.map((row) => ({
       row,
       note: row.point,
@@ -2630,7 +2664,7 @@ function html(data, iconEntries, insights = null) {
     .change-grid { display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:14px; margin-top:16px; }
     .card { padding:18px; min-width:0; } .card h3 { color:var(--blue); margin-bottom:10px; } .card p,.card li { color:#4e5b6b; }
     .card ul { margin-left:0; list-style:none; } .card li { padding:7px 0 7px 14px; border-top:1px solid #edf1f4; position:relative; } .card li:first-child { border-top:0; } .card li::before { content:""; position:absolute; left:0; top:17px; width:5px; height:5px; border-radius:50%; background:var(--blue); }
-    .insight-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:16px; }
+    .insight-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:16px; }
     .insight-card { padding:0; overflow:hidden; }
     .insight-card-head { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:start; padding:16px; background:#fbfcfd; border-bottom:1px solid var(--line); }
     .insight-card-head h3,.motion-head h3 { margin:0; color:var(--blue); }
@@ -2716,6 +2750,7 @@ function html(data, iconEntries, insights = null) {
     .studio-rank-list small { background:#f7f9fb; border-color:#dce3ea; color:#657180; font-weight:700; }
     ul,ol { margin:8px 0 0 20px; padding:0; } li { margin:5px 0; } footer { color:var(--muted); margin-top:20px; font-size:13px; }
     @media (max-width:1100px) { .dashboard { grid-template-columns:1fr; } .side-nav { position:static; grid-template-columns:repeat(4,minmax(0,1fr)); } .side-nav button { text-align:center; } }
+    @media (max-width:1200px) { .insight-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
     @media (max-width:980px) { .change-grid,.motion-grid,.insight-grid,.account-grid { grid-template-columns:1fr; } }
     @media (max-width:860px) { .hero,.grid-2,.grid-3,.visual-strip,.studio-grid,.family-grid { grid-template-columns:1fr; } .side-nav { display:flex; overflow-x:auto; } .side-nav button { flex:0 0 auto; white-space:nowrap; } .studio-product,.family-product,.mini-product { grid-template-columns:42px minmax(0,1fr); } .studio-rank-list,.family-ranks,.mini-ranks { grid-column:1 / -1; grid-template-columns:repeat(3,minmax(0,1fr)); } .hero { padding:22px; } .section { padding:20px; } table { min-width:940px; } }
   </style>
