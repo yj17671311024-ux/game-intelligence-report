@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-10T04:34:39.698Z",
-  "total": 381,
-  "found": 377,
+  "preparedAt": "2026-09-10T09:53:10.742Z",
+  "total": 383,
+  "found": 379,
   "metadata": [
     {
       "name": "8 Ball Pool",
@@ -507,6 +507,18 @@
       "score": 130,
       "query": "Braindom",
       "bytes": 40208
+    },
+    {
+      "name": "Brainy Escape Quest",
+      "found": true,
+      "initial": "BE",
+      "image": "assets/icons/official/brainy-escape-quest.jpg",
+      "matchedName": "Brainy Escape Quest",
+      "artistName": "Metagame.Ltd",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.metagame.annoying.trick.brainypuzzle",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 417238
     },
     {
       "name": "BrownDust2 - Full Burst RPG",
@@ -1291,6 +1303,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 8028
+    },
+    {
+      "name": "Fish Sort Puzzle",
+      "found": true,
+      "initial": "FS",
+      "image": "assets/icons/official/fish-sort-puzzle.jpg",
+      "matchedName": "Fish Sort Puzzle",
+      "artistName": "Shycheese",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=triple.sorting.bubble.fish.match",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 504037
     },
     {
       "name": "Fish Sort Puzzle: Fish Games",
