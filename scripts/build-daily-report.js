@@ -1213,8 +1213,20 @@ async function fetchRankList(config) {
     }
   }
   console.log(`fetch fallback ${config.key}`);
-  const html = await fetchText(config.url, config.expectedTitle);
-  return { ...config, ...parseAppBrain(html, config) };
+  try {
+    const html = await fetchText(config.url, config.expectedTitle);
+    return { ...config, ...parseAppBrain(html, config) };
+  } catch (error) {
+    // A temporary chart outage must not prevent other charts and the daily page from publishing.
+    console.warn(`all sources failed for ${config.key}; publishing an unavailable source marker: ${error.message}`);
+    return {
+      ...config,
+      rows: [],
+      updated: "",
+      sourceProvider: `${config.sourceProvider || "unknown"}-unavailable`,
+      unavailableReason: error.message,
+    };
+  }
 }
 
 function parseAppBrain(html, config) {
@@ -2109,7 +2121,10 @@ function sourceListHtml(data) {
   return Object.values(data)
     .map((source) => {
       const fallback = source.fallbackSourceLabel ? `（兜底源：${source.fallbackSourceLabel}）` : "";
-      return `<li><a href="${escapeHtml(source.url)}">${escapeHtml(source.sourceLabel || source.label)}</a>${escapeHtml(fallback)}</li>`;
+      const unavailable = source.unavailableReason
+        ? `（今日抓取失败，未纳入今日排名：${source.unavailableReason}）`
+        : "";
+      return `<li><a href="${escapeHtml(source.url)}">${escapeHtml(source.sourceLabel || source.label)}</a>${escapeHtml(fallback)}${escapeHtml(unavailable)}</li>`;
     })
     .join("\n");
 }
