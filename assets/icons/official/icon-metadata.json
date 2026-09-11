@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-11T02:09:25.845Z",
-  "total": 384,
-  "found": 380,
+  "preparedAt": "2026-09-11T02:53:42.655Z",
+  "total": 383,
+  "found": 379,
   "metadata": [
     {
       "name": "8 Ball Pool",
@@ -701,18 +701,6 @@
       "bytes": 6363
     },
     {
-      "name": "Cell Survivor",
-      "found": true,
-      "initial": "CS",
-      "image": "assets/icons/official/cell-survivor.jpg",
-      "matchedName": "Cell Survivor",
-      "artistName": "Snap Brain Games",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=defense.roguelike.cell.shoot.survivor",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 434308
-    },
-    {
       "name": "Cell Survivor - Shoot Defense",
       "found": true,
       "initial": "CS",
@@ -1366,18 +1354,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1388,6 +1364,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
