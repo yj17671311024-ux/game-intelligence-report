@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-11T02:53:42.655Z",
-  "total": 383,
-  "found": 379,
+  "preparedAt": "2026-09-12T02:09:23.911Z",
+  "total": 388,
+  "found": 384,
   "metadata": [
     {
       "name": "8 Ball Pool",
@@ -701,6 +701,18 @@
       "bytes": 6363
     },
     {
+      "name": "Cell Survivor",
+      "found": true,
+      "initial": "CS",
+      "image": "assets/icons/official/cell-survivor.jpg",
+      "matchedName": "Cell Survivor",
+      "artistName": "Snap Brain Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=defense.roguelike.cell.shoot.survivor",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 434308
+    },
+    {
       "name": "Cell Survivor - Shoot Defense",
       "found": true,
       "initial": "CS",
@@ -807,6 +819,18 @@
       "score": 286,
       "query": "Color Block: Combo Blast",
       "bytes": 43352
+    },
+    {
+      "name": "Color by Number：Coloring Games",
+      "found": true,
+      "initial": "CB",
+      "image": "assets/icons/official/color-by-number-coloring-games.jpg",
+      "matchedName": "Color by Number：Coloring Games",
+      "artistName": "Wildlife Studios",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tfgco.apps.coloring.free.color.by.number",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 72984
     },
     {
       "name": "Color Fill 3D",
@@ -1354,18 +1378,6 @@
       }
     },
     {
-      "name": "Flambé: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge & Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6265
-    },
-    {
       "name": "Flambe: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1376,6 +1388,18 @@
       "score": 94,
       "query": "Flambe: Merge & Cook",
       "bytes": 58307
+    },
+    {
+      "name": "Flambé: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge & Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6265
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1909,6 +1933,18 @@
       "score": 286,
       "query": "Jelly Busters: Puzzle Game",
       "bytes": 46227
+    },
+    {
+      "name": "Jelly Master: Mukbang ASMR",
+      "found": true,
+      "initial": "JM",
+      "image": "assets/icons/official/jelly-master-mukbang-asmr.jpg",
+      "matchedName": "Jelly Master: Mukbang ASMR",
+      "artistName": "FALCON GAME",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.fc.p.cp.jelly.mukbang.asmr.live.diy",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 500718
     },
     {
       "name": "Jigsaw Drop",
@@ -3658,6 +3694,18 @@
       "bytes": 74498
     },
     {
+      "name": "Stormshot: Isle of Adventure",
+      "found": true,
+      "initial": "SI",
+      "image": "assets/icons/official/stormshot-isle-of-adventure.jpg",
+      "matchedName": "Stormshot: Isle of Adventure",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/stormshot-isle-of-adventure/ios-6443388218",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5734
+    },
+    {
       "name": "Subway Surfers",
       "found": true,
       "initial": "SS",
@@ -4381,6 +4429,18 @@
       "score": 154,
       "query": "Woodoku: Wood Block Puzzle",
       "bytes": 58140
+    },
+    {
+      "name": "Wool Crush",
+      "found": true,
+      "initial": "WC",
+      "image": "assets/icons/official/wool-crush.jpg",
+      "matchedName": "Wool Crush™",
+      "artistName": "Astrasen Global",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=wool.match.color.sort.jam.puzzle",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 656990
     },
     {
       "name": "Word Cookies",
