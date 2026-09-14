@@ -1167,6 +1167,7 @@ async function fetchGooglePlayOfficial(config) {
     lang: "en",
     country: "us",
     fullDetail: false,
+    requestOptions: { timeout: { request: Number(process.env.FETCH_TIMEOUT_MS || 45000) }, retry: { limit: 1 } },
   });
   if (!Array.isArray(apps) || apps.length === 0) {
     throw new Error(`Google Play official list returned no rows for ${config.key}`);
@@ -1194,6 +1195,9 @@ async function fetchGooglePlayOfficial(config) {
   });
   return {
     updated: todayInShanghai(),
+    fetchedAt: new Date().toISOString(),
+    sourceUpdatedAt: null,
+    updatedKind: "capture-date",
     rows,
     url: official.url,
     sourceLabel: official.sourceLabel,
@@ -1215,7 +1219,8 @@ async function fetchRankList(config) {
   console.log(`fetch fallback ${config.key}`);
   try {
     const html = await fetchText(config.url, config.expectedTitle);
-    return { ...config, ...parseAppBrain(html, config) };
+    const parsed = parseAppBrain(html, config);
+    return { ...config, ...parsed, fetchedAt: new Date().toISOString(), sourceUpdatedAt: parsed.updated || null, updatedKind: "source-date" };
   } catch (error) {
     // A temporary chart outage must not prevent other charts and the daily page from publishing.
     console.warn(`all sources failed for ${config.key}; publishing an unavailable source marker: ${error.message}`);
@@ -2101,6 +2106,9 @@ function rankSourceSnapshot(data) {
       sourceLabel: list.sourceLabel || "",
       url: list.url || "",
       updated: list.updated || "",
+      fetchedAt: list.fetchedAt || null,
+      sourceUpdatedAt: list.sourceUpdatedAt || null,
+      updatedKind: list.updatedKind || null,
       rows: list.rows,
     };
   }
@@ -2127,6 +2135,14 @@ function reportIsComplete(document, date) {
   }
 }
 
+function sourceTiming(list) {
+  const captured = list?.fetchedAt ? new Intl.DateTimeFormat("zh-CN", {
+    timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false,
+  }).format(new Date(list.fetchedAt)) : "未记录";
+  const published = list?.sourceProvider === "google-play-official" ? "官方未提供榜单刷新时间" : `来源标注日期：${list?.sourceUpdatedAt || list?.updated || "未提供"}`;
+  return `抓取时间：${captured}（北京时间）；${published}`;
+}
+
 function sourceSummary(data) {
   const providers = new Set(Object.values(data).map((list) => list.sourceProvider || "").filter(Boolean));
   const gpOfficial = providers.has("google-play-official");
@@ -2144,7 +2160,7 @@ function sourceListHtml(data) {
       const unavailable = source.unavailableReason
         ? `（今日抓取失败，未纳入今日排名：${source.unavailableReason}）`
         : "";
-      return `<li><a href="${escapeHtml(source.url)}">${escapeHtml(source.sourceLabel || source.label)}</a>${escapeHtml(fallback)}${escapeHtml(unavailable)}</li>`;
+      return `<li><a href="${escapeHtml(source.url)}">${escapeHtml(source.sourceLabel || source.label)}</a>${escapeHtml(fallback)}${escapeHtml(unavailable)}<br>${escapeHtml(sourceTiming(source))}</li>`;
     })
     .join("\n");
 }
@@ -2796,7 +2812,7 @@ function html(data, iconEntries, insights = null) {
     `${data.iosPuzzleGross.sourceLabel}：${data.iosPuzzleGross.updated || "今日数据不可用"}`,
   ];
   const fallbackTitle = `${displayMonthDay(reportDate)}更新：休闲、Puzzle 与中轻度塔防观察`;
-  const fallbackLead = `公开榜单源当前可见最新快照为 ${snapshotBits.join("；")}；日报日期为 ${reportDate}。排名只展示来源抓到的原始名次，动态只在同榜单有昨日快照可比时标注。`;
+  const fallbackLead = `美国区游戏榜单快照 · 日报日期 ${reportDate}。${sourceTiming(data.gpGamesFree)}。各榜单来源与抓取时间见“来源口径”。`;
   const titleText = insights?.title || fallbackTitle;
   const leadText = insights?.lead || fallbackLead;
   const unmatched = Array.from(new Set(iconRows.map((row) => row.name))).filter((name) => {
@@ -3002,6 +3018,7 @@ function html(data, iconEntries, insights = null) {
       <p class="sub">不按 Puzzle / RPG / Strategy 过滤，专门捕捉免费榜突然冲顶的新游。</p>
       <div class="notice"><strong>用途：</strong>如果点点免费榜看到某个游戏冲到前排，先在这里核对；它可能因为商店分类不是 Puzzle，而不会出现在 Puzzle 免费榜。</div>
       <h3>${escapeHtml(data.gpGamesFree?.label || "Google Play 游戏免费总榜")}</h3>
+      <p class="sub">${escapeHtml(data.gpGamesFree?.sourceLabel || "")} · ${escapeHtml(sourceTiming(data.gpGamesFree))}</p>
       <div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>排名</th><th>游戏</th><th>厂商</th><th>玩法族群</th><th>变化</th><th>简要学习点</th></tr></thead><tbody>${categoryRows(data.gpGamesFree?.rows || [])}</tbody></table></div>
     </section>
 
@@ -3185,7 +3202,8 @@ async function main() {
   console.log("fetch iosPuzzleGross");
   try {
     const iosHtml = await fetchText(iosSource.url);
-    data.iosPuzzleGross = { ...iosSource, ...parseAppCurrents(iosHtml) };
+    const parsed = parseAppCurrents(iosHtml);
+    data.iosPuzzleGross = { ...iosSource, ...parsed, fetchedAt: new Date().toISOString(), sourceUpdatedAt: parsed.updated || null, updatedKind: "source-date" };
   } catch (error) {
     console.warn(`AppCurrents iOS Puzzle failed, fallback to AppBrain: ${error.message}`);
     const iosFallback = {
@@ -3199,7 +3217,8 @@ async function main() {
     };
     try {
       const fallbackHtml = await fetchText(iosFallback.url, iosFallback.expectedTitle);
-      data.iosPuzzleGross = { ...iosFallback, ...parseAppBrain(fallbackHtml, iosFallback) };
+      const parsed = parseAppBrain(fallbackHtml, iosFallback);
+      data.iosPuzzleGross = { ...iosFallback, ...parsed, fetchedAt: new Date().toISOString(), sourceUpdatedAt: parsed.updated || null, updatedKind: "source-date" };
     } catch (fallbackError) {
       console.warn(`AppBrain iOS Puzzle fallback failed: ${fallbackError.message}`);
       data.iosPuzzleGross = {
