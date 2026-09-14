@@ -2933,7 +2933,7 @@ function html(data, iconEntries, insights = null) {
           <span class="chip green">图像速览</span>
           <span class="chip red">休闲塔防 / 放置 / RPG / Strategy</span>
           <span class="chip gold">厂商作品集</span>
-          <span class="chip">对比 ${previousDate}</span>
+          ${previousDate ? `<a class="chip yesterday-link" data-yesterday="${escapeHtml(previousDate)}" href="archive/${escapeHtml(previousDate)}.html">昨日日报：${escapeHtml(previousDate)}</a>` : ""}
         </div>
       </div>
       <div class="meta">
@@ -3059,6 +3059,11 @@ function html(data, iconEntries, insights = null) {
   <script id="rank-source-snapshot" type="application/json">${escapeHtml(rankSourceSnapshot(data))}</script>
   <script>
 ${iconMapScript(iconEntries, rows)}
+
+    const yesterdayLink = document.querySelector("[data-yesterday]");
+    if (yesterdayLink && location.pathname.includes("/archive/")) {
+      yesterdayLink.href = "../" + yesterdayLink.getAttribute("href");
+    }
 
     function activatePanel(panelId, shouldUpdateHash = true) {
       const targetId = panelId && document.getElementById(panelId) ? panelId : "summary";
