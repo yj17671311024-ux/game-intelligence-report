@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-14T08:37:26.901Z",
-  "total": 393,
-  "found": 389,
+  "preparedAt": "2026-09-14T09:04:14.845Z",
+  "total": 401,
+  "found": 397,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -170,6 +170,18 @@
       "score": 262,
       "query": "Angry Birds 2",
       "bytes": 44325
+    },
+    {
+      "name": "Annoying Uncle Punch Game",
+      "found": true,
+      "initial": "AU",
+      "image": "assets/icons/official/annoying-uncle-punch-game.jpg",
+      "matchedName": "Annoying Uncle Punch Game®",
+      "artistName": "Game District LLC",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.gtsy.annoying.punch.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 317986
     },
     {
       "name": "Apex Sniper: Animal Hunt",
@@ -444,6 +456,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 300069
+    },
+    {
+      "name": "Bluey: Let's Play!",
+      "found": true,
+      "initial": "BL",
+      "image": "assets/icons/official/bluey-let-s-play.jpg",
+      "matchedName": "Bluey: Let's Play!",
+      "artistName": "Budge Studios",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.budgestudios.googleplay.BlueyBLU",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 133072
     },
     {
       "name": "Boom Beach: War Strategy Game",
@@ -965,6 +989,18 @@
       "score": 286,
       "query": "Cube Land Puzzle Game",
       "bytes": 84375
+    },
+    {
+      "name": "Cube Tap Sort",
+      "found": true,
+      "initial": "CT",
+      "image": "assets/icons/official/cube-tap-sort.jpg",
+      "matchedName": "Cube Tap Sort",
+      "artistName": "Tripledot Studios Limited",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.zm.pickpack",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 137517
     },
     {
       "name": "CubeAway - 3DPuzzle",
@@ -1655,6 +1691,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6215
+    },
+    {
+      "name": "Goods Puzzle: Sort Challenge",
+      "found": true,
+      "initial": "GP",
+      "image": "assets/icons/official/goods-puzzle-sort-challenge.jpg",
+      "matchedName": "Goods Puzzle: Sort Challenge™",
+      "artistName": "FALCON GAMES",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.fc.goods.sort.matching.puzzle.triplemaster",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 154182
     },
     {
       "name": "Gossip Harbor",
@@ -2754,6 +2802,18 @@
       "bytes": 263552
     },
     {
+      "name": "MONOPOLY: Bingo!",
+      "found": true,
+      "initial": "MB",
+      "image": "assets/icons/official/monopoly-bingo.jpg",
+      "matchedName": "MONOPOLY: Bingo!",
+      "artistName": "Clipwire Games Inc",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.clipwiregames.monopolybingo",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 195929
+    },
+    {
       "name": "Monster Legends - Battle Game",
       "found": true,
       "initial": "ML",
@@ -3055,6 +3115,18 @@
       "score": 262,
       "query": "Pixel Flow!",
       "bytes": 37230
+    },
+    {
+      "name": "Pizza Ready!",
+      "found": true,
+      "initial": "PR",
+      "image": "assets/icons/official/pizza-ready.jpg",
+      "matchedName": "Pizza Ready!",
+      "artistName": "Supercent, Inc.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=io.supercent.pizzaidle",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 493134
     },
     {
       "name": "Plants on Fire",
@@ -4177,6 +4249,18 @@
       "bytes": 40258
     },
     {
+      "name": "Treasure Master",
+      "found": true,
+      "initial": "TM",
+      "image": "assets/icons/official/treasure-master.jpg",
+      "matchedName": "Treasure Master",
+      "artistName": "Gimica GmbH",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.gimica.treasuremaster",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 434593
+    },
+    {
       "name": "Tricky Prank: Annoying Puzzle",
       "found": true,
       "initial": "TP",
@@ -4489,6 +4573,18 @@
       "score": 154,
       "query": "Woodoku: Wood Block Puzzle",
       "bytes": 58140
+    },
+    {
+      "name": "Wool Crush",
+      "found": true,
+      "initial": "WC",
+      "image": "assets/icons/official/wool-crush.jpg",
+      "matchedName": "Wool Crush™",
+      "artistName": "Astrasen Global",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=wool.match.color.sort.jam.puzzle",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 656990
     },
     {
       "name": "Word Connect Association",
