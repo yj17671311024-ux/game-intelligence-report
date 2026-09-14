@@ -2125,11 +2125,30 @@ function incompleteCharts(data) {
   }).map((config) => config.key);
 }
 
+function officialFreshnessIssues(data, date, now = Date.now()) {
+  const start = Date.parse(`${date}T00:00:00+08:00`);
+  if (!Number.isFinite(start)) return ["invalid report date"];
+  // Previous calendar day's noon in Shanghai, never a rolling server-local date.
+  const earliest = start - 12 * 60 * 60 * 1000;
+  const latest = Math.min(Number(now), start + 24 * 60 * 60 * 1000 - 1);
+  return sources.filter((config) => config.official).flatMap((config) => {
+    const list = data[config.key];
+    if (list?.sourceProvider !== "google-play-official") return [`${config.key}: official source required`];
+    const captured = Date.parse(list.fetchedAt || "");
+    if (!Number.isFinite(captured)) return [`${config.key}: capture time missing`];
+    if (captured < earliest) return [`${config.key}: captured before previous-day noon`];
+    if (captured > latest) return [`${config.key}: capture time is in the future`];
+    return [];
+  });
+}
+
 function reportIsComplete(document, date) {
   if (!document.includes(`<div class="date">${date}</div>`)) return false;
   const match = /<script id="rank-source-snapshot"[^>]*>([\s\S]*?)<\/script>/.exec(document);
   try {
-    return !!match && incompleteCharts(JSON.parse(decodeHtml(match[1]))).length === 0;
+    if (!match) return false;
+    const data = JSON.parse(decodeHtml(match[1]));
+    return incompleteCharts(data).length === 0 && officialFreshnessIssues(data, date).length === 0;
   } catch {
     return false;
   }
@@ -3236,6 +3255,10 @@ async function main() {
   if (missingCharts.length) {
     throw new Error(`Incomplete charts: ${missingCharts.join(", ")}. Existing report preserved; retry required.`);
   }
+  const freshnessIssues = officialFreshnessIssues(data, reportDate);
+  if (freshnessIssues.length) {
+    throw new Error(`Official chart freshness check failed: ${freshnessIssues.join("; ")}. Existing report preserved; retry required.`);
+  }
   const previousRanks = parsePreviousRanks();
   attachDeltas(data, previousRanks);
   await attachReleaseDates(data, previousRanks);
@@ -3269,7 +3292,7 @@ async function main() {
   console.log(`prepared ${path.join(siteDir, "index.html")}`);
 }
 
-module.exports = { attachDeltas, signalFlags, priorityMovers, calendarDate, completeTop30, dailySignalsHtml, storeIdentity, incompleteCharts, reportIsComplete };
+module.exports = { attachDeltas, signalFlags, priorityMovers, calendarDate, completeTop30, dailySignalsHtml, storeIdentity, incompleteCharts, officialFreshnessIssues, reportIsComplete };
 
 if (require.main === module && process.argv[2] === "--check-report") {
   const file = process.argv[3];
