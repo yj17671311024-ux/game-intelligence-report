@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-13T02:09:12.881Z",
-  "total": 389,
-  "found": 385,
+  "preparedAt": "2026-09-14T02:09:15.521Z",
+  "total": 397,
+  "found": 393,
   "metadata": [
     {
       "name": "8 Ball Pool",
@@ -158,6 +158,18 @@
       "score": 262,
       "query": "Angry Birds 2",
       "bytes": 44325
+    },
+    {
+      "name": "Apex Sniper: Animal Hunt",
+      "found": true,
+      "initial": "AS",
+      "image": "assets/icons/official/apex-sniper-animal-hunt.jpg",
+      "matchedName": "Apex Sniper: Animal Hunt",
+      "artistName": "CozyCraft",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.animal.hunter.shooting.apex",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 507073
     },
     {
       "name": "Arknights",
@@ -943,6 +955,18 @@
       "bytes": 84375
     },
     {
+      "name": "Cube Tap Sort",
+      "found": true,
+      "initial": "CT",
+      "image": "assets/icons/official/cube-tap-sort.jpg",
+      "matchedName": "Cube Tap Sort",
+      "artistName": "Tripledot Studios Limited",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.zm.pickpack",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 137517
+    },
+    {
       "name": "CubeAway - 3DPuzzle",
       "found": true,
       "initial": "C3",
@@ -1633,6 +1657,18 @@
       "bytes": 6215
     },
     {
+      "name": "Goods Puzzle: Sort Challenge",
+      "found": true,
+      "initial": "GP",
+      "image": "assets/icons/official/goods-puzzle-sort-challenge.jpg",
+      "matchedName": "Goods Puzzle: Sort Challenge™",
+      "artistName": "FALCON GAMES",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.fc.goods.sort.matching.puzzle.triplemaster",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 154182
+    },
+    {
       "name": "Gossip Harbor",
       "found": true,
       "initial": "GH",
@@ -1947,6 +1983,18 @@
       "bytes": 500718
     },
     {
+      "name": "Jewel Color Sort: Gems Art",
+      "found": true,
+      "initial": "JC",
+      "image": "assets/icons/official/jewel-color-sort-gems-art.jpg",
+      "matchedName": "Jewel Color Sort: Gems Art",
+      "artistName": "HappyTapLand",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=diamond.pixel.art.jewel.color.flow.sort.puzzle",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 463618
+    },
+    {
       "name": "Jigsaw Drop",
       "found": true,
       "initial": "JD",
@@ -2175,6 +2223,18 @@
       "bytes": 6734
     },
     {
+      "name": "Last Shelter: War Z",
+      "found": true,
+      "initial": "LS",
+      "image": "assets/icons/official/last-shelter-war-z.jpg",
+      "matchedName": "Last Shelter: War Z",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/last-shelter-war-z/ios-6760406772",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6454
+    },
+    {
       "name": "Last War: Survival Game",
       "found": true,
       "initial": "LW",
@@ -2330,6 +2390,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 4704
+    },
+    {
+      "name": "Lucky Defense!",
+      "found": true,
+      "initial": "LD",
+      "image": "assets/icons/official/lucky-defense.jpg",
+      "matchedName": "Lucky Defense!",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/lucky-defense/ios-6482291732",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 8141
     },
     {
       "name": "Mafia City",
@@ -4093,6 +4165,18 @@
       "bytes": 92235
     },
     {
+      "name": "Tower War - Tactical Conquest",
+      "found": true,
+      "initial": "TW",
+      "image": "assets/icons/official/tower-war-tactical-conquest.jpg",
+      "matchedName": "Tower War - Tactical Conquest",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/tower-war-tactical-conquest/ios-1579356887",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7467
+    },
+    {
       "name": "Township",
       "found": true,
       "initial": "T",
@@ -4320,6 +4404,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 3421
+    },
+    {
+      "name": "Water Sort: Master Colors",
+      "found": true,
+      "initial": "WS",
+      "image": "assets/icons/official/water-sort-master-colors.jpg",
+      "matchedName": "Water Sort: Master Colors",
+      "artistName": "Bobodoo Game",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=water.sort.master.colors.games",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 407477
     },
     {
       "name": "West Game",
