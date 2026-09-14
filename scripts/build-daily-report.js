@@ -2107,6 +2107,26 @@ function rankSourceSnapshot(data) {
   return JSON.stringify(snapshot);
 }
 
+function incompleteCharts(data) {
+  return [...sources, iosSource].filter((config) => {
+    const list = data[config.key];
+    if (!list || !list.updated || /unavailable/.test(list.sourceProvider || "")) return true;
+    const rows = list.rows || [];
+    const ranks = new Set(rows.filter((row) => row.name).map((row) => row.rank));
+    return Array.from({ length: config.limit || 30 }, (_, i) => i + 1).some((rank) => !ranks.has(rank));
+  }).map((config) => config.key);
+}
+
+function reportIsComplete(document, date) {
+  if (!document.includes(`<div class="date">${date}</div>`)) return false;
+  const match = /<script id="rank-source-snapshot"[^>]*>([\s\S]*?)<\/script>/.exec(document);
+  try {
+    return !!match && incompleteCharts(JSON.parse(decodeHtml(match[1]))).length === 0;
+  } catch {
+    return false;
+  }
+}
+
 function sourceSummary(data) {
   const providers = new Set(Object.values(data).map((list) => list.sourceProvider || "").filter(Boolean));
   const gpOfficial = providers.has("google-play-official");
@@ -2380,7 +2400,7 @@ jobs:
           REPORT_DATE="$(TZ=Asia/Shanghai date +'%Y-%m-%d')"
           FORCE="\${{ github.event.inputs.force || 'false' }}"
           echo "REPORT_DATE=$REPORT_DATE" >> "$GITHUB_ENV"
-          if [ "$FORCE" != "true" ] && [ -f index.html ] && grep -q "<div class=\"date\">$REPORT_DATE</div>" index.html; then
+          if [ "$FORCE" != "true" ] && node scripts/build-daily-report.js --check-report index.html "$REPORT_DATE"; then
             echo "Today's report already exists. Skip this safety run."
             echo "SKIP_BUILD=1" >> "$GITHUB_ENV"
           else
@@ -3193,6 +3213,10 @@ async function main() {
   }
   buildDeveloperLookup(data);
 
+  const missingCharts = incompleteCharts(data);
+  if (missingCharts.length) {
+    throw new Error(`Incomplete charts: ${missingCharts.join(", ")}. Existing report preserved; retry required.`);
+  }
   const previousRanks = parsePreviousRanks();
   attachDeltas(data, previousRanks);
   await attachReleaseDates(data, previousRanks);
@@ -3226,9 +3250,13 @@ async function main() {
   console.log(`prepared ${path.join(siteDir, "index.html")}`);
 }
 
-module.exports = { attachDeltas, signalFlags, priorityMovers, calendarDate, completeTop30, dailySignalsHtml, storeIdentity };
+module.exports = { attachDeltas, signalFlags, priorityMovers, calendarDate, completeTop30, dailySignalsHtml, storeIdentity, incompleteCharts, reportIsComplete };
 
-if (require.main === module) main().catch((error) => {
+if (require.main === module && process.argv[2] === "--check-report") {
+  const file = process.argv[3];
+  const date = process.argv[4] || todayInShanghai();
+  process.exitCode = fs.existsSync(file) && reportIsComplete(fs.readFileSync(file, "utf8"), date) ? 0 : 1;
+} else if (require.main === module) main().catch((error) => {
   console.error(error);
   process.exit(1);
 });
