@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-14T07:35:43.695Z",
-  "total": 388,
-  "found": 384,
+  "preparedAt": "2026-09-14T08:37:26.901Z",
+  "total": 393,
+  "found": 389,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -170,6 +170,18 @@
       "score": 262,
       "query": "Angry Birds 2",
       "bytes": 44325
+    },
+    {
+      "name": "Apex Sniper: Animal Hunt",
+      "found": true,
+      "initial": "AS",
+      "image": "assets/icons/official/apex-sniper-animal-hunt.jpg",
+      "matchedName": "Apex Sniper: Animal Hunt",
+      "artistName": "CozyCraft",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.animal.hunter.shooting.apex",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 507073
     },
     {
       "name": "Arknights",
@@ -785,6 +797,18 @@
       "bytes": 78269
     },
     {
+      "name": "Coin Master",
+      "found": true,
+      "initial": "CM",
+      "image": "assets/icons/official/coin-master.jpg",
+      "matchedName": "Coin Master",
+      "artistName": "Moon Active",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.moonactive.coinmaster",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 32773
+    },
+    {
       "name": "Colony Flow!",
       "found": true,
       "initial": "CF",
@@ -819,6 +843,18 @@
       "score": 286,
       "query": "Color Block: Combo Blast",
       "bytes": 43352
+    },
+    {
+      "name": "Color by Number：Coloring Games",
+      "found": true,
+      "initial": "CB",
+      "image": "assets/icons/official/color-by-number-coloring-games.jpg",
+      "matchedName": "Color by Number：Coloring Games",
+      "artistName": "Wildlife Studios",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tfgco.apps.coloring.free.color.by.number",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 72984
     },
     {
       "name": "Color Fill 3D",
@@ -1366,18 +1402,6 @@
       }
     },
     {
-      "name": "Flambé: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge & Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6265
-    },
-    {
       "name": "Flambe: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1388,6 +1412,18 @@
       "score": 94,
       "query": "Flambe: Merge & Cook",
       "bytes": 58307
+    },
+    {
+      "name": "Flambé: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge & Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6265
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1921,6 +1957,18 @@
       "score": 286,
       "query": "Jelly Busters: Puzzle Game",
       "bytes": 46227
+    },
+    {
+      "name": "Jelly Master: Mukbang ASMR",
+      "found": true,
+      "initial": "JM",
+      "image": "assets/icons/official/jelly-master-mukbang-asmr.jpg",
+      "matchedName": "Jelly Master: Mukbang ASMR",
+      "artistName": "FALCON GAME",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.fc.p.cp.jelly.mukbang.asmr.live.diy",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 500718
     },
     {
       "name": "Jigsaw Drop",
@@ -4441,6 +4489,18 @@
       "score": 154,
       "query": "Woodoku: Wood Block Puzzle",
       "bytes": 58140
+    },
+    {
+      "name": "Word Connect Association",
+      "found": true,
+      "initial": "WC",
+      "image": "assets/icons/official/word-connect-association.jpg",
+      "matchedName": "Word Connect Association",
+      "artistName": "PlaySimple Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=in.playsimple.wordtrip.association",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 215607
     },
     {
       "name": "Word Cookies",
