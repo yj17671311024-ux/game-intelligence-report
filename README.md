@@ -5,5 +5,5 @@ GitHub Pages static site.
 - index.html: latest report
 - archive/YYYY-MM-DD.html: daily archive
 
-Last prepared: 2026-09-14
-Source: game-intelligence-full-2026-09-14.html
+Last prepared: 2026-09-15
+Source: game-intelligence-full-2026-09-15.html
