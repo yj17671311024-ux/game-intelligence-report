@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-15T06:42:49.041Z",
-  "total": 394,
-  "found": 390,
+  "preparedAt": "2026-09-15T07:36:45.507Z",
+  "total": 395,
+  "found": 391,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1788,6 +1788,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6053
+    },
+    {
+      "name": "Hell Asylum",
+      "found": true,
+      "initial": "HA",
+      "image": "assets/icons/official/hell-asylum.jpg",
+      "matchedName": "Hell Asylum",
+      "artistName": "Rhinos",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.us.dyjycbt.google",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 37424
     },
     {
       "name": "Hero Wars",
