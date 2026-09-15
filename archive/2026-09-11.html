@@ -146,7 +146,7 @@
           <span class="chip green">图像速览</span>
           <span class="chip red">休闲塔防 / 放置 / RPG / Strategy</span>
           <span class="chip gold">厂商作品集</span>
-          <span class="chip">对比 2026-09-10</span>
+          <a class="chip yesterday-link" data-yesterday="2026-09-10" href="archive/2026-09-10.html">昨日日报：2026-09-10</a>
         </div>
       </div>
       <div class="meta">
@@ -2501,7 +2501,7 @@
       </div>
     </div>
 
-    <footer>生成日期：2026-09-11 10:53（Asia/Shanghai）</footer>
+    <footer>生成日期：2026-09-11 12:32（Asia/Shanghai）</footer>
   </main>
 
   <script id="rank-source-snapshot" type="application/json">{&quot;gpGamesFree&quot;:{&quot;sourceProvider&quot;:&quot;appbrain-unavailable&quot;,&quot;sourceLabel&quot;:&quot;AppBrain Google Play - Top Free Games / US&quot;,&quot;url&quot;:&quot;https://www.appbrain.com/stats/google-play-rankings/top_free/game/us&quot;,&quot;updated&quot;:&quot;&quot;,&quot;rows&quot;:[]},&quot;gpPuzzleGross&quot;:{&quot;sourceProvider&quot;:&quot;appbrain-unavailable&quot;,&quot;sourceLabel&quot;:&quot;AppBrain Google Play - Top Grossing Puzzle / US&quot;,&quot;url&quot;:&quot;https://www.appbrain.com/stats/google-play-rankings/top_grossing/puzzle/us&quot;,&quot;updated&quot;:&quot;&quot;,&quot;rows&quot;:[]},&quot;gpPuzzleFree&quot;:{&quot;sourceProvider&quot;:&quot;appbrain-unavailable&quot;,&quot;sourceLabel&quot;:&quot;AppBrain Google Play - Top Free Puzzle / US&quot;,&quot;url&quot;:&quot;https://www.appbrain.com/stats/google-play-rankings/top_free/puzzle/us&quot;,&quot;updated&quot;:&quot;&quot;,&quot;rows&quot;:[]},&quot;gpRpgGross&quot;:{&quot;sourceProvider&quot;:&quot;appbrain-unavailable&quot;,&quot;sourceLabel&quot;:&quot;AppBrain Google Play - Top Grossing Role Playing / US&quot;,&quot;url&quot;:&quot;https://www.appbrain.com/stats/google-play-rankings/top_grossing/role_playing/us&quot;,&quot;updated&quot;:&quot;&quot;,&quot;rows&quot;:[]},&quot;gpStrategyGross&quot;:{&quot;sourceProvider&quot;:&quot;appbrain-unavailable&quot;,&quot;sourceLabel&quot;:&quot;AppBrain Google Play - Top Grossing Strategy / US&quot;,&quot;url&quot;:&quot;https://www.appbrain.com/stats/google-play-rankings/top_grossing/strategy/us&quot;,&quot;updated&quot;:&quot;&quot;,&quot;rows&quot;:[]},&quot;iosStrategyGross&quot;:{&quot;sourceProvider&quot;:&quot;appbrain-unavailable&quot;,&quot;sourceLabel&quot;:&quot;AppBrain App Store - Top Grossing Strategy / US&quot;,&quot;url&quot;:&quot;https://www.appbrain.com/stats/appstore-rankings/top_grossing/games_strategy/us&quot;,&quot;updated&quot;:&quot;&quot;,&quot;rows&quot;:[]},&quot;iosPuzzleGross&quot;:{&quot;sourceProvider&quot;:&quot;appcurrents-unavailable&quot;,&quot;sourceLabel&quot;:&quot;AppCurrents iOS - Top Grossing Puzzle / US&quot;,&quot;url&quot;:&quot;https://appcurrents.com/charts/us/puzzle-games&quot;,&quot;updated&quot;:&quot;&quot;,&quot;rows&quot;:[]}}</script>
@@ -2584,6 +2584,11 @@
       "Who Is?": { initial: "WI", color: "linear-gradient(135deg,#2e6bc9,#7fd0ff)", image: "assets/icons/official/who-is.jpg" },
       "DOP 2": { initial: "D", color: "linear-gradient(135deg,#e45538,#fed14a)", image: "assets/icons/official/dop-2.jpg" }
     };
+
+    const yesterdayLink = document.querySelector("[data-yesterday]");
+    if (yesterdayLink && location.pathname.includes("/archive/")) {
+      yesterdayLink.href = "../" + yesterdayLink.getAttribute("href");
+    }
 
     function activatePanel(panelId, shouldUpdateHash = true) {
       const targetId = panelId && document.getElementById(panelId) ? panelId : "summary";
