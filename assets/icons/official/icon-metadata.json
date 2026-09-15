@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-15T03:18:17.558Z",
-  "total": 389,
-  "found": 385,
+  "preparedAt": "2026-09-15T05:18:14.941Z",
+  "total": 394,
+  "found": 390,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -545,6 +545,18 @@
       "bytes": 5678
     },
     {
+      "name": "Bulldozer Master: Crush & Mine",
+      "found": true,
+      "initial": "BM",
+      "image": "assets/icons/official/bulldozer-master-crush-and-mine.jpg",
+      "matchedName": "Bulldozer Master: Crush & Mine",
+      "artistName": "Supercent, Inc.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=io.supercent.bulldozermasters",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 517265
+    },
+    {
       "name": "Bus Fever Party!",
       "found": true,
       "initial": "BF",
@@ -663,6 +675,18 @@
       "score": 286,
       "query": "Candy Crush Soda Saga",
       "bytes": 89650
+    },
+    {
+      "name": "Car Evolve",
+      "found": true,
+      "initial": "CE",
+      "image": "assets/icons/official/car-evolve.jpg",
+      "matchedName": "Car Evolve",
+      "artistName": "Heseri Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=io.heseri.car",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 519630
     },
     {
       "name": "Car Sort",
@@ -807,6 +831,18 @@
       "score": 274,
       "query": "Color Block Jam",
       "bytes": 89850
+    },
+    {
+      "name": "Color Block Run - Puzzle Game",
+      "found": true,
+      "initial": "CB",
+      "image": "assets/icons/official/color-block-run-puzzle-game.jpg",
+      "matchedName": "Color Block Run - Puzzle Game",
+      "artistName": "Play2Ever Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.griffin.colorblock.games.free.android",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 288474
     },
     {
       "name": "Color Block: Combo Blast",
@@ -1415,6 +1451,18 @@
       "bytes": 58307
     },
     {
+      "name": "Fluffy Drop - No Timer",
+      "found": true,
+      "initial": "FD",
+      "image": "assets/icons/official/fluffy-drop-no-timer.jpg",
+      "matchedName": "Fluffy Drop - No Timer",
+      "artistName": "UniRise Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.fluffydrop.op.gp",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 545297
+    },
+    {
       "name": "Food Hunt: Pixel Puzzle",
       "found": true,
       "initial": "FH",
@@ -1993,6 +2041,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5477
+    },
+    {
+      "name": "Kick the Buddy－Fun Action Game",
+      "found": true,
+      "initial": "KT",
+      "image": "assets/icons/official/kick-the-buddy-fun-action-game.jpg",
+      "matchedName": "Kick the Buddy－Fun Action Game",
+      "artistName": "Playgendary Limited",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.playgendary.kickthebuddy",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 334483
     },
     {
       "name": "King's Choice",
