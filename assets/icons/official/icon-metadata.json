@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-14T09:04:14.845Z",
-  "total": 401,
-  "found": 397,
+  "preparedAt": "2026-09-15T02:03:28.944Z",
+  "total": 389,
+  "found": 385,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -170,30 +170,6 @@
       "score": 262,
       "query": "Angry Birds 2",
       "bytes": 44325
-    },
-    {
-      "name": "Annoying Uncle Punch Game",
-      "found": true,
-      "initial": "AU",
-      "image": "assets/icons/official/annoying-uncle-punch-game.jpg",
-      "matchedName": "Annoying Uncle Punch Game®",
-      "artistName": "Game District LLC",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.gtsy.annoying.punch.game",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 317986
-    },
-    {
-      "name": "Apex Sniper: Animal Hunt",
-      "found": true,
-      "initial": "AS",
-      "image": "assets/icons/official/apex-sniper-animal-hunt.jpg",
-      "matchedName": "Apex Sniper: Animal Hunt",
-      "artistName": "CozyCraft",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.animal.hunter.shooting.apex",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 507073
     },
     {
       "name": "Arknights",
@@ -456,18 +432,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 300069
-    },
-    {
-      "name": "Bluey: Let's Play!",
-      "found": true,
-      "initial": "BL",
-      "image": "assets/icons/official/bluey-let-s-play.jpg",
-      "matchedName": "Bluey: Let's Play!",
-      "artistName": "Budge Studios",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.budgestudios.googleplay.BlueyBLU",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 133072
     },
     {
       "name": "Boom Beach: War Strategy Game",
@@ -821,18 +785,6 @@
       "bytes": 78269
     },
     {
-      "name": "Coin Master",
-      "found": true,
-      "initial": "CM",
-      "image": "assets/icons/official/coin-master.jpg",
-      "matchedName": "Coin Master",
-      "artistName": "Moon Active",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.moonactive.coinmaster",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 32773
-    },
-    {
       "name": "Colony Flow!",
       "found": true,
       "initial": "CF",
@@ -867,18 +819,6 @@
       "score": 286,
       "query": "Color Block: Combo Blast",
       "bytes": 43352
-    },
-    {
-      "name": "Color by Number：Coloring Games",
-      "found": true,
-      "initial": "CB",
-      "image": "assets/icons/official/color-by-number-coloring-games.jpg",
-      "matchedName": "Color by Number：Coloring Games",
-      "artistName": "Wildlife Studios",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tfgco.apps.coloring.free.color.by.number",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 72984
     },
     {
       "name": "Color Fill 3D",
@@ -955,6 +895,18 @@
       "bytes": 8261
     },
     {
+      "name": "Cooking Fever: Restaurant Game",
+      "found": true,
+      "initial": "CF",
+      "image": "assets/icons/official/cooking-fever-restaurant-game.jpg",
+      "matchedName": "Cooking Fever: Restaurant Game",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/cooking-fever-restaurant-game/ios-714796093",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7956
+    },
+    {
       "name": "Coop TD: Together",
       "found": true,
       "initial": "CT",
@@ -989,18 +941,6 @@
       "score": 286,
       "query": "Cube Land Puzzle Game",
       "bytes": 84375
-    },
-    {
-      "name": "Cube Tap Sort",
-      "found": true,
-      "initial": "CT",
-      "image": "assets/icons/official/cube-tap-sort.jpg",
-      "matchedName": "Cube Tap Sort",
-      "artistName": "Tripledot Studios Limited",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.zm.pickpack",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 137517
     },
     {
       "name": "CubeAway - 3DPuzzle",
@@ -1438,18 +1378,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1460,6 +1388,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1691,18 +1631,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6215
-    },
-    {
-      "name": "Goods Puzzle: Sort Challenge",
-      "found": true,
-      "initial": "GP",
-      "image": "assets/icons/official/goods-puzzle-sort-challenge.jpg",
-      "matchedName": "Goods Puzzle: Sort Challenge™",
-      "artistName": "FALCON GAMES",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.fc.goods.sort.matching.puzzle.triplemaster",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 154182
     },
     {
       "name": "Gossip Harbor",
@@ -2005,18 +1933,6 @@
       "score": 286,
       "query": "Jelly Busters: Puzzle Game",
       "bytes": 46227
-    },
-    {
-      "name": "Jelly Master: Mukbang ASMR",
-      "found": true,
-      "initial": "JM",
-      "image": "assets/icons/official/jelly-master-mukbang-asmr.jpg",
-      "matchedName": "Jelly Master: Mukbang ASMR",
-      "artistName": "FALCON GAME",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.fc.p.cp.jelly.mukbang.asmr.live.diy",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 500718
     },
     {
       "name": "Jigsaw Drop",
@@ -2802,18 +2718,6 @@
       "bytes": 263552
     },
     {
-      "name": "MONOPOLY: Bingo!",
-      "found": true,
-      "initial": "MB",
-      "image": "assets/icons/official/monopoly-bingo.jpg",
-      "matchedName": "MONOPOLY: Bingo!",
-      "artistName": "Clipwire Games Inc",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.clipwiregames.monopolybingo",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 195929
-    },
-    {
       "name": "Monster Legends - Battle Game",
       "found": true,
       "initial": "ML",
@@ -3115,18 +3019,6 @@
       "score": 262,
       "query": "Pixel Flow!",
       "bytes": 37230
-    },
-    {
-      "name": "Pizza Ready!",
-      "found": true,
-      "initial": "PR",
-      "image": "assets/icons/official/pizza-ready.jpg",
-      "matchedName": "Pizza Ready!",
-      "artistName": "Supercent, Inc.",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=io.supercent.pizzaidle",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 493134
     },
     {
       "name": "Plants on Fire",
@@ -4249,18 +4141,6 @@
       "bytes": 40258
     },
     {
-      "name": "Treasure Master",
-      "found": true,
-      "initial": "TM",
-      "image": "assets/icons/official/treasure-master.jpg",
-      "matchedName": "Treasure Master",
-      "artistName": "Gimica GmbH",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.gimica.treasuremaster",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 434593
-    },
-    {
       "name": "Tricky Prank: Annoying Puzzle",
       "found": true,
       "initial": "TP",
@@ -4573,30 +4453,6 @@
       "score": 154,
       "query": "Woodoku: Wood Block Puzzle",
       "bytes": 58140
-    },
-    {
-      "name": "Wool Crush",
-      "found": true,
-      "initial": "WC",
-      "image": "assets/icons/official/wool-crush.jpg",
-      "matchedName": "Wool Crush™",
-      "artistName": "Astrasen Global",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=wool.match.color.sort.jam.puzzle",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 656990
-    },
-    {
-      "name": "Word Connect Association",
-      "found": true,
-      "initial": "WC",
-      "image": "assets/icons/official/word-connect-association.jpg",
-      "matchedName": "Word Connect Association",
-      "artistName": "PlaySimple Games",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=in.playsimple.wordtrip.association",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 215607
     },
     {
       "name": "Word Cookies",
