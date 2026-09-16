@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-16T06:34:17.637Z",
-  "total": 397,
-  "found": 393,
+  "preparedAt": "2026-09-16T06:45:58.492Z",
+  "total": 398,
+  "found": 394,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -855,6 +855,18 @@
       "score": 274,
       "query": "Color Block Jam",
       "bytes": 89850
+    },
+    {
+      "name": "Color Block Run - Puzzle Game",
+      "found": true,
+      "initial": "CB",
+      "image": "assets/icons/official/color-block-run-puzzle-game.jpg",
+      "matchedName": "Color Block Run - Puzzle Game",
+      "artistName": "Play2Ever Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.griffin.colorblock.games.free.android",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 288474
     },
     {
       "name": "Color Block: Combo Blast",
