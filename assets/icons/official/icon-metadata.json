@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-15T08:47:30.111Z",
-  "total": 395,
-  "found": 391,
+  "preparedAt": "2026-09-16T02:01:58.201Z",
+  "total": 394,
+  "found": 390,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -833,18 +833,6 @@
       "bytes": 89850
     },
     {
-      "name": "Color Block Run - Puzzle Game",
-      "found": true,
-      "initial": "CB",
-      "image": "assets/icons/official/color-block-run-puzzle-game.jpg",
-      "matchedName": "Color Block Run - Puzzle Game",
-      "artistName": "Play2Ever Games",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.griffin.colorblock.games.free.android",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 288474
-    },
-    {
       "name": "Color Block: Combo Blast",
       "found": true,
       "initial": "CB",
@@ -965,6 +953,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 370316
+    },
+    {
+      "name": "Craft Builder: 3D Block World",
+      "found": true,
+      "initial": "CB",
+      "image": "assets/icons/official/craft-builder-3d-block-world.jpg",
+      "matchedName": "Craft Builder: 3D Block World",
+      "artistName": "Coup Coup LTD",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.novas.craft.builder.block.world",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 324802
     },
     {
       "name": "Cube Land Puzzle Game",
@@ -1414,18 +1414,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1436,6 +1424,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1449,18 +1449,6 @@
       "score": 286,
       "query": "Flambé: Merge and Cook",
       "bytes": 58307
-    },
-    {
-      "name": "Fluffy Drop - No Timer",
-      "found": true,
-      "initial": "FD",
-      "image": "assets/icons/official/fluffy-drop-no-timer.jpg",
-      "matchedName": "Fluffy Drop - No Timer",
-      "artistName": "UniRise Studio",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.fluffydrop.op.gp",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 545297
     },
     {
       "name": "Food Hunt: Pixel Puzzle",
@@ -1788,18 +1776,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6053
-    },
-    {
-      "name": "Hell Asylum",
-      "found": true,
-      "initial": "HA",
-      "image": "assets/icons/official/hell-asylum.jpg",
-      "matchedName": "Hell Asylum",
-      "artistName": "Rhinos",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.us.dyjycbt.google",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 37424
     },
     {
       "name": "Hero Wars",
@@ -3911,6 +3887,18 @@
       "score": 142,
       "query": "Tasty Travels",
       "bytes": 61682
+    },
+    {
+      "name": "Tavern Legend",
+      "found": true,
+      "initial": "TL",
+      "image": "assets/icons/official/tavern-legend.jpg",
+      "matchedName": "Tavern Legend",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/tavern-legend/ios-6747248118",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7078
     },
     {
       "name": "The Battle Cats",
