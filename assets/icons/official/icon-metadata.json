@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-16T03:18:13.708Z",
-  "total": 394,
-  "found": 390,
+  "preparedAt": "2026-09-16T05:18:19.329Z",
+  "total": 397,
+  "found": 393,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -324,6 +324,18 @@
       "bytes": 3424
     },
     {
+      "name": "Block Craft 3D: Realm Builder",
+      "found": true,
+      "initial": "BC",
+      "image": "assets/icons/official/block-craft-3d-realm-builder.jpg",
+      "matchedName": "Block Craft 3D: Realm Builder",
+      "artistName": "Metagame.Ltd",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.wilds.craft.mysticland.explore",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 48791
+    },
+    {
       "name": "Block Craft 3D：Building Game",
       "found": true,
       "initial": "BC",
@@ -444,6 +456,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6563
+    },
+    {
+      "name": "Brain Puzzle 2: Logic Twist",
+      "found": true,
+      "initial": "BP",
+      "image": "assets/icons/official/brain-puzzle-2-logic-twist.jpg",
+      "matchedName": "Brain Puzzle 2: Logic Twist",
+      "artistName": "JoyGame Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.brain.logic.joygame",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 388143
     },
     {
       "name": "Brain Puzzle 3",
@@ -3175,6 +3199,18 @@
       "score": 262,
       "query": "Police Chief",
       "bytes": 55868
+    },
+    {
+      "name": "Privacy App Guard",
+      "found": true,
+      "initial": "PA",
+      "image": "assets/icons/official/privacy-app-guard.jpg",
+      "matchedName": "Privacy App Guard",
+      "artistName": "Yongyou Trading Co",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.privacy.guard.tool.afsrited",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 132453
     },
     {
       "name": "Project Makeover",
