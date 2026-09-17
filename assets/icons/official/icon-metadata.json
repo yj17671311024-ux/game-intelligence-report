@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-17T02:09:26.095Z",
-  "total": 399,
-  "found": 395,
+  "preparedAt": "2026-09-17T02:28:20.197Z",
+  "total": 400,
+  "found": 396,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -170,6 +170,18 @@
       "score": 262,
       "query": "Angry Birds 2",
       "bytes": 44325
+    },
+    {
+      "name": "Angry Smash",
+      "found": true,
+      "initial": "AS",
+      "image": "assets/icons/official/angry-smash.jpg",
+      "matchedName": "Angry Smash",
+      "artistName": "Tripledot Studios Limited",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tripledot.angrysmash",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 107168
     },
     {
       "name": "Arknights",
