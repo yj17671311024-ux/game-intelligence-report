@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-16T08:41:52.604Z",
-  "total": 398,
-  "found": 394,
+  "preparedAt": "2026-09-17T02:09:26.095Z",
+  "total": 399,
+  "found": 395,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -735,6 +735,18 @@
       "score": 130,
       "query": "Cardscapes",
       "bytes": 105252
+    },
+    {
+      "name": "CarLoop",
+      "found": true,
+      "initial": "C",
+      "image": "assets/icons/official/carloop.jpg",
+      "matchedName": "CarLoop",
+      "artistName": "UUTEAM Technology Limited",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.blast.puzzlegame.bear",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 395307
     },
     {
       "name": "Carnival Blast",
