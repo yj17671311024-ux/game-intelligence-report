@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-17T08:45:17.799Z",
-  "total": 400,
-  "found": 396,
+  "preparedAt": "2026-09-18T02:04:27.955Z",
+  "total": 401,
+  "found": 397,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -184,6 +184,18 @@
       "bytes": 107168
     },
     {
+      "name": "ARES: THE IRON VANGUARD",
+      "found": true,
+      "initial": "AT",
+      "image": "assets/icons/official/ares-the-iron-vanguard.jpg",
+      "matchedName": "ARES: THE IRON VANGUARD",
+      "artistName": "Com2uS Holdings",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.com2usholdings.agwiv.android.google.global.normal",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 447781
+    },
+    {
       "name": "Arknights",
       "found": true,
       "initial": "A",
@@ -336,18 +348,6 @@
       "bytes": 3424
     },
     {
-      "name": "Block Craft 3D: Realm Builder",
-      "found": true,
-      "initial": "BC",
-      "image": "assets/icons/official/block-craft-3d-realm-builder.jpg",
-      "matchedName": "Block Craft 3D: Realm Builder",
-      "artistName": "Metagame.Ltd",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.wilds.craft.mysticland.explore",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 48791
-    },
-    {
       "name": "Block Craft 3D：Building Game",
       "found": true,
       "initial": "BC",
@@ -468,18 +468,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6563
-    },
-    {
-      "name": "Brain Puzzle 2: Logic Twist",
-      "found": true,
-      "initial": "BP",
-      "image": "assets/icons/official/brain-puzzle-2-logic-twist.jpg",
-      "matchedName": "Brain Puzzle 2: Logic Twist",
-      "artistName": "JoyGame Studio",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.brain.logic.joygame",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 388143
     },
     {
       "name": "Brain Puzzle 3",
@@ -879,18 +867,6 @@
       "score": 274,
       "query": "Color Block Jam",
       "bytes": 89850
-    },
-    {
-      "name": "Color Block Run - Puzzle Game",
-      "found": true,
-      "initial": "CB",
-      "image": "assets/icons/official/color-block-run-puzzle-game.jpg",
-      "matchedName": "Color Block Run - Puzzle Game",
-      "artistName": "Play2Ever Games",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.griffin.colorblock.games.free.android",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 288474
     },
     {
       "name": "Color Block: Combo Blast",
@@ -1474,18 +1450,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1496,6 +1460,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1571,6 +1547,18 @@
       "bytes": 5512
     },
     {
+      "name": "Free Fire x NARUTO SHIPPUDEN",
+      "found": true,
+      "initial": "FF",
+      "image": "assets/icons/official/free-fire-x-naruto-shippuden.jpg",
+      "matchedName": "Free Fire x NARUTO SHIPPUDEN",
+      "artistName": "GARENA INTERNATIONAL I",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.dts.freefireth",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 454410
+    },
+    {
       "name": "FreeCell Solitaire",
       "found": true,
       "initial": "FS",
@@ -1630,6 +1618,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 8019
+    },
+    {
+      "name": "Game of Sultans",
+      "found": true,
+      "initial": "GO",
+      "image": "assets/icons/official/game-of-sultans.jpg",
+      "matchedName": "Game of Sultans",
+      "artistName": "DreamPlus Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.dc.hwsj",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 526460
     },
     {
       "name": "Game of Thrones: Conquest",
@@ -2329,6 +2329,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6810
+    },
+    {
+      "name": "Limbus Company",
+      "found": true,
+      "initial": "LC",
+      "image": "assets/icons/official/limbus-company.jpg",
+      "matchedName": "Limbus Company",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/limbus-company/ios-6444112366",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6718
     },
     {
       "name": "Line Puzzle",
