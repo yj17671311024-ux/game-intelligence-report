@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-18T02:48:25.648Z",
-  "total": 402,
-  "found": 398,
+  "preparedAt": "2026-09-18T03:18:24.559Z",
+  "total": 403,
+  "found": 399,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -2089,6 +2089,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5477
+    },
+    {
+      "name": "Keyboard Escape: +1 Speed ASMR",
+      "found": true,
+      "initial": "KE",
+      "image": "assets/icons/official/keyboard-escape-1-speed-asmr.jpg",
+      "matchedName": "Keyboard Escape: +1 Speed ASMR",
+      "artistName": "Goldoint",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.metax.obby.escape.run",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 108038
     },
     {
       "name": "Kick the Buddy－Fun Action Game",
