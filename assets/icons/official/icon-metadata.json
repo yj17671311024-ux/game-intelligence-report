@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-18T05:18:20.470Z",
-  "total": 403,
-  "found": 399,
+  "preparedAt": "2026-09-18T06:28:36.257Z",
+  "total": 404,
+  "found": 400,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -771,6 +771,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6363
+    },
+    {
+      "name": "Cell Survivor",
+      "found": true,
+      "initial": "CS",
+      "image": "assets/icons/official/cell-survivor.jpg",
+      "matchedName": "Cell Survivor",
+      "artistName": "Snap Brain Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=defense.roguelike.cell.shoot.survivor",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 434308
     },
     {
       "name": "Cell Survivor - Shoot Defense",
