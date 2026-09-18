@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-18T02:04:27.955Z",
-  "total": 401,
-  "found": 397,
+  "preparedAt": "2026-09-18T02:09:20.468Z",
+  "total": 402,
+  "found": 398,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1450,18 +1450,6 @@
       }
     },
     {
-      "name": "Flambé: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge & Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6265
-    },
-    {
       "name": "Flambe: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1472,6 +1460,18 @@
       "score": 94,
       "query": "Flambe: Merge & Cook",
       "bytes": 58307
+    },
+    {
+      "name": "Flambé: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge & Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6265
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -4151,6 +4151,18 @@
       "score": 262,
       "query": "Toon Blast",
       "bytes": 33696
+    },
+    {
+      "name": "Top Force",
+      "found": true,
+      "initial": "TF",
+      "image": "assets/icons/official/top-force.jpg",
+      "matchedName": "Top Force",
+      "artistName": "Century Games Innovation Pte. Ltd.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.project.idle.cd",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 512189
     },
     {
       "name": "Top Force: Commander",
