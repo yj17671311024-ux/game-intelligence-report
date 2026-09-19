@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-18T08:21:11.953Z",
-  "total": 404,
-  "found": 400,
+  "preparedAt": "2026-09-19T02:09:27.174Z",
+  "total": 406,
+  "found": 402,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1557,6 +1557,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5512
+    },
+    {
+      "name": "Free Fire MAX x NARUTO",
+      "found": true,
+      "initial": "FF",
+      "image": "assets/icons/official/free-fire-max-x-naruto.jpg",
+      "matchedName": "Free Fire MAX x NARUTO",
+      "artistName": "GARENA INTERNATIONAL I",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.dts.freefiremax",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 438627
     },
     {
       "name": "Free Fire x NARUTO SHIPPUDEN",
@@ -3872,6 +3884,18 @@
       "score": 130,
       "query": "Stormshot",
       "bytes": 74498
+    },
+    {
+      "name": "Stormshot: Isle of Adventure",
+      "found": true,
+      "initial": "SI",
+      "image": "assets/icons/official/stormshot-isle-of-adventure.jpg",
+      "matchedName": "Stormshot: Isle of Adventure",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/stormshot-isle-of-adventure/ios-6443388218",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5734
     },
     {
       "name": "Subway Surfers",
