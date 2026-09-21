@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-20T08:41:23.286Z",
-  "total": 407,
-  "found": 403,
+  "preparedAt": "2026-09-21T02:02:01.312Z",
+  "total": 405,
+  "found": 401,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -785,18 +785,6 @@
       "bytes": 6363
     },
     {
-      "name": "Cell Survivor",
-      "found": true,
-      "initial": "CS",
-      "image": "assets/icons/official/cell-survivor.jpg",
-      "matchedName": "Cell Survivor",
-      "artistName": "Snap Brain Games",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=defense.roguelike.cell.shoot.survivor",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 434308
-    },
-    {
       "name": "Cell Survivor - Shoot Defense",
       "found": true,
       "initial": "CS",
@@ -1474,18 +1462,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1496,6 +1472,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1569,18 +1557,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5512
-    },
-    {
-      "name": "Free Fire MAX x NARUTO",
-      "found": true,
-      "initial": "FF",
-      "image": "assets/icons/official/free-fire-max-x-naruto.jpg",
-      "matchedName": "Free Fire MAX x NARUTO",
-      "artistName": "GARENA INTERNATIONAL I",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.dts.freefiremax",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 438627
     },
     {
       "name": "Free Fire x NARUTO SHIPPUDEN",
@@ -2510,6 +2486,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 8141
+    },
+    {
+      "name": "Lumi Master",
+      "found": true,
+      "initial": "LM",
+      "image": "assets/icons/official/lumi-master.jpg",
+      "matchedName": "Lumi Master",
+      "artistName": "BILIBILI",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.bilibili.lumi",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 233292
     },
     {
       "name": "Mafia City",
@@ -3896,18 +3884,6 @@
       "score": 130,
       "query": "Stormshot",
       "bytes": 74498
-    },
-    {
-      "name": "Stormshot: Isle of Adventure",
-      "found": true,
-      "initial": "SI",
-      "image": "assets/icons/official/stormshot-isle-of-adventure.jpg",
-      "matchedName": "Stormshot: Isle of Adventure",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/stormshot-isle-of-adventure/ios-6443388218",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 5734
     },
     {
       "name": "Subway Surfers",
