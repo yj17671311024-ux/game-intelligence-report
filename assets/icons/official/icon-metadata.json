@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-09-21T02:02:01.312Z",
+  "preparedAt": "2026-09-21T02:09:18.567Z",
   "total": 405,
   "found": 401,
   "metadata": [
@@ -1462,18 +1462,6 @@
       }
     },
     {
-      "name": "Flambé: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge & Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6265
-    },
-    {
       "name": "Flambe: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1484,6 +1472,18 @@
       "score": 94,
       "query": "Flambe: Merge & Cook",
       "bytes": 58307
+    },
+    {
+      "name": "Flambé: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge & Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6265
     },
     {
       "name": "Flambé: Merge and Cook",
