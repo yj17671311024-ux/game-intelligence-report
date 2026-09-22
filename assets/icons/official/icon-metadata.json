@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-21T09:05:45.074Z",
-  "total": 405,
-  "found": 401,
+  "preparedAt": "2026-09-22T02:08:51.944Z",
+  "total": 408,
+  "found": 404,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -182,6 +182,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 107168
+    },
+    {
+      "name": "Apex Sniper: Animal Hunt",
+      "found": true,
+      "initial": "AS",
+      "image": "assets/icons/official/apex-sniper-animal-hunt.jpg",
+      "matchedName": "Apex Sniper: Animal Hunt",
+      "artistName": "CozyCraft",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.animal.hunter.shooting.apex",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 507073
     },
     {
       "name": "ARES: THE IRON VANGUARD",
@@ -569,6 +581,18 @@
       "bytes": 417238
     },
     {
+      "name": "Brawl Stars",
+      "found": true,
+      "initial": "BS",
+      "image": "assets/icons/official/brawl-stars.jpg",
+      "matchedName": "Brawl Stars",
+      "artistName": "Supercell",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.supercell.brawlstars",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 112896
+    },
+    {
       "name": "BrownDust2 - Full Burst RPG",
       "found": true,
       "initial": "BF",
@@ -891,6 +915,18 @@
       "score": 286,
       "query": "Color Block: Combo Blast",
       "bytes": 43352
+    },
+    {
+      "name": "Color by Number：Coloring Games",
+      "found": true,
+      "initial": "CB",
+      "image": "assets/icons/official/color-by-number-coloring-games.jpg",
+      "matchedName": "Color by Number：Coloring Games",
+      "artistName": "Wildlife Studios",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tfgco.apps.coloring.free.color.by.number",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 72984
     },
     {
       "name": "Color Fill 3D",
