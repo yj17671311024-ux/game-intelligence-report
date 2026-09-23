@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-23T03:17:50.322Z",
-  "total": 411,
-  "found": 407,
+  "preparedAt": "2026-09-23T05:17:45.387Z",
+  "total": 412,
+  "found": 408,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1447,6 +1447,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 2781
+    },
+    {
+      "name": "Find The Cat 2 - Spot It!",
+      "found": true,
+      "initial": "FT",
+      "image": "assets/icons/official/find-the-cat-2-spot-it.jpg",
+      "matchedName": "Find The Cat 2 - Spot It!",
+      "artistName": "Agave Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.agavegames.findthecat2",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 452318
     },
     {
       "name": "Fire Emblem Heroes",
