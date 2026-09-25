@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-24T08:34:08.987Z",
-  "total": 412,
-  "found": 408,
+  "preparedAt": "2026-09-25T02:08:44.465Z",
+  "total": 415,
+  "found": 411,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -182,6 +182,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 107168
+    },
+    {
+      "name": "Aniimo",
+      "found": true,
+      "initial": "A",
+      "image": "assets/icons/official/aniimo.jpg",
+      "matchedName": "Aniimo",
+      "artistName": "Pawprint Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.x.aniimos",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 286796
     },
     {
       "name": "Apex Sniper: Animal Hunt",
@@ -2235,6 +2247,18 @@
       "bytes": 7847
     },
     {
+      "name": "Kingdom Rush 6: Genesis TD",
+      "found": true,
+      "initial": "KR",
+      "image": "assets/icons/official/kingdom-rush-6-genesis-td.jpg",
+      "matchedName": "Kingdom Rush 6: Genesis TD",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/kingdom-rush-6-genesis-td/ios-6759664029",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 9187
+    },
+    {
       "name": "Kingshot",
       "found": true,
       "initial": "K",
@@ -2329,6 +2353,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 8253
+    },
+    {
+      "name": "Last Extract",
+      "found": true,
+      "initial": "LE",
+      "image": "assets/icons/official/last-extract.jpg",
+      "matchedName": "Last Extract",
+      "artistName": "VOODOO",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.xiaomo.lastextract",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 420999
     },
     {
       "name": "Last Fortress: Underground",
