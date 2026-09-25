@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-25T02:08:44.465Z",
-  "total": 415,
-  "found": 411,
+  "preparedAt": "2026-09-25T02:27:43.038Z",
+  "total": 416,
+  "found": 412,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -4765,6 +4765,18 @@
       "score": 154,
       "query": "Woodoku: Wood Block Puzzle",
       "bytes": 58140
+    },
+    {
+      "name": "Word Connect Association",
+      "found": true,
+      "initial": "WC",
+      "image": "assets/icons/official/word-connect-association.jpg",
+      "matchedName": "Word Connect Association",
+      "artistName": "PlaySimple Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=in.playsimple.wordtrip.association",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 215607
     },
     {
       "name": "Word Cookies",
