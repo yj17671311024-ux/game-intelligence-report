@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-27T09:22:26.191Z",
-  "total": 416,
-  "found": 412,
+  "preparedAt": "2026-09-28T02:09:06.086Z",
+  "total": 423,
+  "found": 419,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -833,6 +833,18 @@
       "bytes": 6363
     },
     {
+      "name": "Castlevania: 40th Anniversary",
+      "found": true,
+      "initial": "C4",
+      "image": "assets/icons/official/castlevania-40th-anniversary.jpg",
+      "matchedName": "Castlevania: 40th Anniversary",
+      "artistName": "KONAMI",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=jp.konami.epjCastlevania1",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 99391
+    },
+    {
       "name": "Cell Survivor - Shoot Defense",
       "found": true,
       "initial": "CS",
@@ -1135,6 +1147,18 @@
       "bytes": 7282
     },
     {
+      "name": "Delta Force: 2nd Anniversary",
+      "found": true,
+      "initial": "DF",
+      "image": "assets/icons/official/delta-force-2nd-anniversary.jpg",
+      "matchedName": "Delta Force: 2nd Anniversary",
+      "artistName": "Level Infinite",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.proxima.dfm",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 486690
+    },
+    {
       "name": "Diablo Immortal",
       "found": true,
       "initial": "DI",
@@ -1302,6 +1326,18 @@
       "score": 262,
       "query": "Duck Survival",
       "bytes": 63919
+    },
+    {
+      "name": "EA SPORTS FC Soccer Mobile 27",
+      "found": true,
+      "initial": "ES",
+      "image": "assets/icons/official/ea-sports-fc-soccer-mobile-27.jpg",
+      "matchedName": "EA SPORTS FC Soccer Mobile 27",
+      "artistName": "ELECTRONIC ARTS",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.ea.gp.fifamobile",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 416452
     },
     {
       "name": "Egg, Inc.",
@@ -2958,6 +2994,18 @@
       "bytes": 241898
     },
     {
+      "name": "Minion Rush: Running Game",
+      "found": true,
+      "initial": "MR",
+      "image": "assets/icons/official/minion-rush-running-game.jpg",
+      "matchedName": "Minion Rush: Running Game",
+      "artistName": "Gameloft SE",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.gameloft.android.ANMP.GloftDMHM",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 349123
+    },
+    {
       "name": "Mob Control",
       "found": true,
       "initial": "MC",
@@ -3647,6 +3695,18 @@
       "bytes": 80604
     },
     {
+      "name": "Rotate Rings",
+      "found": true,
+      "initial": "RR",
+      "image": "assets/icons/official/rotate-rings.jpg",
+      "matchedName": "Rotate Rings",
+      "artistName": "Nebula  Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.nebula.rotaterings",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 346241
+    },
+    {
       "name": "Royal Kingdom",
       "found": true,
       "initial": "RK",
@@ -3733,6 +3793,18 @@
       "score": 262,
       "query": "Screw Jam",
       "bytes": 93955
+    },
+    {
+      "name": "Screw Out 3D: Nut Sort Jam",
+      "found": true,
+      "initial": "SO",
+      "image": "assets/icons/official/screw-out-3d-nut-sort-jam.jpg",
+      "matchedName": "Screw Out 3D: Nut Sort Jam",
+      "artistName": "Unico Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=net.happywit.screw.out.jam",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 469859
     },
     {
       "name": "Screwdom",
@@ -4029,6 +4101,18 @@
       "score": 262,
       "query": "Sudoku.com",
       "bytes": 32689
+    },
+    {
+      "name": "Sudoku.com - Sudoku Puzzle",
+      "found": true,
+      "initial": "SC",
+      "image": "assets/icons/official/sudoku-com-sudoku-puzzle.jpg",
+      "matchedName": "Sudoku.com - Sudoku Puzzle",
+      "artistName": "Easybrain",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.easybrain.sudoku.android",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 14885
     },
     {
       "name": "Summoners War",
