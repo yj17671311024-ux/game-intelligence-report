@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-28T02:09:06.086Z",
-  "total": 423,
-  "found": 419,
+  "preparedAt": "2026-09-28T02:27:56.494Z",
+  "total": 424,
+  "found": 420,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -4656,6 +4656,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6160
+    },
+    {
+      "name": "Warhammer 40,000: Boltgun Boom",
+      "found": true,
+      "initial": "W4",
+      "image": "assets/icons/official/warhammer-40-000-boltgun-boom.jpg",
+      "matchedName": "Warhammer 40,000: Boltgun Boom",
+      "artistName": "Nitro Games Oyj",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.nitrogames.boltgunboom",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 592371
     },
     {
       "name": "Warhammer 40,000: Tacticus",
