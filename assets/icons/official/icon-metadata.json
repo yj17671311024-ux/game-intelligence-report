@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-28T09:57:03.410Z",
-  "total": 424,
-  "found": 420,
+  "preparedAt": "2026-09-29T02:03:00.469Z",
+  "total": 415,
+  "found": 411,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -194,18 +194,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 286796
-    },
-    {
-      "name": "Apex Sniper: Animal Hunt",
-      "found": true,
-      "initial": "AS",
-      "image": "assets/icons/official/apex-sniper-animal-hunt.jpg",
-      "matchedName": "Apex Sniper: Animal Hunt",
-      "artistName": "CozyCraft",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.animal.hunter.shooting.apex",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 507073
     },
     {
       "name": "ARES: THE IRON VANGUARD",
@@ -503,7 +491,7 @@
       "sourceUrl": "https://play.google.com/store/apps/details?id=com.brain.logic.joygame",
       "source": "AppBrain Google Play icon",
       "score": 100,
-      "bytes": 47464
+      "bytes": 311185
     },
     {
       "name": "Brain Puzzle 3",
@@ -603,18 +591,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 417238
-    },
-    {
-      "name": "Brawl Stars",
-      "found": true,
-      "initial": "BS",
-      "image": "assets/icons/official/brawl-stars.jpg",
-      "matchedName": "Brawl Stars",
-      "artistName": "Supercell",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.supercell.brawlstars",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 112896
     },
     {
       "name": "BrownDust2 - Full Burst RPG",
@@ -1497,18 +1473,6 @@
       "bytes": 2781
     },
     {
-      "name": "Find The Cat 2 - Spot It!",
-      "found": true,
-      "initial": "FT",
-      "image": "assets/icons/official/find-the-cat-2-spot-it.jpg",
-      "matchedName": "Find The Cat 2 - Spot It!",
-      "artistName": "Agave Games",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.agavegames.findthecat2",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 452318
-    },
-    {
       "name": "Fire Emblem Heroes",
       "found": true,
       "initial": "FE",
@@ -1570,18 +1534,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1592,6 +1544,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -2391,18 +2355,6 @@
       "bytes": 8253
     },
     {
-      "name": "Last Extract",
-      "found": true,
-      "initial": "LE",
-      "image": "assets/icons/official/last-extract.jpg",
-      "matchedName": "Last Extract",
-      "artistName": "VOODOO",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.xiaomo.lastextract",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 420999
-    },
-    {
       "name": "Last Fortress: Underground",
       "found": true,
       "initial": "LF",
@@ -2606,18 +2558,6 @@
       "score": 142,
       "query": "Lords Mobile",
       "bytes": 76186
-    },
-    {
-      "name": "Lost Sword",
-      "found": true,
-      "initial": "LS",
-      "image": "assets/icons/official/lost-sword.jpg",
-      "matchedName": "Lost Sword",
-      "artistName": "Wemade Connect",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.wemadeconnect.aos.lostdgl",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 266302
     },
     {
       "name": "Love Nikki-Dress UP Queen",
@@ -3795,18 +3735,6 @@
       "bytes": 93955
     },
     {
-      "name": "Screw Out 3D: Nut Sort Jam",
-      "found": true,
-      "initial": "SO",
-      "image": "assets/icons/official/screw-out-3d-nut-sort-jam.jpg",
-      "matchedName": "Screw Out 3D: Nut Sort Jam",
-      "artistName": "Unico Studio",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=net.happywit.screw.out.jam",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 469859
-    },
-    {
       "name": "Screwdom",
       "found": true,
       "initial": "S",
@@ -4101,18 +4029,6 @@
       "score": 262,
       "query": "Sudoku.com",
       "bytes": 32689
-    },
-    {
-      "name": "Sudoku.com - Sudoku Puzzle",
-      "found": true,
-      "initial": "SC",
-      "image": "assets/icons/official/sudoku-com-sudoku-puzzle.jpg",
-      "matchedName": "Sudoku.com - Sudoku Puzzle",
-      "artistName": "Easybrain",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.easybrain.sudoku.android",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 14885
     },
     {
       "name": "Summoners War",
@@ -4658,18 +4574,6 @@
       "bytes": 6160
     },
     {
-      "name": "Warhammer 40,000: Boltgun Boom",
-      "found": true,
-      "initial": "W4",
-      "image": "assets/icons/official/warhammer-40-000-boltgun-boom.jpg",
-      "matchedName": "Warhammer 40,000: Boltgun Boom",
-      "artistName": "Nitro Games Oyj",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.nitrogames.boltgunboom",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 592371
-    },
-    {
       "name": "Warhammer 40,000: Tacticus",
       "found": true,
       "initial": "W4",
@@ -4861,18 +4765,6 @@
       "score": 154,
       "query": "Woodoku: Wood Block Puzzle",
       "bytes": 58140
-    },
-    {
-      "name": "Word Connect Association",
-      "found": true,
-      "initial": "WC",
-      "image": "assets/icons/official/word-connect-association.jpg",
-      "matchedName": "Word Connect Association",
-      "artistName": "PlaySimple Games",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=in.playsimple.wordtrip.association",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 215607
     },
     {
       "name": "Word Cookies",
