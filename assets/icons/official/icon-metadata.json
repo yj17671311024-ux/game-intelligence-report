@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-09-29T03:17:33.806Z",
-  "total": 415,
-  "found": 411,
+  "preparedAt": "2026-09-29T05:17:29.891Z",
+  "total": 416,
+  "found": 412,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1061,6 +1061,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 324802
+    },
+    {
+      "name": "Crossword Go!",
+      "found": true,
+      "initial": "CG",
+      "image": "assets/icons/official/crossword-go.jpg",
+      "matchedName": "Crossword Go!",
+      "artistName": "PlaySimple Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=in.playsimple.crossword.go",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 161363
     },
     {
       "name": "Cube Land Puzzle Game",
