@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-09-29T09:57:32.776Z",
+  "preparedAt": "2026-09-30T02:03:13.586Z",
   "total": 416,
   "found": 412,
   "metadata": [
@@ -1063,18 +1063,6 @@
       "bytes": 324802
     },
     {
-      "name": "Crossword Go!",
-      "found": true,
-      "initial": "CG",
-      "image": "assets/icons/official/crossword-go.jpg",
-      "matchedName": "Crossword Go!",
-      "artistName": "PlaySimple Games",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=in.playsimple.crossword.go",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 161363
-    },
-    {
       "name": "Cube Land Puzzle Game",
       "found": true,
       "initial": "CL",
@@ -1546,18 +1534,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1568,6 +1544,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -4151,6 +4139,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 7078
+    },
+    {
+      "name": "The Ants: Underground Kingdom",
+      "found": true,
+      "initial": "TA",
+      "image": "assets/icons/official/the-ants-underground-kingdom.jpg",
+      "matchedName": "The Ants: Underground Kingdom",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/the-ants-underground-kingdom/ios-1568415097",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6927
     },
     {
       "name": "The Battle Cats",
