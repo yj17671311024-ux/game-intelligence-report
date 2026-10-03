@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-03T05:18:10.922Z",
-  "total": 423,
-  "found": 419,
+  "preparedAt": "2026-10-03T06:59:35.966Z",
+  "total": 424,
+  "found": 420,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -4899,6 +4899,18 @@
       "score": 262,
       "query": "Word Stacks",
       "bytes": 71690
+    },
+    {
+      "name": "Word Tiles - Relaxing Puzzle",
+      "found": true,
+      "initial": "WT",
+      "image": "assets/icons/official/word-tiles-relaxing-puzzle.jpg",
+      "matchedName": "Word Tiles - Relaxing Puzzle",
+      "artistName": "Agave Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.agavegames.wordtiles",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 253654
     },
     {
       "name": "Wordoku",
