@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-03T03:18:11.749Z",
-  "total": 421,
-  "found": 417,
+  "preparedAt": "2026-10-03T05:18:10.922Z",
+  "total": 423,
+  "found": 419,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1075,6 +1075,18 @@
       "bytes": 324802
     },
     {
+      "name": "Crossword Go!",
+      "found": true,
+      "initial": "CG",
+      "image": "assets/icons/official/crossword-go.jpg",
+      "matchedName": "Crossword Go!",
+      "artistName": "PlaySimple Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=in.playsimple.crossword.go",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 161363
+    },
+    {
       "name": "Cube Land Puzzle Game",
       "found": true,
       "initial": "CL",
@@ -1811,6 +1823,18 @@
       "score": 286,
       "query": "GODDESS OF VICTORY: NIKKE",
       "bytes": 121305
+    },
+    {
+      "name": "GOGO! Blast",
+      "found": true,
+      "initial": "GB",
+      "image": "assets/icons/official/gogo-blast.jpg",
+      "matchedName": "GOGO! Blast",
+      "artistName": "Nebula  Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.nebula.arrows",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 18082
     },
     {
       "name": "Goods Puzzle: 3D Sorting Games",
