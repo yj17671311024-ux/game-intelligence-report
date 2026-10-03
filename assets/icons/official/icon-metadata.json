@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-02T09:54:01.341Z",
-  "total": 416,
-  "found": 412,
+  "preparedAt": "2026-10-03T02:09:11.356Z",
+  "total": 420,
+  "found": 416,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -194,6 +194,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 286796
+    },
+    {
+      "name": "Apex Sniper: Animal Hunt",
+      "found": true,
+      "initial": "AS",
+      "image": "assets/icons/official/apex-sniper-animal-hunt.jpg",
+      "matchedName": "Apex Sniper: Animal Hunt",
+      "artistName": "CozyCraft",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.animal.hunter.shooting.apex",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 507073
     },
     {
       "name": "ARES: THE IRON VANGUARD",
@@ -2066,6 +2078,18 @@
       "bytes": 70713
     },
     {
+      "name": "Invokers: Titan Legacy",
+      "found": true,
+      "initial": "IT",
+      "image": "assets/icons/official/invokers-titan-legacy.jpg",
+      "matchedName": "Invokers: Titan Legacy",
+      "artistName": "HitZone Games Inc.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=hitzone.anima.spirit.guardians",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 503972
+    },
+    {
       "name": "Isekai: Slow Life",
       "found": true,
       "initial": "IS",
@@ -2860,6 +2884,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 56174
+    },
+    {
+      "name": "MemeMix Challenge: Funny Party",
+      "found": true,
+      "initial": "MC",
+      "image": "assets/icons/official/mememix-challenge-funny-party.jpg",
+      "matchedName": "MemeMix Challenge: Funny Party",
+      "artistName": "Amobear VN Game Global",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.mimik.challenge.fun",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 403954
     },
     {
       "name": "Meowdoku",
@@ -3733,6 +3769,18 @@
       "score": 262,
       "query": "Screw Jam",
       "bytes": 93955
+    },
+    {
+      "name": "Screw Out 3D: Nut Sort Jam",
+      "found": true,
+      "initial": "SO",
+      "image": "assets/icons/official/screw-out-3d-nut-sort-jam.jpg",
+      "matchedName": "Screw Out 3D: Nut Sort Jam",
+      "artistName": "Unico Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=net.happywit.screw.out.jam",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 416271
     },
     {
       "name": "Screwdom",
