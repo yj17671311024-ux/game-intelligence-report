@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-04T09:55:18.184Z",
-  "total": 424,
-  "found": 420,
+  "preparedAt": "2026-10-05T02:09:07.976Z",
+  "total": 426,
+  "found": 422,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1605,6 +1605,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6206
+    },
+    {
+      "name": "Food Sort: Puzzle Game",
+      "found": true,
+      "initial": "FS",
+      "image": "assets/icons/official/food-sort-puzzle-game.jpg",
+      "matchedName": "Food Sort: Puzzle Game",
+      "artistName": "Playdayy",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.triple.food.sort.puzzle.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 331134
     },
     {
       "name": "Foodstars: Merge & Cook",
@@ -4295,6 +4307,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 7175
+    },
+    {
+      "name": "Tiki Smash!",
+      "found": true,
+      "initial": "TS",
+      "image": "assets/icons/official/tiki-smash.jpg",
+      "matchedName": "Tiki Smash!",
+      "artistName": "PeopleFun",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.thrivegames.bashbest",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 497835
     },
     {
       "name": "Tile Explorer",
