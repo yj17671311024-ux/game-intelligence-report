@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-06T02:08:52.790Z",
-  "total": 426,
-  "found": 422,
+  "preparedAt": "2026-10-06T02:27:51.502Z",
+  "total": 428,
+  "found": 424,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -3755,6 +3755,18 @@
       "bytes": 323647
     },
     {
+      "name": "Rush Royale: Tower Defense RPG",
+      "found": true,
+      "initial": "RR",
+      "image": "assets/icons/official/rush-royale-tower-defense-rpg.jpg",
+      "matchedName": "Rush Royale: Tower Defense RPG",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/rush-royale-tower-defense-rpg/ios-1526121033",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6231
+    },
+    {
       "name": "Sand Balls",
       "found": true,
       "initial": "SB",
@@ -5140,6 +5152,18 @@
       "matchedName": "لعبة مزاين",
       "artistName": "",
       "sourceUrl": "https://www.appbrain.com/appstore/%D9%84%D8%B9%D8%A8%D8%A9-%D9%85%D8%B2%D8%A7%D9%8A%D9%86/ios-6761799882",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5766
+    },
+    {
+      "name": "لعبة مزاين - Mazayen",
+      "found": true,
+      "initial": "M",
+      "image": "assets/icons/official/mazayen.jpg",
+      "matchedName": "لعبة مزاين - Mazayen",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/%D9%84%D8%B9%D8%A8%D8%A9-%D9%85%D8%B2%D8%A7%D9%8A%D9%86-mazayen/ios-6761799882",
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5766
