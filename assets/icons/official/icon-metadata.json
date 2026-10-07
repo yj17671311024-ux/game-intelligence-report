@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-06T10:29:58.376Z",
-  "total": 428,
-  "found": 424,
+  "preparedAt": "2026-10-07T02:08:58.607Z",
+  "total": 429,
+  "found": 425,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -297,6 +297,18 @@
       "score": 142,
       "query": "Art Puzzle",
       "bytes": 97602
+    },
+    {
+      "name": "Avakin Life - 3D Virtual World",
+      "found": true,
+      "initial": "AL",
+      "image": "assets/icons/official/avakin-life-3d-virtual-world.jpg",
+      "matchedName": "Avakin Life - 3D Virtual World",
+      "artistName": "Lockwood Publishing Ltd",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.lockwoodpublishing.avakinlife",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 387444
     },
     {
       "name": "Avatar: Realms Collide",
