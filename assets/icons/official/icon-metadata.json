@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-08T03:17:53.222Z",
-  "total": 431,
-  "found": 427,
+  "preparedAt": "2026-10-08T05:17:56.572Z",
+  "total": 441,
+  "found": 437,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -196,6 +196,18 @@
       "bytes": 286796
     },
     {
+      "name": "Apex Sniper: Animal Hunt",
+      "found": true,
+      "initial": "AS",
+      "image": "assets/icons/official/apex-sniper-animal-hunt.jpg",
+      "matchedName": "Apex Sniper: Animal Hunt",
+      "artistName": "CozyCraft",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.animal.hunter.shooting.apex",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 507073
+    },
+    {
       "name": "ARES: THE IRON VANGUARD",
       "found": true,
       "initial": "AT",
@@ -382,6 +394,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 3424
+    },
+    {
+      "name": "Block Craft 3D: Realm Builder",
+      "found": true,
+      "initial": "BC",
+      "image": "assets/icons/official/block-craft-3d-realm-builder.jpg",
+      "matchedName": "Block Craft 3D: Realm Builder",
+      "artistName": "Metagame.Ltd",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.wilds.craft.mysticland.explore",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 48791
     },
     {
       "name": "Block Craft 3D：Building Game",
@@ -1087,6 +1111,18 @@
       "bytes": 324802
     },
     {
+      "name": "Crossword Go!",
+      "found": true,
+      "initial": "CG",
+      "image": "assets/icons/official/crossword-go.jpg",
+      "matchedName": "Crossword Go!",
+      "artistName": "PlaySimple Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=in.playsimple.crossword.go",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 161363
+    },
+    {
       "name": "Cube Land Puzzle Game",
       "found": true,
       "initial": "CL",
@@ -1328,6 +1364,18 @@
       "bytes": 7468
     },
     {
+      "name": "Draw Bridge Puzzle: Brain Game",
+      "found": true,
+      "initial": "DB",
+      "image": "assets/icons/official/draw-bridge-puzzle-brain-game.jpg",
+      "matchedName": "Draw Bridge Puzzle: Brain Game",
+      "artistName": "Brave Labs",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.bravestars.draw.bridge.drawgame",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 88560
+    },
+    {
       "name": "Duck Survival",
       "found": true,
       "initial": "DS",
@@ -1519,6 +1567,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 2781
+    },
+    {
+      "name": "Find The Cat 2 - Spot It!",
+      "found": true,
+      "initial": "FT",
+      "image": "assets/icons/official/find-the-cat-2-spot-it.jpg",
+      "matchedName": "Find The Cat 2 - Spot It!",
+      "artistName": "Agave Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.agavegames.findthecat2",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 452318
     },
     {
       "name": "Fire Emblem Heroes",
@@ -2283,6 +2343,18 @@
       "bytes": 108038
     },
     {
+      "name": "Kick & Break The Ragdoll Games",
+      "found": true,
+      "initial": "KA",
+      "image": "assets/icons/official/kick-and-break-the-ragdoll-games.jpg",
+      "matchedName": "Kick & Break The Ragdoll Games",
+      "artistName": "Game District LLC",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.playflix.kick.breakragdoll.games",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 315237
+    },
+    {
       "name": "Kick the Buddy－Fun Action Game",
       "found": true,
       "initial": "KT",
@@ -3040,6 +3112,30 @@
       "score": 142,
       "query": "Merge Mansion",
       "bytes": 53056
+    },
+    {
+      "name": "Mini Fidget Antistress Games",
+      "found": true,
+      "initial": "MF",
+      "image": "assets/icons/official/mini-fidget-antistress-games.jpg",
+      "matchedName": "Mini Fidget Antistress Games",
+      "artistName": "The Fashion Valley",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tvf.anti.stress.relaxing.mini.games",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 437670
+    },
+    {
+      "name": "Mini Games: Calm & Relax",
+      "found": true,
+      "initial": "MG",
+      "image": "assets/icons/official/mini-games-calm-and-relax.jpg",
+      "matchedName": "Mini Games: Calm & Relax",
+      "artistName": "Unicorn Studio Official",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.uc.minigame.relax",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 393399
     },
     {
       "name": "MiniMuse",
@@ -4694,6 +4790,18 @@
       "bytes": 7368
     },
     {
+      "name": "Viral Streamer: Idle Clicker",
+      "found": true,
+      "initial": "VS",
+      "image": "assets/icons/official/viral-streamer-idle-clicker.jpg",
+      "matchedName": "Viral Streamer: Idle Clicker",
+      "artistName": "CSCMobi Studios",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.cscmobi.livestream.idle.clicker",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 476424
+    },
+    {
       "name": "Vita Mahjong",
       "found": true,
       "initial": "VM",
@@ -4933,6 +5041,18 @@
       "score": 154,
       "query": "Woodoku: Wood Block Puzzle",
       "bytes": 58140
+    },
+    {
+      "name": "Wool Crush",
+      "found": true,
+      "initial": "WC",
+      "image": "assets/icons/official/wool-crush.jpg",
+      "matchedName": "Wool Crush™",
+      "artistName": "Astrasen Global",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=wool.match.color.sort.jam.puzzle",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 656990
     },
     {
       "name": "Word Cookies",
