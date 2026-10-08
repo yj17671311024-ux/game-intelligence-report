@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-08T02:08:54.416Z",
-  "total": 429,
-  "found": 425,
+  "preparedAt": "2026-10-08T02:28:04.852Z",
+  "total": 430,
+  "found": 426,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -321,6 +321,18 @@
       "score": 298,
       "query": "Ball Sort Puzzle - Color Games",
       "bytes": 41839
+    },
+    {
+      "name": "Bison Gold",
+      "found": true,
+      "initial": "BG",
+      "image": "assets/icons/official/bison-gold.jpg",
+      "matchedName": "Bison Gold",
+      "artistName": "Yousuf Rahman",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.bisongold.goldpg",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 218442
     },
     {
       "name": "Block Blast!",
