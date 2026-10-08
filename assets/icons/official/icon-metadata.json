@@ -1,5 +1,5 @@
 {
-  "preparedAt": "2026-10-07T10:23:46.871Z",
+  "preparedAt": "2026-10-08T02:05:25.049Z",
   "total": 429,
   "found": 425,
   "metadata": [
@@ -194,18 +194,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 286796
-    },
-    {
-      "name": "Apex Sniper: Animal Hunt",
-      "found": true,
-      "initial": "AS",
-      "image": "assets/icons/official/apex-sniper-animal-hunt.jpg",
-      "matchedName": "Apex Sniper: Animal Hunt",
-      "artistName": "CozyCraft",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.animal.hunter.shooting.apex",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 507073
     },
     {
       "name": "ARES: THE IRON VANGUARD",
@@ -1087,18 +1075,6 @@
       "bytes": 324802
     },
     {
-      "name": "Crossword Go!",
-      "found": true,
-      "initial": "CG",
-      "image": "assets/icons/official/crossword-go.jpg",
-      "matchedName": "Crossword Go!",
-      "artistName": "PlaySimple Games",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=in.playsimple.crossword.go",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 161363
-    },
-    {
       "name": "Cube Land Puzzle Game",
       "found": true,
       "initial": "CL",
@@ -1181,6 +1157,18 @@
       "score": 262,
       "query": "Diablo Immortal",
       "bytes": 100504
+    },
+    {
+      "name": "Dice Dreams️",
+      "found": true,
+      "initial": "DD",
+      "image": "assets/icons/official/dice-dreams.jpg",
+      "matchedName": "Dice Dreams™️",
+      "artistName": "SuperPlay.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.superplaystudios.dicedreams",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 209272
     },
     {
       "name": "Differences - Find Difference",
@@ -1460,6 +1448,18 @@
       "bytes": 7236
     },
     {
+      "name": "Fast Cash Farkle",
+      "found": true,
+      "initial": "FC",
+      "image": "assets/icons/official/fast-cash-farkle.jpg",
+      "matchedName": "Fast Cash Farkle",
+      "artistName": "GreatPlay App",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.greatplay.farklecash",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 492240
+    },
+    {
       "name": "Fate/Grand Order",
       "found": true,
       "initial": "FG",
@@ -1570,18 +1570,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1592,6 +1580,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -2035,6 +2035,18 @@
       "initial": "HI",
       "image": "assets/icons/official/hole-io.jpg",
       "matchedName": "Hole.io",
+      "artistName": "VOODOO",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=io.voodoo.holeio",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 470496
+    },
+    {
+      "name": "Hole.io - Original Hole Game",
+      "found": true,
+      "initial": "HI",
+      "image": "assets/icons/official/hole-io-original-hole-game.jpg",
+      "matchedName": "Hole.io - Original Hole Game",
       "artistName": "VOODOO",
       "sourceUrl": "https://play.google.com/store/apps/details?id=io.voodoo.holeio",
       "source": "AppBrain Google Play icon",
@@ -2811,6 +2823,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 261474
+    },
+    {
+      "name": "MARVEL Puzzle Quest: Match RPG",
+      "found": true,
+      "initial": "MP",
+      "image": "assets/icons/official/marvel-puzzle-quest-match-rpg.jpg",
+      "matchedName": "MARVEL Puzzle Quest: Match RPG",
+      "artistName": "505 Go Inc.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.d3p.mpq",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 305157
     },
     {
       "name": "MARVEL SNAP",
@@ -3831,18 +3855,6 @@
       "bytes": 93955
     },
     {
-      "name": "Screw Out 3D: Nut Sort Jam",
-      "found": true,
-      "initial": "SO",
-      "image": "assets/icons/official/screw-out-3d-nut-sort-jam.jpg",
-      "matchedName": "Screw Out 3D: Nut Sort Jam",
-      "artistName": "Unico Studio",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=net.happywit.screw.out.jam",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 416271
-    },
-    {
       "name": "Screwdom",
       "found": true,
       "initial": "S",
@@ -4011,6 +4023,18 @@
       "bytes": 144115
     },
     {
+      "name": "Solar Smash",
+      "found": true,
+      "initial": "SS",
+      "image": "assets/icons/official/solar-smash.jpg",
+      "matchedName": "Solar Smash",
+      "artistName": "Paradyme Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.paradyme.solarsmash",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 408931
+    },
+    {
       "name": "Solitaire - Classic Card Games",
       "found": true,
       "initial": "SC",
@@ -4112,18 +4136,6 @@
       "score": 130,
       "query": "Stormshot",
       "bytes": 74498
-    },
-    {
-      "name": "Stormshot: Isle of Adventure",
-      "found": true,
-      "initial": "SI",
-      "image": "assets/icons/official/stormshot-isle-of-adventure.jpg",
-      "matchedName": "Stormshot: Isle of Adventure",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/stormshot-isle-of-adventure/ios-6443388218",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 5734
     },
     {
       "name": "Subway Surfers",
@@ -4331,18 +4343,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 7175
-    },
-    {
-      "name": "Tiki Smash!",
-      "found": true,
-      "initial": "TS",
-      "image": "assets/icons/official/tiki-smash.jpg",
-      "matchedName": "Tiki Smash!",
-      "artistName": "PeopleFun",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.thrivegames.bashbest",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 497835
     },
     {
       "name": "Tile Explorer",
