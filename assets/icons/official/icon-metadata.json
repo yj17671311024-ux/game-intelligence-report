@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-08T02:28:04.852Z",
-  "total": 430,
-  "found": 426,
+  "preparedAt": "2026-10-08T02:47:52.622Z",
+  "total": 431,
+  "found": 427,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -3112,6 +3112,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6326
+    },
+    {
+      "name": "My Talking Tom 2: Pet Game",
+      "found": true,
+      "initial": "MT",
+      "image": "assets/icons/official/my-talking-tom-2-pet-game.jpg",
+      "matchedName": "My Talking Tom 2: Pet Game",
+      "artistName": "Outfit7 Limited",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.outfit7.mytalkingtom2",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 58028
     },
     {
       "name": "Mystery Dumpling Blind Box",
