@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-08T05:17:56.572Z",
-  "total": 441,
-  "found": 437,
+  "preparedAt": "2026-10-08T07:55:21.320Z",
+  "total": 442,
+  "found": 438,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1253,6 +1253,18 @@
       "score": 154,
       "query": "Disney Emoji Blitz",
       "bytes": 89083
+    },
+    {
+      "name": "Disney Solitaire",
+      "found": true,
+      "initial": "DS",
+      "image": "assets/icons/official/disney-solitaire.jpg",
+      "matchedName": "Disney Solitaire",
+      "artistName": "SuperPlay.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.superplaystudios.disneysolitairedreams",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 363164
     },
     {
       "name": "Domino Dreams",
