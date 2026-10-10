@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-10T08:23:03.210Z",
-  "total": 436,
-  "found": 432,
+  "preparedAt": "2026-10-10T08:43:43.615Z",
+  "total": 437,
+  "found": 433,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -3379,6 +3379,18 @@
       "score": 274,
       "query": "Parking Jam 3D",
       "bytes": 108151
+    },
+    {
+      "name": "Picture Blast Solitaire",
+      "found": true,
+      "initial": "PB",
+      "image": "assets/icons/official/picture-blast-solitaire.jpg",
+      "matchedName": "Picture Blast Solitaire",
+      "artistName": "Gismart",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.pic.blast.solitaire",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 551706
     },
     {
       "name": "Piggy Kingdom",
