@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-10T03:17:52.695Z",
-  "total": 443,
-  "found": 439,
+  "preparedAt": "2026-10-10T05:17:53.609Z",
+  "total": 444,
+  "found": 440,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -528,6 +528,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6563
+    },
+    {
+      "name": "Boom Crush: 3D Blast Fun",
+      "found": true,
+      "initial": "BC",
+      "image": "assets/icons/official/boom-crush-3d-blast-fun.jpg",
+      "matchedName": "Boom Crush: 3D Blast Fun",
+      "artistName": "Arcloom",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.puzzle.smash.master.blast.stack.boom.crush",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 126282
     },
     {
       "name": "Brain Puzzle 2: Logic Twist",
