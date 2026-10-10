@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-09T09:22:39.901Z",
-  "total": 442,
-  "found": 438,
+  "preparedAt": "2026-10-10T02:08:53.399Z",
+  "total": 443,
+  "found": 439,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -4268,6 +4268,18 @@
       "score": 130,
       "query": "Stormshot",
       "bytes": 74498
+    },
+    {
+      "name": "Stormshot: Isle of Adventure",
+      "found": true,
+      "initial": "SI",
+      "image": "assets/icons/official/stormshot-isle-of-adventure.jpg",
+      "matchedName": "Stormshot: Isle of Adventure",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/stormshot-isle-of-adventure/ios-6443388218",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 5734
     },
     {
       "name": "Subway Surfers",
