@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-11T10:08:44.933Z",
-  "total": 437,
-  "found": 433,
+  "preparedAt": "2026-10-12T02:05:17.071Z",
+  "total": 438,
+  "found": 434,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1582,18 +1582,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1604,6 +1592,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -2425,6 +2425,18 @@
       "score": 274,
       "query": "Last Asylum: Plague",
       "bytes": 84925
+    },
+    {
+      "name": "LAST CLOUDIA",
+      "found": true,
+      "initial": "LC",
+      "image": "assets/icons/official/last-cloudia.jpg",
+      "matchedName": "LAST CLOUDIA",
+      "artistName": "AIDIS Inc.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.aidis.lastcloudiaen",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 318660
     },
     {
       "name": "Last Day on Earth: Survival",
