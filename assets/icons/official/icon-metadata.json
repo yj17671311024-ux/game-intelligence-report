@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-13T10:46:20.972Z",
-  "total": 442,
-  "found": 438,
+  "preparedAt": "2026-10-14T02:04:14.198Z",
+  "total": 443,
+  "found": 439,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -110,6 +110,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6857
+    },
+    {
+      "name": "All Dubs",
+      "found": true,
+      "initial": "AD",
+      "image": "assets/icons/official/all-dubs.jpg",
+      "matchedName": "All Dubs",
+      "artistName": "Vaulty Studios Inc.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.vaultystudios.alldubs",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 389623
     },
     {
       "name": "All in Hole",
@@ -1594,18 +1606,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1616,6 +1616,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
