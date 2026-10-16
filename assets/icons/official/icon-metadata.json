@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-15T08:25:31.485Z",
-  "total": 443,
-  "found": 439,
+  "preparedAt": "2026-10-16T02:09:30.686Z",
+  "total": 445,
+  "found": 441,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -3901,6 +3901,18 @@
       "bytes": 46701
     },
     {
+      "name": "Sand Blocks: Drop Puzzle",
+      "found": true,
+      "initial": "SB",
+      "image": "assets/icons/official/sand-blocks-drop-puzzle.jpg",
+      "matchedName": "Sand Blocks: Drop Puzzle",
+      "artistName": "Rollic Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.uncosoft.wordpuzzle",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 378177
+    },
+    {
       "name": "Save the Girl",
       "found": true,
       "initial": "ST",
@@ -4716,6 +4728,18 @@
       "score": 262,
       "query": "Toy Blast",
       "bytes": 72517
+    },
+    {
+      "name": "Train Station 3: Rail Tycoon",
+      "found": true,
+      "initial": "TS",
+      "image": "assets/icons/official/train-station-3-rail-tycoon.jpg",
+      "matchedName": "Train Station 3: Rail Tycoon",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/train-station-3-rail-tycoon/ios-6670169904",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7076
     },
     {
       "name": "Travel Town",
