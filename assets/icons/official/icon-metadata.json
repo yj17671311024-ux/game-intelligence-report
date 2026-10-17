@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-16T08:18:39.679Z",
-  "total": 445,
-  "found": 441,
+  "preparedAt": "2026-10-17T02:09:26.436Z",
+  "total": 448,
+  "found": 444,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -38,6 +38,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 158710
+    },
+    {
+      "name": "9 Kings",
+      "found": true,
+      "initial": "K",
+      "image": "assets/icons/official/9-kings.jpg",
+      "matchedName": "9 Kings",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/9-kings/ios-6757860952",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6220
     },
     {
       "name": "AFK Arena",
@@ -297,6 +309,18 @@
       "score": 142,
       "query": "Art Puzzle",
       "bytes": 97602
+    },
+    {
+      "name": "Auto Drill: Galaxy",
+      "found": true,
+      "initial": "AD",
+      "image": "assets/icons/official/auto-drill-galaxy.jpg",
+      "matchedName": "Auto Drill: Galaxy",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/auto-drill-galaxy/ios-6790912531",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 3146
     },
     {
       "name": "Avakin Life - 3D Virtual World",
@@ -2703,6 +2727,18 @@
       "score": 142,
       "query": "Lords Mobile",
       "bytes": 76186
+    },
+    {
+      "name": "Lords Mobile: Kingdom Wars",
+      "found": true,
+      "initial": "LM",
+      "image": "assets/icons/official/lords-mobile-kingdom-wars.jpg",
+      "matchedName": "Lords Mobile: Kingdom Wars",
+      "artistName": "IGG.COM",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.igg.android.lordsmobile",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 424397
     },
     {
       "name": "Love Nikki-Dress UP Queen",
