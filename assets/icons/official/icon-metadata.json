@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-17T07:54:29.791Z",
-  "total": 448,
-  "found": 444,
+  "preparedAt": "2026-10-18T02:08:43.662Z",
+  "total": 450,
+  "found": 446,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1870,6 +1870,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 96688
+    },
+    {
+      "name": "Girls Echo",
+      "found": true,
+      "initial": "GE",
+      "image": "assets/icons/official/girls-echo.jpg",
+      "matchedName": "Girls Echo",
+      "artistName": "HOWLYO GAME",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.girlsecho.gp",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 561108
     },
     {
       "name": "GIRLS' FRONTLINE 2: EXILIUM",
@@ -4354,6 +4366,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6650
+    },
+    {
+      "name": "Surprise Dumpling: ASMR Box",
+      "found": true,
+      "initial": "SD",
+      "image": "assets/icons/official/surprise-dumpling-asmr-box.jpg",
+      "matchedName": "Surprise Dumpling: ASMR Box",
+      "artistName": "NAMIGAME",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.RC67.surprise.dumpling.ASMR.box",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 493879
     },
     {
       "name": "Sword x Staff",
