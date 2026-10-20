@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-20T03:21:30.998Z",
-  "total": 452,
-  "found": 448,
+  "preparedAt": "2026-10-20T05:21:17.491Z",
+  "total": 453,
+  "found": 449,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -230,6 +230,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 286796
+    },
+    {
+      "name": "Apex Sniper: Animal Hunt",
+      "found": true,
+      "initial": "AS",
+      "image": "assets/icons/official/apex-sniper-animal-hunt.jpg",
+      "matchedName": "Apex Sniper: Animal Hunt",
+      "artistName": "CozyCraft",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.animal.hunter.shooting.apex",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 507073
     },
     {
       "name": "ARES: THE IRON VANGUARD",
