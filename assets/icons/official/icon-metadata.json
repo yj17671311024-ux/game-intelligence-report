@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-19T09:07:14.560Z",
-  "total": 450,
-  "found": 446,
+  "preparedAt": "2026-10-20T02:12:26.252Z",
+  "total": 452,
+  "found": 448,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -110,6 +110,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5712
+    },
+    {
+      "name": "Age of Spirits",
+      "found": true,
+      "initial": "AO",
+      "image": "assets/icons/official/age-of-spirits.jpg",
+      "matchedName": "Age of Spirits",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/age-of-spirits/ios-6805006706",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6251
     },
     {
       "name": "Aliens vs Zombies: Invasion",
@@ -4034,6 +4046,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 9707
+    },
+    {
+      "name": "Sea Muncher-Big Bite Fish",
+      "found": true,
+      "initial": "SM",
+      "image": "assets/icons/official/sea-muncher-big-bite-fish.jpg",
+      "matchedName": "Sea Muncher-Big Bite Fish",
+      "artistName": "Dear Dream Game",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.ocedomin.fishio",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 340223
     },
     {
       "name": "Sea War: Uboat Raid",
