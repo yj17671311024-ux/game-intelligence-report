@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-20T08:44:30.688Z",
-  "total": 453,
-  "found": 449,
+  "preparedAt": "2026-10-21T02:04:13.957Z",
+  "total": 451,
+  "found": 447,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -38,18 +38,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 158710
-    },
-    {
-      "name": "9 Kings",
-      "found": true,
-      "initial": "K",
-      "image": "assets/icons/official/9-kings.jpg",
-      "matchedName": "9 Kings",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/9-kings/ios-6757860952",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6220
     },
     {
       "name": "AFK Arena",
@@ -230,18 +218,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 286796
-    },
-    {
-      "name": "Apex Sniper: Animal Hunt",
-      "found": true,
-      "initial": "AS",
-      "image": "assets/icons/official/apex-sniper-animal-hunt.jpg",
-      "matchedName": "Apex Sniper: Animal Hunt",
-      "artistName": "CozyCraft",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.animal.hunter.shooting.apex",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 507073
     },
     {
       "name": "ARES: THE IRON VANGUARD",
@@ -1654,18 +1630,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1676,6 +1640,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -2770,11 +2746,11 @@
       "initial": "LM",
       "image": "assets/icons/official/lords-mobile-kingdom-wars.jpg",
       "matchedName": "Lords Mobile: Kingdom Wars",
-      "artistName": "IGG.COM",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.igg.android.lordsmobile",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/lords-mobile-kingdom-wars/ios-1071976327",
       "source": "AppBrain Google Play icon",
       "score": 100,
-      "bytes": 424397
+      "bytes": 7221
     },
     {
       "name": "Love Nikki-Dress UP Queen",
@@ -3982,7 +3958,7 @@
       "sourceUrl": "https://play.google.com/store/apps/details?id=com.uncosoft.wordpuzzle",
       "source": "AppBrain Google Play icon",
       "score": 100,
-      "bytes": 378177
+      "bytes": 213378
     },
     {
       "name": "Save the Girl",
@@ -4441,6 +4417,18 @@
       "bytes": 72119
     },
     {
+      "name": "Tank Busters: Cannon Battle",
+      "found": true,
+      "initial": "TB",
+      "image": "assets/icons/official/tank-busters-cannon-battle.jpg",
+      "matchedName": "Tank Busters: Cannon Battle",
+      "artistName": "SayGames Ltd",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tank.busters",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 203308
+    },
+    {
       "name": "Tap Away",
       "found": true,
       "initial": "TA",
@@ -4824,18 +4812,6 @@
       "score": 262,
       "query": "Toy Blast",
       "bytes": 72517
-    },
-    {
-      "name": "Train Station 3: Rail Tycoon",
-      "found": true,
-      "initial": "TS",
-      "image": "assets/icons/official/train-station-3-rail-tycoon.jpg",
-      "matchedName": "Train Station 3: Rail Tycoon",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/train-station-3-rail-tycoon/ios-6670169904",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 7076
     },
     {
       "name": "Travel Town",
