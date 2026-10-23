@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-23T05:21:26.254Z",
-  "total": 454,
-  "found": 450,
+  "preparedAt": "2026-10-23T06:27:28.098Z",
+  "total": 456,
+  "found": 452,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -903,6 +903,18 @@
       "score": 274,
       "query": "Chaos Zero Nightmare",
       "bytes": 78349
+    },
+    {
+      "name": "Chess - Play and Learn Online",
+      "found": true,
+      "initial": "CP",
+      "image": "assets/icons/official/chess-play-and-learn-online.jpg",
+      "matchedName": "Chess - Play and Learn Online",
+      "artistName": "Chess.com",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.chess",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 25533
     },
     {
       "name": "Chess.com - Play and Learn",
@@ -3402,6 +3414,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 151913
+    },
+    {
+      "name": "OneState RP - Role Play Life",
+      "found": true,
+      "initial": "OR",
+      "image": "assets/icons/official/onestate-rp-role-play-life.jpg",
+      "matchedName": "OneState RP - Role Play Life",
+      "artistName": "ChillBase",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.Chillgaming.oneState",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 312722
     },
     {
       "name": "Overgeared Hero: Merge RPG",
