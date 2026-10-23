@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-22T08:47:38.879Z",
-  "total": 451,
-  "found": 447,
+  "preparedAt": "2026-10-23T02:12:34.538Z",
+  "total": 454,
+  "found": 450,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1448,6 +1448,18 @@
       "bytes": 99638
     },
     {
+      "name": "Epic War:Spin to Kill",
+      "found": true,
+      "initial": "EW",
+      "image": "assets/icons/official/epic-war-spin-to-kill.jpg",
+      "matchedName": "Epic War:Spin to Kill",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/epic-war-spin-to-kill/ios-1668975666",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7449
+    },
+    {
       "name": "Ever Night: Reawakening",
       "found": true,
       "initial": "EN",
@@ -1530,6 +1542,18 @@
       "score": 154,
       "query": "Fate/Grand Order",
       "bytes": 98313
+    },
+    {
+      "name": "Fidget Trading: Dumpling Party",
+      "found": true,
+      "initial": "FT",
+      "image": "assets/icons/official/fidget-trading-dumpling-party.jpg",
+      "matchedName": "Fidget Trading: Dumpling Party",
+      "artistName": "Novix Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.fidget.dumplingparty",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 414639
     },
     {
       "name": "Fill The Fridge",
@@ -2197,6 +2221,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5860
+    },
+    {
+      "name": "Infinite Borders",
+      "found": true,
+      "initial": "IB",
+      "image": "assets/icons/official/infinite-borders.jpg",
+      "matchedName": "Infinite Borders",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/infinite-borders/ios-1080541643",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6053
     },
     {
       "name": "Infinity Kingdom",
