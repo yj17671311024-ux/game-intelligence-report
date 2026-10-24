@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-24T02:12:15.779Z",
-  "total": 456,
-  "found": 452,
+  "preparedAt": "2026-10-24T02:31:14.287Z",
+  "total": 459,
+  "found": 455,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1908,6 +1908,18 @@
       "bytes": 96688
     },
     {
+      "name": "Get Color - Water Sort Puzzle",
+      "found": true,
+      "initial": "GC",
+      "image": "assets/icons/official/get-color-water-sort-puzzle.jpg",
+      "matchedName": "Get Color - Water Sort Puzzle",
+      "artistName": "Tripledot Studios Limited",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.zm.watersort",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 300319
+    },
+    {
       "name": "Girls Echo",
       "found": true,
       "initial": "GE",
@@ -2727,6 +2739,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6450
+    },
+    {
+      "name": "Little Kitty, Big City",
+      "found": true,
+      "initial": "LK",
+      "image": "assets/icons/official/little-kitty-big-city.jpg",
+      "matchedName": "Little Kitty, Big City",
+      "artistName": "Double Dagger Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.DoubleDaggerStudio.LittleKittyBigCity",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 234471
     },
     {
       "name": "Loop Master",
@@ -4058,6 +4082,18 @@
       "score": 262,
       "query": "Screw Jam",
       "bytes": 93955
+    },
+    {
+      "name": "Screw Out 3D: Nut Sort Jam",
+      "found": true,
+      "initial": "SO",
+      "image": "assets/icons/official/screw-out-3d-nut-sort-jam.jpg",
+      "matchedName": "Screw Out 3D: Nut Sort Jam",
+      "artistName": "Unico Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=net.happywit.screw.out.jam",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 432713
     },
     {
       "name": "Screwdom",
