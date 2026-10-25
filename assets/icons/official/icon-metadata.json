@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-24T08:18:35.548Z",
-  "total": 459,
-  "found": 455,
+  "preparedAt": "2026-10-25T02:12:20.262Z",
+  "total": 460,
+  "found": 456,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -2197,6 +2197,18 @@
       "score": 286,
       "query": "Hotel Legacy: Merge Game",
       "bytes": 57317
+    },
+    {
+      "name": "Idle Angels: 6th Anniv",
+      "found": true,
+      "initial": "IA",
+      "image": "assets/icons/official/idle-angels-6th-anniv.jpg",
+      "matchedName": "Idle Angels: 6th Anniv",
+      "artistName": "Neorigin Games Global",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.mujoysg.hxbb",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 476464
     },
     {
       "name": "Idle Cat Gunner: Shooter RPG",
