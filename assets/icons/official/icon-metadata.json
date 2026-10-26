@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-25T08:36:12.701Z",
-  "total": 460,
-  "found": 456,
+  "preparedAt": "2026-10-26T02:06:15.150Z",
+  "total": 451,
+  "found": 447,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -905,18 +905,6 @@
       "bytes": 78349
     },
     {
-      "name": "Chess - Play and Learn Online",
-      "found": true,
-      "initial": "CP",
-      "image": "assets/icons/official/chess-play-and-learn-online.jpg",
-      "matchedName": "Chess - Play and Learn Online",
-      "artistName": "Chess.com",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.chess",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 25533
-    },
-    {
       "name": "Chess.com - Play and Learn",
       "found": true,
       "initial": "CC",
@@ -1460,18 +1448,6 @@
       "bytes": 99638
     },
     {
-      "name": "Epic War:Spin to Kill",
-      "found": true,
-      "initial": "EW",
-      "image": "assets/icons/official/epic-war-spin-to-kill.jpg",
-      "matchedName": "Epic War:Spin to Kill",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/epic-war-spin-to-kill/ios-1668975666",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 7449
-    },
-    {
       "name": "Ever Night: Reawakening",
       "found": true,
       "initial": "EN",
@@ -1554,18 +1530,6 @@
       "score": 154,
       "query": "Fate/Grand Order",
       "bytes": 98313
-    },
-    {
-      "name": "Fidget Trading: Dumpling Party",
-      "found": true,
-      "initial": "FT",
-      "image": "assets/icons/official/fidget-trading-dumpling-party.jpg",
-      "matchedName": "Fidget Trading: Dumpling Party",
-      "artistName": "Novix Games",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.fidget.dumplingparty",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 414639
     },
     {
       "name": "Fill The Fridge",
@@ -1666,18 +1630,6 @@
       }
     },
     {
-      "name": "Flambe: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge and Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
-      "score": 94,
-      "query": "Flambe: Merge & Cook",
-      "bytes": 58307
-    },
-    {
       "name": "Flambé: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1688,6 +1640,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6265
+    },
+    {
+      "name": "Flambe: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flambe-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge and Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://apps.apple.com/us/app/flamb%C3%A9-merge-and-cook/id6618142292?uo=4",
+      "score": 94,
+      "query": "Flambe: Merge & Cook",
+      "bytes": 58307
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1906,18 +1870,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 96688
-    },
-    {
-      "name": "Get Color - Water Sort Puzzle",
-      "found": true,
-      "initial": "GC",
-      "image": "assets/icons/official/get-color-water-sort-puzzle.jpg",
-      "matchedName": "Get Color - Water Sort Puzzle",
-      "artistName": "Tripledot Studios Limited",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.zm.watersort",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 300319
     },
     {
       "name": "Girls Echo",
@@ -2199,18 +2151,6 @@
       "bytes": 57317
     },
     {
-      "name": "Idle Angels: 6th Anniv",
-      "found": true,
-      "initial": "IA",
-      "image": "assets/icons/official/idle-angels-6th-anniv.jpg",
-      "matchedName": "Idle Angels: 6th Anniv",
-      "artistName": "Neorigin Games Global",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.mujoysg.hxbb",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 476464
-    },
-    {
       "name": "Idle Cat Gunner: Shooter RPG",
       "found": true,
       "initial": "IC",
@@ -2257,18 +2197,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5860
-    },
-    {
-      "name": "Infinite Borders",
-      "found": true,
-      "initial": "IB",
-      "image": "assets/icons/official/infinite-borders.jpg",
-      "matchedName": "Infinite Borders",
-      "artistName": "",
-      "sourceUrl": "https://www.appbrain.com/appstore/infinite-borders/ios-1080541643",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6053
     },
     {
       "name": "Infinity Kingdom",
@@ -2751,18 +2679,6 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 6450
-    },
-    {
-      "name": "Little Kitty, Big City",
-      "found": true,
-      "initial": "LK",
-      "image": "assets/icons/official/little-kitty-big-city.jpg",
-      "matchedName": "Little Kitty, Big City",
-      "artistName": "Double Dagger Studio",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.DoubleDaggerStudio.LittleKittyBigCity",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 234471
     },
     {
       "name": "Loop Master",
@@ -3452,18 +3368,6 @@
       "bytes": 151913
     },
     {
-      "name": "OneState RP - Role Play Life",
-      "found": true,
-      "initial": "OR",
-      "image": "assets/icons/official/onestate-rp-role-play-life.jpg",
-      "matchedName": "OneState RP - Role Play Life",
-      "artistName": "ChillBase",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.Chillgaming.oneState",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 312722
-    },
-    {
       "name": "Overgeared Hero: Merge RPG",
       "found": true,
       "initial": "OH",
@@ -4094,18 +3998,6 @@
       "score": 262,
       "query": "Screw Jam",
       "bytes": 93955
-    },
-    {
-      "name": "Screw Out 3D: Nut Sort Jam",
-      "found": true,
-      "initial": "SO",
-      "image": "assets/icons/official/screw-out-3d-nut-sort-jam.jpg",
-      "matchedName": "Screw Out 3D: Nut Sort Jam",
-      "artistName": "Unico Studio",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=net.happywit.screw.out.jam",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 432713
     },
     {
       "name": "Screwdom",
