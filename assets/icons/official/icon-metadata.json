@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-26T02:06:15.150Z",
-  "total": 451,
-  "found": 447,
+  "preparedAt": "2026-10-26T02:12:40.508Z",
+  "total": 456,
+  "found": 452,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -905,6 +905,18 @@
       "bytes": 78349
     },
     {
+      "name": "Chess - Play and Learn Online",
+      "found": true,
+      "initial": "CP",
+      "image": "assets/icons/official/chess-play-and-learn-online.jpg",
+      "matchedName": "Chess - Play and Learn Online",
+      "artistName": "Chess.com",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.chess",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 25533
+    },
+    {
       "name": "Chess.com - Play and Learn",
       "found": true,
       "initial": "CC",
@@ -1532,6 +1544,18 @@
       "bytes": 98313
     },
     {
+      "name": "Fidget Trading: Dumpling Party",
+      "found": true,
+      "initial": "FT",
+      "image": "assets/icons/official/fidget-trading-dumpling-party.jpg",
+      "matchedName": "Fidget Trading: Dumpling Party",
+      "artistName": "Novix Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.fidget.dumplingparty",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 534025
+    },
+    {
       "name": "Fill The Fridge",
       "found": true,
       "initial": "FT",
@@ -1630,18 +1654,6 @@
       }
     },
     {
-      "name": "Flambé: Merge & Cook",
-      "found": true,
-      "initial": "FM",
-      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
-      "matchedName": "Flambé®: Merge & Cook",
-      "artistName": "Microfun Limited",
-      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
-      "source": "AppBrain Google Play icon",
-      "score": 100,
-      "bytes": 6265
-    },
-    {
       "name": "Flambe: Merge & Cook",
       "found": true,
       "initial": "FM",
@@ -1652,6 +1664,18 @@
       "score": 94,
       "query": "Flambe: Merge & Cook",
       "bytes": 58307
+    },
+    {
+      "name": "Flambé: Merge & Cook",
+      "found": true,
+      "initial": "FM",
+      "image": "assets/icons/official/flamb-merge-and-cook.jpg",
+      "matchedName": "Flambé®: Merge & Cook",
+      "artistName": "Microfun Limited",
+      "sourceUrl": "https://www.appbrain.com/app/flamb%C3%A9%C2%AE-merge-cook/com.cola.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 6265
     },
     {
       "name": "Flambé: Merge and Cook",
@@ -1870,6 +1894,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 96688
+    },
+    {
+      "name": "Get Color - Water Sort Puzzle",
+      "found": true,
+      "initial": "GC",
+      "image": "assets/icons/official/get-color-water-sort-puzzle.jpg",
+      "matchedName": "Get Color - Water Sort Puzzle",
+      "artistName": "Tripledot Studios Limited",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.zm.watersort",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 300319
     },
     {
       "name": "Girls Echo",
@@ -3368,6 +3404,18 @@
       "bytes": 151913
     },
     {
+      "name": "OneState RP - Role Play Life",
+      "found": true,
+      "initial": "OR",
+      "image": "assets/icons/official/onestate-rp-role-play-life.jpg",
+      "matchedName": "OneState RP - Role Play Life",
+      "artistName": "ChillBase",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.Chillgaming.oneState",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 312722
+    },
+    {
       "name": "Overgeared Hero: Merge RPG",
       "found": true,
       "initial": "OH",
@@ -3753,6 +3801,18 @@
       "score": 142,
       "query": "Redirect It",
       "bytes": 38209
+    },
+    {
+      "name": "Relax Mini Games",
+      "found": true,
+      "initial": "RM",
+      "image": "assets/icons/official/relax-mini-games.jpg",
+      "matchedName": "Relax Mini Games",
+      "artistName": "SUPERIOR  STUDIO",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.yg.mini.games",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 476518
     },
     {
       "name": "Reverse: 1999",
