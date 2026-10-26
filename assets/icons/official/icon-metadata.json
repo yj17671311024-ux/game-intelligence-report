@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-26T06:52:49.351Z",
-  "total": 456,
-  "found": 452,
+  "preparedAt": "2026-10-26T07:01:38.597Z",
+  "total": 457,
+  "found": 453,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -3101,6 +3101,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 56174
+    },
+    {
+      "name": "Melon Sandbox x Poppy Playtime",
+      "found": true,
+      "initial": "MS",
+      "image": "assets/icons/official/melon-sandbox-x-poppy-playtime.jpg",
+      "matchedName": "Melon Sandbox x Poppy Playtime",
+      "artistName": "playducky.com",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.studio27.MelonPlayground",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 259321
     },
     {
       "name": "MemeMix Challenge: Funny Party",
