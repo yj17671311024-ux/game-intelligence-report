@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-29T07:43:20.250Z",
-  "total": 461,
-  "found": 457,
+  "preparedAt": "2026-10-29T08:24:03.259Z",
+  "total": 462,
+  "found": 458,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -5065,6 +5065,18 @@
       "score": 286,
       "query": "Warhammer 40,000: Tacticus",
       "bytes": 80219
+    },
+    {
+      "name": "Warline: Sniper Squad",
+      "found": true,
+      "initial": "WS",
+      "image": "assets/icons/official/warline-sniper-squad.jpg",
+      "matchedName": "Warline: Sniper Squad",
+      "artistName": "Powerfantasy HK Limited",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.farlightgames.warline.gp.global",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 476722
     },
     {
       "name": "Warline: Sniper Strike",
