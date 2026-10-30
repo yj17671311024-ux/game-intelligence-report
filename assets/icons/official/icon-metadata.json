@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-29T10:13:27.718Z",
-  "total": 462,
-  "found": 458,
+  "preparedAt": "2026-10-30T02:12:29.844Z",
+  "total": 463,
+  "found": 459,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -3257,6 +3257,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 263552
+    },
+    {
+      "name": "Monster Hunter Outlanders",
+      "found": true,
+      "initial": "MH",
+      "image": "assets/icons/official/monster-hunter-outlanders.jpg",
+      "matchedName": "Monster Hunter Outlanders",
+      "artistName": "Level Infinite",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tencent.mhadv",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 77165
     },
     {
       "name": "Monster Legends - Battle Game",
