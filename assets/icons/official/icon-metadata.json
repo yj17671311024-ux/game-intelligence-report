@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-10-30T10:15:27.750Z",
-  "total": 463,
-  "found": 459,
+  "preparedAt": "2026-10-31T02:12:11.622Z",
+  "total": 465,
+  "found": 461,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -975,6 +975,18 @@
       "score": 262,
       "query": "Clash Royale",
       "bytes": 78269
+    },
+    {
+      "name": "Clean Perfect OCD",
+      "found": true,
+      "initial": "CP",
+      "image": "assets/icons/official/clean-perfect-ocd.jpg",
+      "matchedName": "Clean Perfect OCD",
+      "artistName": "Funlab Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.pl.clean.perfect.asrm.ocd",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 591378
     },
     {
       "name": "Colony Flow!",
@@ -4932,6 +4944,18 @@
       "score": 142,
       "query": "Travel Town",
       "bytes": 40258
+    },
+    {
+      "name": "Treasure Master",
+      "found": true,
+      "initial": "TM",
+      "image": "assets/icons/official/treasure-master.jpg",
+      "matchedName": "Treasure Master",
+      "artistName": "Gimica GmbH",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.gimica.treasuremaster",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 434593
     },
     {
       "name": "Tricky Prank: Annoying Puzzle",
