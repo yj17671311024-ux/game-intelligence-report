@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-01T10:40:58.468Z",
-  "total": 466,
-  "found": 462,
+  "preparedAt": "2026-11-02T02:12:13.015Z",
+  "total": 468,
+  "found": 464,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -3586,6 +3586,18 @@
       "bytes": 108151
     },
     {
+      "name": "Parking Loop",
+      "found": true,
+      "initial": "PL",
+      "image": "assets/icons/official/parking-loop.jpg",
+      "matchedName": "Parking Loop",
+      "artistName": "Loop Games A.S.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.loop.packedloop",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 535207
+    },
+    {
       "name": "Picture Blast Solitaire",
       "found": true,
       "initial": "PB",
@@ -4968,6 +4980,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 434593
+    },
+    {
+      "name": "Tricky Brain: Annoying Puzzle",
+      "found": true,
+      "initial": "TB",
+      "image": "assets/icons/official/tricky-brain-annoying-puzzle.jpg",
+      "matchedName": "Tricky Brain: Annoying Puzzle",
+      "artistName": "FemeAves",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tricky.brain.annoying.puzzle.prank.master",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 416191
     },
     {
       "name": "Tricky Prank: Annoying Puzzle",
