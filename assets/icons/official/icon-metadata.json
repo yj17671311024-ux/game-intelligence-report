@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-02T11:28:08.206Z",
-  "total": 468,
-  "found": 464,
+  "preparedAt": "2026-11-03T02:11:49.489Z",
+  "total": 469,
+  "found": 465,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -2245,6 +2245,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 7053
+    },
+    {
+      "name": "Idle Theme Park - Tycoon Game",
+      "found": true,
+      "initial": "IT",
+      "image": "assets/icons/official/idle-theme-park-tycoon-game.jpg",
+      "matchedName": "Idle Theme Park - Tycoon Game",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/idle-theme-park-tycoon-game/ios-1460772578",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 9117
     },
     {
       "name": "IdleOn - The Incremental MMO",
