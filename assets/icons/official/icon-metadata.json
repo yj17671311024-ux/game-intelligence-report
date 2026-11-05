@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-04T11:12:31.170Z",
-  "total": 469,
-  "found": 465,
+  "preparedAt": "2026-11-05T02:11:47.129Z",
+  "total": 471,
+  "found": 467,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -170,6 +170,18 @@
       "score": 262,
       "query": "Amaze GO!",
       "bytes": 24315
+    },
+    {
+      "name": "AMAZE!",
+      "found": true,
+      "initial": "A",
+      "image": "assets/icons/official/amaze.jpg",
+      "matchedName": "AMAZE!",
+      "artistName": "CrazyLabs LTD",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.crazylabs.amaze.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 548814
     },
     {
       "name": "Among Us",
@@ -1181,6 +1193,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5062
+    },
+    {
+      "name": "Cutie Sort: Kitten Games",
+      "found": true,
+      "initial": "CS",
+      "image": "assets/icons/official/cutie-sort-kitten-games.jpg",
+      "matchedName": "Cutie Sort: Kitten Games",
+      "artistName": "Easetouch",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=sort.casual.color.cat.puzzle.match",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 468234
     },
     {
       "name": "Dark War Survival",
