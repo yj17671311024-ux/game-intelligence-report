@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-05T11:12:46.370Z",
-  "total": 472,
-  "found": 468,
+  "preparedAt": "2026-11-06T08:28:33.472Z",
+  "total": 474,
+  "found": 470,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -540,6 +540,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 300069
+    },
+    {
+      "name": "Bolt Out - Puzzle Game",
+      "found": true,
+      "initial": "BO",
+      "image": "assets/icons/official/bolt-out-puzzle-game.jpg",
+      "matchedName": "Bolt Out - Puzzle Game",
+      "artistName": "Loyalty Gaming",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.gl.unbolt",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 448808
     },
     {
       "name": "Boom Beach: War Strategy Game",
@@ -4759,6 +4771,18 @@
       "initial": "TS",
       "image": "assets/icons/official/tiki-smash.jpg",
       "matchedName": "Tiki Smash!",
+      "artistName": "PeopleFun",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.thrivegames.bashbest",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 497835
+    },
+    {
+      "name": "Tiki Smash! Smashing game",
+      "found": true,
+      "initial": "TS",
+      "image": "assets/icons/official/tiki-smash-smashing-game.jpg",
+      "matchedName": "Tiki Smash! Smashing game",
       "artistName": "PeopleFun",
       "sourceUrl": "https://play.google.com/store/apps/details?id=com.thrivegames.bashbest",
       "source": "AppBrain Google Play icon",
