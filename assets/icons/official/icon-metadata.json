@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-06T11:09:40.108Z",
-  "total": 474,
-  "found": 470,
+  "preparedAt": "2026-11-07T07:44:42.257Z",
+  "total": 475,
+  "found": 471,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -2232,6 +2232,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 470496
+    },
+    {
+      "name": "Hollywood Merge",
+      "found": true,
+      "initial": "HM",
+      "image": "assets/icons/official/hollywood-merge.jpg",
+      "matchedName": "Hollywood Merge",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/hollywood-merge/ios-6755455500",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 7380
     },
     {
       "name": "Homescapes",
