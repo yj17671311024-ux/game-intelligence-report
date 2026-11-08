@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-07T10:28:53.312Z",
-  "total": 475,
-  "found": 471,
+  "preparedAt": "2026-11-08T07:54:42.167Z",
+  "total": 476,
+  "found": 472,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -4872,6 +4872,18 @@
       "score": 262,
       "query": "Tiles Survive!",
       "bytes": 56948
+    },
+    {
+      "name": "Tiny Ride",
+      "found": true,
+      "initial": "TR",
+      "image": "assets/icons/official/tiny-ride.jpg",
+      "matchedName": "Tiny Ride",
+      "artistName": "TabTale",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tiny.ride.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 458419
     },
     {
       "name": "Titan Rush: Survival",
