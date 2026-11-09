@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-08T10:36:29.988Z",
-  "total": 476,
-  "found": 472,
+  "preparedAt": "2026-11-09T07:35:01.221Z",
+  "total": 477,
+  "found": 473,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1011,6 +1011,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 591378
+    },
+    {
+      "name": "Clicker DIY: ASMR Charm Master",
+      "found": true,
+      "initial": "CD",
+      "image": "assets/icons/official/clicker-diy-asmr-charm-master.jpg",
+      "matchedName": "Clicker DIY: ASMR Charm Master",
+      "artistName": "HIGAME Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.hp.clicker.diy.asmr.charm.master",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 297905
     },
     {
       "name": "Colony Flow!",
