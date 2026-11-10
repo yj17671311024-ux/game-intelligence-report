@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-09T11:51:10.847Z",
-  "total": 477,
-  "found": 473,
+  "preparedAt": "2026-11-10T08:39:51.577Z",
+  "total": 481,
+  "found": 477,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -2403,6 +2403,18 @@
       "bytes": 101891
     },
     {
+      "name": "Jam Bus:Sandfall",
+      "found": true,
+      "initial": "JB",
+      "image": "assets/icons/official/jam-bus-sandfall.jpg",
+      "matchedName": "Jam Bus:Sandfall",
+      "artistName": "Nova Games Technology Limited",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=bus.sand.fall.jam.loop.traffic.flow",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 446718
+    },
+    {
       "name": "Jelly Busters",
       "found": true,
       "initial": "JB",
@@ -3197,6 +3209,18 @@
       "score": 142,
       "query": "Maze Escape",
       "bytes": 34586
+    },
+    {
+      "name": "Maze Out! - Tap Puzzle",
+      "found": true,
+      "initial": "MO",
+      "image": "assets/icons/official/maze-out-tap-puzzle.jpg",
+      "matchedName": "Maze Out! - Tap Puzzle",
+      "artistName": "",
+      "sourceUrl": "https://www.appbrain.com/appstore/maze-out-tap-puzzle/ios-6762192889",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 4072
     },
     {
       "name": "Melon Sandbox",
@@ -4090,6 +4114,18 @@
       "score": 298,
       "query": "Romantic Nuts & Bolts Sorting",
       "bytes": 80604
+    },
+    {
+      "name": "Room Sort",
+      "found": true,
+      "initial": "RS",
+      "image": "assets/icons/official/room-sort.jpg",
+      "matchedName": "Room Sort",
+      "artistName": "ABF ALPENHOF",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.gamefactory.roomsort",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 393557
     },
     {
       "name": "Rotate Rings",
@@ -5149,6 +5185,18 @@
       "score": 262,
       "query": "Triple Tile",
       "bytes": 81740
+    },
+    {
+      "name": "Underdog: Sports, Games & Rips",
+      "found": true,
+      "initial": "US",
+      "image": "assets/icons/official/underdog-sports-games-and-rips.jpg",
+      "matchedName": "Underdog: Sports, Games & Rips",
+      "artistName": "Underdog Sports Wagering, LLC",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.underdogsports.fantasy",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 32194
     },
     {
       "name": "Vampir",
