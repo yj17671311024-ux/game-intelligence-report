@@ -2,11 +2,11 @@ name: Daily Game Intelligence Report
 
 on:
   schedule:
-    - cron: "30 1 * * *"
-    - cron: "47 1 * * *"
-    - cron: "8 2 * * *"
-    - cron: "27 2 * * *"
-    - cron: "17 3 * * *"
+    - cron: "30 1 * * *"  # UTC 01:30 = 北京时间 09:30
+    - cron: "47 1 * * *"  # UTC 01:47 = 北京时间 09:47
+    - cron: "8 2 * * *"   # UTC 02:08 = 北京时间 10:08
+    - cron: "27 2 * * *"  # UTC 02:27 = 北京时间 10:27
+    - cron: "17 3 * * *"  # UTC 03:17 = 北京时间 11:17
   workflow_dispatch:
     inputs:
       force:
@@ -20,12 +20,15 @@ permissions:
 
 concurrency:
   group: daily-game-intelligence-report
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     steps:
+      - name: Set runner timezone to Asia/Shanghai
+        run: sudo timedatectl set-timezone Asia/Shanghai
+
       - name: Checkout repository
         uses: actions/checkout@v6
 
@@ -41,6 +44,7 @@ jobs:
           REPORT_DATE="$(TZ=Asia/Shanghai date +'%Y-%m-%d')"
           FORCE="${{ github.event.inputs.force || 'false' }}"
           echo "REPORT_DATE=$REPORT_DATE" >> "$GITHUB_ENV"
+          echo "Current runner time: $(date)"
           if [ "$FORCE" != "true" ] && node scripts/build-daily-report.js --check-report index.html "$REPORT_DATE"; then
             echo "Today's report already exists. Skip this safety run."
             echo "SKIP_BUILD=1" >> "$GITHUB_ENV"
@@ -60,13 +64,16 @@ jobs:
           mkdir -p .generated
           for attempt in 1 2 3; do
             echo "Build attempt $attempt for $REPORT_DATE"
+            echo "Start time: $(date)"
             if OUTPUT_DIR="$GITHUB_WORKSPACE/.generated" SITE_DIR="$GITHUB_WORKSPACE" node scripts/build-daily-report.js "$REPORT_DATE"; then
+              echo "Build succeed on attempt $attempt"
               break
             fi
             if [ "$attempt" = "3" ]; then
               echo "Daily report build failed after $attempt attempts."
               exit 1
             fi
+            echo "Build failed, sleep before retry..."
             sleep $((attempt * 180))
           done
 
