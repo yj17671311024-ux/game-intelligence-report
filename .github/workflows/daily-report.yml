@@ -2,17 +2,13 @@ name: Daily Game Intelligence Report
 
 on:
   schedule:
-    # 北京时间早上 08:30、08:47、09:08、09:27、09:17 多轮兜底
-    - cron: "30 8 * * *"
-      timezone: "Asia/Shanghai"
-    - cron: "47 8 * * *"
-      timezone: "Asia/Shanghai"
-    - cron: "8 9 * * *"
-      timezone: "Asia/Shanghai"
-    - cron: "27 9 * * *"
-      timezone: "Asia/Shanghai"
-    - cron: "17 9 * * *"
-      timezone: "Asia/Shanghai"
+    # cron 是 UTC 时间！！重点！GitHub cron 是UTC，不是北京时间！
+    # 北京时间 09:30  = UTC 01:30
+    - cron: "30 1 * * *"
+    - cron: "47 1 * * *"
+    - cron: "8 2 * * *"
+    - cron: "27 2 * * *"
+    - cron: "17 3 * * *"
   workflow_dispatch:
     inputs:
       force:
@@ -31,13 +27,35 @@ concurrency:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
-    env:
-      TZ: Asia/Shanghai
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Set container timezone
+      - name: Set timezone to Asia/Shanghai
         run: sudo timedatectl set-timezone Asia/Shanghai
 
-      # ---------------- 下面你原来所有的抓取、生成、提交步骤不动 ----------------
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 pandas
+
+      - name: Run fetch script to generate report
+        env:
+          TZ: Asia/Shanghai
+        run: |
+          python fetch_report.py
+        # 把这里的 fetch_report.py 换成你真实脚本名字！
+        # 如果脚本叫 main.py 就改成 python main.py
+
+      - name: Commit & Push report
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --quiet && echo "No new changes" || git commit -m "auto update daily report $(date +%Y-%m-%d)"
+          git push
