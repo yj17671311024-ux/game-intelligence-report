@@ -2,7 +2,7 @@ name: Daily Game Intelligence Report
 
 on:
   schedule:
-    # GitHub cron = UTC时间
+    # GitHub cron 是UTC！
     # UTC 01:30 = 北京时间 09:30
     # UTC 01:47 = 北京时间 09:47
     # UTC 02:08 = 北京时间 10:08
@@ -24,7 +24,6 @@ on:
 permissions:
   contents: write
 
-# 并发控制：同时间只跑一个任务，防止大量排队堆积
 concurrency:
   group: daily-game-intelligence-report
   cancel-in-progress: false
@@ -35,9 +34,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
-
-      - name: Set Timezone Asia/Shanghai
-        run: sudo timedatectl set-timezone Asia/Shanghai
 
       - name: Setup Python
         uses: actions/setup-python@v5
