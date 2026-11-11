@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-10T11:26:45.933Z",
-  "total": 481,
-  "found": 477,
+  "preparedAt": "2026-11-11T06:14:01.287Z",
+  "total": 483,
+  "found": 479,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -542,6 +542,18 @@
       "bytes": 300069
     },
     {
+      "name": "Blue Archive-Free Fest Choice",
+      "found": true,
+      "initial": "BA",
+      "image": "assets/icons/official/blue-archive-free-fest-choice.jpg",
+      "matchedName": "Blue Archive-Free Fest Choice",
+      "artistName": "NEXON Company",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.nexon.bluearchive",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 263053
+    },
+    {
       "name": "Bolt Out - Puzzle Game",
       "found": true,
       "initial": "BO",
@@ -1023,6 +1035,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 297905
+    },
+    {
+      "name": "Coin Bounce",
+      "found": true,
+      "initial": "CB",
+      "image": "assets/icons/official/coin-bounce.jpg",
+      "matchedName": "Coin Bounce",
+      "artistName": "Mobsmile Games AS",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.mobsmile.coinbounce",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 43690
     },
     {
       "name": "Colony Flow!",
