@@ -1,0 +1,17 @@
+{
+  "name": "game-intelligence-report",
+  "version": "1.0.0",
+  "private": true,
+  "description": "游戏产品动态与厂商学习日报：定时抓取榜单并生成静态站点（GitHub Pages）",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build-daily-report.js",
+    "check": "node scripts/build-daily-report.js --check-report index.html",
+    "serve": "python3 -m http.server 8080"
+  },
+  "dependencies": {
+    "google-play-scraper": "10.1.3"
+  }
+}
