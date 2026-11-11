@@ -1,25 +1,38 @@
 name: Daily Game Intelligence Report
 
+# ── 时区 ────────────────────────────────────────────────────────────────
+# GitHub 的 cron 只认 UTC（+00:00），没有 timezone 字段！
+# 北京时间 = UTC + 8，所以「北京时间 07:40」必须写成「UTC 23:40（前一天）」。
+#
+# ── 为什么排 5 次 ───────────────────────────────────────────────────────
+# GitHub 定时任务本身不保证准时：高峰期会延迟十几分钟到一小时，偶尔丢一次。
+# 下面 5 个点是北京时间 07:40 / 08:40 / 09:40 / 10:40 / 11:40，
+# 前一次成功把当天日报推到 main 后，后面几次会在 ~30 秒内被
+# 「当天日报是否已完整存在」的检查跳过，几乎零成本。
 on:
   schedule:
-    # UTC 时间。北京时间 = UTC + 8
-    # 下面分别约等于北京时间 10:08、10:27、10:47、11:17、13:17
-    - cron: "8 2 * * *"
-    - cron: "27 2 * * *"
-    - cron: "47 2 * * *"
-    - cron: "17 3 * * *"
-    - cron: "17 5 * * *"
+    - cron: "40 23 * * *" # 北京 07:40
+    - cron: "40 0 * * *" # 北京 08:40
+    - cron: "40 1 * * *" # 北京 09:40
+    - cron: "40 2 * * *" # 北京 10:40
+    - cron: "40 3 * * *" # 北京 11:40（最后兜底）
   workflow_dispatch:
     inputs:
       force:
-        description: "Force rebuild even if today's report already exists"
-        required: false
+        description: "强制重新生成（即使当天日报已存在）"
         type: boolean
         default: false
+      date:
+        description: "指定日期 YYYY-MM-DD（留空=北京时间今天，补历史日期请配合 STRICT_SOURCES=0）"
+        required: false
+        type: string
+        default: ""
 
 permissions:
   contents: write
+  issues: write
 
+# 同一时间只允许一个日报任务，避免 5 次排程互相覆盖提交。
 concurrency:
   group: daily-game-intelligence-report
   cancel-in-progress: false
@@ -27,62 +40,166 @@ concurrency:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # 整个 job 用北京时间：date 命令与 Node 的日期处理都以北京时间为准。
+      TZ: Asia/Shanghai
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
+        with:
+          # 保留少量历史，万一远端有新提交需要 rebase 时能拿到 merge base。
+          fetch-depth: 5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
-          node-version: "24"
-          package-manager-cache: false
+          node-version: "20"
+          cache: "npm"
 
-      - name: Decide whether to build
+      - name: Resolve report date
+        id: date
         shell: bash
         run: |
-          REPORT_DATE="$(TZ=Asia/Shanghai date +'%Y-%m-%d')"
-          FORCE="${{ github.event.inputs.force || 'false' }}"
-          echo "REPORT_DATE=$REPORT_DATE" >> "$GITHUB_ENV"
-          if [ "$FORCE" != "true" ] && [ -f index.html ] && grep -q "<div class=\"date\">$REPORT_DATE</div>" index.html; then
-            echo "Today's report already exists. Skip this safety run."
-            echo "SKIP_BUILD=1" >> "$GITHUB_ENV"
+          set -euo pipefail
+          INPUT_DATE="${{ inputs.date }}"
+          if [ -n "$INPUT_DATE" ]; then
+            REPORT_DATE="$INPUT_DATE"
           else
-            echo "SKIP_BUILD=0" >> "$GITHUB_ENV"
+            REPORT_DATE="$(date +%F)"
+          fi
+          if ! [[ "$REPORT_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "::error::日期格式不合法：$REPORT_DATE"
+            exit 1
+          fi
+          echo "value=$REPORT_DATE" >> "$GITHUB_OUTPUT"
+          echo "报告日期：$REPORT_DATE（北京时间）"
+
+      - name: Decide whether to build
+        id: decide
+        shell: bash
+        run: |
+          set -euo pipefail
+          FORCE="${{ inputs.force }}"
+          REPORT_DATE="${{ steps.date.outputs.value }}"
+          if [ "$FORCE" = "true" ]; then
+            echo "手动强制重建，跳过「已存在」判断。"
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "build=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # 复用脚本自带的完整性校验：不只看日期，还校验榜单数据是否齐全。
+          if [ -f index.html ] && node scripts/build-daily-report.js --check-report index.html "$REPORT_DATE"; then
+            echo "当天日报已完整存在，跳过本次排程。"
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "build=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "当天日报缺失或不完整，开始构建。"
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "build=true" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Install dependencies
+        if: steps.decide.outputs.run == 'true'
+        shell: bash
+        run: npm ci --omit=dev --no-audit --no-fund
+
       - name: Build daily report
-        if: env.SKIP_BUILD != '1'
+        if: steps.decide.outputs.build == 'true'
         shell: bash
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
-          FETCH_ATTEMPTS: "8"
-          FETCH_TIMEOUT_MS: "60000"
+          # 重试预算可控：单源 3 次 × 20s 超时，防止某个站点 403 把任务拖到 6 小时上限。
+          FETCH_ATTEMPTS: "3"
+          FETCH_TIMEOUT_MS: "20000"
+          # 0 = 个别榜单抓不到时也发布（先把当天日报发出去）；
+          # 1 = 宁可不发，也不发残缺日报（在仓库 Variables 里设 STRICT_SOURCES=1）。
+          STRICT_SOURCES: ${{ vars.STRICT_SOURCES || '0' }}
         run: |
-          npm install
-          mkdir -p .generated
+          set -euo pipefail
+          REPORT_DATE="${{ steps.date.outputs.value }}"
+          ok=0
           for attempt in 1 2 3; do
-            echo "Build attempt $attempt for $REPORT_DATE"
-            if OUTPUT_DIR="$GITHUB_WORKSPACE/.generated" SITE_DIR="$GITHUB_WORKSPACE" node scripts/build-daily-report.js "$REPORT_DATE"; then
+            echo "::group::构建尝试 $attempt / 3（$REPORT_DATE）"
+            # 单次构建最多 12 分钟，超时算失败并重试。
+            if timeout --signal=TERM 720 node scripts/build-daily-report.js "$REPORT_DATE"; then
+              ok=1
+              echo "::endgroup::"
               break
             fi
-            if [ "$attempt" = "3" ]; then
-              echo "Daily report build failed after $attempt attempts."
+            echo "::endgroup::"
+            echo "::warning::第 $attempt 次构建失败"
+            if [ "$attempt" -lt 3 ]; then sleep 60; fi
+          done
+          if [ "$ok" -ne 1 ]; then
+            echo "::error::三次构建均失败，当天日报未更新。"
+            exit 1
+          fi
+
+      - name: Verify generated report
+        if: steps.decide.outputs.build == 'true'
+        shell: bash
+        env:
+          STRICT_SOURCES: ${{ vars.STRICT_SOURCES || '0' }}
+        run: |
+          set -euo pipefail
+          REPORT_DATE="${{ steps.date.outputs.value }}"
+          # 硬性检查：页面里的日期必须是当天，否则绝不提交（避免把旧日报当新日报推上线）。
+          if ! grep -q "<div class=\"date\">${REPORT_DATE}</div>" index.html; then
+            echo "::error::index.html 中找不到今天的日期标记，拒绝提交。"
+            exit 1
+          fi
+          if node scripts/build-daily-report.js --check-report index.html "$REPORT_DATE"; then
+            echo "日报完整性校验通过。"
+          else
+            echo "::warning::日报已生成，但有榜单缺失或降级（详情见构建日志的 WARN 行）。"
+            if [ "${STRICT_SOURCES}" = "1" ]; then
+              echo "::error::严格模式下不发布不完整日报。"
               exit 1
             fi
-            sleep $((attempt * 180))
-          done
+          fi
 
       - name: Commit and push report
-        if: env.SKIP_BUILD != '1'
+        if: steps.decide.outputs.build == 'true'
         shell: bash
         run: |
+          set -euo pipefail
+          REPORT_DATE="${{ steps.date.outputs.value }}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html README.md archive assets/icons/official scripts/build-daily-report.js
+          git add -A index.html archive assets/icons/official
           if git diff --cached --quiet; then
-            echo "No report changes to commit."
+            echo "没有内容变化，跳过提交。"
+            exit 0
+          fi
+          git commit -m "daily report: ${REPORT_DATE}"
+          # 并发已用 concurrency 串行化；这里只处理「人刚好也提交了」的极小概率情况。
+          git fetch --depth=5 origin "${GITHUB_REF_NAME}" || true
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD 2>/dev/null || echo none)" ]; then
+            if ! git rebase --autostash FETCH_HEAD; then
+              git rebase --abort || true
+              echo "::error::远端存在冲突提交，本次不推送；下一次排程会重新生成并推送。"
+              exit 1
+            fi
+          fi
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+          echo "推送成功。"
+
+      # 失败可见性：不通知的话，你只会看到「早上又没日报」。
+      - name: Report failure as issue
+        if: failure()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TITLE="[自动] 日报构建失败"
+          RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          BODY="$(printf '日报任务失败\n\n- 日期：%s\n- 触发方式：%s\n- 运行记录：%s' "${{ steps.date.outputs.value }}" "${{ github.event_name }}" "$RUN_URL")"
+          NUM="$(gh issue list --state open --search "in:title \"$TITLE\"" --json number --jq '.[0].number // empty' 2>/dev/null || true)"
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "$BODY" || true
           else
-            git commit -m "daily report: $REPORT_DATE"
-            git push
+            gh issue create --title "$TITLE" --body "$BODY" || true
           fi
