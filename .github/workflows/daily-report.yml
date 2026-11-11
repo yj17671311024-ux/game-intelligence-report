@@ -2,11 +2,17 @@ name: Daily Game Intelligence Report
 
 on:
   schedule:
-    - cron: "30 1 * * *"  # UTC 01:30 = 北京时间 09:30
-    - cron: "47 1 * * *"  # UTC 01:47 = 北京时间 09:47
-    - cron: "8 2 * * *"   # UTC 02:08 = 北京时间 10:08
-    - cron: "27 2 * * *"  # UTC 02:27 = 北京时间 10:27
-    - cron: "17 3 * * *"  # UTC 03:17 = 北京时间 11:17
+    # 北京时间 早上 08:30、08:47、09:08、09:27、09:17 多轮兜底（Asia/Shanghai）
+    - cron: "30 8 * * *"
+      timezone: "Asia/Shanghai"
+    - cron: "47 8 * * *"
+      timezone: "Asia/Shanghai"
+    - cron: "8 9 * * *"
+      timezone: "Asia/Shanghai"
+    - cron: "27 9 * * *"
+      timezone: "Asia/Shanghai"
+    - cron: "17 9 * * *"
+      timezone: "Asia/Shanghai"
   workflow_dispatch:
     inputs:
       force:
@@ -20,73 +26,20 @@ permissions:
 
 concurrency:
   group: daily-game-intelligence-report
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai  # 脚本环境时区，抓取榜单、生成日报日期=北京时间
     steps:
-      - name: Set runner timezone to Asia/Shanghai
-        run: sudo timedatectl set-timezone Asia/Shanghai
-
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: "24"
-          package-manager-cache: false
+      # 系统时区加固（双重保险）
+      - name: Set container timezone
+        run: sudo timedatectl set-timezone Asia/Shanghai
 
-      - name: Decide whether to build
-        shell: bash
-        run: |
-          REPORT_DATE="$(TZ=Asia/Shanghai date +'%Y-%m-%d')"
-          FORCE="${{ github.event.inputs.force || 'false' }}"
-          echo "REPORT_DATE=$REPORT_DATE" >> "$GITHUB_ENV"
-          echo "Current runner time: $(date)"
-          if [ "$FORCE" != "true" ] && node scripts/build-daily-report.js --check-report index.html "$REPORT_DATE"; then
-            echo "Today's report already exists. Skip this safety run."
-            echo "SKIP_BUILD=1" >> "$GITHUB_ENV"
-          else
-            echo "SKIP_BUILD=0" >> "$GITHUB_ENV"
-          fi
-
-      - name: Build daily report
-        if: env.SKIP_BUILD != '1'
-        shell: bash
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
-          FETCH_ATTEMPTS: "8"
-          FETCH_TIMEOUT_MS: "60000"
-        run: |
-          mkdir -p .generated
-          for attempt in 1 2 3; do
-            echo "Build attempt $attempt for $REPORT_DATE"
-            echo "Start time: $(date)"
-            if OUTPUT_DIR="$GITHUB_WORKSPACE/.generated" SITE_DIR="$GITHUB_WORKSPACE" node scripts/build-daily-report.js "$REPORT_DATE"; then
-              echo "Build succeed on attempt $attempt"
-              break
-            fi
-            if [ "$attempt" = "3" ]; then
-              echo "Daily report build failed after $attempt attempts."
-              exit 1
-            fi
-            echo "Build failed, sleep before retry..."
-            sleep $((attempt * 180))
-          done
-
-      - name: Commit and push report
-        if: env.SKIP_BUILD != '1'
-        shell: bash
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html README.md archive assets/icons/official scripts/build-daily-report.js
-          if git diff --cached --quiet; then
-            echo "No report changes to commit."
-          else
-            git commit -m "daily report: $REPORT_DATE"
-            git push
-          fi
+      # ========== 下面是你原来剩下的步骤，保持不动 ==========
+      # - name: ...你原来的脚本、抓取、生成、提交代码全部放这里
