@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-11T06:14:01.287Z",
-  "total": 483,
-  "found": 479,
+  "preparedAt": "2026-11-11T10:56:06.557Z",
+  "total": 487,
+  "found": 483,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -2294,6 +2294,19 @@
       "bytes": 65310
     },
     {
+      "name": "Honor of Kings",
+      "found": true,
+      "initial": "HO",
+      "image": "assets/icons/official/honor-of-kings.jpg",
+      "matchedName": "Honor of Kings",
+      "artistName": "Level Infinite",
+      "sourceUrl": "https://apps.apple.com/us/app/honor-of-kings/id1619254071?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 274,
+      "query": "Honor of Kings",
+      "bytes": 77519
+    },
+    {
       "name": "Hotel Legacy: Merge Game",
       "found": true,
       "initial": "HL",
@@ -2678,6 +2691,19 @@
       "score": 274,
       "query": "Last Asylum: Plague",
       "bytes": 84925
+    },
+    {
+      "name": "Last Beacon: Survival",
+      "found": true,
+      "initial": "LB",
+      "image": "assets/icons/official/last-beacon-survival.jpg",
+      "matchedName": "Last Beacon: Survival",
+      "artistName": "YG Technology FZ-LLC",
+      "sourceUrl": "https://apps.apple.com/us/app/last-beacon-survival/id6761043541?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 274,
+      "query": "Last Beacon: Survival",
+      "bytes": 57766
     },
     {
       "name": "LAST CLOUDIA",
@@ -3136,6 +3162,19 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 8542
+    },
+    {
+      "name": "MARVEL SNAP - Hero Card Game",
+      "found": true,
+      "initial": "MS",
+      "image": "assets/icons/official/marvel-snap-hero-card-game.jpg",
+      "matchedName": "MARVEL SNAP - Hero Card Game",
+      "artistName": "Second Dinner Studios Inc.",
+      "sourceUrl": "https://apps.apple.com/us/app/marvel-snap-hero-card-game/id1592081003?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 298,
+      "query": "MARVEL SNAP - Hero Card Game",
+      "bytes": 88783
     },
     {
       "name": "MARVEL SNAP: Hero Strategy CCG",
@@ -4334,6 +4373,19 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 340223
+    },
+    {
+      "name": "Sea of Conquest: Pirate War",
+      "found": true,
+      "initial": "SO",
+      "image": "assets/icons/official/sea-of-conquest-pirate-war.jpg",
+      "matchedName": "Sea of Conquest: Pirate War",
+      "artistName": "FunPlus International AG",
+      "sourceUrl": "https://apps.apple.com/us/app/sea-of-conquest-pirate-war/id6463715971?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 298,
+      "query": "Sea of Conquest: Pirate War",
+      "bytes": 76621
     },
     {
       "name": "Sea War: Uboat Raid",
