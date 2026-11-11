@@ -3,8 +3,11 @@ const path = require("path");
 const { execFileSync } = require("child_process");
 const { createRequire } = require("module");
 
-const outputDir = process.env.OUTPUT_DIR || "C:\\Users\\admin\\Documents\\Codex\\2026-07-28\\new-chat\\outputs";
-const siteDir = process.env.SITE_DIR || path.join(outputDir, "cloudflare-pages-site");
+// 路径统一从仓库根目录推导，保证本机 / GitHub Actions / 任何机器行为一致：
+//   SITE_DIR   站点根目录（写 index.html、archive/、assets/），默认 = 仓库根目录
+//   OUTPUT_DIR 单份日报 HTML 的落盘目录（不入库），默认 = <SITE_DIR>/.generated
+const siteDir = path.resolve(process.env.SITE_DIR || path.join(__dirname, ".."));
+const outputDir = path.resolve(process.env.OUTPUT_DIR || path.join(siteDir, ".generated"));
 const archiveDir = path.join(siteDir, "archive");
 const siteOfficialIconDir = path.join(siteDir, "assets", "icons", "official");
 const localOfficialIconDir = path.join(outputDir, "assets", "icons", "official");
@@ -1618,7 +1621,10 @@ async function ensureIcons(rows) {
 
   const merged = Array.from(byName.values()).sort((a, b) => a.name.localeCompare(b.name));
   const next = {
-    preparedAt: new Date().toISOString(),
+    // 元数据没变化时保留旧时间戳，避免每次运行都产生一行无意义的 diff。
+    preparedAt: JSON.stringify((metadata.metadata || [])) === JSON.stringify(merged)
+      ? (metadata.preparedAt || new Date().toISOString())
+      : new Date().toISOString(),
     total: merged.length,
     found: merged.filter((entry) => entry.found).length,
     metadata: merged,
@@ -2391,101 +2397,6 @@ function iconMapScript(iconEntries, rows) {
   return `    const iconMap = {\n${lines.join(",\n")}\n    };`;
 }
 
-function hardenedWorkflowYaml() {
-  return `name: Daily Game Intelligence Report
-
-on:
-  schedule:
-    - cron: "30 1 * * *"
-    - cron: "47 1 * * *"
-    - cron: "8 2 * * *"
-    - cron: "27 2 * * *"
-    - cron: "17 3 * * *"
-  workflow_dispatch:
-    inputs:
-      force:
-        description: "Force rebuild even if today's report already exists"
-        required: false
-        type: boolean
-        default: false
-
-permissions:
-  contents: write
-
-concurrency:
-  group: daily-game-intelligence-report
-  cancel-in-progress: false
-
-jobs:
-  build-and-publish:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: "24"
-          package-manager-cache: false
-
-      - name: Decide whether to build
-        shell: bash
-        run: |
-          REPORT_DATE="$(TZ=Asia/Shanghai date +'%Y-%m-%d')"
-          FORCE="\${{ github.event.inputs.force || 'false' }}"
-          echo "REPORT_DATE=$REPORT_DATE" >> "$GITHUB_ENV"
-          if [ "$FORCE" != "true" ] && node scripts/build-daily-report.js --check-report index.html "$REPORT_DATE"; then
-            echo "Today's report already exists. Skip this safety run."
-            echo "SKIP_BUILD=1" >> "$GITHUB_ENV"
-          else
-            echo "SKIP_BUILD=0" >> "$GITHUB_ENV"
-          fi
-
-      - name: Build daily report
-        if: env.SKIP_BUILD != '1'
-        shell: bash
-        env:
-          OPENAI_API_KEY: \${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: \${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
-          FETCH_ATTEMPTS: "8"
-          FETCH_TIMEOUT_MS: "60000"
-        run: |
-          mkdir -p .generated
-          for attempt in 1 2 3; do
-            echo "Build attempt $attempt for $REPORT_DATE"
-            if OUTPUT_DIR="$GITHUB_WORKSPACE/.generated" SITE_DIR="$GITHUB_WORKSPACE" node scripts/build-daily-report.js "$REPORT_DATE"; then
-              break
-            fi
-            if [ "$attempt" = "3" ]; then
-              echo "Daily report build failed after $attempt attempts."
-              exit 1
-            fi
-            sleep $((attempt * 180))
-          done
-
-      - name: Commit and push report
-        if: env.SKIP_BUILD != '1'
-        shell: bash
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html README.md archive assets/icons/official scripts/build-daily-report.js
-          if git diff --cached --quiet; then
-            echo "No report changes to commit."
-          else
-            git commit -m "daily report: $REPORT_DATE"
-            git push
-          fi
-`;
-}
-
-function writeHardenedWorkflow() {
-  const workflowDir = path.join(siteDir, ".github", "workflows");
-  fs.mkdirSync(workflowDir, { recursive: true });
-  fs.writeFileSync(path.join(workflowDir, "daily-report.yml"), hardenedWorkflowYaml(), "utf8");
-}
-
 function changeSummary(data) {
   const gamesFree = data.gpGamesFree?.rows || [];
   const gpPuzzle = data.gpPuzzleGross.rows;
@@ -3251,13 +3162,22 @@ async function main() {
   }
   buildDeveloperLookup(data);
 
+  const strictSources = process.env.STRICT_SOURCES !== "0";
   const missingCharts = incompleteCharts(data);
-  if (missingCharts.length) {
-    throw new Error(`Incomplete charts: ${missingCharts.join(", ")}. Existing report preserved; retry required.`);
-  }
   const freshnessIssues = officialFreshnessIssues(data, reportDate);
-  if (freshnessIssues.length) {
-    throw new Error(`Official chart freshness check failed: ${freshnessIssues.join("; ")}. Existing report preserved; retry required.`);
+  const totalRows = Object.values(data).reduce((sum, list) => sum + ((list && list.rows) || []).length, 0);
+  if (!totalRows) {
+    throw new Error("All rank sources failed; nothing to publish. Existing report preserved.");
+  }
+  if (missingCharts.length || freshnessIssues.length) {
+    const problems = [
+      missingCharts.length ? `incomplete charts: ${missingCharts.join(", ")}` : "",
+      freshnessIssues.length ? `stale/official-missing: ${freshnessIssues.join("; ")}` : "",
+    ].filter(Boolean).join(" | ");
+    if (strictSources) {
+      throw new Error(`${problems}. Existing report preserved; retry required. (set STRICT_SOURCES=0 to publish degraded report)`);
+    }
+    console.warn(`WARN degraded report: ${problems}`);
   }
   const previousRanks = parsePreviousRanks();
   attachDeltas(data, previousRanks);
@@ -3273,20 +3193,8 @@ async function main() {
   fs.writeFileSync(reportPath, document, "utf8");
 
   fs.mkdirSync(archiveDir, { recursive: true });
-  if (process.env.ENABLE_WORKFLOW_SELF_HEAL === "1") writeHardenedWorkflow();
   fs.writeFileSync(path.join(siteDir, "index.html"), document, "utf8");
   fs.writeFileSync(path.join(archiveDir, `${reportDate}.html`), document, "utf8");
-  fs.writeFileSync(path.join(siteDir, "README.md"), [
-    "# Game Intelligence Report",
-    "",
-    "GitHub Pages static site.",
-    "",
-    "- index.html: latest report",
-    "- archive/YYYY-MM-DD.html: daily archive",
-    "",
-    `Last prepared: ${reportDate}`,
-    `Source: game-intelligence-full-${reportDate}.html`,
-  ].join("\n"), "utf8");
 
   console.log(`wrote ${reportPath}`);
   console.log(`prepared ${path.join(siteDir, "index.html")}`);
@@ -3297,7 +3205,14 @@ module.exports = { attachDeltas, signalFlags, priorityMovers, calendarDate, comp
 if (require.main === module && process.argv[2] === "--check-report") {
   const file = process.argv[3];
   const date = process.argv[4] || todayInShanghai();
-  process.exitCode = fs.existsSync(file) && reportIsComplete(fs.readFileSync(file, "utf8"), date) ? 0 : 1;
+  if (!file || !fs.existsSync(file)) {
+    console.log(`check: ${file || "(missing path)"} not found`);
+    process.exitCode = 1;
+  } else {
+    const complete = reportIsComplete(fs.readFileSync(file, "utf8"), date);
+    console.log(`check: ${file} for ${date} -> ${complete ? "complete" : "incomplete or stale"}`);
+    process.exitCode = complete ? 0 : 1;
+  }
 } else if (require.main === module) main().catch((error) => {
   console.error(error);
   process.exit(1);
