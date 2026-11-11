@@ -2,17 +2,13 @@ name: Daily Game Intelligence Report
 
 on:
   schedule:
-    # GitHub cron 是UTC！
-    # UTC 01:30 = 北京时间 09:30
-    # UTC 01:47 = 北京时间 09:47
-    # UTC 02:08 = 北京时间 10:08
-    # UTC 02:27 = 北京时间 10:27
-    # UTC 03:17 = 北京时间 11:17
-    - cron: "30 1 * * *"
-    - cron: "47 1 * * *"
+    # UTC 时间。北京时间 = UTC + 8
+    # 下面分别约等于北京时间 10:08、10:27、10:47、11:17、13:17
     - cron: "8 2 * * *"
     - cron: "27 2 * * *"
+    - cron: "47 2 * * *"
     - cron: "17 3 * * *"
+    - cron: "17 5 * * *"
   workflow_dispatch:
     inputs:
       force:
@@ -35,31 +31,58 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
         with:
-          python-version: "3.11"
+          node-version: "24"
+          package-manager-cache: false
 
-      - name: Install python dependencies
+      - name: Decide whether to build
+        shell: bash
         run: |
-          python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 pandas
-
-      - name: Run report generate script
-        env:
-          TZ: Asia/Shanghai
-          FORCE: ${{ github.event.inputs.force }}
-        run: |
-          python fetch_report.py
-
-      - name: Commit and push generated report
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          if git diff --quiet; then
-            echo "✅ 今日报表已存在，无新文件，跳过提交"
+          REPORT_DATE="$(TZ=Asia/Shanghai date +'%Y-%m-%d')"
+          FORCE="${{ github.event.inputs.force || 'false' }}"
+          echo "REPORT_DATE=$REPORT_DATE" >> "$GITHUB_ENV"
+          if [ "$FORCE" != "true" ] && [ -f index.html ] && grep -q "<div class=\"date\">$REPORT_DATE</div>" index.html; then
+            echo "Today's report already exists. Skip this safety run."
+            echo "SKIP_BUILD=1" >> "$GITHUB_ENV"
           else
-            git commit -m "🤖 Auto update game report $(date +%Y-%m-%d %H:%M:%S)"
+            echo "SKIP_BUILD=0" >> "$GITHUB_ENV"
+          fi
+
+      - name: Build daily report
+        if: env.SKIP_BUILD != '1'
+        shell: bash
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
+          FETCH_ATTEMPTS: "8"
+          FETCH_TIMEOUT_MS: "60000"
+        run: |
+          npm install
+          mkdir -p .generated
+          for attempt in 1 2 3; do
+            echo "Build attempt $attempt for $REPORT_DATE"
+            if OUTPUT_DIR="$GITHUB_WORKSPACE/.generated" SITE_DIR="$GITHUB_WORKSPACE" node scripts/build-daily-report.js "$REPORT_DATE"; then
+              break
+            fi
+            if [ "$attempt" = "3" ]; then
+              echo "Daily report build failed after $attempt attempts."
+              exit 1
+            fi
+            sleep $((attempt * 180))
+          done
+
+      - name: Commit and push report
+        if: env.SKIP_BUILD != '1'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html README.md archive assets/icons/official scripts/build-daily-report.js
+          if git diff --cached --quiet; then
+            echo "No report changes to commit."
+          else
+            git commit -m "daily report: $REPORT_DATE"
             git push
           fi
