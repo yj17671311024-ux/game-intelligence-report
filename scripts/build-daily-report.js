@@ -1044,7 +1044,8 @@ function initials(value) {
 }
 
 function devCn(name) {
-  return devCnRaw[name] || name || "厂商暂缺";
+  // 没查到就留空：把"查不到"写成"厂商暂缺"等于替读者断言这家公司不存在。
+  return devCnRaw[name] || name || "";
 }
 
 function gameType(name, fallback) {
@@ -2197,7 +2198,7 @@ function categoryRows(rows) {
               <tr>
                 <td><span class="${row.rank <= 10 ? "rank" : "rank soft"}">${row.rank}</span></td>
                 <td class="product">${escapeHtml(row.name)}<span class="cn">中文参考：${escapeHtml(cnName(row.name))}</span></td>
-                <td>${escapeHtml(row.developerCn)}</td>
+                <td>${row.developerCn ? escapeHtml(row.developerCn) : `<span class="muted-dash">&mdash;</span>`}</td>
                 <td><strong>${escapeHtml(row.family || gameFamily(row.name, row.categoryShort))}</strong><span class="cn">${escapeHtml(row.type)}</span></td>
                 <td>${deltaHtml}</td>
                 <td>${escapeHtml(row.point)}</td>
