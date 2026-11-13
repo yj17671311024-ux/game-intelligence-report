@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-12T03:13:49.318Z",
-  "total": 488,
-  "found": 484,
+  "preparedAt": "2026-11-13T02:11:48.634Z",
+  "total": 495,
+  "found": 491,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1217,6 +1217,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 324802
+    },
+    {
+      "name": "Crown Crush",
+      "found": true,
+      "initial": "CC",
+      "image": "assets/icons/official/crown-crush.jpg",
+      "matchedName": "Crown Crush",
+      "artistName": "Loyalty Gaming",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.gl.crowncrush",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 516863
     },
     {
       "name": "Cube Land Puzzle Game",
@@ -3744,6 +3756,18 @@
       "bytes": 246798
     },
     {
+      "name": "Paranoize",
+      "found": true,
+      "initial": "P",
+      "image": "assets/icons/official/paranoize.jpg",
+      "matchedName": "Paranoize",
+      "artistName": "ZigZaGame Inc.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.zigzagame.paranoize",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 478219
+    },
+    {
       "name": "Parking Jam 3D",
       "found": true,
       "initial": "PJ",
@@ -3803,6 +3827,18 @@
       "score": 142,
       "query": "Piggy Kingdom",
       "bytes": 47547
+    },
+    {
+      "name": "Pink Pour: Water Sort",
+      "found": true,
+      "initial": "PP",
+      "image": "assets/icons/official/pink-pour-water-sort.jpg",
+      "matchedName": "Pink Pour: Water Sort",
+      "artistName": "NEW PACE PRODUCTIONS",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.yourstudio.pinkpour",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 525214
     },
     {
       "name": "Pixel Flow!",
@@ -4263,6 +4299,18 @@
       "bytes": 6231
     },
     {
+      "name": "Salvage Empire",
+      "found": true,
+      "initial": "SE",
+      "image": "assets/icons/official/salvage-empire.jpg",
+      "matchedName": "Salvage Empire",
+      "artistName": "Sparkhaven HK Limited",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.spark.sp.gp",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 149253
+    },
+    {
       "name": "Sand Balls",
       "found": true,
       "initial": "SB",
@@ -4568,6 +4616,18 @@
       "bytes": 241072
     },
     {
+      "name": "Sort Streak: Color Puzzle",
+      "found": true,
+      "initial": "SS",
+      "image": "assets/icons/official/sort-streak-color-puzzle.jpg",
+      "matchedName": "Sort Streak: Color Puzzle",
+      "artistName": "Oakever Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.oakever.sortparade",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 343887
+    },
+    {
       "name": "Spider Solitaire",
       "found": true,
       "initial": "SS",
@@ -4633,6 +4693,19 @@
       "score": 298,
       "query": "Star Wars: Galaxy of Heroes",
       "bytes": 66387
+    },
+    {
+      "name": "StarSavior",
+      "found": true,
+      "initial": "S",
+      "image": "assets/icons/official/starsavior.jpg",
+      "matchedName": "StarSavior",
+      "artistName": "Studio B Side Co., Ltd",
+      "sourceUrl": "https://apps.apple.com/us/app/starsavior/id6443597557?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 250,
+      "query": "StarSavior",
+      "bytes": 92192
     },
     {
       "name": "State of Survival: Zombie War",
@@ -5188,6 +5261,19 @@
       "score": 262,
       "query": "Toy Blast",
       "bytes": 72517
+    },
+    {
+      "name": "Transformers: Eternal War",
+      "found": true,
+      "initial": "TE",
+      "image": "assets/icons/official/transformers-eternal-war.jpg",
+      "matchedName": "Transformers: Eternal War",
+      "artistName": "HOOLAI GAME LIMITED",
+      "sourceUrl": "https://apps.apple.com/us/app/transformers-eternal-war/id6772922295?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 274,
+      "query": "Transformers: Eternal War",
+      "bytes": 83212
     },
     {
       "name": "Travel Town",
