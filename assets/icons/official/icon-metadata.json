@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-13T02:11:48.634Z",
-  "total": 495,
-  "found": 491,
+  "preparedAt": "2026-11-14T23:35:44.381Z",
+  "total": 498,
+  "found": 494,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -381,6 +381,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 514912
+    },
+    {
+      "name": "Block Blast Lite",
+      "found": true,
+      "initial": "BB",
+      "image": "assets/icons/official/block-blast-lite.jpg",
+      "matchedName": "Block Blast Lite",
+      "artistName": "HungryStudio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.blockblast.lite",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 154201
     },
     {
       "name": "Block Blast!",
@@ -4009,6 +4021,18 @@
       "bytes": 8089
     },
     {
+      "name": "PUBG MOBILE FLASH",
+      "found": true,
+      "initial": "PM",
+      "image": "assets/icons/official/pubg-mobile-flash.jpg",
+      "matchedName": "PUBG MOBILE FLASH",
+      "artistName": "Level Infinite",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tencent.igfit",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 331978
+    },
+    {
       "name": "Pull the Pin",
       "found": true,
       "initial": "PT",
@@ -4937,6 +4961,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 8828
+    },
+    {
+      "name": "The Bazaar",
+      "found": true,
+      "initial": "TB",
+      "image": "assets/icons/official/the-bazaar.jpg",
+      "matchedName": "The Bazaar",
+      "artistName": "Tempo Games Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tempogames.thebazaar",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 124099
     },
     {
       "name": "The Grand Mafia",
