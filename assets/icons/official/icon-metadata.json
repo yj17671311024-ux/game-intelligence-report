@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-16T23:35:44.806Z",
-  "total": 502,
-  "found": 498,
+  "preparedAt": "2026-11-17T23:35:48.959Z",
+  "total": 506,
+  "found": 502,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -735,6 +735,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 517265
+    },
+    {
+      "name": "Bus Crowd - Traffic Jam",
+      "found": true,
+      "initial": "BC",
+      "image": "assets/icons/official/bus-crowd-traffic-jam.jpg",
+      "matchedName": "Bus Crowd - Traffic Jam",
+      "artistName": "Hyper Surfer Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=busflow.traffic.puzzle",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 264882
     },
     {
       "name": "Bus Fever Party!",
@@ -2342,6 +2354,19 @@
       "bytes": 65310
     },
     {
+      "name": "Homescapes: Cafe Makeover",
+      "found": true,
+      "initial": "HC",
+      "image": "assets/icons/official/homescapes-cafe-makeover.jpg",
+      "matchedName": "Homescapes: Cafe Makeover",
+      "artistName": "Playrix",
+      "sourceUrl": "https://apps.apple.com/us/app/homescapes-cafe-makeover/id1195621598?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 274,
+      "query": "Homescapes: Cafe Makeover",
+      "bytes": 58357
+    },
+    {
       "name": "Honor of Kings",
       "found": true,
       "initial": "HO",
@@ -3442,6 +3467,19 @@
       "bytes": 53056
     },
     {
+      "name": "Merge Mansion: Mystery Story",
+      "found": true,
+      "initial": "MM",
+      "image": "assets/icons/official/merge-mansion-mystery-story.jpg",
+      "matchedName": "Merge Mansion: Mystery Story",
+      "artistName": "Metacore Games Oy",
+      "sourceUrl": "https://apps.apple.com/us/app/merge-mansion-mystery-story/id1484442152?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 286,
+      "query": "Merge Mansion: Mystery Story",
+      "bytes": 57371
+    },
+    {
       "name": "MiniMuse",
       "found": true,
       "initial": "M",
@@ -3899,6 +3937,18 @@
       "score": 262,
       "query": "Pixel Flow!",
       "bytes": 37230
+    },
+    {
+      "name": "Pixelora Flow",
+      "found": true,
+      "initial": "PF",
+      "image": "assets/icons/official/pixelora-flow.jpg",
+      "matchedName": "Pixelora Flow",
+      "artistName": "HappyTapLand",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=pixelora.flow.pixel.art.snake.puzzle.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 467197
     },
     {
       "name": "Plants on Fire",
