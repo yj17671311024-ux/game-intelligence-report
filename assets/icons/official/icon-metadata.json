@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-17T23:35:48.959Z",
-  "total": 506,
-  "found": 502,
+  "preparedAt": "2026-11-19T23:35:41.787Z",
+  "total": 507,
+  "found": 503,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1301,6 +1301,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5062
+    },
+    {
+      "name": "Cutie Sort",
+      "found": true,
+      "initial": "CS",
+      "image": "assets/icons/official/cutie-sort.jpg",
+      "matchedName": "Cutie Sort",
+      "artistName": "Ladaneta Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=sort.casual.color.cat.puzzle.match",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 401313
     },
     {
       "name": "Cutie Sort: Kitten Games",
