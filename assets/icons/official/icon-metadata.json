@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-19T23:35:41.787Z",
-  "total": 507,
-  "found": 503,
+  "preparedAt": "2026-11-20T23:35:41.538Z",
+  "total": 508,
+  "found": 504,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1095,6 +1095,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 43690
+    },
+    {
+      "name": "Coin Master - Board Adventure",
+      "found": true,
+      "initial": "CM",
+      "image": "assets/icons/official/coin-master-board-adventure.jpg",
+      "matchedName": "Coin Master - Board Adventure",
+      "artistName": "Moon Active",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.moonactive.cmboard",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 301776
     },
     {
       "name": "Colony Flow!",
