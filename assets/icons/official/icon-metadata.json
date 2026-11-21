@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-20T23:35:41.538Z",
-  "total": 508,
-  "found": 504,
+  "preparedAt": "2026-11-21T23:35:49.260Z",
+  "total": 512,
+  "found": 508,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1640,6 +1640,19 @@
       "bytes": 99638
     },
     {
+      "name": "Epic War:Spin to Kill",
+      "found": true,
+      "initial": "EW",
+      "image": "assets/icons/official/epic-war-spin-to-kill.jpg",
+      "matchedName": "Epic War:Spin to Kill",
+      "artistName": "Genesis Network",
+      "sourceUrl": "https://apps.apple.com/us/app/epic-war-spin-to-kill/id1668975666?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 298,
+      "query": "Epic War:Spin to Kill",
+      "bytes": 73793
+    },
+    {
       "name": "Ever Night: Reawakening",
       "found": true,
       "initial": "EN",
@@ -2972,6 +2985,18 @@
       "bytes": 33158
     },
     {
+      "name": "Line Tangle: Untangle Puzzle",
+      "found": true,
+      "initial": "LT",
+      "image": "assets/icons/official/line-tangle-untangle-puzzle.jpg",
+      "matchedName": "Line Tangle: Untangle Puzzle",
+      "artistName": "Shycheese",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=line.tangle.twist.away.puzzle",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 237472
+    },
+    {
       "name": "Little Farm Story",
       "found": true,
       "initial": "LF",
@@ -3114,6 +3139,18 @@
       "score": 142,
       "query": "Mafia City",
       "bytes": 104918
+    },
+    {
+      "name": "Mafia City RP:Grand Open World",
+      "found": true,
+      "initial": "MC",
+      "image": "assets/icons/official/mafia-city-rp-grand-open-world.jpg",
+      "matchedName": "Mafia City RP:Grand Open World",
+      "artistName": "Universe Game Labs",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.d24.rp.open.world.grand.gangster",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 618190
     },
     {
       "name": "Mafia City: War of Underworld",
@@ -5143,6 +5180,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 7175
+    },
+    {
+      "name": "Tidy Room!",
+      "found": true,
+      "initial": "TR",
+      "image": "assets/icons/official/tidy-room.jpg",
+      "matchedName": "Tidy Room!",
+      "artistName": "Circle Games Teknoloji A.Ş.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.CircleGames.TidyRoom",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 409367
     },
     {
       "name": "Tiki Smash!",
