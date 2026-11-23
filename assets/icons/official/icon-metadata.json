@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-21T23:35:49.260Z",
-  "total": 512,
-  "found": 508,
+  "preparedAt": "2026-11-23T23:35:44.899Z",
+  "total": 513,
+  "found": 509,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -5916,6 +5916,18 @@
       "score": 262,
       "query": "Word Cookies",
       "bytes": 59800
+    },
+    {
+      "name": "Word Jam - Screw Puzzle",
+      "found": true,
+      "initial": "WJ",
+      "image": "assets/icons/official/word-jam-screw-puzzle.jpg",
+      "matchedName": "Word Jam - Screw Puzzle",
+      "artistName": "iKame Games - Zego Studio",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.webyerim.game.word.jam",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 108109
     },
     {
       "name": "Word Search Explorer",
