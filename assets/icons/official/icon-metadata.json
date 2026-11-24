@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-23T23:35:44.899Z",
-  "total": 513,
-  "found": 509,
+  "preparedAt": "2026-11-24T23:35:47.634Z",
+  "total": 515,
+  "found": 511,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -2232,6 +2232,18 @@
       "score": 298,
       "query": "Grass Master: Lawn Mowing 3D",
       "bytes": 106591
+    },
+    {
+      "name": "GTA: Vice City - Definitive",
+      "found": true,
+      "initial": "GV",
+      "image": "assets/icons/official/gta-vice-city-definitive.jpg",
+      "matchedName": "GTA: Vice City - Definitive",
+      "artistName": "Rockstar Games",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.rockstargames.gtavc.de",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 218421
     },
     {
       "name": "Gugu Gaga: Keyboard Escape",
@@ -4689,6 +4701,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 5958
+    },
+    {
+      "name": "Shoot & Hide",
+      "found": true,
+      "initial": "SA",
+      "image": "assets/icons/official/shoot-and-hide.jpg",
+      "matchedName": "Shoot & Hide",
+      "artistName": "CrazyLabs LTD",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.sniper.shoot.hide.game",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 496466
     },
     {
       "name": "SimCity BuildIt",
