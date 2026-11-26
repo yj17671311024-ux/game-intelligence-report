@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-24T23:35:47.634Z",
-  "total": 515,
-  "found": 511,
+  "preparedAt": "2026-11-26T23:35:47.533Z",
+  "total": 518,
+  "found": 514,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -576,6 +576,18 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 263053
+    },
+    {
+      "name": "Bolt Out - Brain Puzzle Games",
+      "found": true,
+      "initial": "BO",
+      "image": "assets/icons/official/bolt-out-brain-puzzle-games.jpg",
+      "matchedName": "Bolt Out - Brain Puzzle Games",
+      "artistName": "Loyalty Gaming",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.gl.unbolt",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 448808
     },
     {
       "name": "Bolt Out - Puzzle Game",
@@ -1737,6 +1749,18 @@
       "bytes": 98313
     },
     {
+      "name": "Fidget Dumpling: Trade Master",
+      "found": true,
+      "initial": "FD",
+      "image": "assets/icons/official/fidget-dumpling-trade-master.jpg",
+      "matchedName": "Fidget Dumpling: Trade Master",
+      "artistName": "Isandares",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.RC80.fidget.dumpling.master",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 438665
+    },
+    {
       "name": "Fidget Trading: Dumpling Party",
       "found": true,
       "initial": "FT",
@@ -2075,6 +2099,18 @@
       "score": 286,
       "query": "Game of Thrones: Dragonfire",
       "bytes": 78249
+    },
+    {
+      "name": "Gangster Miami RP: Grand City",
+      "found": true,
+      "initial": "GM",
+      "image": "assets/icons/official/gangster-miami-rp-grand-city.jpg",
+      "matchedName": "Gangster Miami RP: Grand City",
+      "artistName": "Universe Game Labs",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.bf8.car.street.racing.game3d",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 561963
     },
     {
       "name": "Gardenscapes",
