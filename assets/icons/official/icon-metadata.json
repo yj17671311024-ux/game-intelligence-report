@@ -1,7 +1,7 @@
 {
-  "preparedAt": "2026-11-26T23:35:47.533Z",
-  "total": 518,
-  "found": 514,
+  "preparedAt": "2026-11-27T23:35:53.890Z",
+  "total": 521,
+  "found": 517,
   "metadata": [
     {
       "name": "17-0 Football Manager",
@@ -1435,6 +1435,18 @@
       "bytes": 89909
     },
     {
+      "name": "DIGIMON ALYSION",
+      "found": true,
+      "initial": "DA",
+      "image": "assets/icons/official/digimon-alysion.jpg",
+      "matchedName": "DIGIMON ALYSION",
+      "artistName": "BANDAI CO.,LTD.",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.bandai.digimonalysionw",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 279601
+    },
+    {
       "name": "DIGIMON UP",
       "found": true,
       "initial": "DU",
@@ -1820,6 +1832,19 @@
       "source": "AppBrain Google Play icon",
       "score": 100,
       "bytes": 483867
+    },
+    {
+      "name": "Fire and Glory : Blood War",
+      "found": true,
+      "initial": "FA",
+      "image": "assets/icons/official/fire-and-glory-blood-war.jpg",
+      "matchedName": "Fire and Glory : Blood War",
+      "artistName": "KOOFEI LIMITED",
+      "sourceUrl": "https://apps.apple.com/us/app/fire-and-glory-blood-war/id1523807439?uo=4",
+      "source": "Apple iTunes Search API",
+      "score": 298,
+      "query": "Fire and Glory : Blood War",
+      "bytes": 87037
     },
     {
       "name": "Fire Emblem Heroes",
@@ -3587,6 +3612,18 @@
       "score": 286,
       "query": "Merge Mansion: Mystery Story",
       "bytes": 57371
+    },
+    {
+      "name": "Mini Challenges: Calm Games",
+      "found": true,
+      "initial": "MC",
+      "image": "assets/icons/official/mini-challenges-calm-games.jpg",
+      "matchedName": "Mini Challenges: Calm Games",
+      "artistName": "UltraPub",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.u1.relax.minigame3",
+      "source": "AppBrain Google Play icon",
+      "score": 100,
+      "bytes": 398235
     },
     {
       "name": "MiniMuse",
